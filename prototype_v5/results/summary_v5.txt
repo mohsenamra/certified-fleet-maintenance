@@ -1,0 +1,829 @@
+== Paper 4 prototype v5: rich planner (multi-period shop visits, spare engines, setup cost), exact lambda-path ==
+
+Exactness (direct MILP solves at random margins that match the path): RICH_ID 200/200, RICH_TIGHT 200/200, RICH_S13_src 200/200, RICH_S13_tgt 200/200, RICH_S24_src 200/200, RICH_S24_tgt 200/200
+
+A. Path size and monotonicity
+  RICH_ID       C=2 S0=3 add  plans/scen  118.9  non-mono n_fail 0.457  any 0.266  path sec/scen 14.8
+  RICH_ID       C=2 S0=3 sc   plans/scen  118.9  non-mono n_fail 0.453  any 0.278  path sec/scen 14.8
+  RICH_ID       C=2 S0=3 s05  plans/scen  118.9  non-mono n_fail 0.464  any 0.298  path sec/scen 14.8
+  RICH_TIGHT    C=1 S0=1 add  plans/scen  118.9  non-mono n_fail 0.425  any 0.242  path sec/scen 16.1
+  RICH_TIGHT    C=1 S0=1 sc   plans/scen  118.9  non-mono n_fail 0.432  any 0.278  path sec/scen 16.1
+  RICH_TIGHT    C=1 S0=1 s05  plans/scen  118.9  non-mono n_fail 0.445  any 0.287  path sec/scen 16.1
+  RICH_S13_src  C=2 S0=3 add  plans/scen  117.8  non-mono n_fail 0.380  any 0.230  path sec/scen 15.5
+  RICH_S13_src  C=2 S0=3 sc   plans/scen  117.8  non-mono n_fail 0.390  any 0.258  path sec/scen 15.5
+  RICH_S13_src  C=2 S0=3 s05  plans/scen  117.8  non-mono n_fail 0.398  any 0.285  path sec/scen 15.5
+  RICH_S13_tgt  C=2 S0=3 add  plans/scen  126.1  non-mono n_fail 0.760  any 0.490  path sec/scen 16.5
+  RICH_S13_tgt  C=2 S0=3 sc   plans/scen  126.1  non-mono n_fail 0.728  any 0.468  path sec/scen 16.5
+  RICH_S13_tgt  C=2 S0=3 s05  plans/scen  126.1  non-mono n_fail 0.720  any 0.455  path sec/scen 16.5
+  RICH_S24_src  C=2 S0=3 add  plans/scen  118.0  non-mono n_fail 0.468  any 0.290  path sec/scen 15.4
+  RICH_S24_src  C=2 S0=3 sc   plans/scen  118.0  non-mono n_fail 0.465  any 0.292  path sec/scen 15.4
+  RICH_S24_src  C=2 S0=3 s05  plans/scen  118.0  non-mono n_fail 0.490  any 0.320  path sec/scen 15.4
+  RICH_S24_tgt  C=2 S0=3 add  plans/scen  123.8  non-mono n_fail 0.762  any 0.485  path sec/scen 16.0
+  RICH_S24_tgt  C=2 S0=3 sc   plans/scen  123.8  non-mono n_fail 0.787  any 0.552  path sec/scen 16.0
+  RICH_S24_tgt  C=2 S0=3 s05  plans/scen  123.8  non-mono n_fail 0.800  any 0.570  path sec/scen 16.0
+
+RICH_ID | mean | alpha=0.02 | n=50
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0951   1.000     0.00    2690      603  <-- violates
+  fixed additive 20                                                   0.0197   0.076    20.00    2089        2
+  Zhu-style rhat-3sigma                                               0.0339   1.000    fixed    1974     -113  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0434   1.000    fixed    2033      -54  <-- violates
+  [add] validation-tuned                                              0.0208   0.510    19.54    2090        3  <-- violates
+  [add] per-unit CP (alpha)                                           0.0036   0.000    37.60    2782      695
+  [add] CRC exact path                                                0.0008   0.000    48.45    3590     1503
+  [add] CRC exact cheapest-valid                                      0.0008   0.000    48.45    3590     1503
+  [add] CRC on v1 grid                                                0.0007   0.000    49.13    3652     1565
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0762   1.000     0.93    2400      313  <-- violates
+  [sc] validation-tuned                                               0.0204   0.466     4.40    2082       -5
+  [sc] per-unit CP (alpha)                                            0.0011   0.000    13.41    4028     1941
+  [sc] CRC exact path                                                 0.0009   0.000    14.93    4303     2216
+  [sc] CRC exact cheapest-valid                                       0.0009   0.000    14.93    4303     2216
+  [sc] CRC on v1 grid                                                 0.0008   0.000    15.12    4337     2250
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0769   1.000     0.21    2411      324  <-- violates
+  [s05] validation-tuned                                              0.0205   0.490     4.56    2100       13
+  [s05] per-unit CP (alpha)                                           0.0002   0.000    18.85    4913     2826
+  [s05] CRC exact path                                                0.0008   0.000    15.97    4450     2363
+  [s05] CRC exact cheapest-valid                                      0.0008   0.000    15.97    4450     2363
+  [s05] CRC on v1 grid                                                0.0007   0.000    16.29    4505     2418
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0768   1.000     0.22    2410      323  <-- violates
+
+RICH_ID | mean | alpha=0.02 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0951   1.000     0.00    2690      603  <-- violates
+  fixed additive 20                                                   0.0197   0.146    20.00    2089        2
+  Zhu-style rhat-3sigma                                               0.0339   1.000    fixed    1975     -112  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0434   1.000    fixed    2034      -53  <-- violates
+  [add] validation-tuned                                              0.0202   0.494    19.77    2090        3
+  [add] per-unit CP (alpha)                                           0.0035   0.000    37.60    2780      693
+  [add] CRC exact path                                                0.0098   0.000    27.92    2325      238
+  [add] CRC exact cheapest-valid                                      0.0097   0.000    28.00    2328      241
+  [add] CRC on v1 grid                                                0.0090   0.000    28.82    2358      272
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0762   1.000     0.93    2400      313  <-- violates
+  [sc] validation-tuned                                               0.0204   0.516     4.37    2073      -13  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0011   0.000    13.36    4020     1933
+  [sc] CRC exact path                                                 0.0098   0.000     6.57    2486      399
+  [sc] CRC exact cheapest-valid                                       0.0097   0.000     6.59    2489      403
+  [sc] CRC on v1 grid                                                 0.0093   0.000     6.72    2518      432
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0769   1.000     0.21    2410      324  <-- violates
+  [s05] validation-tuned                                              0.0205   0.546     4.54    2092        5  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0002   0.000    18.73    4905     2818
+  [s05] CRC exact path                                                0.0092   0.000     6.97    2568      482
+  [s05] CRC exact cheapest-valid                                      0.0091   0.000     6.98    2571      485
+  [s05] CRC on v1 grid                                                0.0083   0.000     7.28    2641      555
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0768   1.000     0.22    2410      323  <-- violates
+
+RICH_ID | mean | alpha=0.05 | n=50
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0950   1.000     0.00    2689      677  <-- violates
+  fixed additive 20                                                   0.0197   0.000    20.00    2089       76
+  Zhu-style rhat-3sigma                                               0.0339   0.000    fixed    1973      -39
+  Mitici-style rhat-2.33sigma                                         0.0433   0.000    fixed    2033       20
+  [add] validation-tuned                                              0.0503   0.474     8.00    2138      126
+  [add] per-unit CP (alpha)                                           0.0080   0.000    29.88    2395      383
+  [add] CRC exact path                                                0.0291   0.000    15.17    2033       21
+  [add] CRC exact cheapest-valid                                      0.0266   0.000    16.39    2045       32
+  [add] CRC on v1 grid                                                0.0276   0.000    15.92    2040       27
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0925   1.000     0.04    2650      638  <-- violates
+  [sc] validation-tuned                                               0.0502   0.480     1.85    2093       81
+  [sc] per-unit CP (alpha)                                            0.0045   0.000     8.97    3063     1051
+  [sc] CRC exact path                                                 0.0281   0.000     3.48    2002      -10
+  [sc] CRC exact cheapest-valid                                       0.0259   0.000     3.72    2014        2
+  [sc] CRC on v1 grid                                                 0.0267   0.000     3.64    2010       -2
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0925   1.000     0.01    2652      639  <-- violates
+  [s05] validation-tuned                                              0.0502   0.480     1.91    2090       78
+  [s05] per-unit CP (alpha)                                           0.0037   0.000    10.38    3377     1365
+  [s05] CRC exact path                                                0.0272   0.000     3.72    2011       -1
+  [s05] CRC exact cheapest-valid                                      0.0256   0.000     3.90    2024       12
+  [s05] CRC on v1 grid                                                0.0253   0.000     3.94    2029       17
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0924   1.000     0.01    2649      637  <-- violates
+
+RICH_ID | mean | alpha=0.05 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0950   1.000     0.00    2689      677  <-- violates
+  fixed additive 20                                                   0.0197   0.000    20.00    2089       77
+  Zhu-style rhat-3sigma                                               0.0339   0.000    fixed    1973      -39
+  Mitici-style rhat-2.33sigma                                         0.0433   0.000    fixed    2033       21
+  [add] validation-tuned                                              0.0501   0.500     8.00    2135      123
+  [add] per-unit CP (alpha)                                           0.0080   0.000    29.78    2389      377
+  [add] CRC exact path                                                0.0379   0.002    11.49    2038       26
+  [add] CRC exact cheapest-valid                                      0.0312   0.000    14.23    2030       18
+  [add] CRC on v1 grid                                                0.0358   0.000    12.28    2032       20
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0925   1.000     0.04    2650      638  <-- violates
+  [sc] validation-tuned                                               0.0501   0.522     1.83    2087       75  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0044   0.000     8.94    3057     1045
+  [sc] CRC exact path                                                 0.0367   0.000     2.74    2006       -6
+  [sc] CRC exact cheapest-valid                                       0.0304   0.000     3.26    1995      -17
+  [sc] CRC on v1 grid                                                 0.0350   0.000     2.88    2001      -11
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0925   1.000     0.01    2652      640  <-- violates
+  [s05] validation-tuned                                              0.0501   0.534     1.89    2085       73  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0037   0.000    10.31    3365     1353
+  [s05] CRC exact path                                                0.0358   0.000     2.87    1990      -22
+  [s05] CRC exact cheapest-valid                                      0.0309   0.000     3.30    1984      -28
+  [s05] CRC on v1 grid                                                0.0326   0.000     3.18    1990      -22
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0924   1.000     0.01    2649      637  <-- violates
+
+RICH_ID | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.8671   1.000     0.00    2690       74  <-- violates
+  fixed additive 20                                                   0.3312   1.000    20.00    2089     -527  <-- violates
+  Zhu-style rhat-3sigma                                               0.4901   1.000    fixed    1974     -642  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.5892   1.000    fixed    2034     -582  <-- violates
+  [add] validation-tuned                                              0.1206   0.632    33.20    2560      -56  <-- violates
+  [add] per-unit CP (alpha)                                           0.2986   1.000    21.63    2125     -491  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0285   0.000    45.95    3369      753
+  [add] joint max-score CP                                            0.0289   0.000    45.87    3364      748
+  [add] LTT exact path                                                0.0364   0.038    44.55    3278      662
+  [add] LTT exact cheapest-valid                                      0.0364   0.038    44.55    3279      663
+  [add] LTT on v1 grid                                                0.0321   0.024    45.38    3344      728
+  [add] scenario-max (Campi-Garatti d=1)                              0.0187   0.006    48.05    3559      943
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6661   1.000     4.10    2126     -490  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.6671   1.000     4.13    2125     -491  <-- violates
+  [sc] validation-tuned                                               0.1233   0.692     7.96    2821      205  <-- violates
+  [sc] per-unit CP (alpha)                                            0.2243   1.000     5.85    2331     -285  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0015   0.000    18.86    4994     2378
+  [sc] joint max-score CP                                             0.0016   0.000    18.78    4982     2366
+  [sc] LTT exact path                                                 0.0367   0.024    12.53    3832     1216
+  [sc] LTT exact cheapest-valid                                       0.0366   0.024    12.53    3833     1217
+  [sc] LTT on v1 grid                                                 0.0345   0.022    12.70    3866     1250
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0184   0.004    14.89    4292     1676
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7071   1.000     0.82    2160     -456  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.7051   1.000     0.83    2162     -454  <-- violates
+  [s05] validation-tuned                                              0.1240   0.696     8.34    2902      286  <-- violates
+  [s05] per-unit CP (alpha)                                           0.1878   1.000     6.57    2475     -141  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0000   0.000    35.97    6734     4118
+  [s05] joint max-score CP                                            0.0000   0.000    35.88    6728     4112
+  [s05] LTT exact path                                                0.0324   0.016    13.86    4066     1450
+  [s05] LTT exact cheapest-valid                                      0.0324   0.016    13.86    4067     1451
+  [s05] LTT on v1 grid                                                0.0300   0.012    14.15    4120     1504
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0173   0.002    15.80    4417     1801
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7061   1.000     0.84    2154     -462  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.7041   1.000     0.85    2156     -460  <-- violates
+
+RICH_ID | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.8668   1.000     0.00    2688       70  <-- violates
+  fixed additive 20                                                   0.3305   1.000    20.00    2089     -530  <-- violates
+  Zhu-style rhat-3sigma                                               0.4896   1.000    fixed    1973     -645  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.5885   1.000    fixed    2033     -586  <-- violates
+  [add] validation-tuned                                              0.1096   0.608    34.01    2590      -29  <-- violates
+  [add] per-unit CP (alpha)                                           0.2976   1.000    21.66    2124     -494  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0282   0.000    45.96    3366      748
+  [add] joint max-score CP                                            0.0285   0.000    45.87    3359      741
+  [add] LTT exact path                                                0.0518   0.024    41.32    3034      416
+  [add] LTT exact cheapest-valid                                      0.0517   0.024    41.33    3034      416
+  [add] LTT on v1 grid                                                0.0479   0.006    42.12    3093      475
+  [add] scenario-max (Campi-Garatti d=1)                              0.0081   0.000    50.27    3746     1127
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6655   1.000     4.10    2125     -493  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.6665   1.000     4.13    2124     -494  <-- violates
+  [sc] validation-tuned                                               0.1087   0.606     8.21    2880      261  <-- violates
+  [sc] per-unit CP (alpha)                                            0.2249   1.000     5.85    2329     -289  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0012   0.000    18.79    4986     2368
+  [sc] joint max-score CP                                             0.0014   0.000    18.68    4969     2351
+  [sc] LTT exact path                                                 0.0548   0.036    10.70    3459      841
+  [sc] LTT exact cheapest-valid                                       0.0547   0.036    10.70    3460      842
+  [sc] LTT on v1 grid                                                 0.0522   0.026    10.82    3487      869
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0091   0.000    16.34    4566     1948
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7066   1.000     0.82    2159     -460  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.7046   1.000     0.83    2161     -457  <-- violates
+  [s05] validation-tuned                                              0.1102   0.612     8.65    2978      359  <-- violates
+  [s05] per-unit CP (alpha)                                           0.1861   1.000     6.57    2472     -146  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0000   0.000    35.79    6743     4125
+  [s05] joint max-score CP                                            0.0000   0.000    35.62    6731     4113
+  [s05] LTT exact path                                                0.0514   0.016    11.88    3690     1071
+  [s05] LTT exact cheapest-valid                                      0.0514   0.016    11.89    3690     1072
+  [s05] LTT on v1 grid                                                0.0482   0.012    12.15    3744     1126
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0084   0.000    17.08    4644     2026
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7056   1.000     0.84    2153     -465  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.7037   1.000     0.85    2155     -463  <-- violates
+
+RICH_ID | any | alpha=0.2 | n=50  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.8669   1.000     0.00    2689      399  <-- violates
+  fixed additive 20                                                   0.3310   1.000    20.00    2089     -201  <-- violates
+  Zhu-style rhat-3sigma                                               0.4900   1.000    fixed    1974     -316  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.5891   1.000    fixed    2033     -257  <-- violates
+  [add] validation-tuned                                              0.2173   0.576    26.13    2267      -23  <-- violates
+  [add] per-unit CP (alpha)                                           0.5376   1.000    11.54    2034     -256  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0461   0.000    42.42    3104      814
+  [add] joint max-score CP                                            0.0479   0.000    42.08    3080      790
+  [add] LTT exact path                                                0.1054   0.022    34.60    2629      339
+  [add] LTT exact cheapest-valid                                      0.1047   0.022    34.66    2631      342
+  [add] LTT on v1 grid                                                0.0983   0.012    35.34    2670      380
+  [add] scenario-max (Campi-Garatti d=1)                              0.0170   0.000    48.41    3589     1299
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7440   1.000     2.40    2236      -53  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.7420   1.000     2.48    2227      -63  <-- violates
+  [sc] validation-tuned                                               0.2211   0.604     5.92    2353       63  <-- violates
+  [sc] per-unit CP (alpha)                                            0.4700   1.000     3.12    1989     -300  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0079   0.000    16.48    4599     2309
+  [sc] joint max-score CP                                             0.0099   0.000    16.03    4517     2227
+  [sc] LTT exact path                                                 0.1056   0.022     8.46    2938      648
+  [sc] LTT exact cheapest-valid                                       0.1052   0.022     8.47    2940      650
+  [sc] LTT on v1 grid                                                 0.1006   0.016     8.58    2968      678
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0166   0.000    15.07    4327     2037
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7731   1.000     0.51    2266      -24  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.7742   1.000     0.53    2261      -28  <-- violates
+  [s05] validation-tuned                                              0.2211   0.604     6.13    2388       98  <-- violates
+  [s05] per-unit CP (alpha)                                           0.4404   1.000     3.51    1983     -307  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0000   0.000    27.45    5984     3694
+  [s05] joint max-score CP                                            0.0001   0.000    26.82    5915     3625
+  [s05] LTT exact path                                                0.0986   0.014     9.29    3121      831
+  [s05] LTT exact cheapest-valid                                      0.0982   0.014     9.30    3124      834
+  [s05] LTT on v1 grid                                                0.0907   0.016     9.57    3185      895
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0149   0.000    16.04    4461     2171
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7731   1.000     0.53    2266      -24  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.7721   1.000     0.55    2257      -33  <-- violates
+
+RICH_ID | any | alpha=0.2 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.8670   1.000     0.00    2689      398  <-- violates
+  fixed additive 20                                                   0.3311   1.000    20.00    2089     -202  <-- violates
+  Zhu-style rhat-3sigma                                               0.4899   1.000    fixed    1974     -318  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.5888   1.000    fixed    2033     -258  <-- violates
+  [add] validation-tuned                                              0.2104   0.584    26.36    2269      -22  <-- violates
+  [add] per-unit CP (alpha)                                           0.5362   1.000    11.59    2032     -260  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0475   0.000    42.20    3087      796
+  [add] joint max-score CP                                            0.0495   0.000    41.83    3060      769
+  [add] LTT exact path                                                0.1370   0.042    31.58    2474      182
+  [add] LTT exact cheapest-valid                                      0.1363   0.040    31.63    2476      185
+  [add] LTT on v1 grid                                                0.1277   0.012    32.36    2509      218
+  [add] scenario-max (Campi-Garatti d=1)                              0.0088   0.000    50.13    3733     1442
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7440   1.000     2.39    2236      -55  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.7420   1.000     2.48    2227      -64  <-- violates
+  [sc] validation-tuned                                               0.2118   0.598     6.04    2373       82  <-- violates
+  [sc] per-unit CP (alpha)                                            0.4682   1.000     3.13    1989     -303  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0077   0.000    16.46    4597     2305
+  [sc] joint max-score CP                                             0.0098   0.000    15.97    4510     2218
+  [sc] LTT exact path                                                 0.1388   0.060     7.39    2681      390
+  [sc] LTT exact cheapest-valid                                       0.1385   0.060     7.40    2682      391
+  [sc] LTT on v1 grid                                                 0.1315   0.020     7.54    2719      428
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0094   0.000    16.21    4544     2252
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7729   1.000     0.51    2265      -26  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.7739   1.000     0.53    2261      -30  <-- violates
+  [s05] validation-tuned                                              0.2128   0.578     6.22    2401      110  <-- violates
+  [s05] per-unit CP (alpha)                                           0.4402   1.000     3.51    1979     -312  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0000   0.000    27.37    5991     3700
+  [s05] joint max-score CP                                            0.0000   0.000    26.66    5915     3624
+  [s05] LTT exact path                                                0.1321   0.026     7.94    2808      516
+  [s05] LTT exact cheapest-valid                                      0.1318   0.026     7.95    2809      518
+  [s05] LTT on v1 grid                                                0.1199   0.036     8.22    2874      583
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0091   0.000    16.95    4620     2329
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.7729   1.000     0.53    2265      -26  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.7719   1.000     0.55    2257      -34  <-- violates
+
+RICH_TIGHT | mean | alpha=0.02 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0783   1.000     0.00    3327      237  <-- violates
+  fixed additive 20                                                   0.0199   0.433    20.00    3092        2
+  Zhu-style rhat-3sigma                                               0.0321   1.000    fixed    3078      -11  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0390   1.000    fixed    3026      -63  <-- violates
+  [add] validation-tuned                                              0.0205   0.477    19.67    3081       -8
+  [add] per-unit CP (alpha)                                           0.0033   0.000    38.45    3923      833
+  [add] CRC exact path                                                0.0100   0.000    27.92    3323      234
+  [add] CRC exact cheapest-valid                                      0.0098   0.000    28.02    3326      236
+  [add] CRC on v1 grid                                                0.0089   0.000    28.88    3360      271
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0677   1.000     0.68    3214      125  <-- violates
+  [sc] validation-tuned                                               0.0203   0.553     4.18    3169       80  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0006   0.000    13.90    5104     2015
+  [sc] CRC exact path                                                 0.0093   0.000     6.23    3571      482
+  [sc] CRC exact cheapest-valid                                       0.0092   0.000     6.24    3574      484
+  [sc] CRC on v1 grid                                                 0.0089   0.000     6.35    3597      508
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0672   1.000     0.15    3206      117  <-- violates
+  [s05] validation-tuned                                              0.0205   0.543     4.31    3205      115  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0003   0.000    18.47    5743     2653
+  [s05] CRC exact path                                                0.0081   0.000     6.76    3695      606
+  [s05] CRC exact cheapest-valid                                      0.0080   0.000     6.77    3698      609
+  [s05] CRC on v1 grid                                                0.0077   0.000     6.87    3715      626
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0673   1.000     0.15    3212      123  <-- violates
+
+RICH_TIGHT | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.8143   1.000     0.00    3322     -352  <-- violates
+  fixed additive 20                                                   0.3233   1.000    20.00    3087     -587  <-- violates
+  Zhu-style rhat-3sigma                                               0.5034   1.000    fixed    3073     -601  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.5831   1.000    fixed    3023     -651  <-- violates
+  [add] validation-tuned                                              0.1070   0.563    33.98    3629      -45  <-- violates
+  [add] per-unit CP (alpha)                                           0.2733   1.000    22.48    3140     -534  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0227   0.000    45.57    4508      834
+  [add] joint max-score CP                                            0.0239   0.000    45.33    4487      813
+  [add] LTT exact path                                                0.0553   0.067    39.91    4043      369
+  [add] LTT exact cheapest-valid                                      0.0552   0.067    39.92    4043      369
+  [add] LTT on v1 grid                                                0.0504   0.067    40.52    4086      412
+  [add] scenario-max (Campi-Garatti d=1)                              0.0089   0.000    49.87    4954     1280
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6540   1.000     3.33    3074     -601  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.6515   1.000     3.35    3071     -603  <-- violates
+  [sc] validation-tuned                                               0.1133   0.623     7.35    3819      145  <-- violates
+  [sc] per-unit CP (alpha)                                            0.2000   1.000     5.89    3499     -175  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0027   0.000    19.32    5879     2205
+  [sc] joint max-score CP                                             0.0027   0.000    19.24    5868     2194
+  [sc] LTT exact path                                                 0.0538   0.033     9.86    4397      723
+  [sc] LTT exact cheapest-valid                                       0.0538   0.033     9.86    4398      724
+  [sc] LTT on v1 grid                                                 0.0539   0.030     9.85    4398      724
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0079   0.000    17.05    5543     1869
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6513   1.000     0.66    3054     -620  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.6513   1.000     0.66    3054     -620  <-- violates
+  [s05] validation-tuned                                              0.1148   0.663     7.70    3909      235  <-- violates
+  [s05] per-unit CP (alpha)                                           0.1565   1.000     6.50    3633      -41  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0000   0.000    36.34    7365     3691
+  [s05] joint max-score CP                                            0.0000   0.000    36.07    7347     3673
+  [s05] LTT exact path                                                0.0500   0.023    10.68    4569      894
+  [s05] LTT exact cheapest-valid                                      0.0499   0.023    10.69    4570      895
+  [s05] LTT on v1 grid                                                0.0470   0.010    10.99    4620      946
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0088   0.000    17.82    5637     1963
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6537   1.000     0.68    3061     -613  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.6537   1.000     0.69    3062     -612  <-- violates
+
+RICH S13 source->source | mean | alpha=0.02 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0767   1.000     0.00    2415      361  <-- violates
+  fixed additive 20                                                   0.0120   0.000    20.00    2148       93
+  Zhu-style rhat-3sigma                                               0.0171   0.000    fixed    2129       75
+  Mitici-style rhat-2.33sigma                                         0.0255   1.000    fixed    1994      -60  <-- violates
+  [add] validation-tuned                                              0.0199   0.437    15.24    2049       -5
+  [add] per-unit CP (alpha)                                           0.0033   0.000    31.40    2734      680
+  [add] CRC exact path                                                0.0100   0.000    21.01    2177      123
+  [add] CRC exact cheapest-valid                                      0.0098   0.000    21.11    2180      126
+  [add] CRC on v1 grid                                                0.0090   0.000    22.16    2221      167
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0581   1.000     1.28    2168      114  <-- violates
+  [sc] validation-tuned                                               0.0206   0.537     2.65    2049       -5  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0008   0.000     7.90    4372     2317
+  [sc] CRC exact path                                                 0.0102   0.000     3.89    2487      432
+  [sc] CRC exact cheapest-valid                                       0.0101   0.000     3.89    2488      434
+  [sc] CRC on v1 grid                                                 0.0094   0.000     3.99    2544      490
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0578   1.000     0.28    2162      108  <-- violates
+  [s05] validation-tuned                                              0.0206   0.543     2.70    2054       -0  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0011   0.000     9.52    4929     2875
+  [s05] CRC exact path                                                0.0099   0.000     3.95    2517      463
+  [s05] CRC exact cheapest-valid                                      0.0099   0.000     3.96    2519      465
+  [s05] CRC on v1 grid                                                0.0084   0.000     4.23    2665      611
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0581   1.000     0.29    2164      110  <-- violates
+
+RICH S13 NAIVE source->target (shift) | mean | alpha=0.02 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.1498   1.000     0.00    3384      895  <-- violates
+  fixed additive 20                                                   0.0861   1.000    20.00    2776      287  <-- violates
+  Zhu-style rhat-3sigma                                               0.0786   1.000    fixed    2450      -39  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0941   1.000    fixed    2602      113  <-- violates
+  [add] validation-tuned                                              0.0984   1.000    15.35    2844      355  <-- violates
+  [add] per-unit CP (alpha)                                           0.0468   1.000    31.31    2509       20  <-- violates
+  [add] CRC exact path                                                0.0815   1.000    21.15    2731      242  <-- violates
+  [add] CRC exact cheapest-valid                                      0.0812   1.000    21.25    2727      238  <-- violates
+  [add] CRC on v1 grid                                                0.0779   1.000    22.31    2707      218  <-- violates
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.1321   1.000     1.67    3113      624  <-- violates
+  [sc] validation-tuned                                               0.0861   1.000     2.70    2546       57  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0153   0.133     7.87    3156      667
+  [sc] CRC exact path                                                 0.0588   1.000     3.94    2341     -148  <-- violates
+  [sc] CRC exact cheapest-valid                                       0.0588   1.000     3.94    2341     -148  <-- violates
+  [sc] CRC on v1 grid                                                 0.0569   1.000     4.05    2339     -150  <-- violates
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.1329   1.000     0.28    3120      631  <-- violates
+  [s05] validation-tuned                                              0.0852   1.000     2.74    2517       28  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0085   0.000     9.48    3734     1245
+  [s05] CRC exact path                                                0.0565   1.000     4.01    2291     -198  <-- violates
+  [s05] CRC exact cheapest-valid                                      0.0563   1.000     4.02    2290     -199  <-- violates
+  [s05] CRC on v1 grid                                                0.0523   1.000     4.29    2298     -191  <-- violates
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.1327   1.000     0.28    3117      628  <-- violates
+
+RICH S13 RECALIBRATED on target | mean | alpha=0.02 | n=25
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.1498   1.000     0.00    3384      895  <-- violates
+  fixed additive 20                                                   0.0862   1.000    20.00    2777      288  <-- violates
+  Zhu-style rhat-3sigma                                               0.0786   1.000    fixed    2451      -38  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0942   1.000    fixed    2603      114  <-- violates
+  [add] validation-tuned                                              0.0208   0.487    38.98    2518       29
+  [add] per-unit CP (alpha)                                           0.0042   0.000    48.56    3448      959
+  [add] CRC exact path                                                0.0000   0.000      inf   10181     7692
+  [add] CRC exact cheapest-valid                                      0.0000   0.000      inf   10181     7692
+  [add] CRC on v1 grid                                                0.0000   0.000   100.00    8938     6449
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.1321   1.000     1.68    3113      624  <-- violates
+  [sc] validation-tuned                                               0.0213   0.527     7.07    2886      397  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0057   0.000    10.79    4199     1710
+  [sc] CRC exact path                                                 0.0000   0.000      inf   10181     7692
+  [sc] CRC exact cheapest-valid                                       0.0000   0.000      inf   10181     7692
+  [sc] CRC on v1 grid                                                 0.0005   0.000    20.00    6420     3931
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.1329   1.000     0.28    3121      632  <-- violates
+  [s05] validation-tuned                                              0.0214   0.547     7.05    2862      373  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0054   0.000    11.16    4314     1825
+  [s05] CRC exact path                                                0.0000   0.000      inf   10181     7692
+  [s05] CRC exact cheapest-valid                                      0.0000   0.000      inf   10181     7692
+  [s05] CRC on v1 grid                                                0.0000   0.000    40.00    8344     5855
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.1328   1.000     0.28    3118      629  <-- violates
+
+RICH S13 RECALIBRATED on target | mean | alpha=0.02 | n=50
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.1497   1.000     0.00    3383      895  <-- violates
+  fixed additive 20                                                   0.0861   1.000    20.00    2775      288  <-- violates
+  Zhu-style rhat-3sigma                                               0.0786   1.000    fixed    2450      -38  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0941   1.000    fixed    2602      114  <-- violates
+  [add] validation-tuned                                              0.0204   0.443    38.98    2508       20
+  [add] per-unit CP (alpha)                                           0.0042   0.000    48.27    3393      905
+  [add] CRC exact path                                                0.0006   0.000    55.50    4666     2178
+  [add] CRC exact cheapest-valid                                      0.0006   0.000    55.50    4666     2178
+  [add] CRC on v1 grid                                                0.0006   0.000    56.41    4857     2369
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.1321   1.000     1.67    3112      624  <-- violates
+  [sc] validation-tuned                                               0.0208   0.517     7.09    2882      394  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0055   0.000    10.73    4184     1696
+  [sc] CRC exact path                                                 0.0009   0.000    18.54    6126     3638
+  [sc] CRC exact cheapest-valid                                       0.0009   0.000    18.54    6126     3638
+  [sc] CRC on v1 grid                                                 0.0010   0.000    18.27    6086     3598
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.1328   1.000     0.28    3119      631  <-- violates
+  [s05] validation-tuned                                              0.0211   0.543     7.05    2852      364  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0053   0.000    11.07    4299     1811
+  [s05] CRC exact path                                                0.0009   0.000    19.85    6309     3821
+  [s05] CRC exact cheapest-valid                                      0.0009   0.000    19.85    6309     3821
+  [s05] CRC on v1 grid                                                0.0009   0.000    20.32    6393     3905
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.1327   1.000     0.28    3116      628  <-- violates
+
+RICH S13 source->source | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.7954   1.000     0.00    2419      -68  <-- violates
+  fixed additive 20                                                   0.2200   1.000    20.00    2151     -335  <-- violates
+  Zhu-style rhat-3sigma                                               0.2952   1.000    fixed    2130     -357  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.4172   1.000    fixed    1995     -491  <-- violates
+  [add] validation-tuned                                              0.1108   0.597    26.79    2449      -38  <-- violates
+  [add] per-unit CP (alpha)                                           0.3109   1.000    16.37    2072     -414  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0103   0.000    40.88    3544     1058
+  [add] joint max-score CP                                            0.0103   0.000    40.88    3544     1057
+  [add] LTT exact path                                                0.0535   0.077    32.41    2804      317
+  [add] LTT exact cheapest-valid                                      0.0528   0.077    32.42    2804      317
+  [add] LTT on v1 grid                                                0.0473   0.063    33.33    2870      383
+  [add] scenario-max (Campi-Garatti d=1)                              0.0069   0.000    43.14    3794     1307
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.5369   1.000     5.71    1947     -540  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.5369   1.000     5.74    1947     -539  <-- violates
+  [sc] validation-tuned                                               0.1118   0.563     4.65    2904      417  <-- violates
+  [sc] per-unit CP (alpha)                                            0.2615   1.000     3.28    2226     -261  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0000   0.000    14.56    6169     3683
+  [sc] joint max-score CP                                             0.0000   0.000    14.50    6157     3671
+  [sc] LTT exact path                                                 0.0558   0.087     5.83    3470      983
+  [sc] LTT exact cheapest-valid                                       0.0557   0.087     5.83    3470      983
+  [sc] LTT on v1 grid                                                 0.0510   0.060     6.02    3556     1070
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0067   0.000     9.28    4827     2340
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.5649   1.000     1.00    1985     -501  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.5624   1.000     1.01    1985     -502  <-- violates
+  [s05] validation-tuned                                              0.1127   0.613     4.70    2931      444  <-- violates
+  [s05] per-unit CP (alpha)                                           0.2199   1.000     3.59    2340     -146  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0001   0.000    30.83    7942     5455
+  [s05] joint max-score CP                                            0.0001   0.000    30.80    7939     5453
+  [s05] LTT exact path                                                0.0541   0.083     6.25    3652     1166
+  [s05] LTT exact cheapest-valid                                      0.0540   0.083     6.25    3653     1166
+  [s05] LTT on v1 grid                                                0.0458   0.037     6.69    3839     1352
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0075   0.000    14.66    6115     3628
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.5799   1.000     1.03    1996     -490  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.5773   1.000     1.03    1990     -497  <-- violates
+
+RICH S13 NAIVE source->target (shift) | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.9650   1.000     0.00    3384       43  <-- violates
+  fixed additive 20                                                   0.8275   1.000    20.00    2776     -564  <-- violates
+  Zhu-style rhat-3sigma                                               0.8125   1.000    fixed    2450     -890  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.8600   1.000    fixed    2602     -738  <-- violates
+  [add] validation-tuned                                              0.7351   1.000    26.93    2604     -737  <-- violates
+  [add] per-unit CP (alpha)                                           0.8696   1.000    16.26    2824     -517  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.2869   1.000    40.97    2601     -739  <-- violates
+  [add] joint max-score CP                                            0.2875   1.000    40.96    2601     -739  <-- violates
+  [add] LTT exact path                                                0.6099   1.000    32.44    2511     -829  <-- violates
+  [add] LTT exact cheapest-valid                                      0.6100   1.000    32.45    2512     -829  <-- violates
+  [add] LTT on v1 grid                                                0.5837   1.000    33.40    2511     -829  <-- violates
+  [add] scenario-max (Campi-Garatti d=1)                              0.2379   1.000    42.80    2798     -543  <-- violates
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9225   1.000     6.57    2891     -450  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.9225   1.000     6.69    2899     -442  <-- violates
+  [sc] validation-tuned                                               0.5908   1.000     4.67    2309    -1032  <-- violates
+  [sc] per-unit CP (alpha)                                            0.7798   1.000     3.27    2399     -941  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0465   0.007    14.58    5299     1958
+  [sc] joint max-score CP                                             0.0471   0.007    14.53    5287     1946
+  [sc] LTT exact path                                                 0.4538   1.000     5.92    2553     -787  <-- violates
+  [sc] LTT exact cheapest-valid                                       0.4538   1.000     5.92    2554     -787  <-- violates
+  [sc] LTT on v1 grid                                                 0.4293   1.000     6.13    2601     -740  <-- violates
+  [sc] scenario-max (Campi-Garatti d=1)                               0.1792   1.000     9.26    3654      313  <-- violates
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9300   1.000     0.98    2881     -460  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.9300   1.000     1.00    2884     -457  <-- violates
+  [s05] validation-tuned                                              0.5852   1.000     4.73    2294    -1046  <-- violates
+  [s05] per-unit CP (alpha)                                           0.7443   1.000     3.57    2341     -999  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0018   0.000    30.36    7546     4206
+  [s05] joint max-score CP                                            0.0019   0.000    30.33    7541     4200
+  [s05] LTT exact path                                                0.4155   1.000     6.34    2658     -683  <-- violates
+  [s05] LTT exact cheapest-valid                                      0.4155   1.000     6.34    2658     -683  <-- violates
+  [s05] LTT on v1 grid                                                0.3724   1.000     6.78    2791     -550  <-- violates
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0584   0.133    14.66    5262     1921  <-- violates
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9250   1.000     1.00    2868     -473  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.9250   1.000     1.02    2872     -469  <-- violates
+
+RICH S13 RECALIBRATED on target | any | alpha=0.1 | n=25  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.9651   1.000     0.00    3386       61  <-- violates
+  fixed additive 20                                                   0.8277   1.000    20.00    2778     -547  <-- violates
+  Zhu-style rhat-3sigma                                               0.8125   1.000    fixed    2452     -873  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.8601   1.000    fixed    2604     -721  <-- violates
+  [add] validation-tuned                                              0.1400   0.687    46.00    3105     -220  <-- violates
+  [add] per-unit CP (alpha)                                           0.5891   1.000    33.24    2506     -818  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0047   0.000    57.91    5185     1860
+  [add] joint max-score CP                                            0.0047   0.000    57.90    5182     1858
+  [add] LTT exact path                                                0.0262   0.037    53.86    4367     1042
+  [add] LTT exact cheapest-valid                                      0.0262   0.037    53.86    4367     1042
+  [add] LTT on v1 grid                                                0.0236   0.023    54.71    4540     1215
+  [add] scenario-max (Campi-Garatti d=1)                              0.0262   0.037    53.86    4367     1042
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9223   1.000     6.57    2892     -432  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.9223   1.000     6.68    2900     -424  <-- violates
+  [sc] validation-tuned                                               0.1278   0.613    10.88    4187      862  <-- violates
+  [sc] per-unit CP (alpha)                                            0.4956   1.000     5.51    2447     -878  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0267   0.007    17.27    5881     2556
+  [sc] joint max-score CP                                             0.0267   0.007    17.27    5881     2556
+  [sc] LTT exact path                                                 0.0358   0.050    16.74    5721     2396
+  [sc] LTT exact cheapest-valid                                       0.0358   0.050    16.74    5721     2396
+  [sc] LTT on v1 grid                                                 0.0356   0.043    16.67    5721     2396
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0358   0.050    16.74    5721     2396
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9298   1.000     0.98    2882     -442  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.9298   1.000     1.00    2885     -439  <-- violates
+  [s05] validation-tuned                                              0.1275   0.627    10.98    4204      880  <-- violates
+  [s05] per-unit CP (alpha)                                           0.4910   1.000     5.63    2463     -862  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0198   0.000    19.90    6283     2959
+  [s05] joint max-score CP                                            0.0198   0.000    19.90    6283     2959
+  [s05] LTT exact path                                                0.0361   0.053    17.44    5815     2490
+  [s05] LTT exact cheapest-valid                                      0.0361   0.053    17.44    5815     2490
+  [s05] LTT on v1 grid                                                0.0342   0.043    17.85    5901     2576
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0361   0.053    17.44    5815     2490
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9248   1.000     1.00    2869     -455  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.9248   1.000     1.02    2874     -451  <-- violates
+
+RICH S13 RECALIBRATED on target | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.9650   1.000     0.00    3381       85  <-- violates
+  fixed additive 20                                                   0.8272   1.000    20.00    2774     -522  <-- violates
+  Zhu-style rhat-3sigma                                               0.8124   1.000    fixed    2449     -847  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.8600   1.000    fixed    2601     -695  <-- violates
+  [add] validation-tuned                                              0.1299   0.700    46.29    3124     -172  <-- violates
+  [add] per-unit CP (alpha)                                           0.5848   1.000    33.42    2509     -787  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0048   0.000    57.22    5005     1709
+  [add] joint max-score CP                                            0.0049   0.000    57.18    4998     1702
+  [add] LTT exact path                                                0.0260   0.003    53.40    4260      964
+  [add] LTT exact cheapest-valid                                      0.0261   0.003    53.40    4261      965
+  [add] LTT on v1 grid                                                0.0235   0.000    54.13    4402     1106
+  [add] scenario-max (Campi-Garatti d=1)                              0.0127   0.000    55.49    4663     1367
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9223   1.000     6.57    2888     -408  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.9223   1.000     6.68    2896     -400  <-- violates
+  [sc] validation-tuned                                               0.1298   0.750    10.37    4044      748  <-- violates
+  [sc] per-unit CP (alpha)                                            0.4940   1.000     5.54    2451     -845  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0344   0.000    16.05    5642     2346
+  [sc] joint max-score CP                                             0.0346   0.000    16.03    5637     2341
+  [sc] LTT exact path                                                 0.0349   0.040    16.21    5646     2349
+  [sc] LTT exact cheapest-valid                                       0.0349   0.040    16.21    5646     2350
+  [sc] LTT on v1 grid                                                 0.0342   0.033    16.36    5685     2388
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0175   0.007    18.72    6158     2861
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9298   1.000     0.98    2878     -418  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.9298   1.000     1.00    2881     -415  <-- violates
+  [s05] validation-tuned                                              0.1322   0.763    10.38    4042      746  <-- violates
+  [s05] per-unit CP (alpha)                                           0.4908   1.000     5.66    2467     -829  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0255   0.000    17.65    5947     2651
+  [s05] joint max-score CP                                            0.0257   0.000    17.64    5944     2648
+  [s05] LTT exact path                                                0.0352   0.037    16.66    5709     2413
+  [s05] LTT exact cheapest-valid                                      0.0352   0.037    16.66    5710     2413
+  [s05] LTT on v1 grid                                                0.0334   0.023    17.05    5796     2500
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0169   0.007    20.12    6356     3060
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9248   1.000     1.00    2866     -431  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.9248   1.000     1.02    2870     -426  <-- violates
+
+RICH S24 source->source | mean | alpha=0.02 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.0906   1.000     0.00    2697      604  <-- violates
+  fixed additive 20                                                   0.0162   0.000    20.00    2169       76
+  Zhu-style rhat-3sigma                                               0.0256   1.000    fixed    2064      -30  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0333   1.000    fixed    2029      -64  <-- violates
+  [add] validation-tuned                                              0.0203   0.530    16.94    2088       -5  <-- violates
+  [add] per-unit CP (alpha)                                           0.0018   0.000    38.25    3091      998
+  [add] CRC exact path                                                0.0102   0.000    25.21    2357      264
+  [add] CRC exact cheapest-valid                                      0.0101   0.000    25.28    2358      265
+  [add] CRC on v1 grid                                                0.0094   0.000    26.15    2396      303
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.0692   1.000     1.19    2385      292  <-- violates
+  [sc] validation-tuned                                               0.0205   0.540     3.40    2112       19  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0003   0.000    13.43    4754     2660
+  [sc] CRC exact path                                                 0.0089   0.000     4.88    2406      313
+  [sc] CRC exact cheapest-valid                                       0.0087   0.000     4.90    2410      317
+  [sc] CRC on v1 grid                                                 0.0081   0.000     5.03    2443      349
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.0704   1.000     0.25    2407      313  <-- violates
+  [s05] validation-tuned                                              0.0205   0.530     3.48    2126       32  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0003   0.000    19.93    5920     3826
+  [s05] CRC exact path                                                0.0089   0.000     5.05    2454      361
+  [s05] CRC exact cheapest-valid                                      0.0088   0.000     5.06    2457      364
+  [s05] CRC on v1 grid                                                0.0081   0.000     5.23    2502      409
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.0699   1.000     0.26    2394      301  <-- violates
+
+RICH S24 NAIVE source->target (shift) | mean | alpha=0.02 | n=100
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.1420   1.000     0.00    3296      499  <-- violates
+  fixed additive 20                                                   0.0725   1.000    20.00    2601     -196  <-- violates
+  Zhu-style rhat-3sigma                                               0.0850   1.000    fixed    2579     -218  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0967   1.000    fixed    2677     -119  <-- violates
+  [add] validation-tuned                                              0.0809   1.000    17.08    2650     -147  <-- violates
+  [add] per-unit CP (alpha)                                           0.0321   1.000    38.30    2617     -180  <-- violates
+  [add] CRC exact path                                                0.0559   1.000    25.76    2504     -293  <-- violates
+  [add] CRC exact cheapest-valid                                      0.0557   1.000    25.81    2503     -294  <-- violates
+  [add] CRC on v1 grid                                                0.0536   1.000    26.75    2504     -293  <-- violates
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.1287   1.000     0.94    3098      301  <-- violates
+  [sc] validation-tuned                                               0.0758   1.000     3.43    2524     -272  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0096   0.000    13.37    4403     1607
+  [sc] CRC exact path                                                 0.0527   1.000     4.89    2479     -318  <-- violates
+  [sc] CRC exact cheapest-valid                                       0.0525   1.000     4.90    2481     -316  <-- violates
+  [sc] CRC on v1 grid                                                 0.0506   1.000     5.03    2492     -305  <-- violates
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.1303   1.000     0.21    3127      330  <-- violates
+  [s05] validation-tuned                                              0.0750   1.000     3.52    2505     -292  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0037   0.000    19.90    5557     2760
+  [s05] CRC exact path                                                0.0508   1.000     5.07    2482     -315  <-- violates
+  [s05] CRC exact cheapest-valid                                      0.0506   1.000     5.08    2483     -314  <-- violates
+  [s05] CRC on v1 grid                                                0.0488   1.000     5.27    2528     -269  <-- violates
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.1310   1.000     0.22    3144      347  <-- violates
+
+RICH S24 RECALIBRATED on target | mean | alpha=0.02 | n=25
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.1421   1.000     0.00    3297      490  <-- violates
+  fixed additive 20                                                   0.0725   1.000    20.00    2601     -206  <-- violates
+  Zhu-style rhat-3sigma                                               0.0850   1.000    fixed    2579     -228  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0968   1.000    fixed    2679     -129  <-- violates
+  [add] validation-tuned                                              0.0210   0.513    44.93    2839       31  <-- violates
+  [add] per-unit CP (alpha)                                           0.0066   0.000    55.93    4120     1313
+  [add] CRC exact path                                                0.0000   0.000      inf   10172     7365
+  [add] CRC exact cheapest-valid                                      0.0000   0.000      inf   10172     7365
+  [add] CRC on v1 grid                                                0.0000   0.000   100.00    8901     6094
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.1288   1.000     0.94    3099      292  <-- violates
+  [sc] validation-tuned                                               0.0213   0.537     9.20    3437      630  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0057   0.000    16.65    5045     2238
+  [sc] CRC exact path                                                 0.0000   0.000      inf   10172     7365
+  [sc] CRC exact cheapest-valid                                       0.0000   0.000      inf   10172     7365
+  [sc] CRC on v1 grid                                                 0.0035   0.000    20.00    5622     2815
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.1303   1.000     0.21    3128      321  <-- violates
+  [s05] validation-tuned                                              0.0213   0.547     9.28    3449      641  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0031   0.000    22.21    5875     3068
+  [s05] CRC exact path                                                0.0000   0.000      inf   10172     7365
+  [s05] CRC exact cheapest-valid                                      0.0000   0.000      inf   10172     7365
+  [s05] CRC on v1 grid                                                0.0006   0.000    40.00    7568     4761
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.1311   1.000     0.22    3145      338  <-- violates
+
+RICH S24 RECALIBRATED on target | mean | alpha=0.02 | n=50
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.1420   1.000     0.00    3296      487  <-- violates
+  fixed additive 20                                                   0.0725   1.000    20.00    2601     -208  <-- violates
+  Zhu-style rhat-3sigma                                               0.0850   1.000    fixed    2579     -230  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.0968   1.000    fixed    2678     -131  <-- violates
+  [add] validation-tuned                                              0.0203   0.483    45.28    2824       15
+  [add] per-unit CP (alpha)                                           0.0067   0.000    55.90    4065     1256
+  [add] CRC exact path                                                0.0004   0.000    67.73    7619     4810
+  [add] CRC exact cheapest-valid                                      0.0004   0.000    67.73    7619     4810
+  [add] CRC on v1 grid                                                0.0005   0.000    68.09    7606     4796
+  [add] model Gaussian E[N]/K <= alpha (per instance)                 0.1288   1.000     0.94    3099      290  <-- violates
+  [sc] validation-tuned                                               0.0210   0.533     9.12    3420      610  <-- violates
+  [sc] per-unit CP (alpha)                                            0.0056   0.000    16.64    5049     2239
+  [sc] CRC exact path                                                 0.0010   0.000    29.54    6934     4125
+  [sc] CRC exact cheapest-valid                                       0.0010   0.000    29.54    6934     4125
+  [sc] CRC on v1 grid                                                 0.0036   0.000    19.92    5608     2799
+  [sc] model Gaussian E[N]/K <= alpha (per instance)                  0.1303   1.000     0.21    3128      319  <-- violates
+  [s05] validation-tuned                                              0.0211   0.553     9.19    3430      621  <-- violates
+  [s05] per-unit CP (alpha)                                           0.0030   0.000    21.98    5866     3057
+  [s05] CRC exact path                                                0.0010   0.000    55.01    7696     4887
+  [s05] CRC exact cheapest-valid                                      0.0010   0.000    55.01    7696     4887
+  [s05] CRC on v1 grid                                                0.0011   0.000    34.96    7150     4341
+  [s05] model Gaussian E[N]/K <= alpha (per instance)                 0.1310   1.000     0.22    3144      335  <-- violates
+
+RICH S24 source->source | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.8626   1.000     0.00    2691       39  <-- violates
+  fixed additive 20                                                   0.2771   1.000    20.00    2165     -487  <-- violates
+  Zhu-style rhat-3sigma                                               0.4117   1.000    fixed    2059     -593  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.4966   1.000    fixed    2024     -628  <-- violates
+  [add] validation-tuned                                              0.1106   0.617    30.50    2606      -46  <-- violates
+  [add] per-unit CP (alpha)                                           0.2431   1.000    21.44    2198     -454  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0114   0.000    45.28    3625      973
+  [add] joint max-score CP                                            0.0118   0.000    45.11    3612      960
+  [add] LTT exact path                                                0.0584   0.097    34.89    2865      213
+  [add] LTT exact cheapest-valid                                      0.0582   0.097    34.90    2866      214
+  [add] LTT on v1 grid                                                0.0505   0.083    35.85    2933      281
+  [add] scenario-max (Campi-Garatti d=1)                              0.0099   0.000    48.22    3914     1262
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6460   1.000     4.58    2119     -533  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.6435   1.000     4.67    2116     -536  <-- violates
+  [sc] validation-tuned                                               0.1085   0.587     5.82    2690       38  <-- violates
+  [sc] per-unit CP (alpha)                                            0.1146   0.893     5.52    2582      -70  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0025   0.000    18.87    5812     3160
+  [sc] joint max-score CP                                             0.0025   0.000    18.77    5796     3144
+  [sc] LTT exact path                                                 0.0487   0.013     7.81    3314      662
+  [sc] LTT exact cheapest-valid                                       0.0486   0.013     7.81    3314      662
+  [sc] LTT on v1 grid                                                 0.0457   0.013     7.98    3364      712
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0092   0.000    14.97    4893     2241
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6637   1.000     0.91    2136     -516  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.6637   1.000     0.91    2137     -515  <-- violates
+  [s05] validation-tuned                                              0.1111   0.560     6.10    2772      120  <-- violates
+  [s05] per-unit CP (alpha)                                           0.1023   0.603     6.20    2805      153  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0000   0.000    39.75    7729     5077
+  [s05] joint max-score CP                                            0.0000   0.000    39.66    7723     5071
+  [s05] LTT exact path                                                0.0459   0.023     8.54    3517      865
+  [s05] LTT exact cheapest-valid                                      0.0459   0.023     8.55    3517      865
+  [s05] LTT on v1 grid                                                0.0441   0.003     8.67    3553      901
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0089   0.000    19.15    5643     2991
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.6612   1.000     0.93    2136     -516  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.6612   1.000     0.93    2138     -514  <-- violates
+
+RICH S24 NAIVE source->target (shift) | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.9750   1.000     0.00    3296    -1063  <-- violates
+  fixed additive 20                                                   0.7925   1.000    20.00    2601    -1758  <-- violates
+  Zhu-style rhat-3sigma                                               0.8600   1.000    fixed    2579    -1780  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.8900   1.000    fixed    2677    -1681  <-- violates
+  [add] validation-tuned                                              0.5963   1.000    30.28    2499    -1859  <-- violates
+  [add] per-unit CP (alpha)                                           0.7628   1.000    21.47    2562    -1797  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.3217   1.000    45.33    2804    -1555  <-- violates
+  [add] joint max-score CP                                            0.3256   1.000    45.18    2798    -1560  <-- violates
+  [add] LTT exact path                                                0.5261   1.000    34.96    2573    -1786  <-- violates
+  [add] LTT exact cheapest-valid                                      0.5257   1.000    34.97    2573    -1786  <-- violates
+  [add] LTT on v1 grid                                                0.5201   1.000    35.80    2596    -1763  <-- violates
+  [add] scenario-max (Campi-Garatti d=1)                              0.2594   1.000    48.14    3078    -1281  <-- violates
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9250   1.000     4.44    2812    -1547  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.9250   1.000     4.45    2807    -1552  <-- violates
+  [sc] validation-tuned                                               0.5861   1.000     5.67    2601    -1758  <-- violates
+  [sc] per-unit CP (alpha)                                            0.5991   1.000     5.50    2542    -1817  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0761   0.000    18.89    5448     1090
+  [sc] joint max-score CP                                             0.0768   0.007    18.80    5434     1075
+  [sc] LTT exact path                                                 0.4122   1.000     7.67    3058    -1300  <-- violates
+  [sc] LTT exact cheapest-valid                                       0.4122   1.000     7.67    3059    -1300  <-- violates
+  [sc] LTT on v1 grid                                                 0.4033   1.000     7.81    3094    -1265  <-- violates
+  [sc] scenario-max (Campi-Garatti d=1)                               0.1879   0.773    14.75    4544      185  <-- violates
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9450   1.000     0.84    2823    -1536  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.9450   1.000     0.84    2816    -1542  <-- violates
+  [s05] validation-tuned                                              0.5527   1.000     6.02    2654    -1705  <-- violates
+  [s05] per-unit CP (alpha)                                           0.5386   1.000     6.18    2695    -1663  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0127   0.000    39.80    7533     3175
+  [s05] joint max-score CP                                            0.0127   0.000    39.77    7532     3173
+  [s05] LTT exact path                                                0.3761   1.000     8.34    3222    -1137  <-- violates
+  [s05] LTT exact cheapest-valid                                      0.3758   1.000     8.35    3222    -1136  <-- violates
+  [s05] LTT on v1 grid                                                0.3665   1.000     8.47    3241    -1118  <-- violates
+  [s05] scenario-max (Campi-Garatti d=1)                              0.1146   0.303    19.09    5316      958  <-- violates
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9475   1.000     0.87    2840    -1519  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.9475   1.000     0.87    2833    -1525  <-- violates
+
+RICH S24 RECALIBRATED on target | any | alpha=0.1 | n=25  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.9750   1.000     0.00    3296    -1027  <-- violates
+  fixed additive 20                                                   0.7926   1.000    20.00    2600    -1722  <-- violates
+  Zhu-style rhat-3sigma                                               0.8602   1.000    fixed    2578    -1744  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.8901   1.000    fixed    2677    -1646  <-- violates
+  [add] validation-tuned                                              0.1311   0.643    55.11    3961     -361  <-- violates
+  [add] per-unit CP (alpha)                                           0.5380   1.000    34.15    2558    -1764  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0057   0.000    69.47    7717     3395
+  [add] joint max-score CP                                            0.0062   0.000    69.29    7698     3376
+  [add] LTT exact path                                                0.0184   0.017    65.04    6956     2634
+  [add] LTT exact cheapest-valid                                      0.0184   0.017    65.04    6956     2634
+  [add] LTT on v1 grid                                                0.0207   0.003    65.05    6842     2519
+  [add] scenario-max (Campi-Garatti d=1)                              0.0184   0.017    65.04    6956     2634
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9250   1.000     4.44    2812    -1510  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.9250   1.000     4.45    2807    -1515  <-- violates
+  [sc] validation-tuned                                               0.1204   0.497    16.76    5011      689  <-- violates
+  [sc] per-unit CP (alpha)                                            0.3880   1.000     8.03    3152    -1170  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0273   0.000    26.81    6550     2227
+  [sc] joint max-score CP                                             0.0274   0.000    26.80    6549     2226
+  [sc] LTT exact path                                                 0.0335   0.047    26.54    6490     2167
+  [sc] LTT exact cheapest-valid                                       0.0335   0.047    26.54    6490     2167
+  [sc] LTT on v1 grid                                                 0.0707   0.047    19.67    5564     1242
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0335   0.047    26.54    6490     2167
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9452   1.000     0.84    2823    -1500  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.9452   1.000     0.84    2816    -1506  <-- violates
+  [s05] validation-tuned                                              0.1217   0.493    17.18    5040      718  <-- violates
+  [s05] per-unit CP (alpha)                                           0.3569   1.000     8.68    3305    -1018  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0092   0.000    56.02    8150     3828
+  [s05] joint max-score CP                                            0.0092   0.000    56.02    8150     3828
+  [s05] LTT exact path                                                0.0326   0.040    41.92    7060     2737
+  [s05] LTT exact cheapest-valid                                      0.0326   0.040    41.92    7060     2737
+  [s05] LTT on v1 grid                                                0.0341   0.040    31.03    6756     2434
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0326   0.040    41.92    7060     2737
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9476   1.000     0.87    2839    -1483  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.9476   1.000     0.87    2833    -1489  <-- violates
+
+RICH S24 RECALIBRATED on target | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                                                  risk  >alpha   margin    cost  regret*
+  point (lambda 0)                                                    0.9750   1.000     0.00    3297    -1003  <-- violates
+  fixed additive 20                                                   0.7927   1.000    20.00    2601    -1698  <-- violates
+  Zhu-style rhat-3sigma                                               0.8605   1.000    fixed    2580    -1720  <-- violates
+  Mitici-style rhat-2.33sigma                                         0.8900   1.000    fixed    2679    -1621  <-- violates
+  [add] validation-tuned                                              0.1316   0.717    55.18    3940     -360  <-- violates
+  [add] per-unit CP (alpha)                                           0.5430   1.000    34.07    2560    -1740  <-- violates
+  [add] per-unit CP Bonferroni (alpha/K)                              0.0089   0.000    67.02    7513     3213
+  [add] joint max-score CP                                            0.0094   0.000    66.69    7458     3158
+  [add] LTT exact path                                                0.0206   0.013    64.04    6817     2517
+  [add] LTT exact cheapest-valid                                      0.0206   0.013    64.12    6817     2518
+  [add] LTT on v1 grid                                                0.0221   0.000    63.93    6692     2392
+  [add] scenario-max (Campi-Garatti d=1)                              0.0092   0.000    67.27    7538     3238
+  [add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9248   1.000     4.45    2814    -1486  <-- violates
+  [add] model Markov E[N] <= alpha (per instance)                     0.9248   1.000     4.45    2809    -1490  <-- violates
+  [sc] validation-tuned                                               0.1251   0.637    15.81    4873      573  <-- violates
+  [sc] per-unit CP (alpha)                                            0.3919   1.000     7.97    3141    -1159  <-- violates
+  [sc] per-unit CP Bonferroni (alpha/K)                               0.0346   0.000    24.91    6296     1996
+  [sc] joint max-score CP                                             0.0354   0.000    24.80    6280     1981
+  [sc] LTT exact path                                                 0.0375   0.030    25.21    6313     2014
+  [sc] LTT exact cheapest-valid                                       0.0375   0.030    25.21    6314     2014
+  [sc] LTT on v1 grid                                                 0.0694   0.030    19.81    5590     1290
+  [sc] scenario-max (Campi-Garatti d=1)                               0.0187   0.010    29.33    6890     2590
+  [sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9448   1.000     0.84    2825    -1475  <-- violates
+  [sc] model Markov E[N] <= alpha (per instance)                      0.9448   1.000     0.84    2819    -1481  <-- violates
+  [s05] validation-tuned                                              0.1247   0.653    16.09    4894      595  <-- violates
+  [s05] per-unit CP (alpha)                                           0.3593   1.000     8.63    3296    -1004  <-- violates
+  [s05] per-unit CP Bonferroni (alpha/K)                              0.0098   0.000    48.32    7930     3630
+  [s05] joint max-score CP                                            0.0098   0.000    48.32    7930     3630
+  [s05] LTT exact path                                                0.0371   0.020    31.90    6675     2376
+  [s05] LTT exact cheapest-valid                                      0.0371   0.020    31.91    6675     2376
+  [s05] LTT on v1 grid                                                0.0369   0.023    28.78    6589     2289
+  [s05] scenario-max (Campi-Garatti d=1)                              0.0188   0.007    53.25    7664     3364
+  [s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)  0.9474   1.000     0.87    2842    -1458  <-- violates
+  [s05] model Markov E[N] <= alpha (per instance)                     0.9474   1.000     0.87    2836    -1464  <-- violates

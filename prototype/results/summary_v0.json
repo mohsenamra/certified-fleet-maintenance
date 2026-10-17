@@ -1,0 +1,1826 @@
+{
+ "A->A | mean | alpha=0.01 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08861933333333334,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.6489893333332,
+   "cost_gap_vs_oracle": 19.038644378021818
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.0279924,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.2184293333335,
+   "cost_gap_vs_oracle": 10.182000110080779
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007871733333333334,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.8933839999997,
+   "cost_gap_vs_oracle": 10.44657432100649
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.002996266666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.5556213333334,
+   "cost_gap_vs_oracle": 13.726157454766234
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.0102972,
+   "frac_splits_above": 0.336,
+   "lam_mean": 18.35,
+   "cost_mean": 1045.870744,
+   "cost_gap_vs_oracle": 10.221258030719394
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0011478666666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.632,
+   "cost_mean": 1601.4507919999999,
+   "cost_gap_vs_oracle": 16.182875562630873
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6078.751282666666,
+   "cost_gap_vs_oracle": 64.22367633340828
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6078.751282666666,
+   "cost_gap_vs_oracle": 64.22367633340828
+  }
+ },
+ "A->A | mean | alpha=0.01 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08864471428571429,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.9924285714287,
+   "cost_gap_vs_oracle": 19.09642430140861
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.028011714285714282,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.3383714285715,
+   "cost_gap_vs_oracle": 10.212950587390383
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007880857142857144,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.652265714286,
+   "cost_gap_vs_oracle": 10.474467121314232
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.003003857142857143,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.3443771428572,
+   "cost_gap_vs_oracle": 13.763227513809374
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.009524428571428573,
+   "frac_splits_above": 0.215,
+   "lam_mean": 18.392,
+   "cost_mean": 1032.310842857143,
+   "cost_gap_vs_oracle": 10.10380110766099
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0011307142857142857,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.308,
+   "cost_mean": 1588.2599942857144,
+   "cost_gap_vs_oracle": 16.085043676946935
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6079.019062857143,
+   "cost_gap_vs_oracle": 64.40644560631162
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6079.019062857143,
+   "cost_gap_vs_oracle": 64.40644560631162
+  }
+ },
+ "A->A | mean | alpha=0.01 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.088597,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.20931,
+   "cost_gap_vs_oracle": 19.10315348284402
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.027987666666666668,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1041.9402233333333,
+   "cost_gap_vs_oracle": 10.216677212729138
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007886,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.7663300000002,
+   "cost_gap_vs_oracle": 10.483063694067448
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0030125,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.0647800000002,
+   "cost_gap_vs_oracle": 13.770115793410524
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.008726333333333332,
+   "frac_splits_above": 0.062,
+   "lam_mean": 18.678,
+   "cost_mean": 1027.5308433333335,
+   "cost_gap_vs_oracle": 10.059022423721672
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0011220000000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.194,
+   "cost_mean": 1583.92525,
+   "cost_gap_vs_oracle": 16.050549085986393
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.00045783333333333337,
+   "frac_splits_above": 0.0,
+   "lam_mean": 44.292,
+   "cost_mean": 1982.3622433333335,
+   "cost_gap_vs_oracle": 20.332141613904017
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.00045783333333333337,
+   "frac_splits_above": 0.0,
+   "lam_mean": 44.292,
+   "cost_mean": 1982.3622433333335,
+   "cost_gap_vs_oracle": 20.332141613904017
+  }
+ },
+ "A->A | mean | alpha=0.02 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08860546666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.3799786666666,
+   "cost_gap_vs_oracle": 19.04073858757253
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.028007066666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.3384826666666,
+   "cost_gap_vs_oracle": 10.186161929563575
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.0078712,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.7860773333334,
+   "cost_gap_vs_oracle": 10.44836702614276
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.002995333333333334,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.433216,
+   "cost_gap_vs_oracle": 13.728662224795372
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.019332133333333335,
+   "frac_splits_above": 0.476,
+   "lam_mean": 13.214,
+   "cost_mean": 1007.2634266666668,
+   "cost_gap_vs_oracle": 9.809624299332716
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0025466666666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 31.19,
+   "cost_mean": 1425.261008,
+   "cost_gap_vs_oracle": 14.295194209834943
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6078.879488,
+   "cost_gap_vs_oracle": 64.24205254791754
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6078.879488,
+   "cost_gap_vs_oracle": 64.24205254791754
+  }
+ },
+ "A->A | mean | alpha=0.02 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08856771428571429,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1866.7147742857142,
+   "cost_gap_vs_oracle": 19.031950468281536
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.027974,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1041.9886685714284,
+   "cost_gap_vs_oracle": 10.181085101729696
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007844285714285715,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.4840800000002,
+   "cost_gap_vs_oracle": 10.44349539481835
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.002996,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.9301342857143,
+   "cost_gap_vs_oracle": 13.731986165837894
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.017753142857142856,
+   "frac_splits_above": 0.337,
+   "lam_mean": 13.808,
+   "cost_mean": 1001.4859657142857,
+   "cost_gap_vs_oracle": 9.746535422532823
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.002539571428571429,
+   "frac_splits_above": 0.0,
+   "lam_mean": 31.008,
+   "cost_mean": 1414.7169914285712,
+   "cost_gap_vs_oracle": 14.180093409146128
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0008264285714285715,
+   "frac_splits_above": 0.0,
+   "lam_mean": 40.452,
+   "cost_mean": 1814.5518628571426,
+   "cost_gap_vs_oracle": 18.466074215925047
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0008264285714285715,
+   "frac_splits_above": 0.0,
+   "lam_mean": 40.452,
+   "cost_mean": 1814.5518628571426,
+   "cost_gap_vs_oracle": 18.466074215925047
+  }
+ },
+ "A->A | mean | alpha=0.02 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08866716666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1868.6419466666666,
+   "cost_gap_vs_oracle": 19.061376308705942
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.027988333333333334,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.10832,
+   "cost_gap_vs_oracle": 10.187045852185822
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007898166666666666,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1067.46273,
+   "cost_gap_vs_oracle": 10.458637599430421
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.003009833333333334,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.7361133333334,
+   "cost_gap_vs_oracle": 13.736565590208848
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.017919499999999998,
+   "frac_splits_above": 0.293,
+   "lam_mean": 13.706,
+   "cost_mean": 999.0123766666667,
+   "cost_gap_vs_oracle": 9.724240920549637
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0024821666666666672,
+   "frac_splits_above": 0.0,
+   "lam_mean": 31.018,
+   "cost_mean": 1412.93206,
+   "cost_gap_vs_oracle": 14.167212327383913
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.008679166666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 18.822,
+   "cost_mean": 1033.08185,
+   "cost_gap_vs_oracle": 10.088620336928164
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.008605666666666668,
+   "frac_splits_above": 0.0,
+   "lam_mean": 18.86,
+   "cost_mean": 1033.05822,
+   "cost_gap_vs_oracle": 10.088285666697248
+  }
+ },
+ "A->A | mean | alpha=0.05 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08864760000000001,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1868.2184293333335,
+   "cost_gap_vs_oracle": 19.06001458818529
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.027993866666666666,
+   "frac_splits_above": 0.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.1069253333333,
+   "cost_gap_vs_oracle": 10.189508228447329
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.0078756,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1067.0311920000001,
+   "cost_gap_vs_oracle": 10.457055108117048
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0030032000000000006,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.6293679999999,
+   "cost_gap_vs_oracle": 13.738419303787712
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.043984666666666665,
+   "frac_splits_above": 0.202,
+   "lam_mean": 5.164,
+   "cost_mean": 1156.6986853333333,
+   "cost_gap_vs_oracle": 11.419324130458397
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0065684,
+   "frac_splits_above": 0.0,
+   "lam_mean": 22.746,
+   "cost_mean": 1149.1805546666667,
+   "cost_gap_vs_oracle": 11.338966103279292
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.011759466666666668,
+   "frac_splits_above": 0.0,
+   "lam_mean": 17.262,
+   "cost_mean": 1029.8839440000002,
+   "cost_gap_vs_oracle": 10.057125962988612
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0109164,
+   "frac_splits_above": 0.0,
+   "lam_mean": 17.782,
+   "cost_mean": 1034.1356799999999,
+   "cost_gap_vs_oracle": 10.102359901572449
+  }
+ },
+ "A->A | mean | alpha=0.05 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08861228571428571,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.5808085714286,
+   "cost_gap_vs_oracle": 19.06733839556928
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.027975714285714284,
+   "frac_splits_above": 0.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1041.7327314285715,
+   "cost_gap_vs_oracle": 10.192729808350377
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007857142857142858,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.7024571428572,
+   "cost_gap_vs_oracle": 10.460898069388087
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.003003857142857143,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.5639485714287,
+   "cost_gap_vs_oracle": 13.747470458450618
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.04435828571428571,
+   "frac_splits_above": 0.267,
+   "lam_mean": 4.93,
+   "cost_mean": 1152.5052799999999,
+   "cost_gap_vs_oracle": 11.382314611868038
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.006547000000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 22.648,
+   "cost_mean": 1143.882442857143,
+   "cost_gap_vs_oracle": 11.290016218459881
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.027745428571428574,
+   "frac_splits_above": 0.0,
+   "lam_mean": 9.906,
+   "cost_mean": 1034.8113114285713,
+   "cost_gap_vs_oracle": 10.11816944401404
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.017676142857142856,
+   "frac_splits_above": 0.0,
+   "lam_mean": 14.052,
+   "cost_mean": 1010.3538771428571,
+   "cost_gap_vs_oracle": 9.855476590493483
+  }
+ },
+ "A->A | mean | alpha=0.05 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08863266666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.5718666666667,
+   "cost_gap_vs_oracle": 19.143877890329065
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.027968833333333335,
+   "frac_splits_above": 0.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1040.88867,
+   "cost_gap_vs_oracle": 10.22544891213821
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.007853500000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1065.587066666667,
+   "cost_gap_vs_oracle": 10.491686791324174
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.002993666666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1371.643,
+   "cost_gap_vs_oracle": 13.792874754121922
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.04490383333333333,
+   "frac_splits_above": 0.342,
+   "lam_mean": 4.824,
+   "cost_mean": 1157.64427,
+   "cost_gap_vs_oracle": 11.483373280881695
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.006592333333333335,
+   "frac_splits_above": 0.0,
+   "lam_mean": 22.492,
+   "cost_mean": 1137.1929599999999,
+   "cost_gap_vs_oracle": 11.263753221027677
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.03673766666666667,
+   "frac_splits_above": 0.009,
+   "lam_mean": 6.47,
+   "cost_mean": 1072.5825633333332,
+   "cost_gap_vs_oracle": 10.567199778143074
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.017183666666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 14.268,
+   "cost_mean": 1008.6698433333332,
+   "cost_gap_vs_oracle": 9.878272787822366
+  }
+ },
+ "A->A | any | alpha=0.1 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8573813333333332,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.7888666666665,
+   "cost_gap_vs_oracle": 19.068249317473157
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.43524533333333343,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.270584,
+   "cost_gap_vs_oracle": 10.198485254930343
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.154808,
+   "frac_splits_above": 1.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.3719226666665,
+   "cost_gap_vs_oracle": 10.45720603611381
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.06004266666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.307848,
+   "cost_gap_vs_oracle": 13.74429922895864
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.10415199999999998,
+   "frac_splits_above": 0.47,
+   "lam_mean": 26.012,
+   "cost_mean": 1261.2814186666667,
+   "cost_gap_vs_oracle": 12.548877697475648
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.20762666666666665,
+   "frac_splits_above": 1.0,
+   "lam_mean": 17.01,
+   "cost_mean": 1008.2070293333334,
+   "cost_gap_vs_oracle": 9.83211922795058
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.011309333333333334,
+   "frac_splits_above": 0.0,
+   "lam_mean": 40.984,
+   "cost_mean": 1829.9641466666667,
+   "cost_gap_vs_oracle": 18.660955734950875
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.03274666666666667,
+   "frac_splits_above": 0.047,
+   "lam_mean": 36.496,
+   "cost_mean": 1650.6444986666665,
+   "cost_gap_vs_oracle": 16.733337612450732
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.03274666666666667,
+   "frac_splits_above": 0.047,
+   "lam_mean": 36.496,
+   "cost_mean": 1650.6444986666665,
+   "cost_gap_vs_oracle": 16.733337612450732
+  }
+ },
+ "A->A | any | alpha=0.1 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8576971428571428,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1868.1748514285716,
+   "cost_gap_vs_oracle": 19.049255576009827
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.43524,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.3618999999999,
+   "cost_gap_vs_oracle": 10.186007815073584
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.15510000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1067.0278685714286,
+   "cost_gap_vs_oracle": 10.450353038810167
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.05994,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.4452628571428,
+   "cost_gap_vs_oracle": 13.728132004951354
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.1091742857142857,
+   "frac_splits_above": 0.551,
+   "lam_mean": 25.364,
+   "cost_mean": 1236.7106600000002,
+   "cost_gap_vs_oracle": 12.266962076987628
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.20588857142857142,
+   "frac_splits_above": 1.0,
+   "lam_mean": 16.996,
+   "cost_mean": 1006.4065828571429,
+   "cost_gap_vs_oracle": 9.80010030267969
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.014220000000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 38.916,
+   "cost_mean": 1735.6716542857146,
+   "cost_gap_vs_oracle": 17.62661935510056
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.03281428571428572,
+   "frac_splits_above": 0.017,
+   "lam_mean": 34.802,
+   "cost_mean": 1572.7179085714286,
+   "cost_gap_vs_oracle": 15.874044755788473
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.03281428571428572,
+   "frac_splits_above": 0.017,
+   "lam_mean": 34.802,
+   "cost_mean": 1572.7179085714286,
+   "cost_gap_vs_oracle": 15.874044755788473
+  }
+ },
+ "A->A | any | alpha=0.1 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8574933333333333,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1866.8428700000002,
+   "cost_gap_vs_oracle": 19.09961968214251
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.4339766666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1041.2605866666668,
+   "cost_gap_vs_oracle": 10.209318551138272
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.15453333333333333,
+   "frac_splits_above": 1.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.67326,
+   "cost_gap_vs_oracle": 10.482019234950561
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.05967666666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.7297866666665,
+   "cost_gap_vs_oracle": 13.777138338006484
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.09902666666666667,
+   "frac_splits_above": 0.466,
+   "lam_mean": 26.638,
+   "cost_mean": 1277.2182366666668,
+   "cost_gap_vs_oracle": 12.74759280845678
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.20395333333333335,
+   "frac_splits_above": 1.0,
+   "lam_mean": 17.03,
+   "cost_mean": 1005.8729366666666,
+   "cost_gap_vs_oracle": 9.82812023626444
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.014829999999999998,
+   "frac_splits_above": 0.0,
+   "lam_mean": 38.718,
+   "cost_mean": 1725.50054,
+   "cost_gap_vs_oracle": 17.57687710411835
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.04848666666666667,
+   "frac_splits_above": 0.066,
+   "lam_mean": 31.402,
+   "cost_mean": 1431.3411866666665,
+   "cost_gap_vs_oracle": 14.40831643432488
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.04848666666666667,
+   "frac_splits_above": 0.066,
+   "lam_mean": 31.402,
+   "cost_mean": 1431.3411866666665,
+   "cost_gap_vs_oracle": 14.40831643432488
+  }
+ },
+ "A->A | any | alpha=0.2 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8576666666666666,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1868.0666746666666,
+   "cost_gap_vs_oracle": 19.05408900870701
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.4349200000000001,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.015408,
+   "cost_gap_vs_oracle": 10.185968106235164
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.154744,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.6122613333334,
+   "cost_gap_vs_oracle": 10.449804787513813
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.05979466666666667,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.4623786666668,
+   "cost_gap_vs_oracle": 13.733208049263999
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.20185333333333336,
+   "frac_splits_above": 0.376,
+   "lam_mean": 18.058,
+   "cost_mean": 1045.9628933333333,
+   "cost_gap_vs_oracle": 10.227955883736609
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.4550666666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 9.266,
+   "cost_mean": 1047.3746133333332,
+   "cost_gap_vs_oracle": 10.243980323934535
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.022647999999999998,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.704,
+   "cost_mean": 1604.3896586666665,
+   "cost_gap_vs_oracle": 16.224326569712254
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.09697866666666667,
+   "frac_splits_above": 0.028,
+   "lam_mean": 26.686,
+   "cost_mean": 1282.6117173333337,
+   "cost_gap_vs_oracle": 12.766017080503694
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.09638133333333333,
+   "frac_splits_above": 0.026,
+   "lam_mean": 26.742,
+   "cost_mean": 1284.4134426666665,
+   "cost_gap_vs_oracle": 12.785286065077573
+  }
+ },
+ "A->A | any | alpha=0.2 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8577085714285715,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1868.4437285714284,
+   "cost_gap_vs_oracle": 19.08121289904116
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.4352685714285714,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.4040257142856,
+   "cost_gap_vs_oracle": 10.202832905142726
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.15521999999999997,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.8087028571429,
+   "cost_gap_vs_oracle": 10.464658270469291
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.06014571428571428,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.3690457142857,
+   "cost_gap_vs_oracle": 13.74877393811855
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.1919057142857143,
+   "frac_splits_above": 0.318,
+   "lam_mean": 18.034,
+   "cost_mean": 1030.5879,
+   "cost_gap_vs_oracle": 10.075131627227599
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.4574542857142857,
+   "frac_splits_above": 1.0,
+   "lam_mean": 9.222,
+   "cost_mean": 1049.2890371428573,
+   "cost_gap_vs_oracle": 10.27729310094769
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.02261714285714286,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.348,
+   "cost_mean": 1590.1316428571429,
+   "cost_gap_vs_oracle": 16.08885277163678
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.10487142857142856,
+   "frac_splits_above": 0.003,
+   "lam_mean": 25.78,
+   "cost_mean": 1248.41002,
+   "cost_gap_vs_oracle": 12.413643318906738
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.10461142857142856,
+   "frac_splits_above": 0.002,
+   "lam_mean": 25.802,
+   "cost_mean": 1249.0718599999998,
+   "cost_gap_vs_oracle": 12.420745306342662
+  }
+ },
+ "A->A | any | alpha=0.2 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8575566666666667,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1867.5768333333333,
+   "cost_gap_vs_oracle": 19.087505395536823
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.43487,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 1042.66855,
+   "cost_gap_vs_oracle": 10.213769685023902
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.15487,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1066.92364,
+   "cost_gap_vs_oracle": 10.473580445147446
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.059910000000000005,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1372.5359866666668,
+   "cost_gap_vs_oracle": 13.760569518023006
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.17981666666666665,
+   "frac_splits_above": 0.163,
+   "lam_mean": 18.072,
+   "cost_mean": 1016.7620033333333,
+   "cost_gap_vs_oracle": 9.933905180422746
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.45471,
+   "frac_splits_above": 1.0,
+   "lam_mean": 9.312,
+   "cost_mean": 1049.0218533333332,
+   "cost_gap_vs_oracle": 10.283115357394221
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.022103333333333332,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.244,
+   "cost_mean": 1586.83998,
+   "cost_gap_vs_oracle": 16.065134465178318
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.13334,
+   "frac_splits_above": 0.005,
+   "lam_mean": 22.608,
+   "cost_mean": 1148.6358466666666,
+   "cost_gap_vs_oracle": 11.349951233108333
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.13334,
+   "frac_splits_above": 0.005,
+   "lam_mean": 22.608,
+   "cost_mean": 1148.6358466666666,
+   "cost_gap_vs_oracle": 11.349951233108333
+  }
+ },
+ "A->B | mean | alpha=0.01 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.010929,
+   "frac_splits_above": 0.762,
+   "lam_mean": 18.166,
+   "cost_mean": 980.6580175000001,
+   "cost_gap_vs_oracle": 10.88856514623428
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0012702500000000003,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.49,
+   "cost_mean": 1521.7669724999996,
+   "cost_gap_vs_oracle": 17.448455493256553
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6230.0925,
+   "cost_gap_vs_oracle": 74.52771632065466
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6230.0925,
+   "cost_gap_vs_oracle": 74.52771632065466
+  }
+ },
+ "A->B | mean | alpha=0.01 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.010350000000000002,
+   "frac_splits_above": 0.743,
+   "lam_mean": 18.598,
+   "cost_mean": 984.3503725000003,
+   "cost_gap_vs_oracle": 10.933327746628278
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0012525000000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.42,
+   "cost_mean": 1519.1245699999997,
+   "cost_gap_vs_oracle": 17.41642151841188
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6230.0925,
+   "cost_gap_vs_oracle": 74.52771632065466
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6230.0925,
+   "cost_gap_vs_oracle": 74.52771632065466
+  }
+ },
+ "A->B | mean | alpha=0.01 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.010227625,
+   "frac_splits_above": 0.743,
+   "lam_mean": 18.68,
+   "cost_mean": 983.0421425000002,
+   "cost_gap_vs_oracle": 10.917468010304594
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0013495000000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.18,
+   "cost_mean": 1511.3651699999996,
+   "cost_gap_vs_oracle": 17.322353932414007
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0004232500000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 44.646,
+   "cost_mean": 1948.1888725000001,
+   "cost_gap_vs_oracle": 22.617989058948325
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0004232500000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 44.646,
+   "cost_mean": 1948.1888725000001,
+   "cost_gap_vs_oracle": 22.617989058948325
+  }
+ },
+ "A->B | mean | alpha=0.02 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.0168015,
+   "frac_splits_above": 0.165,
+   "lam_mean": 13.152,
+   "cost_mean": 906.480105,
+   "cost_gap_vs_oracle": 9.989302682224581
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0026496250000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 31.02,
+   "cost_mean": 1352.9553600000002,
+   "cost_gap_vs_oracle": 15.40194405212911
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6230.0925,
+   "cost_gap_vs_oracle": 74.52771632065466
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0,
+   "frac_splits_above": 0.0,
+   "lam_mean": 100.0,
+   "cost_mean": 6230.0925,
+   "cost_gap_vs_oracle": 74.52771632065466
+  }
+ },
+ "A->B | mean | alpha=0.02 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.015555,
+   "frac_splits_above": 0.031,
+   "lam_mean": 13.816,
+   "cost_mean": 905.7008474999999,
+   "cost_gap_vs_oracle": 9.97985570540991
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.0026620000000000007,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.994,
+   "cost_mean": 1350.6665700000003,
+   "cost_gap_vs_oracle": 15.374196938930146
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0008516250000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 40.894,
+   "cost_mean": 1774.3729975,
+   "cost_gap_vs_oracle": 20.510810698590696
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.0008516250000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 40.894,
+   "cost_mean": 1774.3729975,
+   "cost_gap_vs_oracle": 20.510810698590696
+  }
+ },
+ "A->B | mean | alpha=0.02 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.015634000000000002,
+   "frac_splits_above": 0.002,
+   "lam_mean": 13.728,
+   "cost_mean": 902.6290625,
+   "cost_gap_vs_oracle": 9.942616305500835
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.002672250000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 31.036,
+   "cost_mean": 1351.3158000000003,
+   "cost_gap_vs_oracle": 15.38206758599788
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.0099945,
+   "frac_splits_above": 0.0,
+   "lam_mean": 18.92,
+   "cost_mean": 988.3720325000002,
+   "cost_gap_vs_oracle": 10.982082527655706
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.009967375,
+   "frac_splits_above": 0.0,
+   "lam_mean": 18.95,
+   "cost_mean": 988.9548875000002,
+   "cost_gap_vs_oracle": 10.9891485073496
+  }
+ },
+ "A->B | mean | alpha=0.05 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 0.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.03915887500000001,
+   "frac_splits_above": 0.032,
+   "lam_mean": 5.176,
+   "cost_mean": 1046.845035,
+   "cost_gap_vs_oracle": 11.69095359903016
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.006601750000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 22.754,
+   "cost_mean": 1080.8795325,
+   "cost_gap_vs_oracle": 12.103555478102741
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.011823375,
+   "frac_splits_above": 0.0,
+   "lam_mean": 17.2,
+   "cost_mean": 960.1942300000002,
+   "cost_gap_vs_oracle": 10.640481648734658
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.01138675,
+   "frac_splits_above": 0.0,
+   "lam_mean": 17.672,
+   "cost_mean": 969.4329475000003,
+   "cost_gap_vs_oracle": 10.75248307319291
+  }
+ },
+ "A->B | mean | alpha=0.05 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 0.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.04008525,
+   "frac_splits_above": 0.01,
+   "lam_mean": 4.936,
+   "cost_mean": 1055.4494550000002,
+   "cost_gap_vs_oracle": 11.795265403849072
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.006629500000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 22.64,
+   "cost_mean": 1076.51429,
+   "cost_gap_vs_oracle": 12.050635429610548
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.022634875,
+   "frac_splits_above": 0.0,
+   "lam_mean": 9.88,
+   "cost_mean": 900.02862,
+   "cost_gap_vs_oracle": 9.91109101378997
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.015809624999999997,
+   "frac_splits_above": 0.0,
+   "lam_mean": 14.044,
+   "cost_mean": 920.16342,
+   "cost_gap_vs_oracle": 10.155186179724204
+  }
+ },
+ "A->B | mean | alpha=0.05 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.08162500000000003,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.021625,
+   "frac_splits_above": 0.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.009,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.0028750000000000004,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.040560750000000007,
+   "frac_splits_above": 0.001,
+   "lam_mean": 4.844,
+   "cost_mean": 1060.8782575,
+   "cost_gap_vs_oracle": 11.861079042279139
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.006663750000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 22.538,
+   "cost_mean": 1072.7280625,
+   "cost_gap_vs_oracle": 12.004734808304288
+  },
+  "CRC (decision-level)": {
+   "realized_risk": 0.032206375,
+   "frac_splits_above": 0.0,
+   "lam_mean": 6.466,
+   "cost_mean": 962.2786624999999,
+   "cost_gap_vs_oracle": 10.665751325958482
+  },
+  "CRC cheapest-valid": {
+   "realized_risk": 0.01563925,
+   "frac_splits_above": 0.0,
+   "lam_mean": 14.128,
+   "cost_mean": 919.8919050000001,
+   "cost_gap_vs_oracle": 10.151894590089409
+  }
+ },
+ "A->B | any | alpha=0.1 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8175000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.3624999999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.165,
+   "frac_splits_above": 1.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.055000000000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.1001,
+   "frac_splits_above": 0.392,
+   "lam_mean": 26.19,
+   "cost_mean": 1202.6243200000004,
+   "cost_gap_vs_oracle": 13.57947349598424
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.21595250000000005,
+   "frac_splits_above": 1.0,
+   "lam_mean": 17.0,
+   "cost_mean": 949.0467900000001,
+   "cost_gap_vs_oracle": 10.505340687983027
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.0101525,
+   "frac_splits_above": 0.0,
+   "lam_mean": 41.144,
+   "cost_mean": 1769.1186825000002,
+   "cost_gap_vs_oracle": 20.447112380663736
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.031945,
+   "frac_splits_above": 0.029,
+   "lam_mean": 36.654,
+   "cost_mean": 1592.7587724999998,
+   "cost_gap_vs_oracle": 18.30909255947871
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.031945,
+   "frac_splits_above": 0.029,
+   "lam_mean": 36.654,
+   "cost_mean": 1592.7587724999998,
+   "cost_gap_vs_oracle": 18.30909255947871
+  }
+ },
+ "A->B | any | alpha=0.1 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8175000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.3624999999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.165,
+   "frac_splits_above": 1.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.055000000000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.1023425,
+   "frac_splits_above": 0.438,
+   "lam_mean": 25.424,
+   "cost_mean": 1171.2407075,
+   "cost_gap_vs_oracle": 13.19900842551902
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.21513000000000004,
+   "frac_splits_above": 1.0,
+   "lam_mean": 17.012,
+   "cost_mean": 948.5306150000002,
+   "cost_gap_vs_oracle": 10.499083073192908
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.011767500000000002,
+   "frac_splits_above": 0.0,
+   "lam_mean": 38.994,
+   "cost_mean": 1660.3489500000003,
+   "cost_gap_vs_oracle": 19.128491589634795
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.034955,
+   "frac_splits_above": 0.009,
+   "lam_mean": 34.642,
+   "cost_mean": 1497.2975625,
+   "cost_gap_vs_oracle": 17.151811638126993
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.034955,
+   "frac_splits_above": 0.009,
+   "lam_mean": 34.642,
+   "cost_mean": 1497.2975625,
+   "cost_gap_vs_oracle": 17.151811638126993
+  }
+ },
+ "A->B | any | alpha=0.1 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8175000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.3624999999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.165,
+   "frac_splits_above": 1.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.055000000000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.08708,
+   "frac_splits_above": 0.272,
+   "lam_mean": 26.586,
+   "cost_mean": 1203.304,
+   "cost_gap_vs_oracle": 13.58771328989241
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.21480750000000004,
+   "frac_splits_above": 1.0,
+   "lam_mean": 17.014,
+   "cost_mean": 948.2983300000002,
+   "cost_gap_vs_oracle": 10.4962670707683
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.0105425,
+   "frac_splits_above": 0.0,
+   "lam_mean": 38.834,
+   "cost_mean": 1649.4855974999996,
+   "cost_gap_vs_oracle": 18.99679463555084
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.049285,
+   "frac_splits_above": 0.004,
+   "lam_mean": 31.316,
+   "cost_mean": 1363.1988525,
+   "cost_gap_vs_oracle": 15.526126413092895
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.049285,
+   "frac_splits_above": 0.004,
+   "lam_mean": 31.316,
+   "cost_mean": 1363.1988525,
+   "cost_gap_vs_oracle": 15.526126413092895
+  }
+ },
+ "A->B | any | alpha=0.2 | n=25": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8175000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.3624999999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.165,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.055000000000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.20397000000000004,
+   "frac_splits_above": 0.412,
+   "lam_mean": 17.986,
+   "cost_mean": 978.8993950000003,
+   "cost_gap_vs_oracle": 10.867245279587818
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.3910649999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 9.236,
+   "cost_mean": 897.7543125,
+   "cost_gap_vs_oracle": 9.883519472647372
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.02462250000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.628,
+   "cost_mean": 1527.0338149999998,
+   "cost_gap_vs_oracle": 17.512305682679195
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.096245,
+   "frac_splits_above": 0.027,
+   "lam_mean": 26.376,
+   "cost_mean": 1205.7998450000002,
+   "cost_gap_vs_oracle": 13.61797054099106
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.09563250000000001,
+   "frac_splits_above": 0.025,
+   "lam_mean": 26.444,
+   "cost_mean": 1207.9929825,
+   "cost_gap_vs_oracle": 13.644558054250645
+  }
+ },
+ "A->B | any | alpha=0.2 | n=50": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8175000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.3624999999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.165,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.055000000000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.2016275,
+   "frac_splits_above": 0.346,
+   "lam_mean": 17.932,
+   "cost_mean": 970.9745100000002,
+   "cost_gap_vs_oracle": 10.771171510834975
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.39144999999999985,
+   "frac_splits_above": 1.0,
+   "lam_mean": 9.202,
+   "cost_mean": 896.344915,
+   "cost_gap_vs_oracle": 9.86643327776936
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.02543750000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.328,
+   "cost_mean": 1515.6363749999998,
+   "cost_gap_vs_oracle": 17.374133959690866
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.09800249999999999,
+   "frac_splits_above": 0.002,
+   "lam_mean": 25.734,
+   "cost_mean": 1179.5191025000001,
+   "cost_gap_vs_oracle": 13.299367813305047
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.097815,
+   "frac_splits_above": 0.002,
+   "lam_mean": 25.752,
+   "cost_mean": 1180.0199400000001,
+   "cost_gap_vs_oracle": 13.305439490831944
+  }
+ },
+ "A->B | any | alpha=0.2 | n=100": {
+  "point (lambda=0)": {
+   "realized_risk": 0.8175000000000002,
+   "frac_splits_above": 1.0,
+   "lam_mean": 0.0,
+   "cost_mean": 1716.5875000000005,
+   "cost_gap_vs_oracle": 19.81027428398243
+  },
+  "fixed margin 10": {
+   "realized_risk": 0.3624999999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 10.0,
+   "cost_mean": 879.5825000000003,
+   "cost_gap_vs_oracle": 9.663221700257617
+  },
+  "fixed margin 20": {
+   "realized_risk": 0.165,
+   "frac_splits_above": 0.0,
+   "lam_mean": 20.0,
+   "cost_mean": 1012.1725000000002,
+   "cost_gap_vs_oracle": 11.27061676011517
+  },
+  "fixed margin 30": {
+   "realized_risk": 0.055000000000000014,
+   "frac_splits_above": 0.0,
+   "lam_mean": 30.0,
+   "cost_mean": 1307.2825,
+   "cost_gap_vs_oracle": 14.848249734808299
+  },
+  "validation-tuned (no correction)": {
+   "realized_risk": 0.19798250000000003,
+   "frac_splits_above": 0.171,
+   "lam_mean": 18.08,
+   "cost_mean": 970.2748825000003,
+   "cost_gap_vs_oracle": 10.76268989240794
+  },
+  "per-engine conformal (alpha)": {
+   "realized_risk": 0.3877299999999999,
+   "frac_splits_above": 1.0,
+   "lam_mean": 9.304,
+   "cost_mean": 894.1567400000001,
+   "cost_gap_vs_oracle": 9.839905925140174
+  },
+  "per-engine conformal Bonferroni (alpha/K)": {
+   "realized_risk": 0.02665750000000001,
+   "frac_splits_above": 0.0,
+   "lam_mean": 35.212,
+   "cost_mean": 1512.3565774999997,
+   "cost_gap_vs_oracle": 17.33437281406274
+  },
+  "LTT (decision-level)": {
+   "realized_risk": 0.1286,
+   "frac_splits_above": 0.003,
+   "lam_mean": 22.726,
+   "cost_mean": 1086.0952425000003,
+   "cost_gap_vs_oracle": 12.16678578572511
+  },
+  "LTT cheapest-valid": {
+   "realized_risk": 0.1285675,
+   "frac_splits_above": 0.003,
+   "lam_mean": 22.728,
+   "cost_mean": 1086.1516425,
+   "cost_gap_vs_oracle": 12.16746952568571
+  }
+ }
+}

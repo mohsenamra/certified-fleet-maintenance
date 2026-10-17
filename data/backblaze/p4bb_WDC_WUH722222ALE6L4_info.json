@@ -1,0 +1,55 @@
+{
+ "model": "WDC WUH722222ALE6L4",
+ "features": [
+  "smart_5_raw",
+  "smart_5_raw_d7",
+  "smart_5_raw_d30",
+  "smart_197_raw",
+  "smart_197_raw_d7",
+  "smart_197_raw_d30",
+  "smart_198_raw",
+  "smart_198_raw_d7",
+  "smart_198_raw_d30",
+  "smart_199_raw",
+  "smart_199_raw_d7",
+  "smart_199_raw_d30",
+  "smart_193_raw",
+  "smart_193_raw_d7",
+  "smart_193_raw_d30",
+  "smart_9_raw",
+  "smart_12_raw",
+  "smart_194_raw",
+  "age_days"
+ ],
+ "train": {
+  "h7": {
+   "n_train": 49943,
+   "n_pos": 399
+  },
+  "h14": {
+   "n_train": 49943,
+   "n_pos": 790
+  },
+  "h21": {
+   "n_train": 49943,
+   "n_pos": 1188
+  },
+  "h28": {
+   "n_train": 49943,
+   "n_pos": 1565
+  }
+ },
+ "thr_fpr1_G28": 0.0017671483801677823,
+ "auc_eval": {
+  "h7": 0.8315319469875754,
+  "h14": 0.5546951870130165,
+  "h21": 0.8497611189397569,
+  "h28": 0.8529570749854095
+ },
+ "train_fail_per_day": 0.4634146341463415,
+ "n_eval_rows": 9509552,
+ "n_eval_drives": 45713,
+ "eval_days": 212,
+ "eval_failures": 96,
+ "seconds": 283.4352295398712
+}

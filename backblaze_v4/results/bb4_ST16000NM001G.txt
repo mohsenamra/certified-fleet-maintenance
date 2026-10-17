@@ -1,0 +1,327 @@
+
+######## ST16000NM001G - v4 predictor (feature set A; eval AUC {'h7': 0.692, 'h14': 0.94, 'h21': 0.947, 'h28': 0.927}; validation means {'A': 0.9394449851190857, 'B': 0.880165784844752})
+
+--- v3b evaluation (same rules, splits protocol and online rules) ---
+
+=== ST16000NM001G: 200 decision days with a full 28-day outcome; eval AUC {'h7': 0.692, 'h14': 0.94, 'h21': 0.947, 'h28': 0.927}; failures within 28 d per day: 12.5; drives at risk (G28 >= 0.001) per day: 574 of 34454
+  C = 1/day: exact paths computed (837 breakpoints per day, 72s)
+    static 28-day plans, mean over decision days:  tau 0.5: miss 0.71 / repl 22  tau 0.2: miss 0.44 / repl 71  tau 0.1: miss 0.40 / repl 87  tau 0.05: miss 0.33 / repl 111  tau 0.02: miss 0.31 / repl 145  tau 0.01: miss 0.29 / repl 174  tau 0.005: miss 0.27 / repl 220  tau 0.002: miss 0.24 / repl 314  tau 0.001: miss 0.23 / repl 574
+    FLOOR (most conservative in-domain plan, tau = 0.001): miss fraction 0.228
+
+  ST16000NM001G | C=1 | random split | alpha=0.3  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.281   0.21  0.00     0.281   0.21   0.0077     651     22.0   174.6  187.3
+    validation-tuned                                  0.300   0.50  0.00     0.300   0.50   0.0164     537     22.0   134.3  147.2
+    fixed FPR 1% threshold                            0.227   0.00  0.00     0.227   0.00   0.0012    1473     22.0   455.7  467.7
+    point (tau = 0.5)                                 0.716   1.00  0.00     0.716   1.00   0.5000     290     18.0     4.3   17.3
+    model-based (predicted miss <= alpha, per day)    0.403   1.00  0.00     0.403   1.00   0.1352     351     20.0    60.6   72.4
+    RAIDShield-style SMART5 > 0                       0.287   0.04  0.00     0.287   0.04     rule    2197      1.0   692.4  684.9
+    RAIDShield-style SMART5 > 200                     0.540   1.00  0.00     0.540   1.00     rule     677      1.0   152.4  148.3
+
+  ST16000NM001G | C=1 | random split | alpha=0.4  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.382   0.25  0.00     0.382   0.25   0.0893     368     21.6    68.8   82.1
+    validation-tuned                                  0.401   0.49  0.00     0.401   0.49   0.1105     356     20.8    63.7   76.3
+    fixed FPR 1% threshold                            0.227   0.00  0.00     0.227   0.00   0.0012    1473     22.0   455.7  467.7
+    point (tau = 0.5)                                 0.716   1.00  0.00     0.716   1.00   0.5000     290     18.0     4.3   17.3
+    model-based (predicted miss <= alpha, per day)    0.484   1.00  0.00     0.484   1.00   0.2844     322     18.0    43.2   53.6
+    RAIDShield-style SMART5 > 0                       0.287   0.00  0.00     0.287   0.00     rule    2197      1.0   692.4  684.9
+    RAIDShield-style SMART5 > 200                     0.540   1.00  0.00     0.540   1.00     rule     677      1.0   152.4  148.3
+
+  ST16000NM001G | C=1 | random split | alpha=0.5  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.472   0.16  0.00     0.472   0.16   0.2562     325     18.1    46.6   56.9
+    validation-tuned                                  0.495   0.49  0.00     0.495   0.49   0.2823     320     17.9    43.5   53.7
+    fixed FPR 1% threshold                            0.227   0.00  0.00     0.227   0.00   0.0012    1473     22.0   455.7  467.7
+    point (tau = 0.5)                                 0.716   1.00  0.00     0.716   1.00   0.5000     290     18.0     4.3   17.3
+    model-based (predicted miss <= alpha, per day)    0.541   1.00  0.00     0.541   1.00   0.3592     300     18.2    31.5   42.4
+    RAIDShield-style SMART5 > 0                       0.287   0.00  0.00     0.287   0.00     rule    2197      1.0   692.4  684.9
+    RAIDShield-style SMART5 > 200                     0.540   1.00  0.00     0.540   1.00     rule     677      1.0   152.4  148.3
+
+  ST16000NM001G | C=1 | forward split | alpha=0.3  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.236   0.50  0.25     0.263   0.67   0.0063     933     22.0   264.1  274.1
+    validation-tuned                                  0.271   0.50  0.25     0.309   0.67   0.0103     846     22.0   230.3  240.7
+    fixed FPR 1% threshold                            0.194   0.00  0.00     0.194   0.00   0.0012    1532     22.0   470.7  480.0
+    point (tau = 0.5)                                 0.694   1.00  0.00     0.694   1.00   0.5000     360     19.1     5.4   18.2
+    model-based (predicted miss <= alpha, per day)    0.389   1.00  0.00     0.389   1.00   0.1583     381     19.1    59.7   68.5
+    RAIDShield-style SMART5 > 0                       0.277   0.50  0.00     0.277   0.50     rule    2257      1.0   705.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   1.00  0.00     0.573   1.00     rule     746      1.0   156.5  151.2
+
+  ST16000NM001G | C=1 | forward split | alpha=0.4  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.325   0.25  0.00     0.325   0.25   0.0649     424     21.1    82.7   92.8
+    validation-tuned                                  0.371   0.50  0.00     0.371   0.50   0.1191     395     19.8    66.2   75.5
+    fixed FPR 1% threshold                            0.194   0.00  0.00     0.194   0.00   0.0012    1532     22.0   470.7  480.0
+    point (tau = 0.5)                                 0.694   1.00  0.00     0.694   1.00   0.5000     360     19.1     5.4   18.2
+    model-based (predicted miss <= alpha, per day)    0.458   1.00  0.00     0.458   1.00   0.3064     366     17.7    43.7   51.8
+    RAIDShield-style SMART5 > 0                       0.277   0.00  0.00     0.277   0.00     rule    2257      1.0   705.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   1.00  0.00     0.573   1.00     rule     746      1.0   156.5  151.2
+
+  ST16000NM001G | C=1 | forward split | alpha=0.5  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.418   0.25  0.00     0.418   0.25   0.2163     368     18.6    49.2   57.9
+    validation-tuned                                  0.435   0.25  0.00     0.435   0.25   0.2539     357     18.7    43.0   52.0
+    fixed FPR 1% threshold                            0.194   0.00  0.00     0.194   0.00   0.0012    1532     22.0   470.7  480.0
+    point (tau = 0.5)                                 0.694   1.00  0.00     0.694   1.00   0.5000     360     19.1     5.4   18.2
+    model-based (predicted miss <= alpha, per day)    0.485   0.50  0.00     0.485   0.50   0.3719     343     18.2    31.6   40.5
+    RAIDShield-style SMART5 > 0                       0.277   0.00  0.00     0.277   0.00     rule    2257      1.0   705.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   0.75  0.00     0.573   0.75     rule     746      1.0   156.5  151.2
+  C = 2/day: exact paths computed (837 breakpoints per day, 72s)
+    static 28-day plans, mean over decision days:  tau 0.5: miss 0.69 / repl 22  tau 0.2: miss 0.46 / repl 71  tau 0.1: miss 0.42 / repl 87  tau 0.05: miss 0.36 / repl 111  tau 0.02: miss 0.32 / repl 145  tau 0.01: miss 0.30 / repl 174  tau 0.005: miss 0.28 / repl 220  tau 0.002: miss 0.25 / repl 314  tau 0.001: miss 0.24 / repl 574
+    FLOOR (most conservative in-domain plan, tau = 0.001): miss fraction 0.238
+
+  ST16000NM001G | C=2 | random split | alpha=0.3  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.283   0.25  0.00     0.283   0.25   0.0045     721     43.9   190.0  224.4
+    validation-tuned                                  0.303   0.45  0.00     0.303   0.45   0.0093     579     43.9   140.3  174.9
+    fixed FPR 1% threshold                            0.240   0.00  0.00     0.240   0.00   0.0012    1435     44.0   433.9  467.9
+    point (tau = 0.5)                                 0.690   1.00  0.00     0.690   1.00   0.5000     274     21.7     0.6   17.3
+    model-based (predicted miss <= alpha, per day)    0.416   1.00  0.00     0.416   1.00   0.1266     331     35.4    47.0   74.2
+    RAIDShield-style SMART5 > 0                       0.289   0.10  0.00     0.289   0.10     rule    2197      2.0   691.5  685.1
+    RAIDShield-style SMART5 > 200                     0.541   1.00  0.00     0.541   1.00     rule     677      2.0   151.5  148.3
+
+  ST16000NM001G | C=2 | random split | alpha=0.4  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.385   0.31  0.00     0.385   0.31   0.0737     351     40.7    55.9   88.2
+    validation-tuned                                  0.399   0.38  0.00     0.399   0.38   0.0860     341     39.6    52.1   83.4
+    fixed FPR 1% threshold                            0.240   0.00  0.00     0.240   0.00   0.0012    1435     44.0   433.9  467.9
+    point (tau = 0.5)                                 0.690   1.00  0.00     0.690   1.00   0.5000     274     21.7     0.6   17.3
+    model-based (predicted miss <= alpha, per day)    0.484   1.00  0.00     0.484   1.00   0.2701     307     29.8    33.1   55.2
+    RAIDShield-style SMART5 > 0                       0.289   0.00  0.00     0.289   0.00     rule    2197      2.0   691.5  685.1
+    RAIDShield-style SMART5 > 200                     0.541   1.00  0.00     0.541   1.00     rule     677      2.0   151.5  148.3
+
+  ST16000NM001G | C=2 | random split | alpha=0.5  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.476   0.06  0.00     0.476   0.06   0.2418     310     30.2    36.1   58.5
+    validation-tuned                                  0.486   0.12  0.00     0.486   0.12   0.2600     308     30.7    33.8   56.8
+    fixed FPR 1% threshold                            0.240   0.00  0.00     0.240   0.00   0.0012    1435     44.0   433.9  467.9
+    point (tau = 0.5)                                 0.690   1.00  0.00     0.690   1.00   0.5000     274     21.7     0.6   17.3
+    model-based (predicted miss <= alpha, per day)    0.547   1.00  0.00     0.547   1.00   0.3555     289     29.2    22.3   44.2
+    RAIDShield-style SMART5 > 0                       0.289   0.00  0.00     0.289   0.00     rule    2197      2.0   691.5  685.1
+    RAIDShield-style SMART5 > 200                     0.541   1.00  0.00     0.541   1.00     rule     677      2.0   151.5  148.3
+
+  ST16000NM001G | C=2 | forward split | alpha=0.3  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.243   0.50  0.25     0.268   0.67   0.0042    1020     44.0   284.4  316.3
+    validation-tuned                                  0.253   0.50  0.25     0.282   0.67   0.0072     863     44.0   230.7  262.7
+    fixed FPR 1% threshold                            0.208   0.00  0.00     0.208   0.00   0.0012    1494     44.0   448.7  480.0
+    point (tau = 0.5)                                 0.667   1.00  0.00     0.667   1.00   0.5000     340     23.9     0.7   18.2
+    model-based (predicted miss <= alpha, per day)    0.400   1.00  0.00     0.400   1.00   0.1494     363     32.9    47.2   69.8
+    RAIDShield-style SMART5 > 0                       0.277   0.50  0.00     0.277   0.50     rule    2255      2.0   704.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   1.00  0.00     0.573   1.00     rule     744      2.0   155.5  151.2
+
+  ST16000NM001G | C=2 | forward split | alpha=0.4  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.323   0.25  0.00     0.323   0.25   0.0547     400     40.5    68.3   97.6
+    validation-tuned                                  0.341   0.50  0.00     0.341   0.50   0.0741     394     37.3    64.6   91.0
+    fixed FPR 1% threshold                            0.208   0.00  0.00     0.208   0.00   0.0012    1494     44.0   448.7  480.0
+    point (tau = 0.5)                                 0.667   1.00  0.00     0.667   1.00   0.5000     340     23.9     0.7   18.2
+    model-based (predicted miss <= alpha, per day)    0.465   1.00  0.00     0.465   1.00   0.2899     350     29.8    33.4   53.5
+    RAIDShield-style SMART5 > 0                       0.277   0.00  0.00     0.277   0.00     rule    2255      2.0   704.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   1.00  0.00     0.573   1.00     rule     744      2.0   155.5  151.2
+
+  ST16000NM001G | C=2 | forward split | alpha=0.5  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.443   0.25  0.00     0.443   0.25   0.1911     360     33.6    37.0   60.6
+    validation-tuned                                  0.443   0.25  0.00     0.443   0.25   0.2121     351     32.7    34.3   57.1
+    fixed FPR 1% threshold                            0.208   0.00  0.00     0.208   0.00   0.0012    1494     44.0   448.7  480.0
+    point (tau = 0.5)                                 0.667   1.00  0.00     0.667   1.00   0.5000     340     23.9     0.7   18.2
+    model-based (predicted miss <= alpha, per day)    0.501   0.50  0.00     0.501   0.50   0.3657     337     29.6    22.5   42.8
+    RAIDShield-style SMART5 > 0                       0.277   0.00  0.00     0.277   0.00     rule    2255      2.0   704.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   0.75  0.00     0.573   0.75     rule     744      2.0   155.5  151.2
+  C = 4/day: exact paths computed (837 breakpoints per day, 73s)
+    static 28-day plans, mean over decision days:  tau 0.5: miss 0.66 / repl 22  tau 0.2: miss 0.46 / repl 71  tau 0.1: miss 0.43 / repl 87  tau 0.05: miss 0.38 / repl 111  tau 0.02: miss 0.34 / repl 145  tau 0.01: miss 0.30 / repl 174  tau 0.005: miss 0.29 / repl 220  tau 0.002: miss 0.24 / repl 314  tau 0.001: miss 0.23 / repl 574
+    FLOOR (most conservative in-domain plan, tau = 0.001): miss fraction 0.231
+
+  ST16000NM001G | C=4 | random split | alpha=0.3  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.281   0.28  0.00     0.281   0.28   0.0047     626     84.0   145.8  220.4
+    validation-tuned                                  0.300   0.51  0.00     0.300   0.51   0.0085     515     81.5   107.9  180.1
+    fixed FPR 1% threshold                            0.231   0.00  0.00     0.231   0.00   0.0012    1342     88.0   389.7  467.8
+    point (tau = 0.5)                                 0.661   1.00  0.00     0.661   1.00   0.5000     259     22.2     0.1   17.3
+    model-based (predicted miss <= alpha, per day)    0.429   1.00  0.00     0.429   1.00   0.1267     296     50.0    32.2   73.9
+    RAIDShield-style SMART5 > 0                       0.287   0.05  0.00     0.287   0.05     rule    2192      4.0   689.4  684.9
+    RAIDShield-style SMART5 > 200                     0.541   1.00  0.00     0.541   1.00     rule     672      4.0   149.4  148.3
+
+  ST16000NM001G | C=4 | random split | alpha=0.4  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.387   0.35  0.00     0.387   0.35   0.0563     322     65.5    40.5   97.3
+    validation-tuned                                  0.397   0.49  0.00     0.397   0.49   0.0686     312     61.9    37.5   90.9
+    fixed FPR 1% threshold                            0.231   0.00  0.00     0.231   0.00   0.0012    1342     88.0   389.7  467.8
+    point (tau = 0.5)                                 0.661   1.00  0.00     0.661   1.00   0.5000     259     22.2     0.1   17.3
+    model-based (predicted miss <= alpha, per day)    0.483   1.00  0.00     0.483   1.00   0.2462     279     45.6    19.5   57.3
+    RAIDShield-style SMART5 > 0                       0.287   0.00  0.00     0.287   0.00     rule    2192      4.0   689.4  684.9
+    RAIDShield-style SMART5 > 200                     0.541   1.00  0.00     0.541   1.00     rule     672      4.0   149.4  148.3
+
+  ST16000NM001G | C=4 | random split | alpha=0.5  (100 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.468   0.02  0.00     0.468   0.02   0.1985     283     45.3    25.3   62.7
+    validation-tuned                                  0.486   0.11  0.00     0.486   0.11   0.2514     274     47.8    17.5   57.5
+    fixed FPR 1% threshold                            0.231   0.00  0.00     0.231   0.00   0.0012    1342     88.0   389.7  467.8
+    point (tau = 0.5)                                 0.661   1.00  0.00     0.661   1.00   0.5000     259     22.2     0.1   17.3
+    model-based (predicted miss <= alpha, per day)    0.541   1.00  0.00     0.541   1.00   0.3385     260     46.0     8.1   46.7
+    RAIDShield-style SMART5 > 0                       0.287   0.00  0.00     0.287   0.00     rule    2192      4.0   689.4  684.9
+    RAIDShield-style SMART5 > 200                     0.541   1.00  0.00     0.541   1.00     rule     672      4.0   149.4  148.3
+
+  ST16000NM001G | C=4 | forward split | alpha=0.3  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.243   0.50  0.25     0.273   0.67   0.0052     836     84.6   210.5  283.0
+    validation-tuned                                  0.246   0.50  0.25     0.276   0.67   0.0064     809     82.2   201.3  271.6
+    fixed FPR 1% threshold                            0.200   0.00  0.00     0.200   0.00   0.0012    1401     88.0   404.7  480.0
+    point (tau = 0.5)                                 0.627   1.00  0.00     0.627   1.00   0.5000     319     24.4     0.1   18.2
+    model-based (predicted miss <= alpha, per day)    0.388   1.00  0.00     0.388   1.00   0.1451     327     48.7    32.2   70.5
+    RAIDShield-style SMART5 > 0                       0.277   0.50  0.00     0.277   0.50     rule    2251      4.0   702.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   1.00  0.00     0.573   1.00     rule     740      4.0   153.5  151.2
+
+  ST16000NM001G | C=4 | forward split | alpha=0.4  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.335   0.25  0.00     0.335   0.25   0.0552     361     63.1    47.4   99.4
+    validation-tuned                                  0.346   0.25  0.00     0.346   0.25   0.0668     358     59.9    45.7   94.7
+    fixed FPR 1% threshold                            0.200   0.00  0.00     0.200   0.00   0.0012    1401     88.0   404.7  480.0
+    point (tau = 0.5)                                 0.627   1.00  0.00     0.627   1.00   0.5000     319     24.4     0.1   18.2
+    model-based (predicted miss <= alpha, per day)    0.458   1.00  0.00     0.458   1.00   0.2664     320     46.6    18.9   55.7
+    RAIDShield-style SMART5 > 0                       0.277   0.00  0.00     0.277   0.00     rule    2251      4.0   702.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   1.00  0.00     0.573   1.00     rule     740      4.0   153.5  151.2
+
+  ST16000NM001G | C=4 | forward split | alpha=0.5  (4 splits; miss = test mean miss fraction; >alpha = share of splits above alpha; abst = share of splits where the rule abstains; 'certified' = miss / >alpha over non-abstaining splits)
+    rule                                               miss >alpha  abst cert.miss cert>a      tau    cost in-house  exped.  false
+    CRC exact path (abstains if not certifiable)      0.435   0.25  0.00     0.435   0.25   0.2017     321     49.5    20.3   59.8
+    validation-tuned                                  0.436   0.25  0.00     0.436   0.25   0.2110     307     49.0    16.6   55.8
+    fixed FPR 1% threshold                            0.200   0.00  0.00     0.200   0.00   0.0012    1401     88.0   404.7  480.0
+    point (tau = 0.5)                                 0.627   1.00  0.00     0.627   1.00   0.5000     319     24.4     0.1   18.2
+    model-based (predicted miss <= alpha, per day)    0.493   0.25  0.00     0.493   0.25   0.3558     305     46.4     8.1   45.1
+    RAIDShield-style SMART5 > 0                       0.277   0.00  0.00     0.277   0.00     rule    2251      4.0   702.8  696.0
+    RAIDShield-style SMART5 > 200                     0.573   0.75  0.00     0.573   0.75     rule     740      4.0   153.5  151.2
+
+  ONLINE ST16000NM001G: daily re-planning, C = 2/day, scored on days 60..227 (168 days); training failures/day 0.57; lambda_cost = 0.85 (tau 0.4259)
+    fixed tau (frontier of daily re-planning):
+      tau 0.5      missed/day 0.137  miss frac 0.319  in-house   161  expedited      2  cost      857
+      tau 0.2      missed/day 0.077  miss frac 0.217  in-house   244  expedited      6  cost      652
+      tau 0.1      missed/day 0.071  miss frac 0.211  in-house   272  expedited     28  cost      716
+      tau 0.05     missed/day 0.065  miss frac 0.204  in-house   310  expedited     41  cost      763
+      tau 0.02     missed/day 0.065  miss frac 0.204  in-house   336  expedited     78  cost      900
+      tau 0.01     missed/day 0.060  miss frac 0.192  in-house   336  expedited    429  cost     1923
+      tau 0.005    missed/day 0.060  miss frac 0.200  in-house   336  expedited    969  cost     3543
+      tau 0.002    missed/day 0.036  miss frac 0.128  in-house   336  expedited   1427  cost     4797
+      tau 0.001    missed/day 0.030  miss frac 0.114  in-house   336  expedited   1698  cost     5580
+      -> online FLOOR (tau = 0.001): miss fraction 0.114
+    alpha = 0.3: alpha_d = 0.171 missed failures/day; static CRC ABSTAINS
+      static CRC (first 60 days; abstains -> most conservative)  missed/day 0.030 (meets 0.171)  miss frac 0.114  in-house   336  expedited   1698  cost     5580  mean tau 0.0010  bound slack/day 0.088
+      adaptive cold (lambda_0 = 0)                               missed/day 0.143 (meets 0.171)  miss frac 0.312  in-house   177  expedited     15  cost      942  mean tau 0.5020  bound slack/day 0.094
+      adaptive warm (lambda_0 = static CRC)                      missed/day 0.095 (meets 0.171)  miss frac 0.327  in-house    91  expedited      2  cost      577  mean tau 0.5519  bound slack/day 0.088
+      cost-aware (max(lambda_t, lambda_cost))                    missed/day 0.125 (meets 0.171)  miss frac 0.304  in-house   194  expedited      4  cost      836  mean tau 0.3855  bound slack/day 0.094
+    alpha = 0.4: alpha_d = 0.228 missed failures/day; static CRC tau 0.0208
+      static CRC (first 60 days; abstains -> most conservative)  missed/day 0.065 (meets 0.228)  miss frac 0.204  in-house   336  expedited     74  cost      888  mean tau 0.0208  bound slack/day 0.088
+      adaptive cold (lambda_0 = 0)                               missed/day 0.155 (meets 0.228)  miss frac 0.342  in-house   149  expedited     17  cost      980  mean tau 0.6583  bound slack/day 0.094
+      adaptive warm (lambda_0 = static CRC)                      missed/day 0.137 (meets 0.228)  miss frac 0.397  in-house    99  expedited      4  cost      801  mean tau 0.7551  bound slack/day 0.100
+      cost-aware (max(lambda_t, lambda_cost))                    missed/day 0.125 (meets 0.228)  miss frac 0.304  in-house   188  expedited      4  cost      830  mean tau 0.4112  bound slack/day 0.094
+    alpha = 0.5: alpha_d = 0.285 missed failures/day; static CRC tau 0.0873
+      static CRC (first 60 days; abstains -> most conservative)  missed/day 0.071 (meets 0.285)  miss frac 0.211  in-house   278  expedited     29  cost      725  mean tau 0.0873  bound slack/day 0.088
+      adaptive cold (lambda_0 = 0)                               missed/day 0.179 (meets 0.285)  miss frac 0.361  in-house   118  expedited     34  cost     1120  mean tau 0.7114  bound slack/day 0.106
+      adaptive warm (lambda_0 = static CRC)                      missed/day 0.149 (meets 0.285)  miss frac 0.403  in-house    87  expedited      2  cost      843  mean tau 0.8045  bound slack/day 0.100
+      cost-aware (max(lambda_t, lambda_cost))                    missed/day 0.119 (meets 0.285)  miss frac 0.290  in-house   184  expedited      1  cost      787  mean tau 0.4249  bound slack/day 0.088
+
+--- v3c: CRC vs LTT-HB certification ---
+
+=== ST16000NM001G: 200 decision days; failures within 28 d per day 12.5
+  C = 1/day: paths 0s; FLOOR 0.228
+    C=1 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.279 / 0.18 / 0.00 / 0.279 / 0.18 /     653 / 0.0074
+      LTT-HB delta=0.1 (high-probability)  0.227 / 0.00 / 1.00 /   -   /   -   /    1763 / 0.0010
+      validation-tuned                     0.297 / 0.44 / 0.00 / 0.297 / 0.44 /     547 / 0.0150
+    C=1 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.380 / 0.21 / 0.00 / 0.380 / 0.21 /     369 / 0.0867
+      LTT-HB delta=0.1 (high-probability)  0.263 / 0.00 / 0.02 / 0.265 / 0.00 /     801 / 0.0040
+      validation-tuned                     0.397 / 0.45 / 0.00 / 0.397 / 0.45 /     357 / 0.1062
+    C=1 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.465 / 0.08 / 0.00 / 0.465 / 0.08 /     325 / 0.2502
+      LTT-HB delta=0.1 (high-probability)  0.361 / 0.00 / 0.00 / 0.361 / 0.00 /     383 / 0.0723
+      validation-tuned                     0.487 / 0.43 / 0.00 / 0.487 / 0.43 /     321 / 0.2728
+    C=1 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.236 / 0.50 / 0.25 / 0.263 / 0.67 /     933 / 0.0063
+      LTT-HB delta=0.1 (high-probability)  0.204 / 0.25 / 0.75 / 0.316 / 1.00 /    1580 / 0.0014
+      validation-tuned                     0.271 / 0.50 / 0.25 / 0.309 / 0.67 /     846 / 0.0103
+    C=1 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.325 / 0.25 / 0.00 / 0.325 / 0.25 /     424 / 0.0649
+      LTT-HB delta=0.1 (high-probability)  0.232 / 0.00 / 0.50 / 0.327 / 0.00 /    1153 / 0.0052
+      validation-tuned                     0.371 / 0.50 / 0.00 / 0.371 / 0.50 /     395 / 0.1191
+    C=1 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.418 / 0.25 / 0.00 / 0.418 / 0.25 /     368 / 0.2163
+      LTT-HB delta=0.1 (high-probability)  0.306 / 0.00 / 0.00 / 0.306 / 0.00 /     457 / 0.0426
+      validation-tuned                     0.435 / 0.25 / 0.00 / 0.435 / 0.25 /     357 / 0.2539
+  C = 2/day: paths 0s; FLOOR 0.238
+    C=2 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.282 / 0.27 / 0.00 / 0.282 / 0.27 /     733 / 0.0044
+      LTT-HB delta=0.1 (high-probability)  0.238 / 0.00 / 1.00 /   -   /   -   /    1724 / 0.0010
+      validation-tuned                     0.300 / 0.48 / 0.00 / 0.300 / 0.48 /     590 / 0.0086
+    C=2 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.383 / 0.25 / 0.00 / 0.383 / 0.25 /     351 / 0.0720
+      LTT-HB delta=0.1 (high-probability)  0.264 / 0.00 / 0.04 / 0.265 / 0.00 /     901 / 0.0027
+      validation-tuned                     0.400 / 0.39 / 0.00 / 0.400 / 0.39 /     341 / 0.0858
+    C=2 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.478 / 0.06 / 0.00 / 0.478 / 0.06 /     309 / 0.2430
+      LTT-HB delta=0.1 (high-probability)  0.364 / 0.00 / 0.00 / 0.364 / 0.00 /     371 / 0.0549
+      validation-tuned                     0.488 / 0.11 / 0.00 / 0.488 / 0.11 /     307 / 0.2595
+    C=2 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.243 / 0.50 / 0.25 / 0.268 / 0.67 /    1020 / 0.0042
+      LTT-HB delta=0.1 (high-probability)  0.213 / 0.25 / 0.75 / 0.312 / 1.00 /    1551 / 0.0013
+      validation-tuned                     0.253 / 0.50 / 0.25 / 0.282 / 0.67 /     863 / 0.0072
+    C=2 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.323 / 0.25 / 0.00 / 0.323 / 0.25 /     400 / 0.0547
+      LTT-HB delta=0.1 (high-probability)  0.237 / 0.00 / 0.50 / 0.326 / 0.00 /    1209 / 0.0033
+      validation-tuned                     0.341 / 0.50 / 0.00 / 0.341 / 0.50 /     394 / 0.0741
+    C=2 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.443 / 0.25 / 0.00 / 0.443 / 0.25 /     360 / 0.1911
+      LTT-HB delta=0.1 (high-probability)  0.320 / 0.00 / 0.00 / 0.320 / 0.00 /     445 / 0.0347
+      validation-tuned                     0.443 / 0.25 / 0.00 / 0.443 / 0.25 /     351 / 0.2121
+  C = 4/day: paths 0s; FLOOR 0.231
+    C=4 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.279 / 0.19 / 0.00 / 0.279 / 0.19 /     638 / 0.0045
+      LTT-HB delta=0.1 (high-probability)  0.231 / 0.00 / 1.00 /   -   /   -   /    1632 / 0.0010
+      validation-tuned                     0.297 / 0.47 / 0.00 / 0.297 / 0.47 /     525 / 0.0080
+    C=4 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.388 / 0.39 / 0.00 / 0.388 / 0.39 /     321 / 0.0572
+      LTT-HB delta=0.1 (high-probability)  0.263 / 0.00 / 0.02 / 0.264 / 0.00 /     758 / 0.0029
+      validation-tuned                     0.397 / 0.54 / 0.00 / 0.397 / 0.54 /     313 / 0.0679
+    C=4 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.472 / 0.02 / 0.00 / 0.472 / 0.02 /     283 / 0.2077
+      LTT-HB delta=0.1 (high-probability)  0.365 / 0.00 / 0.00 / 0.365 / 0.00 /     352 / 0.0355
+      validation-tuned                     0.491 / 0.17 / 0.00 / 0.491 / 0.17 /     274 / 0.2588
+    C=4 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.243 / 0.50 / 0.25 / 0.273 / 0.67 /     836 / 0.0052
+      LTT-HB delta=0.1 (high-probability)  0.208 / 0.25 / 0.75 / 0.306 / 1.00 /    1457 / 0.0013
+      validation-tuned                     0.246 / 0.50 / 0.25 / 0.276 / 0.67 /     809 / 0.0064
+    C=4 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.335 / 0.25 / 0.00 / 0.335 / 0.25 /     361 / 0.0552
+      LTT-HB delta=0.1 (high-probability)  0.241 / 0.00 / 0.50 / 0.328 / 0.00 /    1078 / 0.0036
+      validation-tuned                     0.346 / 0.25 / 0.00 / 0.346 / 0.25 /     358 / 0.0668
+    C=4 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.435 / 0.25 / 0.00 / 0.435 / 0.25 /     321 / 0.2017
+      LTT-HB delta=0.1 (high-probability)  0.319 / 0.00 / 0.00 / 0.319 / 0.00 /     380 / 0.0357
+      validation-tuned                     0.436 / 0.25 / 0.00 / 0.436 / 0.25 /     307 / 0.2110
+  ONLINE ST16000NM001G (C = 2, scored days 60..227): static LTT-HB on the first 60 days
+    alpha 0.3: ABSTAINS  missed/day 0.030 (meets 0.171)  miss frac 0.114  cost 5580
+    alpha 0.4: ABSTAINS  missed/day 0.030 (meets 0.228)  miss frac 0.114  cost 5580
+    alpha 0.5: tau 0.0157  missed/day 0.060 (meets 0.285)  miss frac 0.189  cost 1155
+
+--- v4 extra analyses ---
+  EXACTNESS/TIMING (C=2, 20 days): exact path = direct solve in 500/500 random-lambda checks; 852 breakpoints/day; path 0.38s vs one direct solve 0.4 ms (a 100-point grid = 0.04s, not exact)
+  LTT vs calibration size (C = 2, 100 random splits): n | alpha | CRC miss / >a | LTT abstain / cert.miss / cert>a / cost
+    n  30 | 0.4 | 0.380 / 0.25 | 0.76 / 0.255 / 0.00 / 1577
+    n  30 | 0.5 | 0.476 / 0.10 | 0.00 / 0.311 / 0.00 / 552
+    n  60 | 0.4 | 0.384 / 0.25 | 0.03 / 0.265 / 0.00 / 902
+    n  60 | 0.5 | 0.477 / 0.04 | 0.00 / 0.363 / 0.00 / 371
+    n  90 | 0.4 | 0.388 / 0.28 | 0.00 / 0.297 / 0.00 / 592
+    n  90 | 0.5 | 0.483 / 0.11 | 0.00 / 0.397 / 0.00 / 341
+    n 120 | 0.4 | 0.390 / 0.33 | 0.00 / 0.309 / 0.00 / 537
+    n 120 | 0.5 | 0.483 / 0.18 | 0.00 / 0.408 / 0.00 / 339
+  COST-RATIO sensitivity (C = 2, 100 random splits; cost of in-house 1, expedited 3, failure c_fail): rule cost / premium over the hindsight cost-optimal fixed plan (miss)
+    c_fail    10 | alpha 0.4: CRC 256 / +144% (0.38)  LTT 802 / +664% (0.27)  validation-tuned 244 / +133% (0.40)  point 107 / +2% (0.69)  oracle 105 / +0% (0.73)
+    c_fail    10 | alpha 0.5: CRC 195 / +86% (0.48)  LTT 280 / +167% (0.36)  validation-tuned 189 / +80% (0.49)  point 107 / +2% (0.69)  oracle 105 / +0% (0.73)
+    c_fail    30 | alpha 0.4: CRC 350 / +31% (0.38)  LTT 869 / +224% (0.27)  validation-tuned 341 / +27% (0.40)  point 273 / +2% (0.69)  oracle 268 / +0% (0.64)
+    c_fail    30 | alpha 0.5: CRC 309 / +16% (0.48)  LTT 370 / +38% (0.36)  validation-tuned 306 / +14% (0.49)  point 273 / +2% (0.69)  oracle 268 / +0% (0.64)
+    c_fail   100 | alpha 0.4: CRC 680 / +1% (0.38)  LTT 1102 / +64% (0.27)  validation-tuned 679 / +1% (0.40)  point 856 / +27% (0.69)  oracle 673 / +0% (0.39)
+    c_fail   100 | alpha 0.5: CRC 709 / +5% (0.48)  LTT 685 / +2% (0.36)  validation-tuned 716 / +6% (0.49)  point 856 / +27% (0.69)  oracle 673 / +0% (0.39)
+
+ST16000NM001G done in 810s

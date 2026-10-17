@@ -1,0 +1,328 @@
+self-test ok (synthetic: LTT lambda 2.320 >= CRC lambda 1.765; alpha 0.01 abstains)
+== Paper 4: Backblaze v3c - CRC vs LTT-HB (delta = 0.1) certification; alphas [0.3, 0.4, 0.5]; capacities [1, 2, 4] ==
+
+=== ST16000NM001G: 200 decision days; failures within 28 d per day 12.5
+  C = 1/day: paths 81s; FLOOR 0.214
+    C=1 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.277 / 0.06 / 0.00 / 0.277 / 0.06 /     748 / 0.0059
+      LTT-HB delta=0.1 (high-probability)  0.213 / 0.00 / 1.00 /   -   /   -   /    1969 / 0.0010
+      validation-tuned                     0.297 / 0.48 / 0.00 / 0.297 / 0.48 /     521 / 0.0142
+    C=1 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.370 / 0.07 / 0.00 / 0.370 / 0.07 /     351 / 0.0520
+      LTT-HB delta=0.1 (high-probability)  0.264 / 0.00 / 0.00 / 0.264 / 0.00 /     980 / 0.0037
+      validation-tuned                     0.402 / 0.59 / 0.00 / 0.402 / 0.59 /     331 / 0.0701
+    C=1 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.471 / 0.14 / 0.00 / 0.471 / 0.14 /     292 / 0.1713
+      LTT-HB delta=0.1 (high-probability)  0.364 / 0.00 / 0.00 / 0.364 / 0.00 /     371 / 0.0428
+      validation-tuned                     0.502 / 0.55 / 0.00 / 0.502 / 0.55 /     285 / 0.2321
+    C=1 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.233 / 0.25 / 0.25 / 0.268 / 0.33 /    1123 / 0.0035
+      LTT-HB delta=0.1 (high-probability)  0.184 / 0.00 / 0.75 / 0.298 / 0.00 /    1718 / 0.0012
+      validation-tuned                     0.248 / 0.25 / 0.25 / 0.288 / 0.33 /     960 / 0.0060
+    C=1 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.318 / 0.00 / 0.00 / 0.318 / 0.00 /     421 / 0.0462
+      LTT-HB delta=0.1 (high-probability)  0.201 / 0.00 / 0.50 / 0.292 / 0.00 /    1307 / 0.0025
+      validation-tuned                     0.344 / 0.25 / 0.00 / 0.344 / 0.25 /     384 / 0.0745
+    C=1 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.386 / 0.00 / 0.00 / 0.386 / 0.00 /     337 / 0.1448
+      LTT-HB delta=0.1 (high-probability)  0.319 / 0.00 / 0.00 / 0.319 / 0.00 /     427 / 0.0433
+      validation-tuned                     0.413 / 0.00 / 0.00 / 0.413 / 0.00 /     331 / 0.1860
+  C = 2/day: paths 86s; FLOOR 0.228
+    C=2 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.283 / 0.20 / 0.00 / 0.283 / 0.20 /     816 / 0.0048
+      LTT-HB delta=0.1 (high-probability)  0.228 / 0.00 / 1.00 /   -   /   -   /    1930 / 0.0010
+      validation-tuned                     0.300 / 0.48 / 0.00 / 0.300 / 0.48 /     614 / 0.0082
+    C=2 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.379 / 0.21 / 0.00 / 0.379 / 0.21 /     307 / 0.0601
+      LTT-HB delta=0.1 (high-probability)  0.265 / 0.00 / 0.03 / 0.267 / 0.00 /    1085 / 0.0029
+      validation-tuned                     0.396 / 0.48 / 0.00 / 0.396 / 0.48 /     303 / 0.0656
+    C=2 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.482 / 0.27 / 0.00 / 0.482 / 0.27 /     267 / 0.1804
+      LTT-HB delta=0.1 (high-probability)  0.362 / 0.00 / 0.00 / 0.362 / 0.00 /     326 / 0.0467
+      validation-tuned                     0.500 / 0.53 / 0.00 / 0.500 / 0.53 /     263 / 0.2159
+    C=2 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.230 / 0.25 / 0.25 / 0.261 / 0.33 /    1091 / 0.0034
+      LTT-HB delta=0.1 (high-probability)  0.191 / 0.25 / 0.75 / 0.303 / 1.00 /    1677 / 0.0012
+      validation-tuned                     0.250 / 0.25 / 0.25 / 0.288 / 0.33 /     981 / 0.0045
+    C=2 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.308 / 0.00 / 0.00 / 0.308 / 0.00 /     417 / 0.0361
+      LTT-HB delta=0.1 (high-probability)  0.204 / 0.00 / 0.50 / 0.290 / 0.00 /    1277 / 0.0025
+      validation-tuned                     0.328 / 0.00 / 0.00 / 0.328 / 0.00 /     363 / 0.0580
+    C=2 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.398 / 0.00 / 0.00 / 0.398 / 0.00 /     315 / 0.1359
+      LTT-HB delta=0.1 (high-probability)  0.305 / 0.00 / 0.00 / 0.305 / 0.00 /     435 / 0.0289
+      validation-tuned                     0.412 / 0.00 / 0.00 / 0.412 / 0.00 /     314 / 0.1519
+  C = 4/day: paths 82s; FLOOR 0.225
+    C=4 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.285 / 0.26 / 0.00 / 0.285 / 0.26 /     679 / 0.0051
+      LTT-HB delta=0.1 (high-probability)  0.225 / 0.00 / 0.99 / 0.248 / 0.00 /    1839 / 0.0010
+      validation-tuned                     0.300 / 0.49 / 0.00 / 0.300 / 0.49 /     532 / 0.0077
+    C=4 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.378 / 0.29 / 0.00 / 0.378 / 0.29 /     274 / 0.0689
+      LTT-HB delta=0.1 (high-probability)  0.266 / 0.00 / 0.01 / 0.267 / 0.00 /     959 / 0.0030
+      validation-tuned                     0.402 / 0.61 / 0.00 / 0.402 / 0.61 /     266 / 0.0843
+    C=4 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.489 / 0.34 / 0.00 / 0.489 / 0.34 /     241 / 0.2576
+      LTT-HB delta=0.1 (high-probability)  0.360 / 0.00 / 0.00 / 0.360 / 0.00 /     282 / 0.0579
+      validation-tuned                     0.503 / 0.58 / 0.00 / 0.503 / 0.58 /     240 / 0.2897
+    C=4 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.227 / 0.25 / 0.25 / 0.256 / 0.33 /     987 / 0.0033
+      LTT-HB delta=0.1 (high-probability)  0.187 / 0.00 / 0.75 / 0.297 / 0.00 /    1587 / 0.0012
+      validation-tuned                     0.244 / 0.25 / 0.25 / 0.278 / 0.33 /     874 / 0.0055
+    C=4 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.330 / 0.00 / 0.00 / 0.330 / 0.00 /     338 / 0.0525
+      LTT-HB delta=0.1 (high-probability)  0.199 / 0.00 / 0.50 / 0.284 / 0.00 /    1198 / 0.0023
+      validation-tuned                     0.345 / 0.25 / 0.00 / 0.345 / 0.25 /     334 / 0.0606
+    C=4 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.400 / 0.00 / 0.00 / 0.400 / 0.00 /     290 / 0.1681
+      LTT-HB delta=0.1 (high-probability)  0.309 / 0.00 / 0.00 / 0.309 / 0.00 /     370 / 0.0369
+      validation-tuned                     0.408 / 0.00 / 0.00 / 0.408 / 0.00 /     287 / 0.1907
+  ONLINE ST16000NM001G (C = 2, scored days 60..227): static LTT-HB on the first 60 days
+    alpha 0.3: ABSTAINS  missed/day 0.030 (meets 0.171)  miss frac 0.109  cost 8241
+    alpha 0.4: ABSTAINS  missed/day 0.030 (meets 0.228)  miss frac 0.109  cost 8241
+    alpha 0.5: tau 0.0087  missed/day 0.042 (meets 0.285)  miss frac 0.113  cost 1587
+
+=== TOSHIBA MG07ACA14TA: 200 decision days; failures within 28 d per day 33.8
+  C = 1/day: paths 242s; FLOOR 0.236
+    C=1 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.285 / 0.16 / 0.00 / 0.285 / 0.16 /    2012 / 0.0034
+      LTT-HB delta=0.1 (high-probability)  0.236 / 0.00 / 1.00 /   -   /   -   /    4274 / 0.0010
+      validation-tuned                     0.300 / 0.57 / 0.00 / 0.300 / 0.57 /    1744 / 0.0051
+    C=1 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.385 / 0.19 / 0.00 / 0.385 / 0.19 /    1170 / 0.0260
+      LTT-HB delta=0.1 (high-probability)  0.268 / 0.00 / 0.00 / 0.268 / 0.00 /    2526 / 0.0022
+      validation-tuned                     0.398 / 0.46 / 0.00 / 0.398 / 0.46 /    1134 / 0.0314
+    C=1 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.484 / 0.18 / 0.00 / 0.484 / 0.18 /     916 / 0.1141
+      LTT-HB delta=0.1 (high-probability)  0.365 / 0.00 / 0.00 / 0.365 / 0.00 /    1252 / 0.0184
+      validation-tuned                     0.499 / 0.46 / 0.00 / 0.499 / 0.46 /     882 / 0.1492
+    C=1 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.246 / 0.00 / 0.00 / 0.246 / 0.00 /    3093 / 0.0022
+      LTT-HB delta=0.1 (high-probability)  0.215 / 0.00 / 1.00 /   -   /   -   /    4447 / 0.0010
+      validation-tuned                     0.255 / 0.00 / 0.00 / 0.255 / 0.00 /    2687 / 0.0029
+    C=1 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.334 / 0.25 / 0.00 / 0.334 / 0.25 /    1395 / 0.0159
+      LTT-HB delta=0.1 (high-probability)  0.235 / 0.00 / 0.75 / 0.247 / 0.00 /    3786 / 0.0016
+      validation-tuned                     0.348 / 0.25 / 0.00 / 0.348 / 0.25 /    1361 / 0.0187
+    C=1 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.428 / 0.25 / 0.00 / 0.428 / 0.25 /    1103 / 0.0711
+      LTT-HB delta=0.1 (high-probability)  0.318 / 0.00 / 0.00 / 0.318 / 0.00 /    1543 / 0.0117
+      validation-tuned                     0.431 / 0.25 / 0.00 / 0.431 / 0.25 /    1069 / 0.0819
+  C = 2/day: paths 233s; FLOOR 0.239
+    C=2 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.281 / 0.09 / 0.00 / 0.281 / 0.09 /    2198 / 0.0027
+      LTT-HB delta=0.1 (high-probability)  0.239 / 0.00 / 1.00 /   -   /   -   /    4234 / 0.0010
+      validation-tuned                     0.300 / 0.47 / 0.00 / 0.300 / 0.47 /    1763 / 0.0047
+    C=2 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.386 / 0.19 / 0.00 / 0.386 / 0.19 /    1149 / 0.0241
+      LTT-HB delta=0.1 (high-probability)  0.268 / 0.00 / 0.00 / 0.268 / 0.00 /    2720 / 0.0018
+      validation-tuned                     0.400 / 0.48 / 0.00 / 0.400 / 0.48 /    1107 / 0.0297
+    C=2 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.487 / 0.22 / 0.00 / 0.487 / 0.22 /     906 / 0.1006
+      LTT-HB delta=0.1 (high-probability)  0.367 / 0.00 / 0.00 / 0.367 / 0.00 /    1228 / 0.0174
+      validation-tuned                     0.500 / 0.49 / 0.00 / 0.500 / 0.49 /     881 / 0.1198
+    C=2 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.244 / 0.00 / 0.25 / 0.234 / 0.00 /    3225 / 0.0020
+      LTT-HB delta=0.1 (high-probability)  0.217 / 0.00 / 1.00 /   -   /   -   /    4405 / 0.0010
+      validation-tuned                     0.250 / 0.00 / 0.00 / 0.250 / 0.00 /    2825 / 0.0025
+    C=2 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.325 / 0.25 / 0.00 / 0.325 / 0.25 /    1449 / 0.0131
+      LTT-HB delta=0.1 (high-probability)  0.237 / 0.00 / 0.75 / 0.249 / 0.00 /    3745 / 0.0016
+      validation-tuned                     0.347 / 0.25 / 0.00 / 0.347 / 0.25 /    1327 / 0.0180
+    C=2 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.428 / 0.50 / 0.00 / 0.428 / 0.50 /    1083 / 0.0624
+      LTT-HB delta=0.1 (high-probability)  0.316 / 0.00 / 0.00 / 0.316 / 0.00 /    1585 / 0.0103
+      validation-tuned                     0.440 / 0.50 / 0.00 / 0.440 / 0.50 /    1064 / 0.0747
+  C = 4/day: paths 237s; FLOOR 0.249
+    C=4 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.280 / 0.07 / 0.00 / 0.280 / 0.07 /    2493 / 0.0020
+      LTT-HB delta=0.1 (high-probability)  0.248 / 0.00 / 1.00 /   -   /   -   /    4151 / 0.0010
+      validation-tuned                     0.299 / 0.47 / 0.00 / 0.299 / 0.47 /    1904 / 0.0035
+    C=4 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.380 / 0.08 / 0.00 / 0.380 / 0.08 /    1117 / 0.0197
+      LTT-HB delta=0.1 (high-probability)  0.265 / 0.00 / 0.02 / 0.266 / 0.00 /    2990 / 0.0015
+      validation-tuned                     0.398 / 0.37 / 0.00 / 0.398 / 0.37 /    1056 / 0.0256
+    C=4 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.487 / 0.24 / 0.00 / 0.487 / 0.24 /     865 / 0.0888
+      LTT-HB delta=0.1 (high-probability)  0.365 / 0.00 / 0.00 / 0.365 / 0.00 /    1191 / 0.0147
+      validation-tuned                     0.500 / 0.53 / 0.00 / 0.500 / 0.53 /     843 / 0.1041
+    C=4 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.249 / 0.25 / 0.75 / 0.266 / 0.00 /    3620 / 0.0017
+      LTT-HB delta=0.1 (high-probability)  0.227 / 0.25 / 1.00 /   -   /   -   /    4326 / 0.0010
+      validation-tuned                     0.255 / 0.00 / 0.00 / 0.255 / 0.00 /    2916 / 0.0023
+    C=4 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.322 / 0.25 / 0.00 / 0.322 / 0.25 /    1515 / 0.0101
+      LTT-HB delta=0.1 (high-probability)  0.248 / 0.00 / 0.75 / 0.261 / 0.00 /    3668 / 0.0016
+      validation-tuned                     0.346 / 0.25 / 0.00 / 0.346 / 0.25 /    1329 / 0.0155
+    C=4 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.427 / 0.25 / 0.00 / 0.427 / 0.25 /    1038 / 0.0536
+      LTT-HB delta=0.1 (high-probability)  0.303 / 0.00 / 0.00 / 0.303 / 0.00 /    1688 / 0.0072
+      validation-tuned                     0.446 / 0.50 / 0.00 / 0.446 / 0.50 /    1008 / 0.0672
+  ONLINE TOSHIBA MG07ACA14TA (C = 2, scored days 60..227): static LTT-HB on the first 60 days
+    alpha 0.3: ABSTAINS  missed/day 0.155 (meets 0.314)  miss frac 0.248  cost 11568
+    alpha 0.4: ABSTAINS  missed/day 0.155 (meets 0.419)  miss frac 0.248  cost 11568
+    alpha 0.5: tau 0.0050  missed/day 0.220 (meets 0.523)  miss frac 0.291  cost 3708
+
+=== TOSHIBA MG08ACA16TA: 200 decision days; failures within 28 d per day 26.8
+  C = 1/day: paths 779s; FLOOR 0.428
+    C=1 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.429 / 1.00 / 1.00 /   -   /   -   /   13062 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.429 / 1.00 / 1.00 /   -   /   -   /   13062 / 0.0010
+      validation-tuned                     0.429 / 1.00 / 1.00 /   -   /   -   /   13062 / 0.0010
+    C=1 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.429 / 1.00 / 0.99 / 0.445 / 1.00 /   13059 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.429 / 1.00 / 1.00 /   -   /   -   /   13062 / 0.0010
+      validation-tuned                     0.429 / 1.00 / 0.97 / 0.444 / 1.00 /   13051 / 0.0010
+    C=1 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.491 / 0.30 / 0.00 / 0.491 / 0.30 /    6714 / 0.0017
+      LTT-HB delta=0.1 (high-probability)  0.429 / 0.00 / 1.00 /   -   /   -   /   13062 / 0.0010
+      validation-tuned                     0.501 / 0.53 / 0.00 / 0.501 / 0.53 /    6013 / 0.0019
+    C=1 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.383 / 0.75 / 1.00 /   -   /   -   /   14376 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.383 / 0.75 / 1.00 /   -   /   -   /   14376 / 0.0010
+      validation-tuned                     0.383 / 0.75 / 1.00 /   -   /   -   /   14376 / 0.0010
+    C=1 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.393 / 0.50 / 0.75 / 0.409 / 1.00 /   12419 / 0.0011
+      LTT-HB delta=0.1 (high-probability)  0.383 / 0.25 / 1.00 /   -   /   -   /   14376 / 0.0010
+      validation-tuned                     0.399 / 0.50 / 0.75 / 0.430 / 1.00 /   12053 / 0.0012
+    C=1 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.437 / 0.50 / 0.50 / 0.442 / 0.50 /    8824 / 0.0020
+      LTT-HB delta=0.1 (high-probability)  0.390 / 0.25 / 0.75 / 0.394 / 0.00 /   13070 / 0.0011
+      validation-tuned                     0.439 / 0.50 / 0.50 / 0.446 / 0.50 /    8706 / 0.0021
+  C = 2/day: paths 788s; FLOOR 0.432
+    C=2 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.432 / 1.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.432 / 1.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+      validation-tuned                     0.432 / 1.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+    C=2 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.432 / 1.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.432 / 1.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+      validation-tuned                     0.432 / 1.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+    C=2 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.491 / 0.39 / 0.00 / 0.491 / 0.39 /    6939 / 0.0016
+      LTT-HB delta=0.1 (high-probability)  0.432 / 0.00 / 1.00 /   -   /   -   /   13016 / 0.0010
+      validation-tuned                     0.501 / 0.51 / 0.00 / 0.501 / 0.51 /    6309 / 0.0018
+    C=2 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.385 / 0.75 / 1.00 /   -   /   -   /   14333 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.385 / 0.75 / 1.00 /   -   /   -   /   14333 / 0.0010
+      validation-tuned                     0.385 / 0.75 / 1.00 /   -   /   -   /   14333 / 0.0010
+    C=2 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.392 / 0.25 / 0.75 / 0.398 / 0.00 /   12607 / 0.0011
+      LTT-HB delta=0.1 (high-probability)  0.385 / 0.25 / 1.00 /   -   /   -   /   14333 / 0.0010
+      validation-tuned                     0.399 / 0.50 / 0.75 / 0.425 / 1.00 /   12022 / 0.0012
+    C=2 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.437 / 0.50 / 0.50 / 0.439 / 0.50 /    8840 / 0.0020
+      LTT-HB delta=0.1 (high-probability)  0.390 / 0.25 / 0.75 / 0.392 / 0.00 /   13130 / 0.0011
+      validation-tuned                     0.442 / 0.50 / 0.50 / 0.448 / 0.50 /    8691 / 0.0021
+  C = 4/day: paths 795s; FLOOR 0.432
+    C=4 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.432 / 1.00 / 1.00 /   -   /   -   /   12962 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.432 / 1.00 / 1.00 /   -   /   -   /   12962 / 0.0010
+      validation-tuned                     0.432 / 1.00 / 1.00 /   -   /   -   /   12962 / 0.0010
+    C=4 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.432 / 1.00 / 1.00 /   -   /   -   /   12962 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.432 / 1.00 / 1.00 /   -   /   -   /   12962 / 0.0010
+      validation-tuned                     0.432 / 1.00 / 0.99 / 0.450 / 1.00 /   12958 / 0.0010
+    C=4 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.492 / 0.37 / 0.00 / 0.492 / 0.37 /    7147 / 0.0015
+      LTT-HB delta=0.1 (high-probability)  0.432 / 0.00 / 1.00 /   -   /   -   /   12962 / 0.0010
+      validation-tuned                     0.500 / 0.50 / 0.00 / 0.500 / 0.50 /    6604 / 0.0017
+    C=4 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.384 / 0.75 / 1.00 /   -   /   -   /   14244 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.384 / 0.75 / 1.00 /   -   /   -   /   14244 / 0.0010
+      validation-tuned                     0.384 / 0.75 / 1.00 /   -   /   -   /   14244 / 0.0010
+    C=4 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.391 / 0.25 / 0.75 / 0.398 / 0.00 /   12519 / 0.0011
+      LTT-HB delta=0.1 (high-probability)  0.384 / 0.25 / 1.00 /   -   /   -   /   14244 / 0.0010
+      validation-tuned                     0.391 / 0.25 / 0.75 / 0.398 / 0.00 /   12519 / 0.0011
+    C=4 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.433 / 0.50 / 0.50 / 0.431 / 0.50 /    9411 / 0.0017
+      LTT-HB delta=0.1 (high-probability)  0.390 / 0.25 / 0.75 / 0.392 / 0.00 /   13111 / 0.0011
+      validation-tuned                     0.439 / 0.50 / 0.50 / 0.443 / 0.50 /    8725 / 0.0020
+  ONLINE TOSHIBA MG08ACA16TA (C = 2, scored days 60..227): static LTT-HB on the first 60 days
+    alpha 0.3: ABSTAINS  missed/day 0.333 (ABOVE 0.264)  miss frac 0.549  cost 24294
+    alpha 0.4: ABSTAINS  missed/day 0.333 (meets 0.351)  miss frac 0.549  cost 24294
+    alpha 0.5: ABSTAINS  missed/day 0.333 (meets 0.439)  miss frac 0.549  cost 24294
+
+=== WDC WUH722222ALE6L4: 200 decision days; failures within 28 d per day 12.0
+  C = 1/day: paths 52s; FLOOR 0.405
+    C=1 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.403 / 1.00 / 1.00 /   -   /   -   /    1768 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.403 / 1.00 / 1.00 /   -   /   -   /    1768 / 0.0010
+      validation-tuned                     0.403 / 1.00 / 1.00 /   -   /   -   /    1768 / 0.0010
+    C=1 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.405 / 0.67 / 0.80 / 0.421 / 1.00 /    1739 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.403 / 0.67 / 1.00 /   -   /   -   /    1768 / 0.0010
+      validation-tuned                     0.408 / 0.67 / 0.66 / 0.426 / 1.00 /    1697 / 0.0011
+    C=1 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.477 / 0.29 / 0.00 / 0.477 / 0.29 /    1015 / 0.0032
+      LTT-HB delta=0.1 (high-probability)  0.403 / 0.00 / 0.99 / 0.426 / 0.00 /    1766 / 0.0010
+      validation-tuned                     0.501 / 0.57 / 0.00 / 0.501 / 0.57 /     852 / 0.0050
+    C=1 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.405 / 0.75 / 1.00 /   -   /   -   /    1654 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.405 / 0.75 / 1.00 /   -   /   -   /    1654 / 0.0010
+      validation-tuned                     0.405 / 0.75 / 1.00 /   -   /   -   /    1654 / 0.0010
+    C=1 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.405 / 0.75 / 1.00 /   -   /   -   /    1654 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.405 / 0.75 / 1.00 /   -   /   -   /    1654 / 0.0010
+      validation-tuned                     0.406 / 0.75 / 0.75 / 0.457 / 1.00 /    1616 / 0.0010
+    C=1 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.428 / 0.50 / 0.25 / 0.433 / 0.67 /    1301 / 0.0018
+      LTT-HB delta=0.1 (high-probability)  0.405 / 0.25 / 1.00 /   -   /   -   /    1654 / 0.0010
+      validation-tuned                     0.443 / 0.50 / 0.00 / 0.443 / 0.50 /    1225 / 0.0021
+  C = 2/day: paths 53s; FLOOR 0.450
+    C=2 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.450 / 1.00 / 1.00 /   -   /   -   /    1740 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.450 / 1.00 / 1.00 /   -   /   -   /    1740 / 0.0010
+      validation-tuned                     0.450 / 1.00 / 1.00 /   -   /   -   /    1740 / 0.0010
+    C=2 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.450 / 1.00 / 1.00 /   -   /   -   /    1740 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.450 / 1.00 / 1.00 /   -   /   -   /    1740 / 0.0010
+      validation-tuned                     0.450 / 1.00 / 0.99 / 0.475 / 1.00 /    1739 / 0.0010
+    C=2 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.487 / 0.36 / 0.01 / 0.487 / 0.36 /    1328 / 0.0017
+      LTT-HB delta=0.1 (high-probability)  0.450 / 0.00 / 1.00 /   -   /   -   /    1740 / 0.0010
+      validation-tuned                     0.500 / 0.52 / 0.01 / 0.501 / 0.53 /    1210 / 0.0021
+    C=2 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.461 / 0.75 / 1.00 /   -   /   -   /    1635 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.461 / 0.75 / 1.00 /   -   /   -   /    1635 / 0.0010
+      validation-tuned                     0.461 / 0.75 / 1.00 /   -   /   -   /    1635 / 0.0010
+    C=2 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.461 / 0.75 / 1.00 /   -   /   -   /    1635 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.461 / 0.75 / 1.00 /   -   /   -   /    1635 / 0.0010
+      validation-tuned                     0.461 / 0.75 / 1.00 /   -   /   -   /    1635 / 0.0010
+    C=2 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.469 / 0.50 / 0.75 / 0.573 / 1.00 /    1497 / 0.0013
+      LTT-HB delta=0.1 (high-probability)  0.461 / 0.50 / 1.00 /   -   /   -   /    1635 / 0.0010
+      validation-tuned                     0.477 / 0.50 / 0.50 / 0.600 / 1.00 /    1426 / 0.0014
+  C = 4/day: paths 54s; FLOOR 0.469
+    C=4 | random | alpha=0.3 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.470 / 1.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.470 / 1.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+      validation-tuned                     0.470 / 1.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+    C=4 | random | alpha=0.4 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.470 / 1.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.470 / 1.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+      validation-tuned                     0.470 / 1.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+    C=4 | random | alpha=0.5 (100 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.490 / 0.29 / 0.19 / 0.498 / 0.36 /    1402 / 0.0014
+      LTT-HB delta=0.1 (high-probability)  0.470 / 0.00 / 1.00 /   -   /   -   /    1659 / 0.0010
+      validation-tuned                     0.503 / 0.60 / 0.07 / 0.507 / 0.65 /    1268 / 0.0017
+    C=4 | forward | alpha=0.3 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.485 / 1.00 / 1.00 /   -   /   -   /    1559 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.485 / 1.00 / 1.00 /   -   /   -   /    1559 / 0.0010
+      validation-tuned                     0.485 / 1.00 / 1.00 /   -   /   -   /    1559 / 0.0010
+    C=4 | forward | alpha=0.4 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.485 / 0.75 / 1.00 /   -   /   -   /    1559 / 0.0010
+      LTT-HB delta=0.1 (high-probability)  0.485 / 0.75 / 1.00 /   -   /   -   /    1559 / 0.0010
+      validation-tuned                     0.485 / 0.75 / 1.00 /   -   /   -   /    1559 / 0.0010
+    C=4 | forward | alpha=0.5 (4 splits)   rule: miss / >alpha / abstain / certified miss / certified >alpha / cost / tau
+      CRC (mean guarantee)                 0.493 / 0.50 / 0.75 / 0.561 / 1.00 /    1444 / 0.0012
+      LTT-HB delta=0.1 (high-probability)  0.485 / 0.50 / 1.00 /   -   /   -   /    1559 / 0.0010
+      validation-tuned                     0.492 / 0.50 / 0.75 / 0.558 / 1.00 /    1437 / 0.0012
+  ONLINE WDC WUH722222ALE6L4 (C = 2, scored days 60..227): static LTT-HB on the first 60 days
+    alpha 0.3: ABSTAINS  missed/day 0.137 (meets 0.140)  miss frac 0.442  cost 11292
+    alpha 0.4: ABSTAINS  missed/day 0.137 (meets 0.187)  miss frac 0.442  cost 11292
+    alpha 0.5: ABSTAINS  missed/day 0.137 (meets 0.234)  miss frac 0.442  cost 11292
+
+done in 8552s

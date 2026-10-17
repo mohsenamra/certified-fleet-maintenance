@@ -1,0 +1,2864 @@
+{
+ "ID | mean | alpha=0.02 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.12220228571428572,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2535.0996028571426,
+   "regret": 1202.7468828571427
+  },
+  "fixed margin 20": {
+   "risk": 0.022085285714285714,
+   "above": 0.998,
+   "lam": 20.0,
+   "cost": 1321.6873114285715,
+   "regret": -10.665408571428564
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.04381971428571428,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1189.8162228571427,
+   "regret": -142.53649714285714
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.055228571428571425,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1351.109302857143,
+   "regret": 18.75658285714286
+  },
+  "validation-tuned additive": {
+   "risk": 0.018295000000000002,
+   "above": 0.278,
+   "lam": 22.382,
+   "cost": 1343.3593571428573,
+   "regret": 11.00663714285715
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.0031132857142857143,
+   "above": 0.0,
+   "lam": 39.122,
+   "cost": 1738.3903285714287,
+   "regret": 406.03760857142856
+  },
+  "CRC additive": {
+   "risk": 0.0008005714285714287,
+   "above": 0.0,
+   "lam": 48.552,
+   "cost": 2158.0178257142857,
+   "regret": 825.6651057142858
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.0008005714285714287,
+   "above": 0.0,
+   "lam": 48.552,
+   "cost": 2158.0178257142857,
+   "regret": 825.6651057142858
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.01832242857142857,
+   "above": 0.303,
+   "lam": 5.026,
+   "cost": 1068.7168571428572,
+   "regret": -263.63586285714285
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.001338857142857143,
+   "above": 0.0,
+   "lam": 13.7008,
+   "cost": 2614.669585714286,
+   "regret": 1282.316865714286
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.0009264285714285714,
+   "above": 0.0,
+   "lam": 15.62,
+   "cost": 2984.51946,
+   "regret": 1652.16674
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.0009264285714285714,
+   "above": 0.0,
+   "lam": 15.62,
+   "cost": 2984.51946,
+   "regret": 1652.16674
+  }
+ },
+ "ID | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.12236333333333334,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2538.2914866666665,
+   "regret": 1205.88606
+  },
+  "fixed margin 20": {
+   "risk": 0.022113833333333333,
+   "above": 0.974,
+   "lam": 20.0,
+   "cost": 1322.1776466666665,
+   "regret": -10.22778
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.04388433333333333,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1191.03242,
+   "regret": -141.37300666666664
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.05528966666666667,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1352.3857266666669,
+   "regret": 19.980299999999996
+  },
+  "validation-tuned additive": {
+   "risk": 0.01830666666666667,
+   "above": 0.208,
+   "lam": 22.284,
+   "cost": 1339.4840299999998,
+   "regret": 7.0786033333333345
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.0031420000000000003,
+   "above": 0.0,
+   "lam": 39.048,
+   "cost": 1734.4524966666665,
+   "regret": 402.04706999999996
+  },
+  "CRC additive": {
+   "risk": 0.009519,
+   "above": 0.0,
+   "lam": 29.05,
+   "cost": 1427.82261,
+   "regret": 95.41718333333334
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.009504000000000002,
+   "above": 0.0,
+   "lam": 29.066,
+   "cost": 1428.1606233333332,
+   "regret": 95.75519666666668
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.01864366666666667,
+   "above": 0.381,
+   "lam": 4.9643999999999995,
+   "cost": 1064.4220066666667,
+   "regret": -267.98342
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0012498333333333335,
+   "above": 0.0,
+   "lam": 13.714400000000001,
+   "cost": 2615.1574866666665,
+   "regret": 1282.75206
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.009504166666666666,
+   "above": 0.0,
+   "lam": 6.8176,
+   "cost": 1226.39823,
+   "regret": -106.00719666666666
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.009482166666666668,
+   "above": 0.0,
+   "lam": 6.821999999999999,
+   "cost": 1226.8048433333333,
+   "regret": -105.60058333333333
+  }
+ },
+ "ID | mean | alpha=0.05 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.12221857142857144,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2535.5944057142856,
+   "regret": 1212.9398857142855
+  },
+  "fixed margin 20": {
+   "risk": 0.02211785714285714,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 1322.7612628571428,
+   "regret": 0.10674285714285701
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.04382114285714286,
+   "above": 0.0,
+   "lam": null,
+   "cost": 1189.8691828571427,
+   "regret": -132.78533714285714
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.05519971428571428,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1350.5553371428573,
+   "regret": 27.900817142857143
+  },
+  "validation-tuned additive": {
+   "risk": 0.04622114285714285,
+   "above": 0.402,
+   "lam": 11.368,
+   "cost": 1465.093337142857,
+   "regret": 142.43881714285712
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.007432571428571428,
+   "above": 0.0,
+   "lam": 31.306,
+   "cost": 1477.8684828571431,
+   "regret": 155.2139628571429
+  },
+  "CRC additive": {
+   "risk": 0.027938714285714282,
+   "above": 0.0,
+   "lam": 17.584,
+   "cost": 1349.5365457142857,
+   "regret": 26.882025714285714
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.02186757142857143,
+   "above": 0.0,
+   "lam": 20.692,
+   "cost": 1349.8508628571428,
+   "regret": 27.196342857142852
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.04638128571428571,
+   "above": 0.371,
+   "lam": 2.6908,
+   "cost": 1287.7474885714284,
+   "regret": -34.90703142857143
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0045117142857142856,
+   "above": 0.0,
+   "lam": 8.888,
+   "cost": 1568.2593314285714,
+   "regret": 245.60481142857142
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.027741285714285715,
+   "above": 0.0,
+   "lam": 3.9856000000000003,
+   "cost": 1092.9195628571429,
+   "regret": -229.73495714285713
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.02038742857142857,
+   "above": 0.0,
+   "lam": 4.7703999999999995,
+   "cost": 1068.6595342857142,
+   "regret": -253.99498571428572
+  }
+ },
+ "ID | mean | alpha=0.05 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.12224766666666667,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2535.828296666667,
+   "regret": 1214.4222366666668
+  },
+  "fixed margin 20": {
+   "risk": 0.022131666666666668,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 1322.3379833333333,
+   "regret": 0.9319233333333361
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.04390383333333333,
+   "above": 0.0,
+   "lam": null,
+   "cost": 1191.2953900000002,
+   "regret": -130.11067
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.0552695,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1351.8108533333334,
+   "regret": 30.404793333333334
+  },
+  "validation-tuned additive": {
+   "risk": 0.046490833333333335,
+   "above": 0.392,
+   "lam": 11.248,
+   "cost": 1465.0887766666667,
+   "regret": 143.68271666666666
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.007371166666666667,
+   "above": 0.0,
+   "lam": 31.322,
+   "cost": 1476.08217,
+   "regret": 154.67611
+  },
+  "CRC additive": {
+   "risk": 0.037575000000000004,
+   "above": 0.003,
+   "lam": 13.918,
+   "cost": 1395.6698766666666,
+   "regret": 74.26381666666667
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.023259666666666668,
+   "above": 0.001,
+   "lam": 19.992,
+   "cost": 1349.8324966666667,
+   "regret": 28.426436666666667
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.04704216666666667,
+   "above": 0.387,
+   "lam": 2.6579999999999995,
+   "cost": 1296.2892066666668,
+   "regret": -25.11685333333333
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.004507,
+   "above": 0.0,
+   "lam": 8.875599999999999,
+   "cost": 1560.91322,
+   "regret": 239.50716
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.03688466666666666,
+   "above": 0.0,
+   "lam": 3.2444000000000006,
+   "cost": 1168.9346466666668,
+   "regret": -152.47141333333332
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.02092916666666667,
+   "above": 0.0,
+   "lam": 4.6936,
+   "cost": 1065.5842633333334,
+   "regret": -255.82179666666667
+  }
+ },
+ "ID | any | alpha=0.1 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.9024142857142857,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2536.076597142857,
+   "regret": 925.04028
+  },
+  "fixed margin 20": {
+   "risk": 0.35498285714285716,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 1322.6748485714286,
+   "regret": -288.36146857142853
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.58002,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1190.9721142857143,
+   "regret": -420.0642028571429
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.670097142857143,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1351.9321771428572,
+   "regret": -259.10414000000003
+  },
+  "validation-tuned additive": {
+   "risk": 0.10538857142857143,
+   "above": 0.542,
+   "lam": 34.516,
+   "cost": 1584.2781828571428,
+   "regret": -26.758134285714284
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.29548571428571424,
+   "above": 1.0,
+   "lam": 22.916,
+   "cost": 1341.7011971428572,
+   "regret": -269.33512
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.019042857142857146,
+   "above": 0.0,
+   "lam": 46.464,
+   "cost": 2039.8998800000002,
+   "regret": 428.8635628571429
+  },
+  "LTT additive": {
+   "risk": 0.03196857142857143,
+   "above": 0.01,
+   "lam": 44.304,
+   "cost": 1953.7351514285713,
+   "regret": 342.6988342857143
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.03196857142857143,
+   "above": 0.01,
+   "lam": 44.304,
+   "cost": 1953.7351514285713,
+   "regret": 342.6988342857143
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.10742571428571429,
+   "above": 0.511,
+   "lam": 8.363599999999998,
+   "cost": 1485.80148,
+   "regret": -125.23483714285713
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.2338542857142857,
+   "above": 1.0,
+   "lam": 5.9432,
+   "cost": 1121.2219742857142,
+   "regret": -489.8143428571428
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.0011942857142857144,
+   "above": 0.0,
+   "lam": 19.1072,
+   "cost": 3620.7077857142854,
+   "regret": 2009.6714685714285
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.03472,
+   "above": 0.035,
+   "lam": 13.258,
+   "cost": 2512.777208571428,
+   "regret": 901.7408914285714
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.03472,
+   "above": 0.035,
+   "lam": 13.258,
+   "cost": 2512.777208571428,
+   "regret": 901.7408914285714
+  }
+ },
+ "ID | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.9025166666666666,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2535.4045,
+   "regret": 931.5681099999999
+  },
+  "fixed margin 20": {
+   "risk": 0.35456,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 1322.2711633333333,
+   "regret": -281.56522666666666
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.5797599999999999,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1191.4139599999999,
+   "regret": -412.42243
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.6695533333333334,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1352.16829,
+   "regret": -251.66809999999998
+  },
+  "validation-tuned additive": {
+   "risk": 0.09747666666666667,
+   "above": 0.458,
+   "lam": 35.0,
+   "cost": 1595.5258,
+   "regret": -8.310589999999998
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.29330999999999996,
+   "above": 1.0,
+   "lam": 23.006,
+   "cost": 1341.2862066666667,
+   "regret": -262.55018333333334
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.018549999999999997,
+   "above": 0.0,
+   "lam": 46.468,
+   "cost": 2038.8552566666667,
+   "regret": 435.0188666666667
+  },
+  "LTT additive": {
+   "risk": 0.04984333333333334,
+   "above": 0.024,
+   "lam": 40.804,
+   "cost": 1807.1598366666667,
+   "regret": 203.32344666666665
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.04984333333333334,
+   "above": 0.024,
+   "lam": 40.804,
+   "cost": 1807.1598366666667,
+   "regret": 203.32344666666665
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.10057666666666666,
+   "above": 0.448,
+   "lam": 8.3772,
+   "cost": 1476.0126666666667,
+   "regret": -127.82372333333335
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.23380666666666666,
+   "above": 1.0,
+   "lam": 5.9276,
+   "cost": 1116.8499366666667,
+   "regret": -486.9864533333333
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.00053,
+   "above": 0.0,
+   "lam": 19.1912,
+   "cost": 3634.4133766666664,
+   "regret": 2030.5769866666667
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.05389666666666666,
+   "above": 0.054,
+   "lam": 11.0112,
+   "cost": 2038.58163,
+   "regret": 434.74523999999997
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.05389666666666666,
+   "above": 0.054,
+   "lam": 11.0112,
+   "cost": 2038.58163,
+   "regret": 434.74523999999997
+  }
+ },
+ "ID | any | alpha=0.2 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.90276,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2536.0038657142854,
+   "regret": 1137.941482857143
+  },
+  "fixed margin 20": {
+   "risk": 0.3554171428571428,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 1323.0049285714285,
+   "regret": -75.0574542857143
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.5801628571428572,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1190.9809685714288,
+   "regret": -207.08141428571426
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.67,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1351.7605600000002,
+   "regret": -46.30182285714285
+  },
+  "validation-tuned additive": {
+   "risk": 0.20057714285714287,
+   "above": 0.389,
+   "lam": 27.772,
+   "cost": 1411.5672514285716,
+   "regret": 13.504868571428567
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.5584742857142858,
+   "above": 1.0,
+   "lam": 12.336,
+   "cost": 1426.2074599999999,
+   "regret": 28.145077142857144
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.03723428571428571,
+   "above": 0.0,
+   "lam": 42.986,
+   "cost": 1889.6554514285713,
+   "regret": 491.5930685714286
+  },
+  "LTT additive": {
+   "risk": 0.10624000000000001,
+   "above": 0.02,
+   "lam": 34.512,
+   "cost": 1585.060657142857,
+   "regret": 186.99827428571427
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.10612285714285716,
+   "above": 0.02,
+   "lam": 34.524,
+   "cost": 1585.5048942857143,
+   "regret": 187.44251142857144
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.2052257142857143,
+   "above": 0.543,
+   "lam": 6.404799999999999,
+   "cost": 1182.9973885714287,
+   "regret": -215.06499428571428
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.5110800000000001,
+   "above": 1.0,
+   "lam": 3.2960000000000003,
+   "cost": 1157.7026028571427,
+   "regret": -240.35978
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.01020857142857143,
+   "above": 0.0,
+   "lam": 16.7516,
+   "cost": 3212.6251914285713,
+   "regret": 1814.5628085714286
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.10947428571428572,
+   "above": 0.025,
+   "lam": 8.293599999999998,
+   "cost": 1471.1133257142856,
+   "regret": 73.05094285714286
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.10947428571428572,
+   "above": 0.025,
+   "lam": 8.293599999999998,
+   "cost": 1471.1133257142856,
+   "regret": 73.05094285714286
+  }
+ },
+ "ID | any | alpha=0.2 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.9024733333333333,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2536.5176466666667,
+   "regret": 1137.6504533333334
+  },
+  "fixed margin 20": {
+   "risk": 0.35444000000000003,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 1321.2749733333335,
+   "regret": -77.59222
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.57973,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1189.9367633333334,
+   "regret": -208.93043
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.6698900000000001,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1350.79665,
+   "regret": -48.070543333333326
+  },
+  "validation-tuned additive": {
+   "risk": 0.18932333333333332,
+   "above": 0.238,
+   "lam": 28.166,
+   "cost": 1409.9959266666665,
+   "regret": 11.128733333333335
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.5609700000000001,
+   "above": 1.0,
+   "lam": 12.214,
+   "cost": 1424.4929166666668,
+   "regret": 25.62572333333333
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.037336666666666664,
+   "above": 0.0,
+   "lam": 42.842,
+   "cost": 1883.20621,
+   "regret": 484.3390166666667
+  },
+  "LTT additive": {
+   "risk": 0.13308333333333333,
+   "above": 0.058,
+   "lam": 32.022,
+   "cost": 1502.1709666666668,
+   "regret": 103.30377333333333
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.13307666666666665,
+   "above": 0.058,
+   "lam": 32.024,
+   "cost": 1502.2663433333332,
+   "regret": 103.39914999999999
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.19278,
+   "above": 0.421,
+   "lam": 6.541199999999999,
+   "cost": 1190.2508833333334,
+   "regret": -208.61631
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.5127833333333333,
+   "above": 1.0,
+   "lam": 3.271200000000001,
+   "cost": 1159.29524,
+   "regret": -239.57195333333334
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.010446666666666665,
+   "above": 0.0,
+   "lam": 16.648,
+   "cost": 3196.10606,
+   "regret": 1797.2388666666668
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.13562000000000002,
+   "above": 0.023,
+   "lam": 7.500799999999999,
+   "cost": 1324.01757,
+   "regret": -74.84962333333333
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.13562000000000002,
+   "above": 0.023,
+   "lam": 7.500799999999999,
+   "cost": 1324.01757,
+   "regret": -74.84962333333333
+  }
+ },
+ "S13 source->source | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.10482166666666667,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2187.521693333333,
+   "regret": 1080.2216733333332
+  },
+  "fixed margin 20": {
+   "risk": 0.01239,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 1125.7367066666666,
+   "regret": 18.436686666666667
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.021753333333333333,
+   "above": 0.974,
+   "lam": null,
+   "cost": 798.27884,
+   "regret": -309.02118
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.03436566666666666,
+   "above": 1.0,
+   "lam": null,
+   "cost": 939.8775933333333,
+   "regret": -167.4224266666667
+  },
+  "validation-tuned additive": {
+   "risk": 0.01830266666666667,
+   "above": 0.342,
+   "lam": 16.888,
+   "cost": 1111.8858333333333,
+   "regret": 4.585813333333328
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.002893,
+   "above": 0.0,
+   "lam": 32.336,
+   "cost": 1519.1070733333333,
+   "regret": 411.80705333333333
+  },
+  "CRC additive": {
+   "risk": 0.009139,
+   "above": 0.0,
+   "lam": 22.3,
+   "cost": 1159.4163866666668,
+   "regret": 52.11636666666667
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.009136333333333333,
+   "above": 0.0,
+   "lam": 22.304,
+   "cost": 1159.5637733333333,
+   "regret": 52.263753333333334
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.017559,
+   "above": 0.428,
+   "lam": 3.383200000000001,
+   "cost": 879.1116733333333,
+   "regret": -228.1883466666667
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0011003333333333334,
+   "above": 0.0,
+   "lam": 8.4896,
+   "cost": 2298.0891266666667,
+   "regret": 1190.7891066666666
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.008882999999999999,
+   "above": 0.0,
+   "lam": 4.271199999999999,
+   "cost": 933.8279733333334,
+   "regret": -173.47204666666667
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.008840333333333334,
+   "above": 0.0,
+   "lam": 4.2783999999999995,
+   "cost": 935.0411133333333,
+   "regret": -172.2589066666667
+  }
+ },
+ "S13 NAIVE source->target (shift) | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.16275,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3289.6950000000006,
+   "regret": 1660.3725000000002
+  },
+  "fixed margin 20": {
+   "risk": 0.10237500000000002,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2562.86,
+   "regret": 933.5375000000003
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.09675000000000003,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2090.5374999999995,
+   "regret": 461.2150000000001
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.113,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2368.9975,
+   "regret": 739.675
+  },
+  "validation-tuned additive": {
+   "risk": 0.10656825000000002,
+   "above": 1.0,
+   "lam": 16.748,
+   "cost": 2574.1585250000003,
+   "regret": 944.8360250000002
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.05273775000000001,
+   "above": 1.0,
+   "lam": 32.412,
+   "cost": 1936.4878849999998,
+   "regret": 307.16538499999996
+  },
+  "CRC additive": {
+   "risk": 0.09449275000000003,
+   "above": 1.0,
+   "lam": 22.284,
+   "cost": 2469.146425000001,
+   "regret": 839.823925
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.09439925000000002,
+   "above": 1.0,
+   "lam": 22.308,
+   "cost": 2467.9613050000003,
+   "regret": 838.638805
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.08352225000000002,
+   "above": 1.0,
+   "lam": 3.3768000000000007,
+   "cost": 1942.1356600000001,
+   "regret": 312.81316000000004
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0166755,
+   "above": 0.134,
+   "lam": 8.4936,
+   "cost": 1921.81614,
+   "regret": 292.4936399999999
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.05922125,
+   "above": 1.0,
+   "lam": 4.2383999999999995,
+   "cost": 1577.1569000000002,
+   "regret": -52.16559999999996
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.059154250000000005,
+   "above": 1.0,
+   "lam": 4.2416,
+   "cost": 1576.41164,
+   "regret": -52.91085999999996
+  }
+ },
+ "S13 RECALIBRATED on target | mean | alpha=0.02 | n=25": {
+  "point (margin 0)": {
+   "risk": 0.1626413333333333,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3287.5374666666667,
+   "regret": 1658.8898133333334
+  },
+  "fixed margin 20": {
+   "risk": 0.10236933333333334,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2562.6226133333334,
+   "regret": 933.9749600000001
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.09675813333333334,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2090.5277226666667,
+   "regret": 461.8800693333333
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.11297626666666667,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2368.4390666666663,
+   "regret": 739.7914133333334
+  },
+  "validation-tuned additive": {
+   "risk": 0.019778933333333335,
+   "above": 0.508,
+   "lam": 41.248,
+   "cost": 1634.3807946666668,
+   "regret": 5.7331413333333385
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.005830133333333334,
+   "above": 0.0,
+   "lam": 48.616,
+   "cost": 1824.8095893333332,
+   "regret": 196.161936
+  },
+  "CRC additive": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 100.0,
+   "cost": 6367.462976,
+   "regret": 4738.815322666666
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 100.0,
+   "cost": 6367.462976,
+   "regret": 4738.815322666666
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.021119466666666666,
+   "above": 0.49,
+   "lam": 7.808,
+   "cost": 1793.0303466666667,
+   "regret": 164.38269333333332
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.006065333333333334,
+   "above": 0.0,
+   "lam": 11.484,
+   "cost": 2661.5415839999996,
+   "regret": 1032.8939306666666
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.0006194666666666666,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 4695.411237333333,
+   "regret": 3066.763584
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.0006194666666666666,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 4695.411237333333,
+   "regret": 3066.763584
+  }
+ },
+ "S13 RECALIBRATED on target | mean | alpha=0.02 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.16272257142857144,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3289.277262857143,
+   "regret": 1660.888742857143
+  },
+  "fixed margin 20": {
+   "risk": 0.10232257142857143,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2561.7910457142857,
+   "regret": 933.4025257142856
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.09669914285714287,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2089.476057142857,
+   "regret": 461.0875371428572
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.11295771428571429,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2368.0817085714284,
+   "regret": 739.6931885714285
+  },
+  "validation-tuned additive": {
+   "risk": 0.017870571428571427,
+   "above": 0.348,
+   "lam": 41.964,
+   "cost": 1629.1578399999999,
+   "regret": 0.7693199999999956
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.005511428571428572,
+   "above": 0.0,
+   "lam": 48.484,
+   "cost": 1807.3996342857142,
+   "regret": 179.01111428571429
+  },
+  "CRC additive": {
+   "risk": 0.0004954285714285715,
+   "above": 0.0,
+   "lam": 56.652,
+   "cost": 2396.973542857143,
+   "regret": 768.5850228571428
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.0004954285714285715,
+   "above": 0.0,
+   "lam": 56.652,
+   "cost": 2396.973542857143,
+   "regret": 768.5850228571428
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.018673428571428573,
+   "above": 0.282,
+   "lam": 8.115200000000002,
+   "cost": 1842.2945028571428,
+   "regret": 213.90598285714287
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0055837142857142865,
+   "above": 0.0,
+   "lam": 11.5352,
+   "cost": 2672.412234285714,
+   "regret": 1044.0237142857143
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.0010777142857142856,
+   "above": 0.0,
+   "lam": 18.110400000000002,
+   "cost": 4289.715514285714,
+   "regret": 2661.3269942857137
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.0010777142857142856,
+   "above": 0.0,
+   "lam": 18.110400000000002,
+   "cost": 4289.715514285714,
+   "regret": 2661.3269942857137
+  }
+ },
+ "S13 source->source | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.8874866666666666,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2184.5606533333334,
+   "regret": 809.5463933333333
+  },
+  "fixed margin 20": {
+   "risk": 0.22990666666666668,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 1124.4395466666667,
+   "regret": -250.57471333333334
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.37498000000000004,
+   "above": 1.0,
+   "lam": null,
+   "cost": 797.4437466666667,
+   "regret": -577.5705133333333
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.5273266666666666,
+   "above": 1.0,
+   "lam": null,
+   "cost": 939.9233333333334,
+   "regret": -435.09092666666663
+  },
+  "validation-tuned additive": {
+   "risk": 0.09958000000000002,
+   "above": 0.42,
+   "lam": 27.952,
+   "cost": 1357.7826,
+   "regret": -17.23166
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.33383333333333337,
+   "above": 1.0,
+   "lam": 16.848,
+   "cost": 1109.7387866666666,
+   "regret": -265.2754733333333
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.0056,
+   "above": 0.0,
+   "lam": 41.524,
+   "cost": 1943.2686466666669,
+   "regret": 568.2543866666667
+  },
+  "LTT additive": {
+   "risk": 0.05087333333333333,
+   "above": 0.056,
+   "lam": 33.012,
+   "cost": 1545.1598866666668,
+   "regret": 170.14562666666666
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.05087333333333333,
+   "above": 0.056,
+   "lam": 33.012,
+   "cost": 1545.1598866666668,
+   "regret": 170.14562666666666
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.09252666666666666,
+   "above": 0.532,
+   "lam": 5.0488,
+   "cost": 1084.8019266666668,
+   "regret": -290.2123333333334
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.29334000000000005,
+   "above": 1.0,
+   "lam": 3.5048000000000012,
+   "cost": 874.2609333333334,
+   "regret": -500.7533266666667
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 2.666666666666667e-05,
+   "above": 0.0,
+   "lam": 15.5984,
+   "cost": 4489.170673333333,
+   "regret": 3114.156413333333
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.05208,
+   "above": 0.018,
+   "lam": 6.3824,
+   "cost": 1527.2866933333335,
+   "regret": 152.2724333333333
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.05208,
+   "above": 0.018,
+   "lam": 6.3824,
+   "cost": 1527.2866933333335,
+   "regret": 152.2724333333333
+  }
+ },
+ "S13 NAIVE source->target (shift) | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.9574999999999998,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3289.6950000000006,
+   "regret": 1395.4874999999997
+  },
+  "fixed margin 20": {
+   "risk": 0.8674999999999998,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2562.86,
+   "regret": 668.6525000000001
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8550000000000002,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2090.5374999999995,
+   "regret": 196.32999999999996
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8975000000000002,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2368.9975,
+   "regret": 474.78999999999996
+  },
+  "validation-tuned additive": {
+   "risk": 0.75765,
+   "above": 1.0,
+   "lam": 28.048,
+   "cost": 2197.4360949999996,
+   "regret": 303.228595
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.87891,
+   "above": 1.0,
+   "lam": 16.872,
+   "cost": 2571.08633,
+   "regret": 676.8788299999999
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.31448000000000004,
+   "above": 1.0,
+   "lam": 41.572,
+   "cost": 1623.373435,
+   "regret": -270.83406499999995
+  },
+  "LTT additive": {
+   "risk": 0.6202549999999999,
+   "above": 1.0,
+   "lam": 33.044,
+   "cost": 1893.9196499999998,
+   "regret": -0.2878500000000258
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.6202549999999999,
+   "above": 1.0,
+   "lam": 33.044,
+   "cost": 1893.9196499999998,
+   "regret": -0.2878500000000258
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.5702200000000001,
+   "above": 1.0,
+   "lam": 5.036,
+   "cost": 1425.1053100000001,
+   "regret": -469.1021899999999
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.7732999999999999,
+   "above": 1.0,
+   "lam": 3.528000000000001,
+   "cost": 1873.1845700000001,
+   "regret": -21.022929999999914
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.029225,
+   "above": 0.004,
+   "lam": 15.621599999999999,
+   "cost": 3761.6776299999997,
+   "regret": 1867.4701300000004
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.472615,
+   "above": 1.0,
+   "lam": 6.3096,
+   "cost": 1538.454045,
+   "regret": -355.753455
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.472615,
+   "above": 1.0,
+   "lam": 6.3096,
+   "cost": 1538.454045,
+   "regret": -355.753455
+  }
+ },
+ "S13 RECALIBRATED on target | any | alpha=0.1 | n=25": {
+  "point (margin 0)": {
+   "risk": 0.9574346666666665,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3289.2602346666663,
+   "regret": 1406.4171893333335
+  },
+  "fixed margin 20": {
+   "risk": 0.8671306666666667,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2563.053632,
+   "regret": 680.2105866666667
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.854832,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2090.198544,
+   "regret": 207.35549866666665
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8971359999999999,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2368.3900533333335,
+   "regret": 485.547008
+  },
+  "validation-tuned additive": {
+   "risk": 0.09999466666666668,
+   "above": 0.524,
+   "lam": 49.42,
+   "cost": 1877.676576,
+   "regret": -5.166469333333336
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.5921813333333332,
+   "above": 1.0,
+   "lam": 33.908,
+   "cost": 1843.3893813333332,
+   "regret": -39.45366400000001
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.005733333333333333,
+   "above": 0.0,
+   "lam": 58.504,
+   "cost": 2637.1630666666665,
+   "regret": 754.3200213333333
+  },
+  "LTT additive": {
+   "risk": 0.023813333333333332,
+   "above": 0.034,
+   "lam": 55.356,
+   "cost": 2293.780693333333,
+   "regret": 410.93764799999997
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.023813333333333332,
+   "above": 0.034,
+   "lam": 55.356,
+   "cost": 2293.780693333333,
+   "regret": 410.93764799999997
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.10856533333333333,
+   "above": 0.41,
+   "lam": 11.859200000000001,
+   "cost": 2762.962864,
+   "regret": 880.1198186666667
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.5218773333333333,
+   "above": 1.0,
+   "lam": 5.7376000000000005,
+   "cost": 1448.2472213333335,
+   "regret": -434.59582400000005
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.025461333333333336,
+   "above": 0.0,
+   "lam": 16.836800000000004,
+   "cost": 4019.667434666667,
+   "regret": 2136.8243893333333
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.035845333333333326,
+   "above": 0.024,
+   "lam": 16.398400000000002,
+   "cost": 3879.6469439999996,
+   "regret": 1996.8038986666668
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.035845333333333326,
+   "above": 0.024,
+   "lam": 16.398400000000002,
+   "cost": 3879.6469439999996,
+   "regret": 1996.8038986666668
+  }
+ },
+ "S13 RECALIBRATED on target | any | alpha=0.1 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.9576114285714286,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3291.7094971428573,
+   "regret": 1430.7028914285713
+  },
+  "fixed margin 20": {
+   "risk": 0.8674114285714286,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2563.3983599999992,
+   "regret": 702.3917542857142
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8550171428571428,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2090.741645714286,
+   "regret": 229.73504
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8975257142857143,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2368.868817142857,
+   "regret": 507.86221142857147
+  },
+  "validation-tuned additive": {
+   "risk": 0.09509142857142856,
+   "above": 0.566,
+   "lam": 49.216,
+   "cost": 1852.50696,
+   "regret": -8.499645714285718
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.5920457142857142,
+   "above": 1.0,
+   "lam": 33.98,
+   "cost": 1837.2897657142857,
+   "regret": -23.716840000000005
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.006451428571428572,
+   "above": 0.0,
+   "lam": 57.584,
+   "cost": 2503.488388571428,
+   "regret": 642.4817828571429
+  },
+  "LTT additive": {
+   "risk": 0.022439999999999998,
+   "above": 0.008,
+   "lam": 55.244,
+   "cost": 2275.9935885714285,
+   "regret": 414.9869828571429
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.022439999999999998,
+   "above": 0.008,
+   "lam": 55.244,
+   "cost": 2275.9935885714285,
+   "regret": 414.9869828571429
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.10514285714285714,
+   "above": 0.394,
+   "lam": 11.5704,
+   "cost": 2682.2782228571427,
+   "regret": 821.2716171428572
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.5252457142857142,
+   "above": 1.0,
+   "lam": 5.704,
+   "cost": 1440.7285314285716,
+   "regret": -420.2780742857143
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.030199999999999998,
+   "above": 0.0,
+   "lam": 15.7224,
+   "cost": 3774.728965714286,
+   "regret": 1913.72236
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.03585714285714285,
+   "above": 0.016,
+   "lam": 15.8368,
+   "cost": 3767.24852,
+   "regret": 1906.2419142857143
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.03585714285714285,
+   "above": 0.016,
+   "lam": 15.8368,
+   "cost": 3767.24852,
+   "regret": 1906.2419142857143
+  }
+ },
+ "S24 source->source | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.131502,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2729.2101933333333,
+   "regret": 1399.9338
+  },
+  "fixed margin 20": {
+   "risk": 0.020326666666666666,
+   "above": 0.6,
+   "lam": 20.0,
+   "cost": 1310.5091933333333,
+   "regret": -18.7672
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.036102666666666665,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1028.92708,
+   "regret": -300.3493133333333
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.04933033333333333,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1218.24896,
+   "regret": -111.02743333333333
+  },
+  "validation-tuned additive": {
+   "risk": 0.018893,
+   "above": 0.45,
+   "lam": 21.72,
+   "cost": 1345.40702,
+   "regret": 16.130626666666668
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.003858666666666667,
+   "above": 0.0,
+   "lam": 40.716,
+   "cost": 1884.78972,
+   "regret": 555.5133266666667
+  },
+  "CRC additive": {
+   "risk": 0.00938266666666667,
+   "above": 0.0,
+   "lam": 31.912,
+   "cost": 1583.0151333333333,
+   "regret": 253.73873999999998
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.009378666666666667,
+   "above": 0.0,
+   "lam": 31.916,
+   "cost": 1583.11874,
+   "regret": 253.84234666666669
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.018311,
+   "above": 0.438,
+   "lam": 4.2032,
+   "cost": 983.3576866666667,
+   "regret": -345.91870666666665
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0012226666666666668,
+   "above": 0.0,
+   "lam": 13.832799999999999,
+   "cost": 3140.35048,
+   "regret": 1811.074086666667
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.009325333333333333,
+   "above": 0.0,
+   "lam": 5.628,
+   "cost": 1095.8653333333334,
+   "regret": -233.41106
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.009325333333333333,
+   "above": 0.0,
+   "lam": 5.628,
+   "cost": 1095.8653333333334,
+   "regret": -233.41106
+  }
+ },
+ "S24 NAIVE source->target (shift) | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.16924999999999996,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3423.175000000001,
+   "regret": 1369.2475000000006
+  },
+  "fixed margin 20": {
+   "risk": 0.08549999999999999,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2248.005000000001,
+   "regret": 194.07750000000033
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.1055,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2261.9975000000004,
+   "regret": 208.07000000000016
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.11725000000000006,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2454.0125,
+   "regret": 400.08500000000004
+  },
+  "validation-tuned additive": {
+   "risk": 0.079337,
+   "above": 1.0,
+   "lam": 21.82,
+   "cost": 2184.6173550000003,
+   "regret": 130.68985500000034
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.033677250000000006,
+   "above": 1.0,
+   "lam": 40.748,
+   "cost": 1937.1697049999998,
+   "regret": -116.75779499999982
+  },
+  "CRC additive": {
+   "risk": 0.0514385,
+   "above": 1.0,
+   "lam": 31.876,
+   "cost": 1964.9943700000001,
+   "regret": -88.93312999999978
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.051420499999999994,
+   "above": 1.0,
+   "lam": 31.884,
+   "cost": 1964.92463,
+   "regret": -89.00286999999977
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.08109000000000001,
+   "above": 1.0,
+   "lam": 4.2143999999999995,
+   "cost": 1981.34299,
+   "regret": -72.58450999999974
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.01230325,
+   "above": 0.0,
+   "lam": 13.8024,
+   "cost": 3080.3712149999997,
+   "regret": 1026.4437150000003
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.05734475000000001,
+   "above": 1.0,
+   "lam": 5.5888,
+   "cost": 1728.4354899999998,
+   "regret": -325.49200999999977
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.05734475000000001,
+   "above": 1.0,
+   "lam": 5.5888,
+   "cost": 1728.4354899999998,
+   "regret": -325.49200999999977
+  }
+ },
+ "S24 RECALIBRATED on target | mean | alpha=0.02 | n=25": {
+  "point (margin 0)": {
+   "risk": 0.169196,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3422.0914826666667,
+   "regret": 1368.6520266666666
+  },
+  "fixed margin 20": {
+   "risk": 0.0855144,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2248.19232,
+   "regret": 194.75286399999996
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.10547573333333334,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2261.401952,
+   "regret": 207.962496
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.11720693333333333,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2453.096896,
+   "regret": 399.65744
+  },
+  "validation-tuned additive": {
+   "risk": 0.020148,
+   "above": 0.45,
+   "lam": 48.916,
+   "cost": 2050.2204480000005,
+   "regret": -3.2190080000000045
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.006859733333333334,
+   "above": 0.002,
+   "lam": 57.652,
+   "cost": 2462.1055999999994,
+   "regret": 408.66614400000003
+  },
+  "CRC additive": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 100.0,
+   "cost": 6297.389685333333,
+   "regret": 4243.9502293333335
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 100.0,
+   "cost": 6297.389685333333,
+   "regret": 4243.9502293333335
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.021748800000000002,
+   "above": 0.628,
+   "lam": 10.709599999999998,
+   "cost": 2391.3607946666666,
+   "regret": 337.92133866666666
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.005592533333333333,
+   "above": 0.0,
+   "lam": 18.1576,
+   "cost": 3891.518314666667,
+   "regret": 1838.0788586666667
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.003616533333333333,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 4193.429418666667,
+   "regret": 2139.9899626666665
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.003616533333333333,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 4193.429418666667,
+   "regret": 2139.9899626666665
+  }
+ },
+ "S24 RECALIBRATED on target | mean | alpha=0.02 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.16943085714285713,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3426.8347142857147,
+   "regret": 1372.7814457142856
+  },
+  "fixed margin 20": {
+   "risk": 0.08557714285714287,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2249.4952114285716,
+   "regret": 195.44194285714283
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.10562428571428571,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2264.5884685714286,
+   "regret": 210.53519999999997
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.11738857142857143,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2456.8554971428575,
+   "regret": 402.80222857142854
+  },
+  "validation-tuned additive": {
+   "risk": 0.018706000000000004,
+   "above": 0.324,
+   "lam": 49.792,
+   "cost": 2059.7140057142856,
+   "regret": 5.660737142857144
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.007092,
+   "above": 0.0,
+   "lam": 57.42,
+   "cost": 2412.8218571428574,
+   "regret": 358.76858857142855
+  },
+  "CRC additive": {
+   "risk": 0.00047571428571428575,
+   "above": 0.0,
+   "lam": 69.008,
+   "cost": 4242.9721714285715,
+   "regret": 2188.918902857143
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.00047571428571428575,
+   "above": 0.0,
+   "lam": 69.008,
+   "cost": 4242.9721714285715,
+   "regret": 2188.918902857143
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.020005428571428573,
+   "above": 0.516,
+   "lam": 11.0664,
+   "cost": 2463.7625657142858,
+   "regret": 409.7092971428571
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.005417428571428571,
+   "above": 0.0,
+   "lam": 18.1768,
+   "cost": 3900.3170342857143,
+   "regret": 1846.263765714286
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.0036562857142857148,
+   "above": 0.0,
+   "lam": 19.9712,
+   "cost": 4190.79152,
+   "regret": 2136.7382514285714
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.0036562857142857148,
+   "above": 0.0,
+   "lam": 19.9712,
+   "cost": 4190.79152,
+   "regret": 2136.7382514285714
+  }
+ },
+ "S24 source->source | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.9375466666666666,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 2727.9554000000003,
+   "regret": 954.9465866666667
+  },
+  "fixed margin 20": {
+   "risk": 0.34434000000000003,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 1308.7224333333334,
+   "regret": -464.28638
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.5243133333333333,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1026.2756666666667,
+   "regret": -746.7331466666667
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.6395133333333333,
+   "above": 1.0,
+   "lam": null,
+   "cost": 1216.3911333333333,
+   "regret": -556.61768
+  },
+  "validation-tuned additive": {
+   "risk": 0.09957333333333332,
+   "above": 0.416,
+   "lam": 37.36,
+   "cost": 1758.0875066666665,
+   "regret": -14.921306666666668
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.3014266666666666,
+   "above": 1.0,
+   "lam": 23.128,
+   "cost": 1368.82052,
+   "regret": -404.1882933333333
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.015273333333333333,
+   "above": 0.0,
+   "lam": 48.196,
+   "cost": 2217.0466800000004,
+   "regret": 444.0378666666667
+  },
+  "LTT additive": {
+   "risk": 0.05004000000000001,
+   "above": 0.024,
+   "lam": 43.032,
+   "cost": 1976.6970133333334,
+   "regret": 203.68820000000002
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.05004000000000001,
+   "above": 0.024,
+   "lam": 43.032,
+   "cost": 1976.6970133333334,
+   "regret": 203.68820000000002
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.10208666666666667,
+   "above": 0.404,
+   "lam": 7.1552,
+   "cost": 1407.1293066666667,
+   "regret": -365.87950666666666
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.16206666666666666,
+   "above": 0.998,
+   "lam": 5.7408,
+   "cost": 1107.8206066666664,
+   "regret": -665.1882066666668
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.004153333333333334,
+   "above": 0.0,
+   "lam": 19.08,
+   "cost": 4197.8918533333335,
+   "regret": 2424.88304
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.05609333333333333,
+   "above": 0.026,
+   "lam": 9.556799999999999,
+   "cost": 2035.2373333333333,
+   "regret": 262.22852
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.05609333333333333,
+   "above": 0.026,
+   "lam": 9.556799999999999,
+   "cost": 2035.2373333333333,
+   "regret": 262.22852
+  }
+ },
+ "S24 NAIVE source->target (shift) | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.9800000000000002,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3423.175000000001,
+   "regret": 823.3250000000006
+  },
+  "fixed margin 20": {
+   "risk": 0.8200000000000002,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2248.005000000001,
+   "regret": -351.84499999999974
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8975000000000002,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2261.9975000000004,
+   "regret": -337.85249999999996
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.9149999999999998,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2454.0125,
+   "regret": -145.8375000000001
+  },
+  "validation-tuned additive": {
+   "risk": 0.5840850000000001,
+   "above": 1.0,
+   "lam": 37.356,
+   "cost": 1942.6335399999998,
+   "regret": -657.21646
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.7798700000000001,
+   "above": 1.0,
+   "lam": 23.148,
+   "cost": 2136.21977,
+   "regret": -463.63022999999976
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.359765,
+   "above": 1.0,
+   "lam": 48.312,
+   "cost": 2018.093465,
+   "regret": -581.756535
+  },
+  "LTT additive": {
+   "risk": 0.47502999999999995,
+   "above": 1.0,
+   "lam": 43.012,
+   "cost": 1955.0494299999998,
+   "regret": -644.80057
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.47502999999999995,
+   "above": 1.0,
+   "lam": 43.012,
+   "cost": 1955.0494299999998,
+   "regret": -644.80057
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.5579700000000001,
+   "above": 1.0,
+   "lam": 7.1568,
+   "cost": 1773.1083299999998,
+   "regret": -826.7416699999999
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.6663100000000002,
+   "above": 1.0,
+   "lam": 5.7584,
+   "cost": 1701.23163,
+   "regret": -898.61837
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.087275,
+   "above": 0.024,
+   "lam": 19.145599999999998,
+   "cost": 4062.191085,
+   "regret": 1462.3410849999998
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.413195,
+   "above": 1.0,
+   "lam": 9.4888,
+   "cost": 2150.102015,
+   "regret": -449.74798499999997
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.413195,
+   "above": 1.0,
+   "lam": 9.4888,
+   "cost": 2150.102015,
+   "regret": -449.74798499999997
+  }
+ },
+ "S24 RECALIBRATED on target | any | alpha=0.1 | n=25": {
+  "point (margin 0)": {
+   "risk": 0.9798720000000001,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3421.9093600000006,
+   "regret": 821.6774186666667
+  },
+  "fixed margin 20": {
+   "risk": 0.8197066666666667,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2247.45592,
+   "regret": -352.77602133333335
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8972373333333333,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2261.6767253333337,
+   "regret": -338.555216
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.9147360000000001,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2453.0170506666664,
+   "regret": -147.21489066666666
+  },
+  "validation-tuned additive": {
+   "risk": 0.09237333333333334,
+   "above": 0.394,
+   "lam": 59.136,
+   "cost": 2589.997034666667,
+   "regret": -10.234906666666658
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.6060213333333334,
+   "above": 1.0,
+   "lam": 35.916,
+   "cost": 1944.4397333333332,
+   "regret": -655.792208
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.006954666666666666,
+   "above": 0.002,
+   "lam": 70.452,
+   "cost": 4290.926106666667,
+   "regret": 1690.6941653333333
+  },
+  "LTT additive": {
+   "risk": 0.021328,
+   "above": 0.02,
+   "lam": 66.312,
+   "cost": 3814.9273866666667,
+   "regret": 1214.6954453333333
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.021328,
+   "above": 0.02,
+   "lam": 66.312,
+   "cost": 3814.9273866666667,
+   "regret": 1214.6954453333333
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.11838933333333333,
+   "above": 0.478,
+   "lam": 17.74,
+   "cost": 3809.576037333333,
+   "regret": 1209.3440959999998
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.450848,
+   "above": 1.0,
+   "lam": 8.765600000000001,
+   "cost": 1998.3331253333333,
+   "regret": -601.898816
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.07244266666666667,
+   "above": 0.0,
+   "lam": 19.9984,
+   "cost": 4195.033007999999,
+   "regret": 1594.8010666666667
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.07613866666666666,
+   "above": 0.062,
+   "lam": 19.796799999999998,
+   "cost": 4162.035738666667,
+   "regret": 1561.8037973333333
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.07613866666666666,
+   "above": 0.062,
+   "lam": 19.796799999999998,
+   "cost": 4162.035738666667,
+   "regret": 1561.8037973333333
+  }
+ },
+ "S24 RECALIBRATED on target | any | alpha=0.1 | n=50": {
+  "point (margin 0)": {
+   "risk": 0.9800628571428572,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 3422.6951257142855,
+   "regret": 822.8348228571429
+  },
+  "fixed margin 20": {
+   "risk": 0.8201028571428571,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2248.4801542857144,
+   "regret": -351.3801485714286
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8977200000000001,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2262.5444685714283,
+   "regret": -337.3158342857143
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.9151371428571428,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2454.2090628571427,
+   "regret": -145.65124000000003
+  },
+  "validation-tuned additive": {
+   "risk": 0.09282285714285715,
+   "above": 0.436,
+   "lam": 58.956,
+   "cost": 2531.2000857142857,
+   "regret": -68.66021714285715
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.6079485714285714,
+   "above": 1.0,
+   "lam": 35.848,
+   "cost": 1942.1608514285713,
+   "regret": -657.6994514285715
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.009845714285714288,
+   "above": 0.0,
+   "lam": 68.02,
+   "cost": 4130.500851428571,
+   "regret": 1530.6405485714286
+  },
+  "LTT additive": {
+   "risk": 0.022257142857142857,
+   "above": 0.008,
+   "lam": 64.996,
+   "cost": 3728.4443485714282,
+   "regret": 1128.5840457142856
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.02218857142857143,
+   "above": 0.008,
+   "lam": 65.28,
+   "cost": 3729.9696685714284,
+   "regret": 1130.1093657142856
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.11753142857142859,
+   "above": 0.554,
+   "lam": 17.607200000000002,
+   "cost": 3796.7928857142856,
+   "regret": 1196.932582857143
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.4549771428571429,
+   "above": 1.0,
+   "lam": 8.705599999999999,
+   "cost": 1987.0837485714285,
+   "regret": -612.7765542857144
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.07249714285714286,
+   "above": 0.0,
+   "lam": 20.0,
+   "cost": 4193.989022857143,
+   "regret": 1594.1287200000002
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.07373142857142857,
+   "above": 0.024,
+   "lam": 19.932,
+   "cost": 4183.289468571429,
+   "regret": 1583.4291657142858
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.07373142857142857,
+   "above": 0.024,
+   "lam": 19.932,
+   "cost": 4183.289468571429,
+   "regret": 1583.4291657142858
+  }
+ },
+ "SENS_K10 | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.70228,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 1154.8444200000001,
+   "regret": 505.24536
+  },
+  "fixed margin 20": {
+   "risk": 0.20398000000000002,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 648.10578,
+   "regret": -1.493280000000002
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.33446000000000004,
+   "above": 1.0,
+   "lam": null,
+   "cost": 558.35414,
+   "regret": -91.24492
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.42466000000000004,
+   "above": 1.0,
+   "lam": null,
+   "cost": 656.376,
+   "regret": 6.776940000000002
+  },
+  "validation-tuned additive": {
+   "risk": 0.09578,
+   "above": 0.3,
+   "lam": 28.44,
+   "cost": 662.9041,
+   "regret": 13.305039999999998
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.14772000000000002,
+   "above": 0.944,
+   "lam": 23.68,
+   "cost": 637.9364,
+   "regret": -11.662660000000002
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.01466,
+   "above": 0.0,
+   "lam": 43.508,
+   "cost": 872.0456800000001,
+   "regret": 222.44662
+  },
+  "LTT additive": {
+   "risk": 0.05208000000000001,
+   "above": 0.058,
+   "lam": 34.096,
+   "cost": 722.1413400000001,
+   "regret": 72.54228
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.052000000000000005,
+   "above": 0.058,
+   "lam": 34.108,
+   "cost": 722.2266000000001,
+   "regret": 72.62754000000001
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.09826,
+   "above": 0.488,
+   "lam": 6.1264,
+   "cost": 530.5870600000001,
+   "regret": -119.012
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.07610000000000001,
+   "above": 0.114,
+   "lam": 6.4688,
+   "cost": 538.8044600000001,
+   "regret": -110.7946
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 2e-05,
+   "above": 0.0,
+   "lam": 17.4632,
+   "cost": 1624.3103800000001,
+   "regret": 974.7113200000001
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.0526,
+   "above": 0.054,
+   "lam": 7.418399999999999,
+   "cost": 610.74222,
+   "regret": -38.85684
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.05258,
+   "above": 0.054,
+   "lam": 7.419199999999999,
+   "cost": 610.8313999999999,
+   "regret": -38.76766000000001
+  }
+ },
+ "SENS_K10 | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.108476,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 1159.67858,
+   "regret": 527.7688400000001
+  },
+  "fixed margin 20": {
+   "risk": 0.023238,
+   "above": 0.796,
+   "lam": 20.0,
+   "cost": 652.00818,
+   "regret": 20.098440000000004
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.040164,
+   "above": 1.0,
+   "lam": null,
+   "cost": 562.8376599999999,
+   "regret": -69.07208
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.05241,
+   "above": 1.0,
+   "lam": null,
+   "cost": 662.7958199999999,
+   "regret": 30.886080000000003
+  },
+  "validation-tuned additive": {
+   "risk": 0.019014000000000003,
+   "above": 0.316,
+   "lam": 22.384,
+   "cost": 647.17786,
+   "regret": 15.26812
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.002772,
+   "above": 0.0,
+   "lam": 39.656,
+   "cost": 815.85212,
+   "regret": 183.94238
+  },
+  "CRC additive": {
+   "risk": 0.009678,
+   "above": 0.026,
+   "lam": 28.908,
+   "cost": 667.54972,
+   "regret": 35.639979999999994
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.009448,
+   "above": 0.026,
+   "lam": 29.288,
+   "cost": 671.19826,
+   "regret": 39.288520000000005
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.018416000000000005,
+   "above": 0.22,
+   "lam": 4.812799999999999,
+   "cost": 507.18660000000006,
+   "regret": -124.72314
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.00042400000000000006,
+   "above": 0.0,
+   "lam": 14.148,
+   "cost": 1315.62654,
+   "regret": 683.7168
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.009678000000000003,
+   "above": 0.012,
+   "lam": 6.3024,
+   "cost": 540.8061799999999,
+   "regret": -91.10356000000002
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.009496000000000003,
+   "above": 0.012,
+   "lam": 6.34,
+   "cost": 542.6651800000001,
+   "regret": -89.24455999999999
+  }
+ },
+ "SENS_K40 | any | alpha=0.1 | n=100": {
+  "point (margin 0)": {
+   "risk": 1.0,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 5464.89164,
+   "regret": 2001.29604
+  },
+  "fixed margin 20": {
+   "risk": 0.61846,
+   "above": 1.0,
+   "lam": 20.0,
+   "cost": 2523.3047800000004,
+   "regret": -940.29082
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.87754,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2450.3210999999997,
+   "regret": -1013.2745
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.9183,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2795.45014,
+   "regret": -668.14546
+  },
+  "validation-tuned additive": {
+   "risk": 0.09852000000000001,
+   "above": 0.408,
+   "lam": 40.856,
+   "cost": 3465.58404,
+   "regret": 1.9884399999999913
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.54506,
+   "above": 1.0,
+   "lam": 22.052,
+   "cost": 2542.2691,
+   "regret": -921.3265
+  },
+  "per-engine CP additive (alpha/K)": {
+   "risk": 0.03926,
+   "above": 0.0,
+   "lam": 48.164,
+   "cost": 4099.6404,
+   "regret": 636.0448
+  },
+  "LTT additive": {
+   "risk": 0.05054000000000001,
+   "above": 0.114,
+   "lam": 45.808,
+   "cost": 3897.9994800000004,
+   "regret": 434.40388
+  },
+  "LTT additive cheapest-valid": {
+   "risk": 0.05054000000000001,
+   "above": 0.114,
+   "lam": 45.808,
+   "cost": 3897.9994800000004,
+   "regret": 434.40388
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.10118,
+   "above": 0.414,
+   "lam": 11.419999999999998,
+   "cost": 3965.4993799999997,
+   "regret": 501.90378000000004
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.49736,
+   "above": 1.0,
+   "lam": 6.0856,
+   "cost": 2135.1686400000003,
+   "regret": -1328.42696
+  },
+  "per-engine CP sigma-scaled (alpha/K)": {
+   "risk": 0.0209,
+   "above": 0.0,
+   "lam": 19.931999999999995,
+   "cost": 7314.48424,
+   "regret": 3850.88864
+  },
+  "LTT sigma-scaled": {
+   "risk": 0.057760000000000006,
+   "above": 0.038,
+   "lam": 13.2192,
+   "cost": 4745.56736,
+   "regret": 1281.9717599999997
+  },
+  "LTT sigma-scaled cheapest-valid": {
+   "risk": 0.057760000000000006,
+   "above": 0.038,
+   "lam": 13.2192,
+   "cost": 4745.56736,
+   "regret": 1281.9717599999997
+  }
+ },
+ "SENS_K40 | mean | alpha=0.02 | n=100": {
+  "point (margin 0)": {
+   "risk": 0.13419099999999998,
+   "above": 1.0,
+   "lam": 0.0,
+   "cost": 5469.065460000001,
+   "regret": 2910.51616
+  },
+  "fixed margin 20": {
+   "risk": 0.023222499999999997,
+   "above": 0.966,
+   "lam": 20.0,
+   "cost": 2527.4880200000002,
+   "regret": -31.06128
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.04958350000000001,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2462.9727199999998,
+   "regret": -95.57658
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.06124050000000001,
+   "above": 1.0,
+   "lam": null,
+   "cost": 2808.2717599999996,
+   "regret": 249.72245999999998
+  },
+  "validation-tuned additive": {
+   "risk": 0.018790999999999995,
+   "above": 0.292,
+   "lam": 22.628,
+   "cost": 2573.11016,
+   "regret": 14.560860000000002
+  },
+  "per-engine CP additive (alpha)": {
+   "risk": 0.0036455000000000007,
+   "above": 0.0,
+   "lam": 38.52,
+   "cost": 3290.2106599999997,
+   "regret": 731.66136
+  },
+  "CRC additive": {
+   "risk": 0.009056500000000002,
+   "above": 0.0,
+   "lam": 30.38,
+   "cost": 2821.05546,
+   "regret": 262.50616
+  },
+  "CRC additive cheapest-valid": {
+   "risk": 0.009056500000000002,
+   "above": 0.0,
+   "lam": 30.38,
+   "cost": 2821.05546,
+   "regret": 262.50616
+  },
+  "validation-tuned sigma-scaled": {
+   "risk": 0.019094499999999997,
+   "above": 0.442,
+   "lam": 5.356,
+   "cost": 2059.42278,
+   "regret": -499.12652
+  },
+  "per-engine CP sigma-scaled (alpha)": {
+   "risk": 0.0014410000000000002,
+   "above": 0.0,
+   "lam": 13.005600000000001,
+   "cost": 4657.31642,
+   "regret": 2098.76712
+  },
+  "CRC sigma-scaled": {
+   "risk": 0.009388000000000002,
+   "above": 0.0,
+   "lam": 7.6416,
+   "cost": 2500.4634399999995,
+   "regret": -58.085860000000004
+  },
+  "CRC sigma-scaled cheapest-valid": {
+   "risk": 0.009388000000000002,
+   "above": 0.0,
+   "lam": 7.6416,
+   "cost": 2500.4634399999995,
+   "regret": -58.085860000000004
+  }
+ },
+ "online": {
+  "S13|shift|adaptive_add|0.0025": {
+   "rate": 0.00255,
+   "post": 0.0029558823529411762,
+   "above": 0.8,
+   "cost": 143.84,
+   "maint": 1.1282,
+   "lam": 23.0924
+  },
+  "S13|shift|adaptive_add|0.005": {
+   "rate": 0.00444,
+   "post": 0.005367647058823529,
+   "above": 0.0,
+   "cost": 168.3134,
+   "maint": 1.069,
+   "lam": 21.301500000000004
+  },
+  "S13|shift|adaptive_sc|0.0025": {
+   "rate": 0.00242,
+   "post": 0.0026470588235294116,
+   "above": 0.0,
+   "cost": 122.8042,
+   "maint": 1.1262,
+   "lam": 3.78070999999996
+  },
+  "S13|shift|adaptive_sc|0.005": {
+   "rate": 0.00439,
+   "post": 0.005161764705882353,
+   "above": 0.0,
+   "cost": 151.8704,
+   "maint": 1.071,
+   "lam": 3.3740199999999416
+  },
+  "S13|shift|mitici|0.0": {
+   "rate": 0.01532,
+   "post": 0.022220588235294117,
+   "above": null,
+   "cost": 331.3688,
+   "maint": 0.8044,
+   "lam": 2.326
+  },
+  "S13|shift|point|0.0": {
+   "rate": 0.01806,
+   "post": 0.024926470588235293,
+   "above": null,
+   "cost": 374.885,
+   "maint": 0.7378,
+   "lam": 0.0
+  },
+  "S13|shift|static_CRC|0.0": {
+   "rate": 0.0147,
+   "post": 0.021544117647058825,
+   "above": null,
+   "cost": 379.9662,
+   "maint": 0.9092,
+   "lam": 22.0
+  },
+  "S13|shift|zhu|0.0": {
+   "rate": 0.01359,
+   "post": 0.019794117647058823,
+   "above": null,
+   "cost": 304.5462,
+   "maint": 0.8668,
+   "lam": 3.0
+  },
+  "S13|stationary|adaptive_add|0.0025": {
+   "rate": 0.00163,
+   "post": 0.0017058823529411764,
+   "above": 0.0,
+   "cost": 86.1136,
+   "maint": 1.2314,
+   "lam": 2.0997
+  },
+  "S13|stationary|adaptive_add|0.005": {
+   "rate": 0.0023100000000000004,
+   "post": 0.002397058823529412,
+   "above": 0.0,
+   "cost": 91.0296,
+   "maint": 1.2064,
+   "lam": 1.3148000000000004
+  },
+  "S13|stationary|adaptive_sc|0.0025": {
+   "rate": 0.0019200000000000003,
+   "post": 0.0020294117647058824,
+   "above": 0.0,
+   "cost": 87.3266,
+   "maint": 1.224,
+   "lam": 0.8312850000000004
+  },
+  "S13|stationary|adaptive_sc|0.005": {
+   "rate": 0.00264,
+   "post": 0.0026323529411764707,
+   "above": 0.0,
+   "cost": 94.4006,
+   "maint": 1.199,
+   "lam": 0.4539000000000002
+  },
+  "S13|stationary|mitici|0.0": {
+   "rate": 0.0007700000000000001,
+   "post": 0.0007058823529411764,
+   "above": null,
+   "cost": 68.7098,
+   "maint": 1.2818,
+   "lam": 2.326
+  },
+  "S13|stationary|point|0.0": {
+   "rate": 0.0036500000000000005,
+   "post": 0.0035294117647058825,
+   "above": null,
+   "cost": 105.7838,
+   "maint": 1.1638,
+   "lam": 0.0
+  },
+  "S13|stationary|static_CRC|0.0": {
+   "rate": 0.0,
+   "post": 0.0,
+   "above": null,
+   "cost": 148.634,
+   "maint": 1.441,
+   "lam": 22.0
+  },
+  "S13|stationary|zhu|0.0": {
+   "rate": 0.00038,
+   "post": 0.00045588235294117646,
+   "above": null,
+   "cost": 70.625,
+   "maint": 1.3236,
+   "lam": 3.0
+  },
+  "S24|shift|adaptive_add|0.0025": {
+   "rate": 0.00266,
+   "post": 0.0028823529411764704,
+   "above": 1.0,
+   "cost": 162.5404,
+   "maint": 1.1398,
+   "lam": 20.78315
+  },
+  "S24|shift|adaptive_add|0.005": {
+   "rate": 0.00467,
+   "post": 0.005308823529411764,
+   "above": 0.0,
+   "cost": 187.3136,
+   "maint": 1.092,
+   "lam": 17.8309
+  },
+  "S24|shift|adaptive_sc|0.0025": {
+   "rate": 0.0026,
+   "post": 0.00275,
+   "above": 1.0,
+   "cost": 194.6504,
+   "maint": 1.2514,
+   "lam": 5.330590000000007
+  },
+  "S24|shift|adaptive_sc|0.005": {
+   "rate": 0.004659999999999999,
+   "post": 0.00525,
+   "above": 0.0,
+   "cost": 192.0932,
+   "maint": 1.1392,
+   "lam": 4.404159999999925
+  },
+  "S24|shift|mitici|0.0": {
+   "rate": 0.01465,
+   "post": 0.020691176470588237,
+   "above": null,
+   "cost": 320.5886,
+   "maint": 0.8386,
+   "lam": 2.326
+  },
+  "S24|shift|point|0.0": {
+   "rate": 0.01863,
+   "post": 0.024441176470588237,
+   "above": null,
+   "cost": 388.989,
+   "maint": 0.7434,
+   "lam": 0.0
+  },
+  "S24|shift|static_CRC|0.0": {
+   "rate": 0.00133,
+   "post": 0.0019558823529411762,
+   "above": null,
+   "cost": 176.9214,
+   "maint": 1.2458,
+   "lam": 28.0
+  },
+  "S24|shift|zhu|0.0": {
+   "rate": 0.01248,
+   "post": 0.01801470588235294,
+   "above": null,
+   "cost": 283.8418,
+   "maint": 0.8968,
+   "lam": 3.0
+  },
+  "S24|stationary|adaptive_add|0.0025": {
+   "rate": 0.0021699999999999996,
+   "post": 0.002235294117647059,
+   "above": 0.0,
+   "cost": 113.8928,
+   "maint": 1.264,
+   "lam": 3.5019
+  },
+  "S24|stationary|adaptive_add|0.005": {
+   "rate": 0.00356,
+   "post": 0.0036470588235294117,
+   "above": 0.0,
+   "cost": 128.8986,
+   "maint": 1.2184,
+   "lam": 2.394800000000001
+  },
+  "S24|stationary|adaptive_sc|0.0025": {
+   "rate": 0.00232,
+   "post": 0.002352941176470588,
+   "above": 0.0,
+   "cost": 106.1946,
+   "maint": 1.2626,
+   "lam": 1.3946449999999984
+  },
+  "S24|stationary|adaptive_sc|0.005": {
+   "rate": 0.0038,
+   "post": 0.003926470588235294,
+   "above": 0.0,
+   "cost": 125.5574,
+   "maint": 1.2194,
+   "lam": 0.9213200000000011
+  },
+  "S24|stationary|mitici|0.0": {
+   "rate": 0.0015199999999999999,
+   "post": 0.0015588235294117646,
+   "above": null,
+   "cost": 85.8898,
+   "maint": 1.2974,
+   "lam": 2.326
+  },
+  "S24|stationary|point|0.0": {
+   "rate": 0.006290000000000001,
+   "post": 0.006382352941176471,
+   "above": null,
+   "cost": 157.2906,
+   "maint": 1.156,
+   "lam": 0.0
+  },
+  "S24|stationary|static_CRC|0.0": {
+   "rate": 0.0,
+   "post": 0.0,
+   "above": null,
+   "cost": 199.6606,
+   "maint": 1.549,
+   "lam": 28.0
+  },
+  "S24|stationary|zhu|0.0": {
+   "rate": 0.0009,
+   "post": 0.0008088235294117648,
+   "above": null,
+   "cost": 82.1736,
+   "maint": 1.3146,
+   "lam": 3.0
+  }
+ }
+}

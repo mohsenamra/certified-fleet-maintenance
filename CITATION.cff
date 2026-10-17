@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Certified fleet maintenance plans from learned failure predictions: exact conformal calibration under shared capacity"
+authors:
+  - family-names: Amra
+    given-names: Mohsen
+    orcid: "https://orcid.org/0000-0002-5713-2800"
+    affiliation: "Department of Industrial Engineering, South Tehran Branch, Islamic Azad University, Tehran, Iran"
+license: MIT
+repository-code: "https://github.com/mohsenamra/certified-fleet-maintenance"

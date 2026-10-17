@@ -1,0 +1,6742 @@
+{
+ "exactness": {
+  "RICH_ID": [
+   200,
+   200
+  ],
+  "RICH_TIGHT": [
+   200,
+   200
+  ],
+  "RICH_S13_src": [
+   200,
+   200
+  ],
+  "RICH_S13_tgt": [
+   200,
+   200
+  ],
+  "RICH_S24_src": [
+   200,
+   200
+  ],
+  "RICH_S24_tgt": [
+   200,
+   200
+  ]
+ },
+ "monotonicity": {
+  "RICH_ID|add": {
+   "plans": 118.911,
+   "share_mean": 0.457,
+   "share_any": 0.266,
+   "sec": 14.792138846635819
+  },
+  "RICH_ID|sc": {
+   "plans": 118.911,
+   "share_mean": 0.453,
+   "share_any": 0.278,
+   "sec": 14.792138846635819
+  },
+  "RICH_ID|s05": {
+   "plans": 118.911,
+   "share_mean": 0.464,
+   "share_any": 0.298,
+   "sec": 14.792138846635819
+  },
+  "RICH_TIGHT|add": {
+   "plans": 118.94,
+   "share_mean": 0.425,
+   "share_any": 0.2425,
+   "sec": 16.122335450053214
+  },
+  "RICH_TIGHT|sc": {
+   "plans": 118.94,
+   "share_mean": 0.4325,
+   "share_any": 0.2775,
+   "sec": 16.122335450053214
+  },
+  "RICH_TIGHT|s05": {
+   "plans": 118.94,
+   "share_mean": 0.445,
+   "share_any": 0.2875,
+   "sec": 16.122335450053214
+  },
+  "RICH_S13_src|add": {
+   "plans": 117.795,
+   "share_mean": 0.38,
+   "share_any": 0.23,
+   "sec": 15.471071576476097
+  },
+  "RICH_S13_src|sc": {
+   "plans": 117.795,
+   "share_mean": 0.39,
+   "share_any": 0.2575,
+   "sec": 15.471071576476097
+  },
+  "RICH_S13_src|s05": {
+   "plans": 117.795,
+   "share_mean": 0.3975,
+   "share_any": 0.285,
+   "sec": 15.471071576476097
+  },
+  "RICH_S13_tgt|add": {
+   "plans": 126.075,
+   "share_mean": 0.76,
+   "share_any": 0.49,
+   "sec": 16.503938528299333
+  },
+  "RICH_S13_tgt|sc": {
+   "plans": 126.075,
+   "share_mean": 0.7275,
+   "share_any": 0.4675,
+   "sec": 16.503938528299333
+  },
+  "RICH_S13_tgt|s05": {
+   "plans": 126.075,
+   "share_mean": 0.72,
+   "share_any": 0.455,
+   "sec": 16.503938528299333
+  },
+  "RICH_S24_src|add": {
+   "plans": 117.98,
+   "share_mean": 0.4675,
+   "share_any": 0.29,
+   "sec": 15.35446134030819
+  },
+  "RICH_S24_src|sc": {
+   "plans": 117.98,
+   "share_mean": 0.465,
+   "share_any": 0.2925,
+   "sec": 15.35446134030819
+  },
+  "RICH_S24_src|s05": {
+   "plans": 117.98,
+   "share_mean": 0.49,
+   "share_any": 0.32,
+   "sec": 15.35446134030819
+  },
+  "RICH_S24_tgt|add": {
+   "plans": 123.7575,
+   "share_mean": 0.7625,
+   "share_any": 0.485,
+   "sec": 15.965068250894547
+  },
+  "RICH_S24_tgt|sc": {
+   "plans": 123.7575,
+   "share_mean": 0.7875,
+   "share_any": 0.5525,
+   "sec": 15.965068250894547
+  },
+  "RICH_S24_tgt|s05": {
+   "plans": 123.7575,
+   "share_mean": 0.8,
+   "share_any": 0.57,
+   "sec": 15.965068250894547
+  }
+ },
+ "RICH_ID | mean | alpha=0.02 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.09508358140289784,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2689.783673339844,
+   "regret": 602.7950691293174,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.01971810572966933,
+   "above": 0.076,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2089.326604003906,
+   "regret": 2.3379997933799204,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.0338998947368421,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.8348778947368,
+   "regret": -113.15372631578948,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.04336368421052632,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2033.4706084210525,
+   "regret": -53.5179957894737,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.020800526985898612,
+   "above": 0.51,
+   "lam": 19.544878227517405,
+   "inf_share": 0.0,
+   "cost": 2090.1446208496095,
+   "regret": 3.1560166390830453,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0035972632085904477,
+   "above": 0.0,
+   "lam": 37.602265507521196,
+   "inf_share": 0.0,
+   "cost": 2782.132310546875,
+   "regret": 695.1437063363488,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.0008273684286832577,
+   "above": 0.0,
+   "lam": 48.4497355924648,
+   "inf_share": 0.0,
+   "cost": 3590.0195751953124,
+   "regret": 1503.0309709847863,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.0008273684286832577,
+   "above": 0.0,
+   "lam": 48.4497355924648,
+   "inf_share": 0.0,
+   "cost": 3590.0195751953124,
+   "regret": 1503.0309709847863,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.0006826315962825902,
+   "above": 0.0,
+   "lam": 49.128000099999994,
+   "inf_share": 0.0,
+   "cost": 3651.9715161132813,
+   "regret": 1564.982911902755,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.0761725294739008,
+   "above": 1.0,
+   "lam": 0.9344398368340815,
+   "inf_share": 0.0,
+   "cost": 2400.0794301757815,
+   "regret": 313.0908259652549,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.020362737502902746,
+   "above": 0.466,
+   "lam": 4.398214664184878,
+   "inf_share": 0.0,
+   "cost": 2082.2828461914064,
+   "regret": -4.705758019120079,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.0011434737046365625,
+   "above": 0.0,
+   "lam": 13.409054172360674,
+   "inf_share": 0.0,
+   "cost": 4027.7604794921876,
+   "regret": 1940.7718752816613,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.0008688421209226363,
+   "above": 0.0,
+   "lam": 14.9331927201144,
+   "inf_share": 0.0,
+   "cost": 4302.633905273437,
+   "regret": 2215.645301062911,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0008688421209226363,
+   "above": 0.0,
+   "lam": 14.9331927201144,
+   "inf_share": 0.0,
+   "cost": 4302.633905273437,
+   "regret": 2215.645301062911,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.0008181052733561955,
+   "above": 0.0,
+   "lam": 15.1232001,
+   "inf_share": 0.0,
+   "cost": 4337.281379882813,
+   "regret": 2250.292775672286,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.07687716126441956,
+   "above": 1.0,
+   "lam": 0.21275118442031743,
+   "inf_share": 0.0,
+   "cost": 2410.6200419921875,
+   "regret": 323.6314377816612,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.02046779012680054,
+   "above": 0.49,
+   "lam": 4.560012857212721,
+   "inf_share": 0.0,
+   "cost": 2100.4373005371094,
+   "regret": 13.448696326583045,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.00022315789794083684,
+   "above": 0.0,
+   "lam": 18.852794091778257,
+   "inf_share": 0.0,
+   "cost": 4912.536680175781,
+   "regret": 2825.5480759652546,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.0007706315968534909,
+   "above": 0.0,
+   "lam": 15.968492625229064,
+   "inf_share": 0.0,
+   "cost": 4449.753032714843,
+   "regret": 2362.7644285043175,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.0007706315968534909,
+   "above": 0.0,
+   "lam": 15.968492625229064,
+   "inf_share": 0.0,
+   "cost": 4449.753032714843,
+   "regret": 2362.7644285043175,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.0006870526525599416,
+   "above": 0.0,
+   "lam": 16.2944001,
+   "inf_share": 0.0,
+   "cost": 4504.931409667969,
+   "regret": 2417.9428054574423,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.0767758976817131,
+   "above": 1.0,
+   "lam": 0.22160659615671846,
+   "inf_share": 0.0,
+   "cost": 2410.033423828125,
+   "regret": 323.04481961759865,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | mean | alpha=0.02 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.09506844660639763,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2689.8498486328126,
+   "regret": 603.1266619661459,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.01969977831840515,
+   "above": 0.146,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2089.200229980469,
+   "regret": 2.477043313802091,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.033937333333333326,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1974.5580133333335,
+   "regret": -112.16517333333333,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.043379777777777774,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2033.9614866666668,
+   "regret": -52.76169999999999,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.020210444973781706,
+   "above": 0.494,
+   "lam": 19.769228434051534,
+   "inf_share": 0.0,
+   "cost": 2089.729284423828,
+   "regret": 3.0060977571614664,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0034655556273646654,
+   "above": 0.0,
+   "lam": 37.598944861794706,
+   "inf_share": 0.0,
+   "cost": 2779.9981025390625,
+   "regret": 693.2749158723957,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.009794555723667145,
+   "above": 0.0,
+   "lam": 27.917731227912498,
+   "inf_share": 0.0,
+   "cost": 2324.554408203125,
+   "regret": 237.83122153645834,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.009718444612808526,
+   "above": 0.0,
+   "lam": 27.997645639450674,
+   "inf_share": 0.0,
+   "cost": 2327.6067099609377,
+   "regret": 240.88352329427084,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.009011000176891685,
+   "above": 0.0,
+   "lam": 28.824000100000006,
+   "inf_share": 0.0,
+   "cost": 2358.4169516601564,
+   "regret": 271.6937649934896,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.07615322616696357,
+   "above": 1.0,
+   "lam": 0.9328247239102023,
+   "inf_share": 0.0,
+   "cost": 2399.922261230469,
+   "regret": 313.1990745638021,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.02041155620291829,
+   "above": 0.516,
+   "lam": 4.374289826186422,
+   "inf_share": 0.0,
+   "cost": 2073.3611245117186,
+   "regret": -13.362062154947909,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.0011498889137874356,
+   "above": 0.0,
+   "lam": 13.359970399625503,
+   "inf_share": 0.0,
+   "cost": 4020.065400390625,
+   "regret": 1933.3422137239584,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.009764000135473907,
+   "above": 0.0,
+   "lam": 6.573684660173491,
+   "inf_share": 0.0,
+   "cost": 2486.1863896484374,
+   "regret": 399.46320298177085,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.009718444577418267,
+   "above": 0.0,
+   "lam": 6.58705136431366,
+   "inf_share": 0.0,
+   "cost": 2489.3522236328126,
+   "regret": 402.62903696614586,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.009282333455979824,
+   "above": 0.0,
+   "lam": 6.7152001,
+   "inf_share": 0.0,
+   "cost": 2518.406207519531,
+   "regret": 431.6830208528646,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.07685233741998672,
+   "above": 1.0,
+   "lam": 0.21239644917784797,
+   "inf_share": 0.0,
+   "cost": 2410.3205483398438,
+   "regret": 323.5973616731771,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.020487889477983117,
+   "above": 0.546,
+   "lam": 4.538669030790926,
+   "inf_share": 0.0,
+   "cost": 2091.917022705078,
+   "regret": 5.193836038411466,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.0001536666699248599,
+   "above": 0.0,
+   "lam": 18.728932841637803,
+   "inf_share": 0.0,
+   "cost": 4904.728068359375,
+   "regret": 2818.0048816927083,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.009181000164709985,
+   "above": 0.0,
+   "lam": 6.966731024600413,
+   "inf_share": 0.0,
+   "cost": 2568.32540234375,
+   "regret": 481.60221567708334,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.009141222381033003,
+   "above": 0.0,
+   "lam": 6.978960274697962,
+   "inf_share": 0.0,
+   "cost": 2571.306247558594,
+   "regret": 484.5830608919271,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.008255444591864943,
+   "above": 0.0,
+   "lam": 7.276800099999998,
+   "inf_share": 0.0,
+   "cost": 2641.277365234375,
+   "regret": 554.5541785677083,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.07675500436127186,
+   "above": 1.0,
+   "lam": 0.22118581709213203,
+   "inf_share": 0.0,
+   "cost": 2409.8124223632813,
+   "regret": 323.0892356966146,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | mean | alpha=0.05 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.09504726545512676,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2688.8498813476563,
+   "regret": 676.642066610814,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.019699579387903215,
+   "above": 0.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2088.638291015625,
+   "regret": 76.43047627878289,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.033896105263157894,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.2588842105263,
+   "regret": -38.94893052631578,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.04334463157894737,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2032.6224715789472,
+   "regret": 20.41465684210527,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.05028810927271843,
+   "above": 0.474,
+   "lam": 7.998989526007388,
+   "inf_share": 0.0,
+   "cost": 2138.2360588378906,
+   "regret": 126.02824410104853,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.008003368520177901,
+   "above": 0.0,
+   "lam": 29.883469887898013,
+   "inf_share": 0.0,
+   "cost": 2395.3104912109375,
+   "regret": 383.10267647409546,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.02909379113651812,
+   "above": 0.0,
+   "lam": 15.167918469947159,
+   "inf_share": 0.0,
+   "cost": 2033.14844140625,
+   "regret": 20.940626669407898,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.026605159224942325,
+   "above": 0.0,
+   "lam": 16.38733143355262,
+   "inf_share": 0.0,
+   "cost": 2044.5109450683594,
+   "regret": 32.303130331517266,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.0275960013512522,
+   "above": 0.0,
+   "lam": 15.920000099999998,
+   "inf_share": 0.0,
+   "cost": 2039.5940827636718,
+   "regret": 27.386268026829775,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.09249495020508766,
+   "above": 1.0,
+   "lam": 0.044295762194594704,
+   "inf_share": 0.0,
+   "cost": 2649.7953295898437,
+   "regret": 637.5875148530016,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.05019800404459238,
+   "above": 0.48,
+   "lam": 1.846668589254449,
+   "inf_share": 0.0,
+   "cost": 2093.4796577148436,
+   "regret": 81.27184297800164,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.004464000075589865,
+   "above": 0.0,
+   "lam": 8.96856753000219,
+   "inf_share": 0.0,
+   "cost": 3063.37751171875,
+   "regret": 1051.1696969819081,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.028146106749773026,
+   "above": 0.0,
+   "lam": 3.4821989911819293,
+   "inf_share": 0.0,
+   "cost": 2001.8265686035156,
+   "regret": -10.381246133326476,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0259178959839046,
+   "above": 0.0,
+   "lam": 3.716390284232283,
+   "inf_share": 0.0,
+   "cost": 2013.8567307128906,
+   "regret": 1.6489159760485246,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.026714843617752195,
+   "above": 0.0,
+   "lam": 3.6424000999999997,
+   "inf_share": 0.0,
+   "cost": 2009.8388610839843,
+   "regret": -2.3689536528577255,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.09254516100883484,
+   "above": 1.0,
+   "lam": 0.011192143135606472,
+   "inf_share": 0.0,
+   "cost": 2651.6987294921873,
+   "regret": 639.4909147553453,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.050169898584485055,
+   "above": 0.48,
+   "lam": 1.9115286734238395,
+   "inf_share": 0.0,
+   "cost": 2089.9844267578123,
+   "regret": 77.77661202097039,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.0036917895232327284,
+   "above": 0.0,
+   "lam": 10.37871588985225,
+   "inf_share": 0.0,
+   "cost": 3377.2098046875,
+   "regret": 1365.0019899506578,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.027163685504347085,
+   "above": 0.0,
+   "lam": 3.716885507358862,
+   "inf_share": 0.0,
+   "cost": 2011.0590131835938,
+   "regret": -1.1488015532483504,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.025556527441367508,
+   "above": 0.0,
+   "lam": 3.8982069741579206,
+   "inf_share": 0.0,
+   "cost": 2024.331259765625,
+   "regret": 12.123445028782898,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.025278421949595214,
+   "above": 0.0,
+   "lam": 3.9360001000000002,
+   "inf_share": 0.0,
+   "cost": 2028.9175458984375,
+   "regret": 16.7097311615954,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.09239663451910018,
+   "above": 1.0,
+   "lam": 0.01157108786679331,
+   "inf_share": 0.0,
+   "cost": 2648.7288251953123,
+   "regret": 636.5210104584703,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | mean | alpha=0.05 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.09504600252211094,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2688.8690771484376,
+   "regret": 676.8108904817707,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.019700667273253203,
+   "above": 0.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2088.8827763671875,
+   "regret": 76.82458970052082,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.033888777777777775,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.1077933333333,
+   "regret": -38.95039333333333,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.043348666666666674,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2032.6981244444444,
+   "regret": 20.639937777777778,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.05008578164130449,
+   "above": 0.5,
+   "lam": 7.995060297361086,
+   "inf_share": 0.0,
+   "cost": 2135.390109375,
+   "regret": 123.33192270833332,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.007991777840070427,
+   "above": 0.0,
+   "lam": 29.77848290481415,
+   "inf_share": 0.0,
+   "cost": 2389.2218369140624,
+   "regret": 377.1636502473959,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.03788044682145119,
+   "above": 0.002,
+   "lam": 11.491052321261668,
+   "inf_share": 0.0,
+   "cost": 2038.1743127441407,
+   "regret": 26.116126077473957,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.03118622390925884,
+   "above": 0.0,
+   "lam": 14.231678471189229,
+   "inf_share": 0.0,
+   "cost": 2030.0077536621093,
+   "regret": 17.949566995442705,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.035843002155423166,
+   "above": 0.0,
+   "lam": 12.280000099999995,
+   "inf_share": 0.0,
+   "cost": 2031.6179226074219,
+   "regret": 19.559735940755207,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.0924946695715189,
+   "above": 1.0,
+   "lam": 0.04430610576139682,
+   "inf_share": 0.0,
+   "cost": 2649.858989746094,
+   "regret": 637.8008030794269,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.05008089239150286,
+   "above": 0.522,
+   "lam": 1.8327008431125582,
+   "inf_share": 0.0,
+   "cost": 2086.8394611816407,
+   "regret": 74.78127451497394,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.004445222293492407,
+   "above": 0.0,
+   "lam": 8.939593260216279,
+   "inf_share": 0.0,
+   "cost": 3056.927220703125,
+   "regret": 1044.8690340364583,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.03672011309862137,
+   "above": 0.0,
+   "lam": 2.736284948992839,
+   "inf_share": 0.0,
+   "cost": 2006.3386325683593,
+   "regret": -5.719554098307294,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.030362001430243254,
+   "above": 0.0,
+   "lam": 3.2630807212038553,
+   "inf_share": 0.0,
+   "cost": 1995.104279296875,
+   "regret": -16.95390736979167,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.03495433533936739,
+   "above": 0.0,
+   "lam": 2.875200099999999,
+   "inf_share": 0.0,
+   "cost": 2000.5612543945313,
+   "regret": -11.496932272135417,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.09254211394488812,
+   "above": 1.0,
+   "lam": 0.011185170733915662,
+   "inf_share": 0.0,
+   "cost": 2651.7110815429687,
+   "regret": 639.652894876302,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.050148781336843966,
+   "above": 0.534,
+   "lam": 1.894756962635489,
+   "inf_share": 0.0,
+   "cost": 2085.153921875,
+   "regret": 73.09573520833332,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.003728555622976273,
+   "above": 0.0,
+   "lam": 10.311046029220076,
+   "inf_share": 0.0,
+   "cost": 3364.795459472656,
+   "regret": 1352.7372728059897,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.03581089109182358,
+   "above": 0.0,
+   "lam": 2.8677950102952545,
+   "inf_share": 0.0,
+   "cost": 1990.2201533203124,
+   "regret": -21.83803334635417,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.03086566825211048,
+   "above": 0.0,
+   "lam": 3.301077589502245,
+   "inf_share": 0.0,
+   "cost": 1984.0459453125,
+   "regret": -28.01224135416667,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.03259133517742157,
+   "above": 0.0,
+   "lam": 3.176000099999999,
+   "inf_share": 0.0,
+   "cost": 1990.4884372558595,
+   "regret": -21.569749410807294,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.09239511416852474,
+   "above": 1.0,
+   "lam": 0.011568440077998872,
+   "inf_share": 0.0,
+   "cost": 2648.772236328125,
+   "regret": 636.7140496614583,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | any | alpha=0.1 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.8670694743394851,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2690.0528193359373,
+   "regret": 74.08305302014803,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.3311873691678047,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2089.2604321289064,
+   "regret": -526.7093341868832,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.49008,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.7993789473683,
+   "regret": -642.1703873684211,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.5891621052631578,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2033.589349473684,
+   "regret": -582.3804168421053,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.12060631623491645,
+   "above": 0.632,
+   "lam": 33.19733593741845,
+   "inf_share": 0.0,
+   "cost": 2560.212444824219,
+   "regret": -55.75732149157072,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.29859368509054185,
+   "above": 1.0,
+   "lam": 21.626941017464574,
+   "inf_share": 0.0,
+   "cost": 2124.9904580078123,
+   "regret": -490.97930830797696,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.02849473696714267,
+   "above": 0.0,
+   "lam": 45.94989862601488,
+   "inf_share": 0.0,
+   "cost": 3369.2922026367187,
+   "regret": 753.3224363209293,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.028934736961033197,
+   "above": 0.0,
+   "lam": 45.87104979490608,
+   "inf_share": 0.0,
+   "cost": 3363.523109863281,
+   "regret": 747.5533435474919,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.036406315950676796,
+   "above": 0.038,
+   "lam": 44.54792833469669,
+   "inf_share": 0.0,
+   "cost": 3278.273357421875,
+   "regret": 662.3035911060856,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.03635789489373565,
+   "above": 0.038,
+   "lam": 44.55488934111871,
+   "inf_share": 0.0,
+   "cost": 3278.8392275390624,
+   "regret": 662.8694612232731,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.032147368389181794,
+   "above": 0.024,
+   "lam": 45.380000100000004,
+   "inf_share": 0.0,
+   "cost": 3344.0301982421875,
+   "regret": 728.0604319263981,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.018730526256375016,
+   "above": 0.006,
+   "lam": 48.04638043230849,
+   "inf_share": 0.0,
+   "cost": 3559.202355957031,
+   "regret": 943.2325896412418,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6661221024990082,
+   "above": 1.0,
+   "lam": 4.1041141226342805,
+   "inf_share": 0.0,
+   "cost": 2126.131341796875,
+   "regret": -489.8384245189145,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6671178947687149,
+   "above": 1.0,
+   "lam": 4.12795219176351,
+   "inf_share": 0.0,
+   "cost": 2124.989419433594,
+   "regret": -490.98034688219576,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.12332842145115137,
+   "above": 0.692,
+   "lam": 7.96214142831188,
+   "inf_share": 0.0,
+   "cost": 2820.998875,
+   "regret": 205.0291086842105,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.22433684232831003,
+   "above": 1.0,
+   "lam": 5.853632539656577,
+   "inf_share": 0.0,
+   "cost": 2331.318794921875,
+   "regret": -284.65097139391446,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0014505263450555503,
+   "above": 0.0,
+   "lam": 18.859757327174464,
+   "inf_share": 0.0,
+   "cost": 4994.359852539063,
+   "regret": 2378.390086223273,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.0015831579216755926,
+   "above": 0.0,
+   "lam": 18.78162685743254,
+   "inf_share": 0.0,
+   "cost": 4981.82605859375,
+   "regret": 2365.8562922779606,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.03665473675169051,
+   "above": 0.024,
+   "lam": 12.527412486660126,
+   "inf_share": 0.0,
+   "cost": 3832.339207519531,
+   "regret": 1216.3694412037419,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.03663999992795289,
+   "above": 0.024,
+   "lam": 12.52899794478056,
+   "inf_share": 0.0,
+   "cost": 3832.6623369140625,
+   "regret": 1216.692570598273,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.03453894739411771,
+   "above": 0.022,
+   "lam": 12.696000100000001,
+   "inf_share": 0.0,
+   "cost": 3865.9440986328127,
+   "regret": 1249.974332317023,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.018404210668057204,
+   "above": 0.004,
+   "lam": 14.892064969959856,
+   "inf_share": 0.0,
+   "cost": 4292.249374511719,
+   "regret": 1676.2796081959293,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7070905247926712,
+   "above": 1.0,
+   "lam": 0.8203065768688912,
+   "inf_share": 0.0,
+   "cost": 2159.879212890625,
+   "regret": -456.0905534251645,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7050968425273896,
+   "above": 1.0,
+   "lam": 0.8277830623306562,
+   "inf_share": 0.0,
+   "cost": 2162.0131430664064,
+   "regret": -453.95662324938326,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.12395157933980226,
+   "above": 0.696,
+   "lam": 8.344755587241467,
+   "inf_share": 0.0,
+   "cost": 2902.4286997070312,
+   "regret": 286.45893339124177,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.1878063157349825,
+   "above": 1.0,
+   "lam": 6.571996521916166,
+   "inf_share": 0.0,
+   "cost": 2475.1601162109373,
+   "regret": -140.80965010485198,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 35.970766124627616,
+   "inf_share": 0.0,
+   "cost": 6734.381227539063,
+   "regret": 4118.411461223273,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 35.88192518687643,
+   "inf_share": 0.0,
+   "cost": 6727.7101328125,
+   "regret": 4111.7403664967105,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.03240631571458653,
+   "above": 0.016,
+   "lam": 13.860359732143788,
+   "inf_share": 0.0,
+   "cost": 4066.146587402344,
+   "regret": 1450.1768210865544,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.03238526308489963,
+   "above": 0.016,
+   "lam": 13.864772838961878,
+   "inf_share": 0.0,
+   "cost": 4066.999306640625,
+   "regret": 1451.0295403248356,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.029983158103190362,
+   "above": 0.012,
+   "lam": 14.1488001,
+   "inf_share": 0.0,
+   "cost": 4120.138901367188,
+   "regret": 1504.1691350513981,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.017292631562799216,
+   "above": 0.002,
+   "lam": 15.80350500960034,
+   "inf_share": 0.0,
+   "cost": 4417.237829101562,
+   "regret": 1801.268062785773,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7060989463329315,
+   "above": 1.0,
+   "lam": 0.8444077238129916,
+   "inf_share": 0.0,
+   "cost": 2154.0246640625,
+   "regret": -461.94510225328946,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7041052652597427,
+   "above": 1.0,
+   "lam": 0.8527878767610191,
+   "inf_share": 0.0,
+   "cost": 2156.1585791015623,
+   "regret": -459.811187214227,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | any | alpha=0.1 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.8667777817249298,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2687.847640136719,
+   "regret": 69.5210934700521,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.3305288887619972,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2088.614859375,
+   "regret": -529.7116872916666,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.48962666666666665,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.2694266666667,
+   "regret": -645.0571200000002,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.5885177777777777,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2032.7440822222218,
+   "regret": -585.5824644444446,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.10963555630668997,
+   "above": 0.608,
+   "lam": 34.0062721243252,
+   "inf_share": 0.0,
+   "cost": 2589.6952338867186,
+   "regret": -28.63131277994792,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.2975577776134014,
+   "above": 1.0,
+   "lam": 21.658425626856094,
+   "inf_share": 0.0,
+   "cost": 2124.1522431640624,
+   "regret": -494.17430350260423,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.02815777787193656,
+   "above": 0.0,
+   "lam": 45.96226472861982,
+   "inf_share": 0.0,
+   "cost": 3366.193052246094,
+   "regret": 747.8665055794271,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.028537777848541737,
+   "above": 0.0,
+   "lam": 45.87313962840015,
+   "inf_share": 0.0,
+   "cost": 3359.4894091796873,
+   "regret": 741.1628625130209,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.051786666601896285,
+   "above": 0.024,
+   "lam": 41.3170837482915,
+   "inf_share": 0.0,
+   "cost": 3033.9118637695315,
+   "regret": 415.58531710286456,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.05165111104957759,
+   "above": 0.024,
+   "lam": 41.3251333079491,
+   "inf_share": 0.0,
+   "cost": 3034.385257324219,
+   "regret": 416.05871065755207,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.04794000017363578,
+   "above": 0.006,
+   "lam": 42.120000100000006,
+   "inf_share": 0.0,
+   "cost": 3093.2096762695314,
+   "regret": 474.8831296028646,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.00808666677121073,
+   "above": 0.0,
+   "lam": 50.265381835763414,
+   "inf_share": 0.0,
+   "cost": 3745.7400971679685,
+   "regret": 1127.413550501302,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6654777792692185,
+   "above": 1.0,
+   "lam": 4.1042093486124855,
+   "inf_share": 0.0,
+   "cost": 2125.1541469726562,
+   "regret": -493.17239969401044,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6664777772426606,
+   "above": 1.0,
+   "lam": 4.128158430939134,
+   "inf_share": 0.0,
+   "cost": 2124.0423154296873,
+   "regret": -494.28423123697917,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.1087244442999363,
+   "above": 0.606,
+   "lam": 8.209980091818807,
+   "inf_share": 0.0,
+   "cost": 2879.5758696289063,
+   "regret": 261.24932296223955,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.2249222224652767,
+   "above": 1.0,
+   "lam": 5.849266719461617,
+   "inf_share": 0.0,
+   "cost": 2329.173302734375,
+   "regret": -289.1532439322917,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.001231111140921712,
+   "above": 0.0,
+   "lam": 18.787980173667524,
+   "inf_share": 0.0,
+   "cost": 4986.1989296875,
+   "regret": 2367.8723830208337,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.0014333333680406214,
+   "above": 0.0,
+   "lam": 18.682006525851154,
+   "inf_share": 0.0,
+   "cost": 4969.371724609375,
+   "regret": 2351.0451779427085,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.05481777814216912,
+   "above": 0.036,
+   "lam": 10.697948770151797,
+   "inf_share": 0.0,
+   "cost": 3459.3390205078126,
+   "regret": 841.0124738411458,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.054708889218047264,
+   "above": 0.036,
+   "lam": 10.700347113030478,
+   "inf_share": 0.0,
+   "cost": 3459.8526459960935,
+   "regret": 841.5260993294271,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.05218666672334075,
+   "above": 0.026,
+   "lam": 10.824800100000001,
+   "inf_share": 0.0,
+   "cost": 3487.3754555664063,
+   "regret": 869.0489088997397,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.009064444545656443,
+   "above": 0.0,
+   "lam": 16.33980896489369,
+   "inf_share": 0.0,
+   "cost": 4566.249795898438,
+   "regret": 1947.9232492317708,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7066088899374008,
+   "above": 1.0,
+   "lam": 0.820174977794747,
+   "inf_share": 0.0,
+   "cost": 2158.7443203125,
+   "regret": -459.58222635416666,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7046333345174789,
+   "above": 1.0,
+   "lam": 0.8277149708117788,
+   "inf_share": 0.0,
+   "cost": 2160.9037529296875,
+   "regret": -457.4227937369792,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.11020222253352403,
+   "above": 0.612,
+   "lam": 8.649747160477418,
+   "inf_share": 0.0,
+   "cost": 2977.6300087890627,
+   "regret": 359.3034621223958,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.18614888894557952,
+   "above": 1.0,
+   "lam": 6.570174334339157,
+   "inf_share": 0.0,
+   "cost": 2471.8992177734376,
+   "regret": -146.42732889322917,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 35.787136073422644,
+   "inf_share": 0.0,
+   "cost": 6743.301600585937,
+   "regret": 4124.975053919272,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 35.62279030865594,
+   "inf_share": 0.0,
+   "cost": 6730.974317382813,
+   "regret": 4112.647770716147,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.051422222301363944,
+   "above": 0.016,
+   "lam": 11.884332780141646,
+   "inf_share": 0.0,
+   "cost": 3689.7233134765625,
+   "regret": 1071.3967668098958,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.051366666734218594,
+   "above": 0.016,
+   "lam": 11.886485022205592,
+   "inf_share": 0.0,
+   "cost": 3690.1535458984376,
+   "regret": 1071.826999231771,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.04820000029914081,
+   "above": 0.012,
+   "lam": 12.1488001,
+   "inf_share": 0.0,
+   "cost": 3743.8369057617188,
+   "regret": 1125.510359095052,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.008444444518536329,
+   "above": 0.0,
+   "lam": 17.084612381182918,
+   "inf_share": 0.0,
+   "cost": 4644.107132324219,
+   "regret": 2025.7805856575521,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7056311113834381,
+   "above": 1.0,
+   "lam": 0.8442765779630649,
+   "inf_share": 0.0,
+   "cost": 2153.0134545898436,
+   "regret": -465.31309207682295,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7036555565595627,
+   "above": 1.0,
+   "lam": 0.8527394842990265,
+   "inf_share": 0.0,
+   "cost": 2155.172881347656,
+   "regret": -463.15366531901043,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | any | alpha=0.2 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.8669368432760238,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2689.1077294921874,
+   "regret": 399.30136317639796,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.33101473754644395,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2088.8814262695314,
+   "regret": -200.9249400462582,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.49002526315789474,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.6486315789475,
+   "regret": -316.1577347368421,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.5891199999999999,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2033.2712231578948,
+   "regret": -256.53514315789477,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.2172884218096733,
+   "above": 0.576,
+   "lam": 26.130629198830544,
+   "inf_share": 0.0,
+   "cost": 2266.579908203125,
+   "regret": -23.22645811266447,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.5375747386217117,
+   "above": 1.0,
+   "lam": 11.539882893974799,
+   "inf_share": 0.0,
+   "cost": 2033.5902514648437,
+   "regret": -256.21611485094576,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.04614736857637763,
+   "above": 0.0,
+   "lam": 42.41871817192549,
+   "inf_share": 0.0,
+   "cost": 3103.8495375976563,
+   "regret": 814.0431712818668,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.047907368507236245,
+   "above": 0.0,
+   "lam": 42.082611682520344,
+   "inf_share": 0.0,
+   "cost": 3080.08420703125,
+   "regret": 790.2778407154605,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.10544000045582652,
+   "above": 0.022,
+   "lam": 34.60373473325985,
+   "inf_share": 0.0,
+   "cost": 2628.78666796875,
+   "regret": 338.98030165296046,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.10469473728165031,
+   "above": 0.022,
+   "lam": 34.65550122211334,
+   "inf_share": 0.0,
+   "cost": 2631.313738769531,
+   "regret": 341.5073724537417,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.09825894847884774,
+   "above": 0.012,
+   "lam": 35.3440001,
+   "inf_share": 0.0,
+   "cost": 2669.550011230469,
+   "regret": 379.74364491467924,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.017002105264924468,
+   "above": 0.0,
+   "lam": 48.408798467293586,
+   "inf_share": 0.0,
+   "cost": 3589.008560058594,
+   "regret": 1299.2021937428042,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7440357913970947,
+   "above": 1.0,
+   "lam": 2.3953966093283636,
+   "inf_share": 0.0,
+   "cost": 2236.4109111328125,
+   "regret": -53.39545518297697,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7420189499855041,
+   "above": 1.0,
+   "lam": 2.4818480227235997,
+   "inf_share": 0.0,
+   "cost": 2226.884815917969,
+   "regret": -62.92155039782071,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.2210821058154106,
+   "above": 0.604,
+   "lam": 5.920334078337177,
+   "inf_share": 0.0,
+   "cost": 2352.505546386719,
+   "regret": 62.69918007092929,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.47003789472579954,
+   "above": 1.0,
+   "lam": 3.121003573119467,
+   "inf_share": 0.0,
+   "cost": 1989.4165104980468,
+   "regret": -300.3898558177426,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.007856842185370624,
+   "above": 0.0,
+   "lam": 16.483723310382327,
+   "inf_share": 0.0,
+   "cost": 4598.8261870117185,
+   "regret": 2309.0198206959294,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.009926315913442523,
+   "above": 0.0,
+   "lam": 16.02873337606734,
+   "inf_share": 0.0,
+   "cost": 4517.235737792968,
+   "regret": 2227.4293714771793,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.1056210530474782,
+   "above": 0.022,
+   "lam": 8.460039355176539,
+   "inf_share": 0.0,
+   "cost": 2937.9926967773436,
+   "regret": 648.1863304615542,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.10523578976839781,
+   "above": 0.022,
+   "lam": 8.469172168508917,
+   "inf_share": 0.0,
+   "cost": 2940.1319399414065,
+   "regret": 650.3255736256167,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.10056631645187736,
+   "above": 0.016,
+   "lam": 8.583200099999997,
+   "inf_share": 0.0,
+   "cost": 2967.811798828125,
+   "regret": 678.0054325123355,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.016640000117942692,
+   "above": 0.0,
+   "lam": 15.068823387704404,
+   "inf_share": 0.0,
+   "cost": 4326.78164453125,
+   "regret": 2036.9752782154605,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7731452625989914,
+   "above": 1.0,
+   "lam": 0.5146011082319945,
+   "inf_share": 0.0,
+   "cost": 2265.5940864257814,
+   "regret": -24.21227989000822,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7741663150787353,
+   "above": 1.0,
+   "lam": 0.5316600559079588,
+   "inf_share": 0.0,
+   "cost": 2261.4258486328126,
+   "regret": -28.38051768297697,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.22105684199929237,
+   "above": 0.604,
+   "lam": 6.12884006504821,
+   "inf_share": 0.0,
+   "cost": 2387.6802502441406,
+   "regret": 97.87388392835115,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.44040000015497205,
+   "above": 1.0,
+   "lam": 3.508533929085059,
+   "inf_share": 0.0,
+   "cost": 1982.6491872558595,
+   "regret": -307.1571790599301,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 4.2105264030396936e-05,
+   "above": 0.0,
+   "lam": 27.445814728858625,
+   "inf_share": 0.0,
+   "cost": 5983.6645234375,
+   "regret": 3693.8581571217105,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 7.368420995771885e-05,
+   "above": 0.0,
+   "lam": 26.82412295133757,
+   "inf_share": 0.0,
+   "cost": 5914.512481445313,
+   "regret": 3624.706115129523,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.09860631596855819,
+   "above": 0.014,
+   "lam": 9.2898946626177,
+   "inf_share": 0.0,
+   "cost": 3121.158371582031,
+   "regret": 831.3520052662417,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.09822315819002687,
+   "above": 0.014,
+   "lam": 9.300280628789897,
+   "inf_share": 0.0,
+   "cost": 3123.5066005859376,
+   "regret": 833.700234270148,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.09065263134986162,
+   "above": 0.016,
+   "lam": 9.5680001,
+   "inf_share": 0.0,
+   "cost": 3184.8926518554686,
+   "regret": 895.0862855396792,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.01487789469771087,
+   "above": 0.0,
+   "lam": 16.036589504510683,
+   "inf_share": 0.0,
+   "cost": 4460.694170898438,
+   "regret": 2170.887804582648,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7731305253505707,
+   "above": 1.0,
+   "lam": 0.5319945651243587,
+   "inf_share": 0.0,
+   "cost": 2265.5863979492187,
+   "regret": -24.21996836657072,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7721389466524125,
+   "above": 1.0,
+   "lam": 0.5505865649319298,
+   "inf_share": 0.0,
+   "cost": 2257.12316015625,
+   "regret": -32.683206159539466,
+   "kind": "inst"
+  }
+ },
+ "RICH_ID | any | alpha=0.2 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.8669800050258637,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2688.9342529296873,
+   "regret": 397.64261737413193,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.33107111024856567,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2089.4200678710936,
+   "regret": -201.87156768446184,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.4898844444444444,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1973.6278955555556,
+   "regret": -317.6637400000001,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.5888133333333333,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2033.3995622222224,
+   "regret": -257.8920733333333,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.2104200005233288,
+   "above": 0.584,
+   "lam": 26.360174576218444,
+   "inf_share": 0.0,
+   "cost": 2268.8202333984377,
+   "regret": -22.471402157118064,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.5361644448637962,
+   "above": 1.0,
+   "lam": 11.592059222338719,
+   "inf_share": 0.0,
+   "cost": 2031.5591315917968,
+   "regret": -259.7325039637587,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.04754888889938593,
+   "above": 0.0,
+   "lam": 42.20086212539233,
+   "inf_share": 0.0,
+   "cost": 3087.029498046875,
+   "regret": 795.7378624913194,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.04951333349198103,
+   "above": 0.0,
+   "lam": 41.825691872619245,
+   "inf_share": 0.0,
+   "cost": 3060.2760830078123,
+   "regret": 768.984447452257,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.13701111163198948,
+   "above": 0.042,
+   "lam": 31.58242432551929,
+   "inf_share": 0.0,
+   "cost": 2473.769990234375,
+   "regret": 182.47835467881941,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.1362511116862297,
+   "above": 0.04,
+   "lam": 31.63347865870653,
+   "inf_share": 0.0,
+   "cost": 2475.9371484375,
+   "regret": 184.64551288194443,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.12768666706979276,
+   "above": 0.012,
+   "lam": 32.36000010000001,
+   "inf_share": 0.0,
+   "cost": 2509.2041870117187,
+   "regret": 217.91255145616316,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.008760000045411288,
+   "above": 0.0,
+   "lam": 50.12717013265539,
+   "inf_share": 0.0,
+   "cost": 3733.148059082031,
+   "regret": 1441.8564235264757,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7439577786922454,
+   "above": 1.0,
+   "lam": 2.393264304795525,
+   "inf_share": 0.0,
+   "cost": 2236.26873828125,
+   "regret": -55.02289727430556,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7420044449567795,
+   "above": 1.0,
+   "lam": 2.4794650649782204,
+   "inf_share": 0.0,
+   "cost": 2226.8230986328126,
+   "regret": -64.46853692274307,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.21177111126482487,
+   "above": 0.598,
+   "lam": 6.043491152365075,
+   "inf_share": 0.0,
+   "cost": 2372.927955078125,
+   "regret": 81.63631952256944,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.46817555582523346,
+   "above": 1.0,
+   "lam": 3.1339756115914317,
+   "inf_share": 0.0,
+   "cost": 1988.6457351074218,
+   "regret": -302.6459004481337,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.007651111200451851,
+   "above": 0.0,
+   "lam": 16.46232989945896,
+   "inf_share": 0.0,
+   "cost": 4596.711950195312,
+   "regret": 2305.4203146397567,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.0098200001148507,
+   "above": 0.0,
+   "lam": 15.97232633031032,
+   "inf_share": 0.0,
+   "cost": 4509.7424453125,
+   "regret": 2218.4508097569446,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.13879555601626634,
+   "above": 0.06,
+   "lam": 7.389096702455791,
+   "inf_share": 0.0,
+   "cost": 2680.9275859375,
+   "regret": 389.63595038194444,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.13850444493442773,
+   "above": 0.06,
+   "lam": 7.3952265944334945,
+   "inf_share": 0.0,
+   "cost": 2682.4566689453127,
+   "regret": 391.1650333897569,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.13151111120730638,
+   "above": 0.02,
+   "lam": 7.541600099999999,
+   "inf_share": 0.0,
+   "cost": 2719.0303251953123,
+   "regret": 427.7386896397569,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.009397777886129915,
+   "above": 0.0,
+   "lam": 16.213022878940453,
+   "inf_share": 0.0,
+   "cost": 4543.7813735351565,
+   "regret": 2252.4897379796007,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7729133312702179,
+   "above": 1.0,
+   "lam": 0.514321817360051,
+   "inf_share": 0.0,
+   "cost": 2265.4640239257815,
+   "regret": -25.827611629774314,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.773919999241829,
+   "above": 1.0,
+   "lam": 0.5313394663476283,
+   "inf_share": 0.0,
+   "cost": 2261.28065234375,
+   "regret": -30.010983211805563,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.21278222258388996,
+   "above": 0.578,
+   "lam": 6.217757205483111,
+   "inf_share": 0.0,
+   "cost": 2401.1132416992186,
+   "regret": 109.82160614366317,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.4402266664505005,
+   "above": 1.0,
+   "lam": 3.511256672757335,
+   "inf_share": 0.0,
+   "cost": 1979.2014921875,
+   "regret": -312.0901433680556,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 27.36755771397949,
+   "inf_share": 0.0,
+   "cost": 5990.923952148438,
+   "regret": 3699.632316592882,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 26.664924475438117,
+   "inf_share": 0.0,
+   "cost": 5915.120217773438,
+   "regret": 3623.828582217882,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.1320888891890645,
+   "above": 0.026,
+   "lam": 7.942446545681927,
+   "inf_share": 0.0,
+   "cost": 2807.512419921875,
+   "regret": 516.2207843663194,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.13177333357930182,
+   "above": 0.026,
+   "lam": 7.94965189968905,
+   "inf_share": 0.0,
+   "cost": 2809.223733886719,
+   "regret": 517.9320983311632,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.11992666646838188,
+   "above": 0.036,
+   "lam": 8.2240001,
+   "inf_share": 0.0,
+   "cost": 2874.0090830078125,
+   "regret": 582.7174474522569,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.009111111206933855,
+   "above": 0.0,
+   "lam": 16.952576888739028,
+   "inf_share": 0.0,
+   "cost": 4620.321841308593,
+   "regret": 2329.030205753038,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.7729244422912598,
+   "above": 1.0,
+   "lam": 0.5317651029290732,
+   "inf_share": 0.0,
+   "cost": 2265.4546899414063,
+   "regret": -25.836945614149315,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.7719422212839127,
+   "above": 1.0,
+   "lam": 0.5503054899540818,
+   "inf_share": 0.0,
+   "cost": 2257.0259697265624,
+   "regret": -34.265665828993065,
+   "kind": "inst"
+  }
+ },
+ "RICH_TIGHT | mean | alpha=0.02 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.07829944930970668,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3327.011766764323,
+   "regret": 237.4308556532118,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.019944444621602695,
+   "above": 0.43333333333333335,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 3091.6399389648436,
+   "regret": 2.059027853732634,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.03205722222222222,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 3078.3071777777777,
+   "regret": -11.273733333333338,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.03895111111111111,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 3026.166888888889,
+   "regret": -63.41402222222223,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.020475555853918196,
+   "above": 0.4766666666666667,
+   "lam": 19.671357205872877,
+   "inf_share": 0.0,
+   "cost": 3081.418165690104,
+   "regret": -8.16274542100695,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0032572222951178747,
+   "above": 0.0,
+   "lam": 38.44648757187492,
+   "inf_share": 0.0,
+   "cost": 3923.0766202799477,
+   "regret": 833.4957091688368,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.009975555770409605,
+   "above": 0.0,
+   "lam": 27.920494737743482,
+   "inf_share": 0.0,
+   "cost": 3323.2836490885416,
+   "regret": 233.70273797743056,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.009830000194100042,
+   "above": 0.0,
+   "lam": 28.015990278156636,
+   "inf_share": 0.0,
+   "cost": 3325.7537386067706,
+   "regret": 236.17282749565973,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.008912222382302085,
+   "above": 0.0,
+   "lam": 28.880000099999997,
+   "inf_share": 0.0,
+   "cost": 3360.2335229492187,
+   "regret": 270.65261183810765,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.0676861157019933,
+   "above": 1.0,
+   "lam": 0.67960399924169,
+   "inf_share": 0.0,
+   "cost": 3214.1652799479166,
+   "regret": 124.58436883680557,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.020345555792252223,
+   "above": 0.5533333333333333,
+   "lam": 4.17876895961367,
+   "inf_share": 0.0,
+   "cost": 3169.3033862304687,
+   "regret": 79.72247511935764,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.0006416666799729379,
+   "above": 0.0,
+   "lam": 13.903259903315211,
+   "inf_share": 0.0,
+   "cost": 5104.081614583333,
+   "regret": 2014.5007034722228,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.009291111254133283,
+   "above": 0.0,
+   "lam": 6.230482950908376,
+   "inf_share": 0.0,
+   "cost": 3571.3400032552086,
+   "regret": 481.7590921440973,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.009240000151718657,
+   "above": 0.0,
+   "lam": 6.243578029588458,
+   "inf_share": 0.0,
+   "cost": 3574.027899576823,
+   "regret": 484.44698846571185,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.00888222237272809,
+   "above": 0.0,
+   "lam": 6.345333433333334,
+   "inf_share": 0.0,
+   "cost": 3597.0861783854166,
+   "regret": 507.5052672743056,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.06716833715637525,
+   "above": 1.0,
+   "lam": 0.14512963887287708,
+   "inf_share": 0.0,
+   "cost": 3206.3075260416667,
+   "regret": 116.72661493055557,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.020453889134029547,
+   "above": 0.5433333333333333,
+   "lam": 4.30863309048723,
+   "inf_share": 0.0,
+   "cost": 3204.9585986328125,
+   "regret": 115.3776875217014,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.00026111111064286283,
+   "above": 0.0,
+   "lam": 18.473098078736715,
+   "inf_share": 0.0,
+   "cost": 5742.55884765625,
+   "regret": 2652.9779365451395,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.008066111312558254,
+   "above": 0.0,
+   "lam": 6.756466237190871,
+   "inf_share": 0.0,
+   "cost": 3695.1903466796875,
+   "regret": 605.6094355685765,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.008030555757383505,
+   "above": 0.0,
+   "lam": 6.772040254693754,
+   "inf_share": 0.0,
+   "cost": 3698.207022298177,
+   "regret": 608.626111187066,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.007656111279502511,
+   "above": 0.0,
+   "lam": 6.866666766666667,
+   "inf_share": 0.0,
+   "cost": 3715.278068033854,
+   "regret": 625.6971569227431,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.0672888929148515,
+   "above": 1.0,
+   "lam": 0.14855034174860415,
+   "inf_share": 0.0,
+   "cost": 3212.0886197916666,
+   "regret": 122.50770868055557,
+   "kind": "inst"
+  }
+ },
+ "RICH_TIGHT | any | alpha=0.1 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.81432222088178,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3322.2597135416668,
+   "regret": -351.811253125,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.32325555503368375,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 3086.625510253906,
+   "regret": -587.4454564127603,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.5033555555555556,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 3073.1913777777777,
+   "regret": -600.879588888889,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.5830888888888889,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 3022.884811111111,
+   "regret": -651.1861555555556,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.10695555640384555,
+   "above": 0.5633333333333334,
+   "lam": 33.977186689919996,
+   "inf_share": 0.0,
+   "cost": 3629.396531575521,
+   "regret": -44.67443509114583,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.273266666183869,
+   "above": 1.0,
+   "lam": 22.479041968944767,
+   "inf_share": 0.0,
+   "cost": 3140.307110188802,
+   "regret": -533.7638564778645,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.022677777864349383,
+   "above": 0.0,
+   "lam": 45.571460024068486,
+   "inf_share": 0.0,
+   "cost": 4508.449181315104,
+   "regret": 834.3782146484375,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.02387777788564563,
+   "above": 0.0,
+   "lam": 45.32776635007616,
+   "inf_share": 0.0,
+   "cost": 4486.913263346354,
+   "regret": 812.8422966796875,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.05533333364253243,
+   "above": 0.06666666666666667,
+   "lam": 39.90938559872214,
+   "inf_share": 0.0,
+   "cost": 4042.5871183268227,
+   "regret": 368.5161516601562,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.05523333369443814,
+   "above": 0.06666666666666667,
+   "lam": 39.91923927786934,
+   "inf_share": 0.0,
+   "cost": 4043.477548014323,
+   "regret": 369.40658134765624,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.050444445388081176,
+   "above": 0.06666666666666667,
+   "lam": 40.520000100000004,
+   "inf_share": 0.0,
+   "cost": 4086.2703637695313,
+   "regret": 412.19939710286457,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.008877777837527296,
+   "above": 0.0,
+   "lam": 49.86588268596777,
+   "inf_share": 0.0,
+   "cost": 4954.469057617188,
+   "regret": 1280.398090950521,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6540333342552185,
+   "above": 1.0,
+   "lam": 3.3332577435437636,
+   "inf_share": 0.0,
+   "cost": 3073.5534220377604,
+   "regret": -600.5175446289062,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6515333328644435,
+   "above": 1.0,
+   "lam": 3.348085220926831,
+   "inf_share": 0.0,
+   "cost": 3071.188420410156,
+   "regret": -602.8825462565103,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.11325555561731258,
+   "above": 0.6233333333333333,
+   "lam": 7.345710273497352,
+   "inf_share": 0.0,
+   "cost": 3818.880051269531,
+   "regret": 144.80908460286457,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.2000111115227143,
+   "above": 1.0,
+   "lam": 5.88560907147623,
+   "inf_share": 0.0,
+   "cost": 3498.990802408854,
+   "regret": -175.0801642578125,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.002655555618306001,
+   "above": 0.0,
+   "lam": 19.32070020893519,
+   "inf_share": 0.0,
+   "cost": 5879.161923828125,
+   "regret": 2205.0909571614584,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.002677777841066321,
+   "above": 0.0,
+   "lam": 19.239999057220658,
+   "inf_share": 0.0,
+   "cost": 5867.907880859375,
+   "regret": 2193.8369141927083,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.053811111614728964,
+   "above": 0.03333333333333333,
+   "lam": 9.861740009229225,
+   "inf_share": 0.0,
+   "cost": 4397.37665608724,
+   "regret": 723.305689420573,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.05377777826351424,
+   "above": 0.03333333333333333,
+   "lam": 9.864781120697513,
+   "inf_share": 0.0,
+   "cost": 4398.004372558594,
+   "regret": 723.9334058919271,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.05391111156282326,
+   "above": 0.03,
+   "lam": 9.849333433333333,
+   "inf_share": 0.0,
+   "cost": 4398.084821777344,
+   "regret": 724.0138551106771,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.007900000122996667,
+   "above": 0.0,
+   "lam": 17.05017639296984,
+   "inf_share": 0.0,
+   "cost": 5542.7686735026045,
+   "regret": 1868.6977068359374,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6512888872623444,
+   "above": 1.0,
+   "lam": 0.6576850883946751,
+   "inf_share": 0.0,
+   "cost": 3053.6077872721353,
+   "regret": -620.4631793945312,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6512888872623444,
+   "above": 1.0,
+   "lam": 0.6621804937131731,
+   "inf_share": 0.0,
+   "cost": 3053.757782389323,
+   "regret": -620.3131842773437,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.11481111165756981,
+   "above": 0.6633333333333333,
+   "lam": 7.700288654024237,
+   "inf_share": 0.0,
+   "cost": 3909.010008138021,
+   "regret": 234.93904147135413,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.15651111140847207,
+   "above": 1.0,
+   "lam": 6.5011497195670405,
+   "inf_share": 0.0,
+   "cost": 3632.6904418945314,
+   "regret": -41.380524772135416,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 36.34071462896027,
+   "inf_share": 0.0,
+   "cost": 7365.017073567708,
+   "regret": 3690.9461069010417,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 36.07166352713678,
+   "inf_share": 0.0,
+   "cost": 7346.729508463542,
+   "regret": 3672.658541796875,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.049966666769857206,
+   "above": 0.023333333333333334,
+   "lam": 10.679942513235693,
+   "inf_share": 0.0,
+   "cost": 4568.53780843099,
+   "regret": 894.466841764323,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.04992222226845722,
+   "above": 0.023333333333333334,
+   "lam": 10.685457117977721,
+   "inf_share": 0.0,
+   "cost": 4569.515138346354,
+   "regret": 895.4441716796875,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.04704444443496565,
+   "above": 0.01,
+   "lam": 10.986666766666666,
+   "inf_share": 0.0,
+   "cost": 4619.949794921875,
+   "regret": 945.8788282552084,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.008800000043896337,
+   "above": 0.0,
+   "lam": 17.824582132435538,
+   "inf_share": 0.0,
+   "cost": 5637.260763346354,
+   "regret": 1963.1897966796873,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6537000008424123,
+   "above": 1.0,
+   "lam": 0.6799604822095137,
+   "inf_share": 0.0,
+   "cost": 3060.770866699219,
+   "regret": -613.3000999674479,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6537000008424123,
+   "above": 1.0,
+   "lam": 0.6851061373090666,
+   "inf_share": 0.0,
+   "cost": 3062.135869140625,
+   "regret": -611.9350975260415,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 source->source | mean | alpha=0.02 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.07673722664515177,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2415.4691870117185,
+   "regret": 361.30706478949656,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.011997777965540687,
+   "above": 0.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2147.636729329427,
+   "regret": 93.47460710720486,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.01708777777777778,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2128.695244444444,
+   "regret": 74.53312222222223,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.025465555555555557,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1994.2024444444442,
+   "regret": -59.95967777777777,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.01992833349543313,
+   "above": 0.43666666666666665,
+   "lam": 15.24368245718983,
+   "inf_share": 0.0,
+   "cost": 2048.738548990885,
+   "regret": -5.423573231336801,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.003301666749563689,
+   "above": 0.0,
+   "lam": 31.40244679910935,
+   "inf_share": 0.0,
+   "cost": 2734.421857096354,
+   "regret": 680.2597348741319,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.00997000017358611,
+   "above": 0.0,
+   "lam": 21.011644295987967,
+   "inf_share": 0.0,
+   "cost": 2177.4989021809897,
+   "regret": 123.33677995876737,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.009755000172493358,
+   "above": 0.0,
+   "lam": 21.111521455276883,
+   "inf_share": 0.0,
+   "cost": 2180.061212565104,
+   "regret": 125.89909034288195,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.008972222389032444,
+   "above": 0.0,
+   "lam": 22.160000099999998,
+   "inf_share": 0.0,
+   "cost": 2221.1334147135417,
+   "regret": 166.97129249131945,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.05812333665788174,
+   "above": 1.0,
+   "lam": 1.2761203082202826,
+   "inf_share": 0.0,
+   "cost": 2167.8902734375,
+   "regret": 113.72815121527778,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.020596111364041766,
+   "above": 0.5366666666666666,
+   "lam": 2.6480419377706887,
+   "inf_share": 0.0,
+   "cost": 2049.41292195638,
+   "regret": -4.749200265842009,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.0007900000157921264,
+   "above": 0.0,
+   "lam": 7.904287495539305,
+   "inf_share": 0.0,
+   "cost": 4371.522221679687,
+   "regret": 2317.360099457465,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.010150000226373473,
+   "above": 0.0,
+   "lam": 3.886180233127219,
+   "inf_share": 0.0,
+   "cost": 2486.5992602539063,
+   "regret": 432.43713803168407,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.010104444654037556,
+   "above": 0.0,
+   "lam": 3.889566220919469,
+   "inf_share": 0.0,
+   "cost": 2488.0747713216147,
+   "regret": 433.9126490993924,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.00941166682789723,
+   "above": 0.0,
+   "lam": 3.9880001000000007,
+   "inf_share": 0.0,
+   "cost": 2543.983966471354,
+   "regret": 489.82184424913197,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.057845558946331345,
+   "above": 1.0,
+   "lam": 0.2826900497435189,
+   "inf_share": 0.0,
+   "cost": 2161.804600423177,
+   "regret": 107.64247820095487,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.020570555791879695,
+   "above": 0.5433333333333333,
+   "lam": 2.697663569156275,
+   "inf_share": 0.0,
+   "cost": 2053.8836006673178,
+   "regret": -0.2785215549045089,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.0010866666864603758,
+   "above": 0.0,
+   "lam": 9.51801631282194,
+   "inf_share": 0.0,
+   "cost": 4928.702415364583,
+   "regret": 2874.540293142361,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.009948888995374243,
+   "above": 0.0,
+   "lam": 3.9493383317759467,
+   "inf_share": 0.0,
+   "cost": 2516.6939778645833,
+   "regret": 462.53185564236117,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.009855000150079528,
+   "above": 0.0,
+   "lam": 3.955826038194866,
+   "inf_share": 0.0,
+   "cost": 2519.1671940104166,
+   "regret": 465.00507178819447,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.008441111266923448,
+   "above": 0.0,
+   "lam": 4.232000100000001,
+   "inf_share": 0.0,
+   "cost": 2665.333152669271,
+   "regret": 611.1710304470487,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.058101670232911906,
+   "above": 1.0,
+   "lam": 0.2927304689973639,
+   "inf_share": 0.0,
+   "cost": 2163.9734049479166,
+   "regret": 109.81128272569445,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 NAIVE source->target (shift) | mean | alpha=0.02 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.1497500091791153,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3383.739990234375,
+   "regret": 894.794990234375,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.08612500131130219,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2776.2724609375,
+   "regret": 287.3274609374998,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.07862500000000001,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2450.39,
+   "regret": -38.55500000000029,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.09412500000000001,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2602.2550000000006,
+   "regret": 113.30999999999995,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.09843083639939626,
+   "above": 1.0,
+   "lam": 15.348252881359025,
+   "inf_share": 0.0,
+   "cost": 2843.505031738281,
+   "regret": 354.56003173828105,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.04678125288337469,
+   "above": 1.0,
+   "lam": 31.314214415429856,
+   "inf_share": 0.0,
+   "cost": 2509.181150716146,
+   "regret": 20.23615071614567,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.08151375216742357,
+   "above": 1.0,
+   "lam": 21.154004134386085,
+   "inf_share": 0.0,
+   "cost": 2730.9067716471354,
+   "regret": 241.96177164713524,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.08116208503643672,
+   "above": 1.0,
+   "lam": 21.246840040793494,
+   "inf_share": 0.0,
+   "cost": 2727.1951383463543,
+   "regret": 238.25013834635396,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.07786500565707684,
+   "above": 1.0,
+   "lam": 22.31333343333333,
+   "inf_share": 0.0,
+   "cost": 2706.8200838216144,
+   "regret": 217.87508382161442,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13212500512599945,
+   "above": 1.0,
+   "lam": 1.674405962643183,
+   "inf_share": 0.0,
+   "cost": 3112.56005859375,
+   "regret": 623.61505859375,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.08610666930675506,
+   "above": 1.0,
+   "lam": 2.698522579811525,
+   "inf_share": 0.0,
+   "cost": 2545.7643294270833,
+   "regret": 56.819329427083176,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.015310833758364121,
+   "above": 0.13333333333333333,
+   "lam": 7.868084354566497,
+   "inf_share": 0.0,
+   "cost": 3155.8447989908855,
+   "regret": 666.8997989908853,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.058845419970651465,
+   "above": 1.0,
+   "lam": 3.9376106882915725,
+   "inf_share": 0.0,
+   "cost": 2341.2205094401043,
+   "regret": -147.72449055989597,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.058775419853627685,
+   "above": 1.0,
+   "lam": 3.9405253225105827,
+   "inf_share": 0.0,
+   "cost": 2340.657665201823,
+   "regret": -148.28733479817723,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.056912086742619675,
+   "above": 1.0,
+   "lam": 4.0480001,
+   "inf_share": 0.0,
+   "cost": 2338.7807364908854,
+   "regret": -150.16426350911473,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.1328750103712082,
+   "above": 1.0,
+   "lam": 0.2787622348768374,
+   "inf_share": 0.0,
+   "cost": 3120.3076171875,
+   "regret": 631.3626171875,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.0852125034481287,
+   "above": 1.0,
+   "lam": 2.735030118728773,
+   "inf_share": 0.0,
+   "cost": 2517.0808520507812,
+   "regret": 28.135852050781086,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.00846375039080158,
+   "above": 0.0,
+   "lam": 9.479479952083864,
+   "inf_share": 0.0,
+   "cost": 3733.8302392578125,
+   "regret": 1244.8852392578126,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.05645000372081995,
+   "above": 1.0,
+   "lam": 4.0124330394069085,
+   "inf_share": 0.0,
+   "cost": 2290.619561360677,
+   "regret": -198.32543863932307,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.05633250386764606,
+   "above": 1.0,
+   "lam": 4.017980992532066,
+   "inf_share": 0.0,
+   "cost": 2289.871563313802,
+   "regret": -199.07343668619805,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.05231708586215973,
+   "above": 1.0,
+   "lam": 4.290666766666667,
+   "inf_share": 0.0,
+   "cost": 2298.180936686198,
+   "regret": -190.76406331380224,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.1327499896287918,
+   "above": 1.0,
+   "lam": 0.2823487486091052,
+   "inf_share": 0.0,
+   "cost": 3117.362548828125,
+   "regret": 628.417548828125,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 RECALIBRATED on target | mean | alpha=0.02 | n=25": {
+  "point (lambda 0)": {
+   "risk": 0.1497520050406456,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3383.869392903646,
+   "regret": 894.8512151258682,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.08617244966328144,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2777.468093261719,
+   "regret": 288.44991548394097,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.07862977777777778,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2450.683724444444,
+   "regret": -38.33445333333332,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.09415066666666667,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2602.905173333333,
+   "regret": 113.88699555555557,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.02080844469058017,
+   "above": 0.4866666666666667,
+   "lam": 38.97796819443397,
+   "inf_share": 0.0,
+   "cost": 2518.363073730469,
+   "regret": 29.34489595269098,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.004174222272073772,
+   "above": 0.0,
+   "lam": 48.56425336001547,
+   "inf_share": 0.0,
+   "cost": 3448.4631013997396,
+   "regret": 959.4449236219618,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10180.930123697917,
+   "regret": 7691.911945920139,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10180.930123697917,
+   "regret": 7691.911945920139,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 100.00000009999998,
+   "inf_share": 0.0,
+   "cost": 8938.146083984375,
+   "regret": 6449.127906206597,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13212533687551817,
+   "above": 1.0,
+   "lam": 1.6757909600822605,
+   "inf_share": 0.0,
+   "cost": 3112.7849462890626,
+   "regret": 623.7667685112847,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.021288444890330237,
+   "above": 0.5266666666666666,
+   "lam": 7.066093709803464,
+   "inf_share": 0.0,
+   "cost": 2885.989132486979,
+   "regret": 396.97095470920135,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.005691555682569742,
+   "above": 0.0,
+   "lam": 10.78760758252318,
+   "inf_share": 0.0,
+   "cost": 4199.129915364583,
+   "regret": 1710.1117375868055,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10180.930123697917,
+   "regret": 7691.911945920139,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10180.930123697917,
+   "regret": 7691.911945920139,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.0005044444524780072,
+   "above": 0.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 6420.060979817708,
+   "regret": 3931.0428020399304,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.1328906700015068,
+   "above": 1.0,
+   "lam": 0.27902639251560235,
+   "inf_share": 0.0,
+   "cost": 3120.8215584309896,
+   "regret": 631.8033806532118,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.021419111679618557,
+   "above": 0.5466666666666666,
+   "lam": 7.045890308144481,
+   "inf_share": 0.0,
+   "cost": 2862.2195825195313,
+   "regret": 373.20140474175344,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.005361333421897143,
+   "above": 0.0,
+   "lam": 11.160735672654694,
+   "inf_share": 0.0,
+   "cost": 4313.926360677084,
+   "regret": 1824.9081828993055,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10180.930123697917,
+   "regret": 7691.911945920139,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10180.930123697917,
+   "regret": 7691.911945920139,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 40.0000001,
+   "inf_share": 0.0,
+   "cost": 8343.638450520833,
+   "regret": 5854.6202727430555,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13276622593402862,
+   "above": 1.0,
+   "lam": 0.2826087234408906,
+   "inf_share": 0.0,
+   "cost": 3117.8779028320314,
+   "regret": 628.8597250542534,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 RECALIBRATED on target | mean | alpha=0.02 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.14970333869258562,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3382.7828694661457,
+   "regret": 894.8140027994792,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.08609381437301636,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2775.4796028645833,
+   "regret": 287.51073619791663,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.07863238095238095,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2449.767742857143,
+   "regret": -38.2011238095238,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.09411952380952382,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2601.726295238095,
+   "regret": 113.75742857142859,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.020393333518877624,
+   "above": 0.44333333333333336,
+   "lam": 38.97675977989374,
+   "inf_share": 0.0,
+   "cost": 2507.613458658854,
+   "regret": 19.64459199218751,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0042080952681135386,
+   "above": 0.0,
+   "lam": 48.267510959764316,
+   "inf_share": 0.0,
+   "cost": 3393.1749446614585,
+   "regret": 905.2060779947917,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.0006214285780636904,
+   "above": 0.0,
+   "lam": 55.50482543058077,
+   "inf_share": 0.0,
+   "cost": 4666.211389973958,
+   "regret": 2178.242523307292,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.0006214285780636904,
+   "above": 0.0,
+   "lam": 55.50482543058077,
+   "inf_share": 0.0,
+   "cost": 4666.211389973958,
+   "regret": 2178.242523307292,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.0006066666919893274,
+   "above": 0.0,
+   "lam": 56.406666766666675,
+   "inf_share": 0.0,
+   "cost": 4857.343869628906,
+   "regret": 2369.3750029622397,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13209143276015917,
+   "above": 1.0,
+   "lam": 1.670454220460842,
+   "inf_share": 0.0,
+   "cost": 3111.561541341146,
+   "regret": 623.5926746744792,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.020848095562929908,
+   "above": 0.5166666666666667,
+   "lam": 7.091411826001219,
+   "inf_share": 0.0,
+   "cost": 2882.2703572591145,
+   "regret": 394.3014905924479,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.005491904822022964,
+   "above": 0.0,
+   "lam": 10.727672090859427,
+   "inf_share": 0.0,
+   "cost": 4184.0559700520835,
+   "regret": 1696.0871033854166,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.0009495238055630277,
+   "above": 0.0,
+   "lam": 18.544298401796325,
+   "inf_share": 0.0,
+   "cost": 6126.351442057292,
+   "regret": 3638.3825753906253,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0009495238055630277,
+   "above": 0.0,
+   "lam": 18.544298401796325,
+   "inf_share": 0.0,
+   "cost": 6126.351442057292,
+   "regret": 3638.3825753906253,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.0010009524015670952,
+   "above": 0.0,
+   "lam": 18.2680001,
+   "inf_share": 0.0,
+   "cost": 6085.645519205729,
+   "regret": 3597.6766525390626,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13284143224358558,
+   "above": 1.0,
+   "lam": 0.2784286568962503,
+   "inf_share": 0.0,
+   "cost": 3119.374805501302,
+   "regret": 631.4059388346355,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.021110476404428483,
+   "above": 0.5433333333333333,
+   "lam": 7.049651695081404,
+   "inf_share": 0.0,
+   "cost": 2851.6253271484375,
+   "regret": 363.6564604817708,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.005303809601658335,
+   "above": 0.0,
+   "lam": 11.071906629378248,
+   "inf_share": 0.0,
+   "cost": 4298.706490885416,
+   "regret": 1810.7376242187502,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.0009195238200481981,
+   "above": 0.0,
+   "lam": 19.851371002140915,
+   "inf_share": 0.0,
+   "cost": 6308.9920263671875,
+   "regret": 3821.0231597005213,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.0009195238200481981,
+   "above": 0.0,
+   "lam": 19.851371002140915,
+   "inf_share": 0.0,
+   "cost": 6308.9920263671875,
+   "regret": 3821.0231597005213,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.0008680952427675948,
+   "above": 0.0,
+   "lam": 20.320000099999998,
+   "inf_share": 0.0,
+   "cost": 6393.422552083333,
+   "regret": 3905.4536854166668,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13271714588006336,
+   "above": 1.0,
+   "lam": 0.28200832948045745,
+   "inf_share": 0.0,
+   "cost": 3116.431953125,
+   "regret": 628.4630864583335,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 source->source | any | alpha=0.1 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.79536667684714,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2418.6788932291665,
+   "regret": -67.90618454861111,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.21997777839501698,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2151.2168701171877,
+   "regret": -335.3682076605902,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.2951777777777778,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2129.7017,
+   "regret": -356.8833777777778,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.41723333333333334,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 1995.147133333333,
+   "regret": -491.43794444444444,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.11080000034223,
+   "above": 0.5966666666666667,
+   "lam": 26.79398162785216,
+   "inf_share": 0.0,
+   "cost": 2449.028011067708,
+   "regret": -37.557066710069435,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.31091111148397127,
+   "above": 1.0,
+   "lam": 16.365327006982486,
+   "inf_share": 0.0,
+   "cost": 2072.394451090495,
+   "regret": -414.19062668728293,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.010344444634392857,
+   "above": 0.0,
+   "lam": 40.88425317131828,
+   "inf_share": 0.0,
+   "cost": 3544.321709798177,
+   "regret": 1057.7366320203994,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.010344444634392857,
+   "above": 0.0,
+   "lam": 40.880873669533734,
+   "inf_share": 0.0,
+   "cost": 3543.9028670247394,
+   "regret": 1057.3177892469619,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.05354444483139863,
+   "above": 0.07666666666666666,
+   "lam": 32.41123107514908,
+   "inf_share": 0.0,
+   "cost": 2803.771242675781,
+   "regret": 317.18616489800354,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.052811111390280226,
+   "above": 0.07666666666666666,
+   "lam": 32.418895485663704,
+   "inf_share": 0.0,
+   "cost": 2803.7855004882813,
+   "regret": 317.2004227105035,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.047266667108051476,
+   "above": 0.06333333333333334,
+   "lam": 33.32666676666667,
+   "inf_share": 0.0,
+   "cost": 2869.993680826823,
+   "regret": 383.4086030490452,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.006855555639291803,
+   "above": 0.0,
+   "lam": 43.13598943571007,
+   "inf_share": 0.0,
+   "cost": 3793.7060302734376,
+   "regret": 1307.1209524956598,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.5369222245613734,
+   "above": 1.0,
+   "lam": 5.7113598873402385,
+   "inf_share": 0.0,
+   "cost": 1946.6377803548178,
+   "regret": -539.9472974229601,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.5369222245613734,
+   "above": 1.0,
+   "lam": 5.742448142469524,
+   "inf_share": 0.0,
+   "cost": 1947.4077901204428,
+   "regret": -539.1772876573351,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.1117888888840874,
+   "above": 0.5633333333333334,
+   "lam": 4.649261260763449,
+   "inf_share": 0.0,
+   "cost": 2903.9194295247394,
+   "regret": 417.3343517469619,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.261455555409193,
+   "above": 1.0,
+   "lam": 3.281229440292726,
+   "inf_share": 0.0,
+   "cost": 2226.062979329427,
+   "regret": -260.5220984483506,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 3.333333414047956e-05,
+   "above": 0.0,
+   "lam": 14.564196385525575,
+   "inf_share": 0.0,
+   "cost": 6169.259879557291,
+   "regret": 3682.6748017795135,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 4.444444552063942e-05,
+   "above": 0.0,
+   "lam": 14.501342679026305,
+   "inf_share": 0.0,
+   "cost": 6157.148033854167,
+   "regret": 3670.5629560763887,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.055788888751218714,
+   "above": 0.08666666666666667,
+   "lam": 5.82949453658999,
+   "inf_share": 0.0,
+   "cost": 3469.5766764322916,
+   "regret": 982.991598654514,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.0557222220984598,
+   "above": 0.08666666666666667,
+   "lam": 5.830419998649329,
+   "inf_share": 0.0,
+   "cost": 3469.964463704427,
+   "regret": 983.3793859266493,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.05098888890817761,
+   "above": 0.06,
+   "lam": 6.021333433333333,
+   "inf_share": 0.0,
+   "cost": 3556.307548014323,
+   "regret": 1069.7224702365452,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.006677777760972579,
+   "above": 0.0,
+   "lam": 9.27779376649827,
+   "inf_share": 0.0,
+   "cost": 4826.625943196615,
+   "regret": 2340.040865418837,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.5648888874053956,
+   "above": 1.0,
+   "lam": 1.0012288583994826,
+   "inf_share": 0.0,
+   "cost": 1985.2474454752605,
+   "regret": -501.3376323025174,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.5624111107985179,
+   "above": 1.0,
+   "lam": 1.0085778383310295,
+   "inf_share": 0.0,
+   "cost": 1984.855089518229,
+   "regret": -501.72998825954863,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.11273333304872116,
+   "above": 0.6133333333333333,
+   "lam": 4.698173733025823,
+   "inf_share": 0.0,
+   "cost": 2930.662882486979,
+   "regret": 444.0778047092015,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.21988888919353486,
+   "above": 1.0,
+   "lam": 3.589478511463369,
+   "inf_share": 0.0,
+   "cost": 2340.400224609375,
+   "regret": -146.18485316840278,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 6.666666517655055e-05,
+   "above": 0.0,
+   "lam": 30.82527847471927,
+   "inf_share": 0.0,
+   "cost": 7942.043878580729,
+   "regret": 5455.458800802952,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 6.666666517655055e-05,
+   "above": 0.0,
+   "lam": 30.803437820611936,
+   "inf_share": 0.0,
+   "cost": 7939.348422851563,
+   "regret": 5452.763345073785,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.054088889302996296,
+   "above": 0.08333333333333333,
+   "lam": 6.249204230292795,
+   "inf_share": 0.0,
+   "cost": 3652.3590649414064,
+   "regret": 1165.7739871636286,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.05403333370108157,
+   "above": 0.08333333333333333,
+   "lam": 6.249709590338052,
+   "inf_share": 0.0,
+   "cost": 3652.560309244792,
+   "regret": 1165.975231467014,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.04583333349010597,
+   "above": 0.03666666666666667,
+   "lam": 6.688000099999999,
+   "inf_share": 0.0,
+   "cost": 3839.0806233723956,
+   "regret": 1352.495545594618,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.007488888793935378,
+   "above": 0.0,
+   "lam": 14.663983732306287,
+   "inf_share": 0.0,
+   "cost": 6114.518072102865,
+   "regret": 3627.9329943250864,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.5798888816436132,
+   "above": 1.0,
+   "lam": 1.0261658362106505,
+   "inf_share": 0.0,
+   "cost": 1996.1206575520832,
+   "regret": -490.46442022569437,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.5772666589419047,
+   "above": 1.0,
+   "lam": 1.0322551196114087,
+   "inf_share": 0.0,
+   "cost": 1989.8522310384114,
+   "regret": -496.7328467393664,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 NAIVE source->target (shift) | any | alpha=0.1 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.9649999737739563,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3383.739990234375,
+   "regret": 43.18249023437511,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.8274999856948853,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2776.2724609375,
+   "regret": -564.2850390625,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8125,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2450.39,
+   "regret": -890.1674999999996,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8600000000000002,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2602.2550000000006,
+   "regret": -738.3024999999998,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.7350916604200999,
+   "above": 1.0,
+   "lam": 26.929066950587664,
+   "inf_share": 0.0,
+   "cost": 2603.8432169596354,
+   "regret": -736.7142830403645,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.8695583385229111,
+   "above": 1.0,
+   "lam": 16.256034470945398,
+   "inf_share": 0.0,
+   "cost": 2823.6913810221354,
+   "regret": -516.8661189778646,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.28685000002384187,
+   "above": 1.0,
+   "lam": 40.97110908578831,
+   "inf_share": 0.0,
+   "cost": 2601.1006648763023,
+   "regret": -739.4568351236979,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.2875333333015442,
+   "above": 1.0,
+   "lam": 40.957790673191724,
+   "inf_share": 0.0,
+   "cost": 2601.2267325846356,
+   "regret": -739.3307674153646,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.6098916695515315,
+   "above": 1.0,
+   "lam": 32.441926010836106,
+   "inf_share": 0.0,
+   "cost": 2511.2482950846356,
+   "regret": -829.3092049153644,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.6100166694323221,
+   "above": 1.0,
+   "lam": 32.451275619396135,
+   "inf_share": 0.0,
+   "cost": 2511.7251782226563,
+   "regret": -828.8323217773435,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.5836666615804037,
+   "above": 1.0,
+   "lam": 33.40000010000001,
+   "inf_share": 0.0,
+   "cost": 2511.1366031901043,
+   "regret": -829.4208968098957,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.2378749991208315,
+   "above": 1.0,
+   "lam": 42.79682365096531,
+   "inf_share": 0.0,
+   "cost": 2797.5963037109377,
+   "regret": -542.9611962890625,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9225000143051147,
+   "above": 1.0,
+   "lam": 6.572137925345558,
+   "inf_share": 0.0,
+   "cost": 2890.5224609375,
+   "regret": -450.0350390625,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9225000143051147,
+   "above": 1.0,
+   "lam": 6.6866507890502405,
+   "inf_share": 0.0,
+   "cost": 2898.614990234375,
+   "regret": -441.942509765625,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.5908416652679443,
+   "above": 1.0,
+   "lam": 4.6717708746632765,
+   "inf_share": 0.0,
+   "cost": 2308.642147623698,
+   "regret": -1031.9153523763016,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.7797666599353155,
+   "above": 1.0,
+   "lam": 3.270864093426694,
+   "inf_share": 0.0,
+   "cost": 2399.306133626302,
+   "regret": -941.2513663736976,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.046466666612153255,
+   "above": 0.006666666666666667,
+   "lam": 14.578212332058174,
+   "inf_share": 0.0,
+   "cost": 5299.028678385416,
+   "regret": 1958.4711783854175,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.04708333331160247,
+   "above": 0.006666666666666667,
+   "lam": 14.528032572878583,
+   "inf_share": 0.0,
+   "cost": 5286.995870768229,
+   "regret": 1946.43837076823,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.4538000051180522,
+   "above": 1.0,
+   "lam": 5.92321271255685,
+   "inf_share": 0.0,
+   "cost": 2553.2930818684895,
+   "regret": -787.2644181315102,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.453775005141894,
+   "above": 1.0,
+   "lam": 5.924058581037914,
+   "inf_share": 0.0,
+   "cost": 2553.6520166015625,
+   "regret": -786.9054833984374,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.4293249906102816,
+   "above": 1.0,
+   "lam": 6.134666766666666,
+   "inf_share": 0.0,
+   "cost": 2600.8925154622398,
+   "regret": -739.6649845377605,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.1792499990016222,
+   "above": 1.0,
+   "lam": 9.260400171092744,
+   "inf_share": 0.0,
+   "cost": 3653.8021484375,
+   "regret": 313.2446484375001,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9300000071525574,
+   "above": 1.0,
+   "lam": 0.9792484513850892,
+   "inf_share": 0.0,
+   "cost": 2880.607421875,
+   "regret": -459.950078125,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9300000071525574,
+   "above": 1.0,
+   "lam": 1.0036194159683747,
+   "inf_share": 0.0,
+   "cost": 2883.722412109375,
+   "regret": -456.835087890625,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.585174998541673,
+   "above": 1.0,
+   "lam": 4.727084243523055,
+   "inf_share": 0.0,
+   "cost": 2294.3732983398436,
+   "regret": -1046.1842016601558,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.7443250010410944,
+   "above": 1.0,
+   "lam": 3.5736551416196556,
+   "inf_share": 0.0,
+   "cost": 2341.2729842122394,
+   "regret": -999.28451578776,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0017916666467984517,
+   "above": 0.0,
+   "lam": 30.364662007741796,
+   "inf_share": 0.0,
+   "cost": 7546.46548828125,
+   "regret": 4205.90798828125,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.0019333333165074387,
+   "above": 0.0,
+   "lam": 30.328147469713524,
+   "inf_share": 0.0,
+   "cost": 7540.606505533854,
+   "regret": 4200.049005533854,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.41553333391745884,
+   "above": 1.0,
+   "lam": 6.335470105464494,
+   "inf_share": 0.0,
+   "cost": 2657.760236816406,
+   "regret": -682.7972631835937,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.4154916672905286,
+   "above": 1.0,
+   "lam": 6.335645482972911,
+   "inf_share": 0.0,
+   "cost": 2657.830577799479,
+   "regret": -682.7269222005208,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.3724499946584304,
+   "above": 1.0,
+   "lam": 6.7786667666666665,
+   "inf_share": 0.0,
+   "cost": 2790.746326497396,
+   "regret": -549.8111735026042,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.05837499952564637,
+   "above": 0.13333333333333333,
+   "lam": 14.664732263922922,
+   "inf_share": 0.0,
+   "cost": 5261.558159993489,
+   "regret": 1921.0006599934904,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.925000011920929,
+   "above": 1.0,
+   "lam": 1.0009753168541244,
+   "inf_share": 0.0,
+   "cost": 2867.675048828125,
+   "regret": -472.882451171875,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.925000011920929,
+   "above": 1.0,
+   "lam": 1.022876877250544,
+   "inf_share": 0.0,
+   "cost": 2871.945068359375,
+   "regret": -468.612431640625,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 RECALIBRATED on target | any | alpha=0.1 | n=25": {
+  "point (lambda 0)": {
+   "risk": 0.9650666775306066,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3385.6330509440104,
+   "regret": 60.95224205512153,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.827662216424942,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2777.622472330729,
+   "regret": -547.0583365581597,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8125244444444443,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2451.5091377777776,
+   "regret": -873.1716711111111,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8600888888888888,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2603.6541688888888,
+   "regret": -721.02664,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.13998222166051466,
+   "above": 0.6866666666666666,
+   "lam": 45.99682183390015,
+   "inf_share": 0.0,
+   "cost": 3104.6505411783855,
+   "regret": -220.03026771050344,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.589111112554868,
+   "above": 1.0,
+   "lam": 33.23927508206217,
+   "inf_share": 0.0,
+   "cost": 2506.442421061198,
+   "regret": -818.238387827691,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.004657777797741194,
+   "above": 0.0,
+   "lam": 57.91209489849714,
+   "inf_share": 0.0,
+   "cost": 5184.608780924479,
+   "regret": 1859.9279720355903,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.00468444446567446,
+   "above": 0.0,
+   "lam": 57.90045629022087,
+   "inf_share": 0.0,
+   "cost": 5182.349306640625,
+   "regret": 1857.6684977517361,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.026168888830579818,
+   "above": 0.03666666666666667,
+   "lam": 53.86314010463194,
+   "inf_share": 0.0,
+   "cost": 4366.737117513021,
+   "regret": 1042.056308624132,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.026168888830579818,
+   "above": 0.03666666666666667,
+   "lam": 53.86314010463194,
+   "inf_share": 0.0,
+   "cost": 4366.737117513021,
+   "regret": 1042.056308624132,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.023582221826848885,
+   "above": 0.023333333333333334,
+   "lam": 54.71333343333334,
+   "inf_share": 0.0,
+   "cost": 4539.984115397136,
+   "regret": 1215.3033065082466,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.026168888830579818,
+   "above": 0.03666666666666667,
+   "lam": 53.86314010463194,
+   "inf_share": 0.0,
+   "cost": 4366.737117513021,
+   "regret": 1042.056308624132,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9223466640710831,
+   "above": 1.0,
+   "lam": 6.569033766408983,
+   "inf_share": 0.0,
+   "cost": 2892.4476692708336,
+   "regret": -432.23313961805553,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9223466640710831,
+   "above": 1.0,
+   "lam": 6.683020446823348,
+   "inf_share": 0.0,
+   "cost": 2900.3640901692706,
+   "regret": -424.31671871961805,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.12779555520353217,
+   "above": 0.6133333333333333,
+   "lam": 10.883179623435485,
+   "inf_share": 0.0,
+   "cost": 4186.682783203125,
+   "regret": 862.001974314236,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.4956000033020973,
+   "above": 1.0,
+   "lam": 5.514371096099588,
+   "inf_share": 0.0,
+   "cost": 2446.997156575521,
+   "regret": -877.6836523133682,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.02670222253073007,
+   "above": 0.006666666666666667,
+   "lam": 17.273270012888432,
+   "inf_share": 0.0,
+   "cost": 5880.5933235677085,
+   "regret": 2555.9125146788197,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.02670222253073007,
+   "above": 0.006666666666666667,
+   "lam": 17.273270012888432,
+   "inf_share": 0.0,
+   "cost": 5880.5933235677085,
+   "regret": 2555.9125146788197,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.03584888907459875,
+   "above": 0.05,
+   "lam": 16.735973065996475,
+   "inf_share": 0.0,
+   "cost": 5721.0754907226565,
+   "regret": 2396.394681833767,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.03584888907459875,
+   "above": 0.05,
+   "lam": 16.735973065996475,
+   "inf_share": 0.0,
+   "cost": 5721.0754907226565,
+   "regret": 2396.394681833767,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.03555555563730498,
+   "above": 0.043333333333333335,
+   "lam": 16.672000099999998,
+   "inf_share": 0.0,
+   "cost": 5720.564734700521,
+   "regret": 2395.883925811632,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.03584888907459875,
+   "above": 0.05,
+   "lam": 16.735973065996475,
+   "inf_share": 0.0,
+   "cost": 5721.0754907226565,
+   "regret": 2396.394681833767,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9298133273919423,
+   "above": 1.0,
+   "lam": 0.9792823998875455,
+   "inf_share": 0.0,
+   "cost": 2882.3570662434895,
+   "regret": -442.32374264539925,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9298133273919423,
+   "above": 1.0,
+   "lam": 1.0036049198464658,
+   "inf_share": 0.0,
+   "cost": 2885.2653735351564,
+   "regret": -439.4154353537326,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.12753777818443873,
+   "above": 0.6266666666666667,
+   "lam": 10.982709060792585,
+   "inf_share": 0.0,
+   "cost": 4204.4481233723955,
+   "regret": 879.7673144835069,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.4910400014122327,
+   "above": 1.0,
+   "lam": 5.632339505993985,
+   "inf_share": 0.0,
+   "cost": 2462.8795263671873,
+   "regret": -861.8012825217014,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.019822222250513732,
+   "above": 0.0,
+   "lam": 19.900530991639314,
+   "inf_share": 0.0,
+   "cost": 6283.181559244792,
+   "regret": 2958.5007503559027,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.019822222250513732,
+   "above": 0.0,
+   "lam": 19.900530991639314,
+   "inf_share": 0.0,
+   "cost": 6283.181559244792,
+   "regret": 2958.5007503559027,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.036115555732200544,
+   "above": 0.05333333333333334,
+   "lam": 17.43559432738525,
+   "inf_share": 0.0,
+   "cost": 5814.9985050455725,
+   "regret": 2490.3176961566837,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.036115555732200544,
+   "above": 0.05333333333333334,
+   "lam": 17.43559432738525,
+   "inf_share": 0.0,
+   "cost": 5814.9985050455725,
+   "regret": 2490.3176961566837,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.034248888899261754,
+   "above": 0.043333333333333335,
+   "lam": 17.8480001,
+   "inf_share": 0.0,
+   "cost": 5900.932220052084,
+   "regret": 2576.251411163194,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.036115555732200544,
+   "above": 0.05333333333333334,
+   "lam": 17.43559432738525,
+   "inf_share": 0.0,
+   "cost": 5814.9985050455725,
+   "regret": 2490.3176961566837,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9248177752892176,
+   "above": 1.0,
+   "lam": 1.0010042366868916,
+   "inf_share": 0.0,
+   "cost": 2869.4782088216148,
+   "regret": -455.20260006727426,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9248177752892176,
+   "above": 1.0,
+   "lam": 1.0228624430893956,
+   "inf_share": 0.0,
+   "cost": 2873.570819498698,
+   "regret": -451.10998939019095,
+   "kind": "inst"
+  }
+ },
+ "RICH S13 RECALIBRATED on target | any | alpha=0.1 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.9649618933598201,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3380.7136857096352,
+   "regret": 84.50664761439731,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.8271809566020966,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2773.909182128906,
+   "regret": -522.2978559663318,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8123523809523809,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2448.9196666666667,
+   "regret": -847.2873714285713,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8600190476190475,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2600.755142857143,
+   "regret": -695.4518952380953,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.12988571447630723,
+   "above": 0.7,
+   "lam": 46.28873285040342,
+   "inf_share": 0.0,
+   "cost": 3123.8933650716144,
+   "regret": -172.31367302362352,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.5847714293003082,
+   "above": 1.0,
+   "lam": 33.423048002036616,
+   "inf_share": 0.0,
+   "cost": 2508.9071915690106,
+   "regret": -787.2998465262277,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.00481904753173391,
+   "above": 0.0,
+   "lam": 57.21870097544259,
+   "inf_share": 0.0,
+   "cost": 5005.188581542969,
+   "regret": 1708.9815434477305,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.004942857053441306,
+   "above": 0.0,
+   "lam": 57.18133880082154,
+   "inf_share": 0.0,
+   "cost": 4998.048749186198,
+   "regret": 1701.8417110909597,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.02601904744670416,
+   "above": 0.0033333333333333335,
+   "lam": 53.39613003089806,
+   "inf_share": 0.0,
+   "cost": 4260.330591634114,
+   "regret": 964.1235535388765,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.0260761903016828,
+   "above": 0.0033333333333333335,
+   "lam": 53.39876101423248,
+   "inf_share": 0.0,
+   "cost": 4260.861116536458,
+   "regret": 964.6540784412203,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.02351428578219687,
+   "above": 0.0,
+   "lam": 54.12666676666667,
+   "inf_share": 0.0,
+   "cost": 4401.9803393554685,
+   "regret": 1105.7733012602307,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.012695237948404004,
+   "above": 0.0,
+   "lam": 55.48960504589446,
+   "inf_share": 0.0,
+   "cost": 4663.401345214844,
+   "regret": 1367.1943071196056,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9223142971595129,
+   "above": 1.0,
+   "lam": 6.56684009452133,
+   "inf_share": 0.0,
+   "cost": 2887.891084798177,
+   "regret": -408.315953297061,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9223142971595129,
+   "above": 1.0,
+   "lam": 6.680950674237416,
+   "inf_share": 0.0,
+   "cost": 2895.858933919271,
+   "regret": -400.34810417596725,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.1297999995822708,
+   "above": 0.75,
+   "lam": 10.367695389956662,
+   "inf_share": 0.0,
+   "cost": 4043.8297639973957,
+   "regret": 747.6227259021578,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.4940285736322403,
+   "above": 1.0,
+   "lam": 5.543909553587087,
+   "inf_share": 0.0,
+   "cost": 2450.8869205729166,
+   "regret": -845.3201175223215,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.03442857138502101,
+   "above": 0.0,
+   "lam": 16.054484534060315,
+   "inf_share": 0.0,
+   "cost": 5642.4032014973955,
+   "regret": 2346.1961634021573,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.034599999931330484,
+   "above": 0.0,
+   "lam": 16.03409800077657,
+   "inf_share": 0.0,
+   "cost": 5637.123212890625,
+   "regret": 2340.9161747953867,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.03493333297936867,
+   "above": 0.04,
+   "lam": 16.209229959196996,
+   "inf_share": 0.0,
+   "cost": 5645.646431477865,
+   "regret": 2349.439393382627,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.034885713959423206,
+   "above": 0.04,
+   "lam": 16.211977237049783,
+   "inf_share": 0.0,
+   "cost": 5646.089436035156,
+   "regret": 2349.882397939918,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.03423809514225771,
+   "above": 0.03333333333333333,
+   "lam": 16.3640001,
+   "inf_share": 0.0,
+   "cost": 5684.583633626302,
+   "regret": 2388.376595531064,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.017504761963306616,
+   "above": 0.006666666666666667,
+   "lam": 18.716701055476708,
+   "inf_share": 0.0,
+   "cost": 6157.6726692708335,
+   "regret": 2861.465631175595,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9298285661141078,
+   "above": 1.0,
+   "lam": 0.9784887752389602,
+   "inf_share": 0.0,
+   "cost": 2878.4054581705727,
+   "regret": -417.8015799246652,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9298285661141078,
+   "above": 1.0,
+   "lam": 1.00273103023086,
+   "inf_share": 0.0,
+   "cost": 2881.3793424479168,
+   "regret": -414.82769564732143,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.13218095269054175,
+   "above": 0.7633333333333333,
+   "lam": 10.383049058975434,
+   "inf_share": 0.0,
+   "cost": 4041.7237890625,
+   "regret": 745.516750967262,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.49080000122388207,
+   "above": 1.0,
+   "lam": 5.656996467070167,
+   "inf_share": 0.0,
+   "cost": 2467.0269694010417,
+   "regret": -829.1800686941965,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.025514285484484086,
+   "above": 0.0,
+   "lam": 17.652408756149445,
+   "inf_share": 0.0,
+   "cost": 5947.484471028646,
+   "regret": 2651.2774329334075,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.02565714264366155,
+   "above": 0.0,
+   "lam": 17.640286672658426,
+   "inf_share": 0.0,
+   "cost": 5944.45814453125,
+   "regret": 2648.2511064360115,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.03520952387635286,
+   "above": 0.03666666666666667,
+   "lam": 16.655446495922686,
+   "inf_share": 0.0,
+   "cost": 5709.312089029948,
+   "regret": 2413.10505093471,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.03517142863556122,
+   "above": 0.03666666666666667,
+   "lam": 16.656397221071575,
+   "inf_share": 0.0,
+   "cost": 5709.508298339843,
+   "regret": 2413.3012602446056,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.033419047216884795,
+   "above": 0.023333333333333334,
+   "lam": 17.0480001,
+   "inf_share": 0.0,
+   "cost": 5796.057346191406,
+   "regret": 2499.850308096168,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.01688571418945988,
+   "above": 0.006666666666666667,
+   "lam": 20.123532325807112,
+   "inf_share": 0.0,
+   "cost": 6355.7762483723955,
+   "regret": 3059.5692102771573,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9248000093301137,
+   "above": 1.0,
+   "lam": 1.000233074946033,
+   "inf_share": 0.0,
+   "cost": 2865.5487939453124,
+   "regret": -430.6582441499256,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9248000093301137,
+   "above": 1.0,
+   "lam": 1.0220297734058457,
+   "inf_share": 0.0,
+   "cost": 2869.747947591146,
+   "regret": -426.4590905040923,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 source->source | mean | alpha=0.02 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.09056778294344743,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2697.3361092122395,
+   "regret": 603.9257314344618,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.01619055585935712,
+   "above": 0.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2169.097265625,
+   "regret": 75.68688784722222,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.02559777777777778,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2063.8033444444445,
+   "regret": -29.607033333333316,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.03334888888888889,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2029.4676111111114,
+   "regret": -63.94276666666667,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.020343333532412848,
+   "above": 0.53,
+   "lam": 16.941476249367053,
+   "inf_share": 0.0,
+   "cost": 2087.989650472005,
+   "regret": -5.420727305772569,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0017677778164700915,
+   "above": 0.0,
+   "lam": 38.24553584874325,
+   "inf_share": 0.0,
+   "cost": 3090.9881315104167,
+   "regret": 997.5777537326388,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.010222777995901803,
+   "above": 0.0,
+   "lam": 25.209754781771963,
+   "inf_share": 0.0,
+   "cost": 2357.102277832031,
+   "regret": 263.69190005425344,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.01005388911968718,
+   "above": 0.0,
+   "lam": 25.276469444392237,
+   "inf_share": 0.0,
+   "cost": 2358.325665690104,
+   "regret": 264.91528791232633,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.009446666882528614,
+   "above": 0.0,
+   "lam": 26.15333343333333,
+   "inf_share": 0.0,
+   "cost": 2396.0469409179686,
+   "regret": 302.63656314019096,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.06916889337201913,
+   "above": 1.0,
+   "lam": 1.19191779017669,
+   "inf_share": 0.0,
+   "cost": 2385.0214396158854,
+   "regret": 291.6110618381076,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.020538333564375837,
+   "above": 0.54,
+   "lam": 3.398192451324148,
+   "inf_share": 0.0,
+   "cost": 2112.0483923339843,
+   "regret": 18.6380145562066,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.0002583333305665292,
+   "above": 0.0,
+   "lam": 13.426175279187639,
+   "inf_share": 0.0,
+   "cost": 4753.6080322265625,
+   "regret": 2660.1976544487843,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.008873889071401209,
+   "above": 0.0,
+   "lam": 4.883695182590435,
+   "inf_share": 0.0,
+   "cost": 2406.151941731771,
+   "regret": 312.741563953993,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.008728333493539443,
+   "above": 0.0,
+   "lam": 4.901693578679217,
+   "inf_share": 0.0,
+   "cost": 2410.1698453776044,
+   "regret": 316.75946759982634,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.008142777915733555,
+   "above": 0.0,
+   "lam": 5.028000099999999,
+   "inf_share": 0.0,
+   "cost": 2442.6482006835936,
+   "regret": 349.23782290581596,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.07042278245091438,
+   "above": 1.0,
+   "lam": 0.25336910468483853,
+   "inf_share": 0.0,
+   "cost": 2406.669753417969,
+   "regret": 313.25937564019097,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.020465555743624766,
+   "above": 0.53,
+   "lam": 3.4821647920984864,
+   "inf_share": 0.0,
+   "cost": 2125.8631966145836,
+   "regret": 32.452818836805555,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.00034888889301025,
+   "above": 0.0,
+   "lam": 19.932110588935767,
+   "inf_share": 0.0,
+   "cost": 5919.702527669271,
+   "regret": 3826.2921498914934,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.008883333519722024,
+   "above": 0.0,
+   "lam": 5.0487623296105255,
+   "inf_share": 0.0,
+   "cost": 2454.434421386719,
+   "regret": 361.02404360894093,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.008817777951868873,
+   "above": 0.0,
+   "lam": 5.059180228504082,
+   "inf_share": 0.0,
+   "cost": 2457.4206599934896,
+   "regret": 364.01028221571175,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.008118333453312516,
+   "above": 0.0,
+   "lam": 5.2320001000000005,
+   "inf_share": 0.0,
+   "cost": 2501.946837565104,
+   "regret": 408.53645978732635,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.06992555985848109,
+   "above": 1.0,
+   "lam": 0.2636945461877987,
+   "inf_share": 0.0,
+   "cost": 2394.000244140625,
+   "regret": 300.5898663628472,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 NAIVE source->target (shift) | mean | alpha=0.02 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.1420000046491623,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3295.85498046875,
+   "regret": 498.99998046875,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.07249999791383743,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2600.6201171875,
+   "regret": -196.2348828125,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.08499999999999999,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2578.7125,
+   "regret": -218.14249999999996,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.09674999999999999,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2677.4274999999993,
+   "regret": -119.42750000000024,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.08085042049487431,
+   "above": 1.0,
+   "lam": 17.079341914330616,
+   "inf_share": 0.0,
+   "cost": 2650.3502506510417,
+   "regret": -146.50474934895834,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0321050012173752,
+   "above": 1.0,
+   "lam": 38.297892720425246,
+   "inf_share": 0.0,
+   "cost": 2616.882549641927,
+   "regret": -179.9724503580729,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.05586750422914823,
+   "above": 1.0,
+   "lam": 25.7569868320715,
+   "inf_share": 0.0,
+   "cost": 2503.774744466146,
+   "regret": -293.08025553385414,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.05567792057991028,
+   "above": 1.0,
+   "lam": 25.813383593352263,
+   "inf_share": 0.0,
+   "cost": 2502.5430647786457,
+   "regret": -294.3119352213542,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.05361417019118865,
+   "above": 1.0,
+   "lam": 26.74666676666666,
+   "inf_share": 0.0,
+   "cost": 2503.7403653971355,
+   "regret": -293.11463460286456,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.1287499964237213,
+   "above": 1.0,
+   "lam": 0.9374998490301883,
+   "inf_share": 0.0,
+   "cost": 3098.132568359375,
+   "regret": 301.277568359375,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.07580875389277936,
+   "above": 1.0,
+   "lam": 3.428533021848335,
+   "inf_share": 0.0,
+   "cost": 2524.373806966146,
+   "regret": -272.48119303385414,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.009559166825686891,
+   "above": 0.0,
+   "lam": 13.371158839560781,
+   "inf_share": 0.0,
+   "cost": 4403.3927213541665,
+   "regret": 1606.5377213541667,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.05274292141199112,
+   "above": 1.0,
+   "lam": 4.8860293136407,
+   "inf_share": 0.0,
+   "cost": 2479.1741560872397,
+   "regret": -317.6808439127604,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0524804209296902,
+   "above": 1.0,
+   "lam": 4.9025441813018675,
+   "inf_share": 0.0,
+   "cost": 2480.7246858723956,
+   "regret": -316.13031412760415,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.05061792022238175,
+   "above": 1.0,
+   "lam": 5.0320001,
+   "inf_share": 0.0,
+   "cost": 2491.684036458333,
+   "regret": -305.17096354166665,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.1302500069141388,
+   "above": 1.0,
+   "lam": 0.2101936274785578,
+   "inf_share": 0.0,
+   "cost": 3127.125,
+   "regret": 330.27,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.07504708642760913,
+   "above": 1.0,
+   "lam": 3.515009889423071,
+   "inf_share": 0.0,
+   "cost": 2504.765041503906,
+   "regret": -292.08995849609374,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.0037129166861996055,
+   "above": 0.0,
+   "lam": 19.895354540197015,
+   "inf_share": 0.0,
+   "cost": 5557.22529296875,
+   "regret": 2760.37029296875,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.05082417024920384,
+   "above": 1.0,
+   "lam": 5.065710767128549,
+   "inf_share": 0.0,
+   "cost": 2481.817125651042,
+   "regret": -315.0378743489583,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.05062875361492236,
+   "above": 1.0,
+   "lam": 5.077606178253702,
+   "inf_share": 0.0,
+   "cost": 2482.960879720052,
+   "regret": -313.8941202799479,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.04875750131905079,
+   "above": 1.0,
+   "lam": 5.266666766666667,
+   "inf_share": 0.0,
+   "cost": 2528.2540047200523,
+   "regret": -268.60099527994794,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13099999725818634,
+   "above": 1.0,
+   "lam": 0.2172379264612801,
+   "inf_share": 0.0,
+   "cost": 3144.10009765625,
+   "regret": 347.24509765625,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 RECALIBRATED on target | mean | alpha=0.02 | n=25": {
+  "point (lambda 0)": {
+   "risk": 0.1420755593975385,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3297.4157356770834,
+   "regret": 490.0185356770833,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.07253467212120691,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2601.184706217448,
+   "regret": -206.2124937825521,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.0850377777777778,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2579.2816266666664,
+   "regret": -228.11557333333332,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.09682177777777778,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2678.655386666667,
+   "regret": -128.74181333333334,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.02101244478796919,
+   "above": 0.5133333333333333,
+   "lam": 44.933697810527015,
+   "inf_share": 0.0,
+   "cost": 2838.631687011719,
+   "regret": 31.234487011718752,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.006571111175774907,
+   "above": 0.0,
+   "lam": 55.9289788203456,
+   "inf_share": 0.0,
+   "cost": 4120.093614908854,
+   "regret": 1312.696414908854,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10172.366966145833,
+   "regret": 7364.969766145833,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10172.366966145833,
+   "regret": 7364.969766145833,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 100.00000009999998,
+   "inf_share": 0.0,
+   "cost": 8901.0873046875,
+   "regret": 6093.690104687499,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.12881600439548493,
+   "above": 1.0,
+   "lam": 0.937710482473426,
+   "inf_share": 0.0,
+   "cost": 3099.3638704427085,
+   "regret": 291.96667044270833,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.021274222442880273,
+   "above": 0.5366666666666666,
+   "lam": 9.19805067048802,
+   "inf_share": 0.0,
+   "cost": 3437.1662638346356,
+   "regret": 629.7690638346355,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.005719555666825423,
+   "above": 0.0,
+   "lam": 16.651530035200054,
+   "inf_share": 0.0,
+   "cost": 5045.414353841145,
+   "regret": 2238.0171538411455,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10172.366966145833,
+   "regret": 7364.969766145833,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10172.366966145833,
+   "regret": 7364.969766145833,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.0034897778710971275,
+   "above": 0.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 5622.272825520833,
+   "regret": 2814.875625520833,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13030978177984556,
+   "above": 1.0,
+   "lam": 0.2101318428339804,
+   "inf_share": 0.0,
+   "cost": 3128.2546695963542,
+   "regret": 320.8574695963542,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.021289778208980956,
+   "above": 0.5466666666666666,
+   "lam": 9.2823552561292,
+   "inf_share": 0.0,
+   "cost": 3448.893135579427,
+   "regret": 641.4959355794272,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.003056444487107607,
+   "above": 0.0,
+   "lam": 22.208123800398262,
+   "inf_share": 0.0,
+   "cost": 5875.087727864583,
+   "regret": 3067.690527864583,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10172.366966145833,
+   "regret": 7364.969766145833,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 10172.366966145833,
+   "regret": 7364.969766145833,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.0006284444409538992,
+   "above": 0.0,
+   "lam": 40.0000001,
+   "inf_share": 0.0,
+   "cost": 7568.130359700521,
+   "regret": 4760.73315970052,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13105867008368174,
+   "above": 1.0,
+   "lam": 0.2171887768678183,
+   "inf_share": 0.0,
+   "cost": 3145.2088061523436,
+   "regret": 337.81160615234376,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 RECALIBRATED on target | mean | alpha=0.02 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.14200714662671088,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3296.0656274414064,
+   "regret": 486.8914655366444,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.07249571956694126,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2600.8358170572915,
+   "regret": -208.33834484747024,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.08501619047619048,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2579.0497047619046,
+   "regret": -230.12445714285712,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.09676809523809524,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2677.705247619048,
+   "regret": -131.46891428571428,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.020318571714063486,
+   "above": 0.48333333333333334,
+   "lam": 45.27569129841675,
+   "inf_share": 0.0,
+   "cost": 2823.9155688476562,
+   "regret": 14.741406942894358,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.0066700000987232975,
+   "above": 0.0,
+   "lam": 55.90225744602993,
+   "inf_share": 0.0,
+   "cost": 4065.1175276692707,
+   "regret": 1255.9433657645088,
+   "kind": "fixed"
+  },
+  "[add] CRC exact path": {
+   "risk": 0.00040333333580444254,
+   "above": 0.0,
+   "lam": 67.73421553744254,
+   "inf_share": 0.0,
+   "cost": 7618.766053059896,
+   "regret": 4809.591891155134,
+   "kind": "fixed"
+  },
+  "[add] CRC exact cheapest-valid": {
+   "risk": 0.00040333333580444254,
+   "above": 0.0,
+   "lam": 67.73421553744254,
+   "inf_share": 0.0,
+   "cost": 7618.766053059896,
+   "regret": 4809.591891155134,
+   "kind": "fixed"
+  },
+  "[add] CRC on v1 grid": {
+   "risk": 0.000465238103934098,
+   "above": 0.0,
+   "lam": 68.08666676666665,
+   "inf_share": 0.0,
+   "cost": 7605.652630208333,
+   "regret": 4796.478468303571,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.12879381428162257,
+   "above": 1.0,
+   "lam": 0.9353248819884262,
+   "inf_share": 0.0,
+   "cost": 3098.760213216146,
+   "regret": 289.5860513113839,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.021035714574779072,
+   "above": 0.5333333333333333,
+   "lam": 9.117061027678128,
+   "inf_share": 0.0,
+   "cost": 3419.589081217448,
+   "regret": 610.414919312686,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.005620000053507586,
+   "above": 0.0,
+   "lam": 16.644207333590273,
+   "inf_share": 0.0,
+   "cost": 5048.5408121744795,
+   "regret": 2239.3666502697174,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact path": {
+   "risk": 0.0009657142944827986,
+   "above": 0.0,
+   "lam": 29.543256530308415,
+   "inf_share": 0.0,
+   "cost": 6933.882498372396,
+   "regret": 4124.708336467635,
+   "kind": "fixed"
+  },
+  "[sc] CRC exact cheapest-valid": {
+   "risk": 0.0009657142944827986,
+   "above": 0.0,
+   "lam": 29.543256530308415,
+   "inf_share": 0.0,
+   "cost": 6933.882498372396,
+   "regret": 4124.708336467635,
+   "kind": "fixed"
+  },
+  "[sc] CRC on v1 grid": {
+   "risk": 0.003555714382479588,
+   "above": 0.0,
+   "lam": 19.92266676666667,
+   "inf_share": 0.0,
+   "cost": 5608.439874674479,
+   "regret": 2799.265712769717,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13029190888007483,
+   "above": 1.0,
+   "lam": 0.20987844084967594,
+   "inf_share": 0.0,
+   "cost": 3127.730460611979,
+   "regret": 318.55629870721725,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.021054285879557332,
+   "above": 0.5533333333333333,
+   "lam": 9.193695420384318,
+   "inf_share": 0.0,
+   "cost": 3429.838484700521,
+   "regret": 620.664322795759,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.002956190493229466,
+   "above": 0.0,
+   "lam": 21.97648964193515,
+   "inf_share": 0.0,
+   "cost": 5866.085646158855,
+   "regret": 3056.911484254092,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact path": {
+   "risk": 0.0009690476242879716,
+   "above": 0.0,
+   "lam": 55.00663115322136,
+   "inf_share": 0.0,
+   "cost": 7696.277740885416,
+   "regret": 4887.103578980655,
+   "kind": "fixed"
+  },
+  "[s05] CRC exact cheapest-valid": {
+   "risk": 0.0009690476242879716,
+   "above": 0.0,
+   "lam": 55.00663115322136,
+   "inf_share": 0.0,
+   "cost": 7696.277740885416,
+   "regret": 4887.103578980655,
+   "kind": "fixed"
+  },
+  "[s05] CRC on v1 grid": {
+   "risk": 0.0011338095233077183,
+   "above": 0.0,
+   "lam": 34.95733343333333,
+   "inf_share": 0.0,
+   "cost": 7149.852649739583,
+   "regret": 4340.678487834822,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian E[N]/K <= alpha (per instance)": {
+   "risk": 0.13102476661403975,
+   "above": 1.0,
+   "lam": 0.2168977854908818,
+   "inf_share": 0.0,
+   "cost": 3144.328700358073,
+   "regret": 335.15453845331103,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 source->source | any | alpha=0.1 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.8625555660327275,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 2691.032334798177,
+   "regret": 39.025201464843754,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.2771333329876264,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2165.0219653320314,
+   "regret": -486.98516800130216,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.41170000000000007,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2058.888877777778,
+   "regret": -593.1182555555555,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.49660000000000004,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2024.0327222222224,
+   "regret": -627.9744111111111,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.11055555569628875,
+   "above": 0.6166666666666667,
+   "lam": 30.49864901587638,
+   "inf_share": 0.0,
+   "cost": 2606.2257967122396,
+   "regret": -45.78133662109375,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.24314444447557132,
+   "above": 1.0,
+   "lam": 21.436378362785042,
+   "inf_share": 0.0,
+   "cost": 2198.0734269205727,
+   "regret": -453.93370641276044,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.01138888909947127,
+   "above": 0.0,
+   "lam": 45.28414196855467,
+   "inf_share": 0.0,
+   "cost": 3625.1323494466146,
+   "regret": 973.1252161132812,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.01183333355622987,
+   "above": 0.0,
+   "lam": 45.11431058383908,
+   "inf_share": 0.0,
+   "cost": 3612.313154296875,
+   "regret": 960.3060209635416,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.058400000383456545,
+   "above": 0.09666666666666666,
+   "lam": 34.89349494320796,
+   "inf_share": 0.0,
+   "cost": 2865.4393709309898,
+   "regret": 213.43223759765624,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.05815555583685637,
+   "above": 0.09666666666666666,
+   "lam": 34.90434302693439,
+   "inf_share": 0.0,
+   "cost": 2865.969983723958,
+   "regret": 213.962850390625,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.05045555502952387,
+   "above": 0.08333333333333333,
+   "lam": 35.84666676666667,
+   "inf_share": 0.0,
+   "cost": 2932.8147371419273,
+   "regret": 280.80760380859374,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.009922222341410816,
+   "above": 0.0,
+   "lam": 48.21553444876259,
+   "inf_share": 0.0,
+   "cost": 3913.7627473958332,
+   "regret": 1261.7556140625,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6459666627645493,
+   "above": 1.0,
+   "lam": 4.584996311427636,
+   "inf_share": 0.0,
+   "cost": 2118.558700358073,
+   "regret": -533.4484329752605,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6435444378852844,
+   "above": 1.0,
+   "lam": 4.66715153927073,
+   "inf_share": 0.0,
+   "cost": 2116.0031079101564,
+   "regret": -536.0040254231772,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.10846666694308321,
+   "above": 0.5866666666666667,
+   "lam": 5.82441951902738,
+   "inf_share": 0.0,
+   "cost": 2690.214822591146,
+   "regret": 38.207689257812504,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.11464444503188133,
+   "above": 0.8933333333333333,
+   "lam": 5.521664362907038,
+   "inf_share": 0.0,
+   "cost": 2582.385235188802,
+   "regret": -69.62189814453124,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.002522222283296287,
+   "above": 0.0,
+   "lam": 18.870017534981155,
+   "inf_share": 0.0,
+   "cost": 5812.363531901042,
+   "regret": 3160.3563985677083,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.002522222283296287,
+   "above": 0.0,
+   "lam": 18.76975218874497,
+   "inf_share": 0.0,
+   "cost": 5795.862037760417,
+   "regret": 3143.8549044270835,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.04865555569995195,
+   "above": 0.013333333333333334,
+   "lam": 7.806288982693377,
+   "inf_share": 0.0,
+   "cost": 3314.2840576171875,
+   "regret": 662.2769242838541,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.04864444458701958,
+   "above": 0.013333333333333334,
+   "lam": 7.807089466625824,
+   "inf_share": 0.0,
+   "cost": 3314.482223307292,
+   "regret": 662.4750899739582,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.04566666682406018,
+   "above": 0.013333333333333334,
+   "lam": 7.981333433333333,
+   "inf_share": 0.0,
+   "cost": 3363.6607845052085,
+   "regret": 711.6536511718749,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.009211111326391498,
+   "above": 0.0,
+   "lam": 14.967821642137993,
+   "inf_share": 0.0,
+   "cost": 4893.089443359375,
+   "regret": 2241.082310026042,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6637000077962876,
+   "above": 1.0,
+   "lam": 0.9076037849388661,
+   "inf_share": 0.0,
+   "cost": 2135.726970621745,
+   "regret": -516.2801627115886,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6637000077962876,
+   "above": 1.0,
+   "lam": 0.9140272310368088,
+   "inf_share": 0.0,
+   "cost": 2136.5414127604167,
+   "regret": -515.4657205729167,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.1110555558030804,
+   "above": 0.56,
+   "lam": 6.096004696018159,
+   "inf_share": 0.0,
+   "cost": 2771.948542480469,
+   "regret": 119.94140914713542,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.10234444484114646,
+   "above": 0.6033333333333334,
+   "lam": 6.20482136449018,
+   "inf_share": 0.0,
+   "cost": 2805.0791414388023,
+   "regret": 153.07200810546874,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 39.749061535456654,
+   "inf_share": 0.0,
+   "cost": 7729.292771809895,
+   "regret": 5077.285638476562,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.0,
+   "above": 0.0,
+   "lam": 39.663755799669886,
+   "inf_share": 0.0,
+   "cost": 7723.283917643229,
+   "regret": 5071.276784309895,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.045877777963566284,
+   "above": 0.023333333333333334,
+   "lam": 8.544120130352185,
+   "inf_share": 0.0,
+   "cost": 3516.834660644531,
+   "regret": 864.8275273111979,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.04585555575011919,
+   "above": 0.023333333333333334,
+   "lam": 8.546281939735758,
+   "inf_share": 0.0,
+   "cost": 3517.455985514323,
+   "regret": 865.4488521809895,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.04414444425298522,
+   "above": 0.0033333333333333335,
+   "lam": 8.6720001,
+   "inf_share": 0.0,
+   "cost": 3553.083405761719,
+   "regret": 901.0762724283853,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.008933333451859654,
+   "above": 0.0,
+   "lam": 19.145876752519722,
+   "inf_share": 0.0,
+   "cost": 5643.361850585938,
+   "regret": 2991.354717252604,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.6611888953049978,
+   "above": 1.0,
+   "lam": 0.9257667861285874,
+   "inf_share": 0.0,
+   "cost": 2135.9423404947916,
+   "regret": -516.0647928385417,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.6611888953049978,
+   "above": 1.0,
+   "lam": 0.9296265655590317,
+   "inf_share": 0.0,
+   "cost": 2138.1280737304687,
+   "regret": -513.8790596028647,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 NAIVE source->target (shift) | any | alpha=0.1 | n=100": {
+  "point (lambda 0)": {
+   "risk": 0.9750000238418579,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3295.85498046875,
+   "regret": -1062.79751953125,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.7925000190734863,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2600.6201171875,
+   "regret": -1758.0323828125,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8600000000000002,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2578.7125,
+   "regret": -1779.94,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.89,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2677.4274999999993,
+   "regret": -1681.2250000000004,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.5962916640440623,
+   "above": 1.0,
+   "lam": 30.282647026817067,
+   "inf_share": 0.0,
+   "cost": 2499.192998860677,
+   "regret": -1859.4595011393228,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.7628166677554449,
+   "above": 1.0,
+   "lam": 21.467614487178565,
+   "inf_share": 0.0,
+   "cost": 2561.8600455729165,
+   "regret": -1796.7924544270834,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.32165833180149395,
+   "above": 1.0,
+   "lam": 45.330759553130314,
+   "inf_share": 0.0,
+   "cost": 2803.883788248698,
+   "regret": -1554.7687117513021,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.3255916638672352,
+   "above": 1.0,
+   "lam": 45.17837623010773,
+   "inf_share": 0.0,
+   "cost": 2798.2059611002605,
+   "regret": -1560.4465388997396,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.5260916668176651,
+   "above": 1.0,
+   "lam": 34.957146927783505,
+   "inf_share": 0.0,
+   "cost": 2572.9443131510416,
+   "regret": -1785.7081868489583,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.5257000005245209,
+   "above": 1.0,
+   "lam": 34.972923022513335,
+   "inf_share": 0.0,
+   "cost": 2573.0657975260415,
+   "regret": -1785.5867024739584,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.5201333287358284,
+   "above": 1.0,
+   "lam": 35.800000100000005,
+   "inf_share": 0.0,
+   "cost": 2595.840791829427,
+   "regret": -1762.811708170573,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.2594333325823148,
+   "above": 1.0,
+   "lam": 48.13554799224901,
+   "inf_share": 0.0,
+   "cost": 3078.0590006510415,
+   "regret": -1280.5934993489584,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.925000011920929,
+   "above": 1.0,
+   "lam": 4.444530957577208,
+   "inf_share": 0.0,
+   "cost": 2812.017578125,
+   "regret": -1546.634921875,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.925000011920929,
+   "above": 1.0,
+   "lam": 4.447474762561122,
+   "inf_share": 0.0,
+   "cost": 2807.0048828125,
+   "regret": -1551.6476171875,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.586075004239877,
+   "above": 1.0,
+   "lam": 5.6733420946950615,
+   "inf_share": 0.0,
+   "cost": 2600.5816642252603,
+   "regret": -1758.0708357747396,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.5990916667381923,
+   "above": 1.0,
+   "lam": 5.496529269312233,
+   "inf_share": 0.0,
+   "cost": 2541.5861661783856,
+   "regret": -1817.0663338216145,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.0760500015070041,
+   "above": 0.0,
+   "lam": 18.889125178580215,
+   "inf_share": 0.0,
+   "cost": 5448.168699544271,
+   "regret": 1089.5161995442709,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.07684166806439559,
+   "above": 0.006666666666666667,
+   "lam": 18.804955247638016,
+   "inf_share": 0.0,
+   "cost": 5434.138684895834,
+   "regret": 1075.4861848958333,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.4122000002861023,
+   "above": 1.0,
+   "lam": 7.669448114586691,
+   "inf_share": 0.0,
+   "cost": 3058.230546061198,
+   "regret": -1300.421953938802,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.412150000333786,
+   "above": 1.0,
+   "lam": 7.671339769557147,
+   "inf_share": 0.0,
+   "cost": 3058.8265787760415,
+   "regret": -1299.8259212239584,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.40334999591112136,
+   "above": 1.0,
+   "lam": 7.812000100000001,
+   "inf_share": 0.0,
+   "cost": 3093.685890299479,
+   "regret": -1264.9666097005208,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.18789999755720296,
+   "above": 0.7733333333333333,
+   "lam": 14.749567159403389,
+   "inf_share": 0.0,
+   "cost": 4543.914056803385,
+   "regret": 185.26155680338528,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9449999928474426,
+   "above": 1.0,
+   "lam": 0.8415804895499325,
+   "inf_share": 0.0,
+   "cost": 2822.820068359375,
+   "regret": -1535.832431640625,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9449999928474426,
+   "above": 1.0,
+   "lam": 0.8440275438446331,
+   "inf_share": 0.0,
+   "cost": 2816.45751953125,
+   "regret": -1542.19498046875,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.552683333059152,
+   "above": 1.0,
+   "lam": 6.0190588123854205,
+   "inf_share": 0.0,
+   "cost": 2654.0433658854167,
+   "regret": -1704.6091341145836,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.5386000076929728,
+   "above": 1.0,
+   "lam": 6.181073928671262,
+   "inf_share": 0.0,
+   "cost": 2695.2480867513023,
+   "regret": -1663.404413248698,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.01265000006960084,
+   "above": 0.0,
+   "lam": 39.796185759316906,
+   "inf_share": 0.0,
+   "cost": 7533.411907552083,
+   "regret": 3174.7594075520833,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.012716666725464166,
+   "above": 0.0,
+   "lam": 39.7728312104806,
+   "inf_share": 0.0,
+   "cost": 7531.8264778645835,
+   "regret": 3173.1739778645833,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.3760833298166593,
+   "above": 1.0,
+   "lam": 8.343299436155984,
+   "inf_share": 0.0,
+   "cost": 3221.9594864908854,
+   "regret": -1136.6930135091145,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.37584999670584995,
+   "above": 1.0,
+   "lam": 8.346226834948865,
+   "inf_share": 0.0,
+   "cost": 3222.4751424153646,
+   "regret": -1136.1773575846355,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.36653333723545073,
+   "above": 1.0,
+   "lam": 8.474666766666665,
+   "inf_share": 0.0,
+   "cost": 3241.102882486979,
+   "regret": -1117.5496175130208,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.11455000054091215,
+   "above": 0.30333333333333334,
+   "lam": 19.088550415380805,
+   "inf_share": 0.0,
+   "cost": 5316.427100423177,
+   "regret": 957.774600423177,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9474999904632568,
+   "above": 1.0,
+   "lam": 0.8653982785747761,
+   "inf_share": 0.0,
+   "cost": 2839.7451171875,
+   "regret": -1518.9073828125,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9474999904632568,
+   "above": 1.0,
+   "lam": 0.869076953711523,
+   "inf_share": 0.0,
+   "cost": 2833.382568359375,
+   "regret": -1525.269931640625,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 RECALIBRATED on target | any | alpha=0.1 | n=25": {
+  "point (lambda 0)": {
+   "risk": 0.9749600166082382,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3295.5292423502606,
+   "regret": -1026.7526776497396,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.7925688916444779,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2600.0914371744793,
+   "regret": -1722.1904828255208,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8602044444444444,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2578.376391111111,
+   "regret": -1743.9055288888887,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8901333333333334,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2676.6904711111106,
+   "regret": -1645.5914488888889,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.13106666608403125,
+   "above": 0.6433333333333333,
+   "lam": 55.10623917297421,
+   "inf_share": 0.0,
+   "cost": 3961.2183056640624,
+   "regret": -361.06361433593753,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.537973332007726,
+   "above": 1.0,
+   "lam": 34.14668096935811,
+   "inf_share": 0.0,
+   "cost": 2558.098605143229,
+   "regret": -1764.183314856771,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.005697777833168705,
+   "above": 0.0,
+   "lam": 69.46509880173703,
+   "inf_share": 0.0,
+   "cost": 7716.876793619792,
+   "regret": 3394.5948736197915,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.006168888950099548,
+   "above": 0.0,
+   "lam": 69.28851512828075,
+   "inf_share": 0.0,
+   "cost": 7698.4322932942705,
+   "regret": 3376.150373294271,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.018355555549884835,
+   "above": 0.016666666666666666,
+   "lam": 65.03725184748363,
+   "inf_share": 0.0,
+   "cost": 6956.282106933594,
+   "regret": 2634.000186933594,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.018355555549884835,
+   "above": 0.016666666666666666,
+   "lam": 65.03725184748363,
+   "inf_share": 0.0,
+   "cost": 6956.282106933594,
+   "regret": 2634.000186933594,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.02071111130838593,
+   "above": 0.0033333333333333335,
+   "lam": 65.05333343333332,
+   "inf_share": 0.0,
+   "cost": 6841.753672688802,
+   "regret": 2519.471752688802,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.018355555549884835,
+   "above": 0.016666666666666666,
+   "lam": 65.03725184748363,
+   "inf_share": 0.0,
+   "cost": 6956.282106933594,
+   "regret": 2634.000186933594,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9250488855441411,
+   "above": 1.0,
+   "lam": 4.443432964717487,
+   "inf_share": 0.0,
+   "cost": 2812.3418684895832,
+   "regret": -1509.9400515104167,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9250488855441411,
+   "above": 1.0,
+   "lam": 4.4464055535723555,
+   "inf_share": 0.0,
+   "cost": 2807.280353190104,
+   "regret": -1515.0015668098958,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.12044444396781424,
+   "above": 0.49666666666666665,
+   "lam": 16.75940453639038,
+   "inf_share": 0.0,
+   "cost": 5011.337325846354,
+   "regret": 689.0554058463541,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.38799999992052714,
+   "above": 1.0,
+   "lam": 8.030170914651814,
+   "inf_share": 0.0,
+   "cost": 3152.185918782552,
+   "regret": -1170.096001217448,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.027333333327745398,
+   "above": 0.0,
+   "lam": 26.809250513949944,
+   "inf_share": 0.0,
+   "cost": 6549.6890234375,
+   "regret": 2227.4071034375,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.02738666664498548,
+   "above": 0.0,
+   "lam": 26.79987306142042,
+   "inf_share": 0.0,
+   "cost": 6548.503722330729,
+   "regret": 2226.221802330729,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.03346666646345208,
+   "above": 0.04666666666666667,
+   "lam": 26.540210444049382,
+   "inf_share": 0.0,
+   "cost": 6489.609273274739,
+   "regret": 2167.3273532747394,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.03346666646345208,
+   "above": 0.04666666666666667,
+   "lam": 26.540210444049382,
+   "inf_share": 0.0,
+   "cost": 6489.609273274739,
+   "regret": 2167.3273532747394,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.07071111172437668,
+   "above": 0.04666666666666667,
+   "lam": 19.6680001,
+   "inf_share": 0.0,
+   "cost": 5564.2493400065105,
+   "regret": 1241.9674200065103,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.03346666646345208,
+   "above": 0.04666666666666667,
+   "lam": 26.540210444049382,
+   "inf_share": 0.0,
+   "cost": 6489.609273274739,
+   "regret": 2167.3273532747394,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9451644470294317,
+   "above": 1.0,
+   "lam": 0.8412826123756897,
+   "inf_share": 0.0,
+   "cost": 2822.64568359375,
+   "regret": -1499.63623640625,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9451644470294317,
+   "above": 1.0,
+   "lam": 0.8437428163740492,
+   "inf_share": 0.0,
+   "cost": 2816.251184082031,
+   "regret": -1506.0307359179687,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.12171555524691939,
+   "above": 0.49333333333333335,
+   "lam": 17.17569429840829,
+   "inf_share": 0.0,
+   "cost": 5040.448612467448,
+   "regret": 718.1666924674479,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.3568977761268616,
+   "above": 1.0,
+   "lam": 8.678485105646361,
+   "inf_share": 0.0,
+   "cost": 3304.6976131184897,
+   "regret": -1017.5843068815104,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.009200000204145908,
+   "above": 0.0,
+   "lam": 56.017122290395925,
+   "inf_share": 0.0,
+   "cost": 8150.43611328125,
+   "regret": 3828.15419328125,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.009200000204145908,
+   "above": 0.0,
+   "lam": 56.017122290395925,
+   "inf_share": 0.0,
+   "cost": 8150.43611328125,
+   "regret": 3828.15419328125,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.03255111113656312,
+   "above": 0.04,
+   "lam": 41.921261641511016,
+   "inf_share": 0.0,
+   "cost": 7059.737770182292,
+   "regret": 2737.4558501822917,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.03255111113656312,
+   "above": 0.04,
+   "lam": 41.921261641511016,
+   "inf_share": 0.0,
+   "cost": 7059.737770182292,
+   "regret": 2737.4558501822917,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.03410666650782029,
+   "above": 0.04,
+   "lam": 31.034666766666668,
+   "inf_share": 0.0,
+   "cost": 6756.216647135417,
+   "regret": 2433.934727135417,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.03255111113656312,
+   "above": 0.04,
+   "lam": 41.921261641511016,
+   "inf_share": 0.0,
+   "cost": 7059.737770182292,
+   "regret": 2737.4558501822917,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9475999947388967,
+   "above": 1.0,
+   "lam": 0.8650335033061655,
+   "inf_share": 0.0,
+   "cost": 2839.495402018229,
+   "regret": -1482.7865179817709,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9475999947388967,
+   "above": 1.0,
+   "lam": 0.8687373706614714,
+   "inf_share": 0.0,
+   "cost": 2833.100916341146,
+   "regret": -1489.1810036588543,
+   "kind": "inst"
+  }
+ },
+ "RICH S24 RECALIBRATED on target | any | alpha=0.1 | n=50": {
+  "point (lambda 0)": {
+   "risk": 0.9749619130293529,
+   "above": 1.0,
+   "lam": 0.0,
+   "inf_share": 0.0,
+   "cost": 3296.979852701823,
+   "regret": -1002.6930234886531,
+   "kind": "fixed"
+  },
+  "fixed additive 20": {
+   "risk": 0.7927047592401505,
+   "above": 1.0,
+   "lam": 20.000000099999998,
+   "inf_share": 0.0,
+   "cost": 2601.3589615885417,
+   "regret": -1698.3139146019344,
+   "kind": "fixed"
+  },
+  "Zhu-style rhat-3sigma": {
+   "risk": 0.8605333333333333,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2580.0976,
+   "regret": -1719.5752761904762,
+   "kind": "raw"
+  },
+  "Mitici-style rhat-2.33sigma": {
+   "risk": 0.8900380952380954,
+   "above": 1.0,
+   "lam": null,
+   "inf_share": null,
+   "cost": 2679.011428571429,
+   "regret": -1620.6614476190477,
+   "kind": "raw"
+  },
+  "[add] validation-tuned": {
+   "risk": 0.1315619052449862,
+   "above": 0.7166666666666667,
+   "lam": 55.17867975257468,
+   "inf_share": 0.0,
+   "cost": 3939.950422363281,
+   "regret": -359.722453827195,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP (alpha)": {
+   "risk": 0.5430190474788348,
+   "above": 1.0,
+   "lam": 34.068437764355814,
+   "inf_share": 0.0,
+   "cost": 2559.757276204427,
+   "regret": -1739.9155999860488,
+   "kind": "fixed"
+  },
+  "[add] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.008885714170367768,
+   "above": 0.0,
+   "lam": 67.01702701211819,
+   "inf_share": 0.0,
+   "cost": 7513.107999674479,
+   "regret": 3213.4351234840033,
+   "kind": "fixed"
+  },
+  "[add] joint max-score CP": {
+   "risk": 0.009447618928582717,
+   "above": 0.0,
+   "lam": 66.68782785874708,
+   "inf_share": 0.0,
+   "cost": 7457.878341471354,
+   "regret": 3158.2054652808783,
+   "kind": "fixed"
+  },
+  "[add] LTT exact path": {
+   "risk": 0.020552380837810535,
+   "above": 0.013333333333333334,
+   "lam": 64.03966247249417,
+   "inf_share": 0.0,
+   "cost": 6817.162803548177,
+   "regret": 2517.489927357701,
+   "kind": "fixed"
+  },
+  "[add] LTT exact cheapest-valid": {
+   "risk": 0.020590476075497768,
+   "above": 0.013333333333333334,
+   "lam": 64.12473382525779,
+   "inf_share": 0.0,
+   "cost": 6817.391535644531,
+   "regret": 2517.7186594540553,
+   "kind": "fixed"
+  },
+  "[add] LTT on v1 grid": {
+   "risk": 0.022057142568907392,
+   "above": 0.0,
+   "lam": 63.92666676666665,
+   "inf_share": 0.0,
+   "cost": 6691.540476888021,
+   "regret": 2391.8676006975447,
+   "kind": "fixed"
+  },
+  "[add] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.009209523723305513,
+   "above": 0.0,
+   "lam": 67.27425099838028,
+   "inf_share": 0.0,
+   "cost": 7537.804943033854,
+   "regret": 3238.132066843378,
+   "kind": "fixed"
+  },
+  "[add] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9247714360555013,
+   "above": 1.0,
+   "lam": 4.4510875544454525,
+   "inf_share": 0.0,
+   "cost": 2814.1661661783855,
+   "regret": -1485.5067100120907,
+   "kind": "inst"
+  },
+  "[add] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9247714360555013,
+   "above": 1.0,
+   "lam": 4.453868749249302,
+   "inf_share": 0.0,
+   "cost": 2809.4305395507813,
+   "regret": -1490.2423366396947,
+   "kind": "inst"
+  },
+  "[sc] validation-tuned": {
+   "risk": 0.12507619050641855,
+   "above": 0.6366666666666667,
+   "lam": 15.807932501421444,
+   "inf_share": 0.0,
+   "cost": 4872.55640218099,
+   "regret": 572.8835259905135,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP (alpha)": {
+   "risk": 0.39192380964756013,
+   "above": 1.0,
+   "lam": 7.968564274826703,
+   "inf_share": 0.0,
+   "cost": 3140.8725537109376,
+   "regret": -1158.8003224795386,
+   "kind": "fixed"
+  },
+  "[sc] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.03459047606370101,
+   "above": 0.0,
+   "lam": 24.91380695258412,
+   "inf_share": 0.0,
+   "cost": 6295.754853515625,
+   "regret": 1996.0819773251485,
+   "kind": "fixed"
+  },
+  "[sc] joint max-score CP": {
+   "risk": 0.03535238083607207,
+   "above": 0.0,
+   "lam": 24.800872375250915,
+   "inf_share": 0.0,
+   "cost": 6280.482333984375,
+   "regret": 1980.8094577938987,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact path": {
+   "risk": 0.037504761770833284,
+   "above": 0.03,
+   "lam": 25.205774613261624,
+   "inf_share": 0.0,
+   "cost": 6313.290719401041,
+   "regret": 2013.6178432105653,
+   "kind": "fixed"
+  },
+  "[sc] LTT exact cheapest-valid": {
+   "risk": 0.03751428558724001,
+   "above": 0.03,
+   "lam": 25.20803485106498,
+   "inf_share": 0.0,
+   "cost": 6313.687119140625,
+   "regret": 2014.0142429501486,
+   "kind": "fixed"
+  },
+  "[sc] LTT on v1 grid": {
+   "risk": 0.06941904759655396,
+   "above": 0.03,
+   "lam": 19.806666766666662,
+   "inf_share": 0.0,
+   "cost": 5589.943684895833,
+   "regret": 1290.2708087053572,
+   "kind": "fixed"
+  },
+  "[sc] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.018742856977817912,
+   "above": 0.01,
+   "lam": 29.325439691090917,
+   "inf_share": 0.0,
+   "cost": 6889.684567057292,
+   "regret": 2590.011690866815,
+   "kind": "fixed"
+  },
+  "[sc] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9447904833157857,
+   "above": 1.0,
+   "lam": 0.8419050562979439,
+   "inf_share": 0.0,
+   "cost": 2824.779434407552,
+   "regret": -1474.893441782924,
+   "kind": "inst"
+  },
+  "[sc] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9447904833157857,
+   "above": 1.0,
+   "lam": 0.8442750699826275,
+   "inf_share": 0.0,
+   "cost": 2818.676200358073,
+   "regret": -1480.996675832403,
+   "kind": "inst"
+  },
+  "[s05] validation-tuned": {
+   "risk": 0.12465714316194255,
+   "above": 0.6533333333333333,
+   "lam": 16.09015751248098,
+   "inf_share": 0.0,
+   "cost": 4894.360092773438,
+   "regret": 594.6872165829614,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP (alpha)": {
+   "risk": 0.35933333352208136,
+   "above": 1.0,
+   "lam": 8.634062706749807,
+   "inf_share": 0.0,
+   "cost": 3295.6864111328123,
+   "regret": -1003.9864650576635,
+   "kind": "fixed"
+  },
+  "[s05] per-unit CP Bonferroni (alpha/K)": {
+   "risk": 0.009819047418422997,
+   "above": 0.0,
+   "lam": 48.31905174451518,
+   "inf_share": 0.0,
+   "cost": 7930.111321614583,
+   "regret": 3630.4384454241067,
+   "kind": "fixed"
+  },
+  "[s05] joint max-score CP": {
+   "risk": 0.009838095038818816,
+   "above": 0.0,
+   "lam": 48.31548271885901,
+   "inf_share": 0.0,
+   "cost": 7929.76953125,
+   "regret": 3630.0966550595235,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact path": {
+   "risk": 0.037142856907254704,
+   "above": 0.02,
+   "lam": 31.899323393840145,
+   "inf_share": 0.0,
+   "cost": 6675.1985904947915,
+   "regret": 2375.5257143043154,
+   "kind": "fixed"
+  },
+  "[s05] LTT exact cheapest-valid": {
+   "risk": 0.03713333309084798,
+   "above": 0.02,
+   "lam": 31.90886100898339,
+   "inf_share": 0.0,
+   "cost": 6675.328912760417,
+   "regret": 2375.65603656994,
+   "kind": "fixed"
+  },
+  "[s05] LTT on v1 grid": {
+   "risk": 0.03692380920440579,
+   "above": 0.023333333333333334,
+   "lam": 28.776000100000008,
+   "inf_share": 0.0,
+   "cost": 6588.844873046875,
+   "regret": 2289.1719968563984,
+   "kind": "fixed"
+  },
+  "[s05] scenario-max (Campi-Garatti d=1)": {
+   "risk": 0.018838095164392145,
+   "above": 0.006666666666666667,
+   "lam": 53.25320895460435,
+   "inf_share": 0.0,
+   "cost": 7663.951183268229,
+   "regret": 3364.2783070777527,
+   "kind": "fixed"
+  },
+  "[s05] model Gaussian Poisson-binomial P(any) <= alpha (per instance)": {
+   "risk": 0.9473523918787639,
+   "above": 1.0,
+   "lam": 0.8655136837345363,
+   "inf_share": 0.0,
+   "cost": 2841.6693888346354,
+   "regret": -1458.0034873558407,
+   "kind": "inst"
+  },
+  "[s05] model Markov E[N] <= alpha (per instance)": {
+   "risk": 0.9473523918787639,
+   "above": 1.0,
+   "lam": 0.869047285871896,
+   "inf_share": 0.0,
+   "cost": 2835.5661458333334,
+   "regret": -1464.1067303571426,
+   "kind": "inst"
+  }
+ }
+}

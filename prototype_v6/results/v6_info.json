@@ -1,0 +1,67 @@
+{
+ "seed": 2028,
+ "K": 10,
+ "P": 6,
+ "Lp": 5,
+ "C": 1,
+ "D": 2,
+ "D_out": 3,
+ "S0": 2,
+ "c_waste": 2.0,
+ "c_out": 300.0,
+ "c_fail": 1000.0,
+ "c_setup": 100.0,
+ "c_lease": 40.0,
+ "M": 5,
+ "folds": 5,
+ "min_hist": 10,
+ "families": [
+  "add",
+  "sc",
+  "s05"
+ ],
+ "zhu_omega": 3.0,
+ "mitici_z": 2.326,
+ "renewal_cp": 300.0,
+ "renewal_cc": 1000.0,
+ "n": {
+  "NC_ID": 1000,
+  "NC_SHIFT_src": 400,
+  "NC_SHIFT_tgt": 400
+ },
+ "n_check": 100,
+ "source": [
+  "DS01-005",
+  "DS02-006",
+  "DS03-012",
+  "DS07"
+ ],
+ "target": [
+  "DS04",
+  "DS05",
+  "DS06"
+ ],
+ "workers": 3,
+ "units": 99,
+ "subsets": [
+  "DS01-005",
+  "DS02-006",
+  "DS03-012",
+  "DS04",
+  "DS05",
+  "DS06",
+  "DS07",
+  "DS08a-009",
+  "DS08c-008"
+ ],
+ "rmse": {
+  "NC_ID": {
+   "pool": 7.830194879954471
+  },
+  "NC_SHIFT": {
+   "src": 7.700634736434634,
+   "tgt": 11.346578782908962
+  }
+ },
+ "seconds": 3998.891115665436
+}

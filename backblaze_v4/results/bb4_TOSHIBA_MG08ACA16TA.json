@@ -1,0 +1,3068 @@
+{
+ "info": {
+  "feature_set": "B",
+  "selection_mean": {
+   "A": 0.7857950888241418,
+   "B": 0.797231878182215
+  },
+  "auc_eval": {
+   "h7": 0.766868396272431,
+   "h14": 0.7736211808564712,
+   "h21": 0.7603416817276879,
+   "h28": 0.7343360533861224
+  },
+  "thr_fpr1_G28": 0.005858441349118948,
+  "train_fail_per_day": 0.8785046728971962
+ },
+ "v3b": {
+  "TOSHIBA_MG08ACA16TA | C=1 | frontier": [
+   {
+    "tau": 0.5,
+    "miss": 0.8461205747723579,
+    "repl": 49.435,
+    "cost": 776.455
+   },
+   {
+    "tau": 0.2,
+    "miss": 0.7067220613360405,
+    "repl": 121.435,
+    "cost": 865.555
+   },
+   {
+    "tau": 0.1,
+    "miss": 0.6343214374780655,
+    "repl": 162.955,
+    "cost": 953.815
+   },
+   {
+    "tau": 0.05,
+    "miss": 0.6194655743986368,
+    "repl": 187.895,
+    "cost": 1015.585
+   },
+   {
+    "tau": 0.02,
+    "miss": 0.5885543641448021,
+    "repl": 251.305,
+    "cost": 1178.665
+   },
+   {
+    "tau": 0.01,
+    "miss": 0.5522934805601836,
+    "repl": 364.2,
+    "cost": 1483.0
+   },
+   {
+    "tau": 0.005,
+    "miss": 0.5145329660922289,
+    "repl": 578.32,
+    "cost": 2094.31
+   },
+   {
+    "tau": 0.002,
+    "miss": 0.4529508667439222,
+    "repl": 1261.885,
+    "cost": 4090.255
+   },
+   {
+    "tau": 0.0010000001,
+    "miss": 0.42102132238447665,
+    "repl": 2300.745,
+    "cost": 7183.135
+   }
+  ],
+  "TOSHIBA_MG08ACA16TA | C=1 | random split | alpha=0.3": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4208299559525081,
+    "cost": 7182.111571428572,
+    "inhouse": 22.0,
+    "exped": 2278.271714285714,
+    "false": 2284.3135,
+    "nfail": 26.782714285714285,
+    "missed": 10.843214285714286,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4208299559525081,
+    "cost": 7182.111571428572,
+    "inhouse": 22.0,
+    "exped": 2278.271714285714,
+    "false": 2284.3135,
+    "nfail": 26.782714285714285,
+    "missed": 10.843214285714286,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5212956523490804,
+    "cost": 1899.2407857142857,
+    "inhouse": 22.0,
+    "exped": 489.0005,
+    "false": 497.5957142857143,
+    "nfail": 26.782714285714285,
+    "missed": 13.674642857142857,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5212956523490804,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8458818879382951,
+    "cost": 777.217,
+    "inhouse": 22.0,
+    "exped": 27.461142857142857,
+    "false": 44.28635714285714,
+    "nfail": 26.782714285714285,
+    "missed": 22.427785714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8458818879382952,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6136001856561218,
+    "cost": 1192.2655,
+    "inhouse": 22.0,
+    "exped": 223.16992857142858,
+    "false": 234.63528571428571,
+    "nfail": 26.782714285714285,
+    "missed": 16.691857142857142,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6136001856561218,
+    "cert_above": 1.0,
+    "tau": 0.04250028029630884
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5568933226047076,
+    "cost": 8076.435571428571,
+    "inhouse": 1.0,
+    "exped": 2554.413285714286,
+    "false": 2542.3704285714284,
+    "nfail": 26.782714285714285,
+    "missed": 13.739857142857144,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5568933226047076,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8672321624813386,
+    "cost": 978.7548571428572,
+    "inhouse": 1.0,
+    "exped": 100.02828571428572,
+    "false": 96.83457142857142,
+    "nfail": 26.782714285714285,
+    "missed": 22.589,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8672321624813385,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=1 | random split | alpha=0.4": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4208299559525081,
+    "cost": 7182.111571428572,
+    "inhouse": 22.0,
+    "exped": 2278.271714285714,
+    "false": 2284.3135,
+    "nfail": 26.782714285714285,
+    "missed": 10.843214285714286,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.42110401262875113,
+    "cost": 7168.714642857143,
+    "inhouse": 22.0,
+    "exped": 2273.7467857142856,
+    "false": 2279.7943571428573,
+    "nfail": 26.782714285714285,
+    "missed": 10.849142857142857,
+    "above": 1.0,
+    "abstain": 0.97,
+    "cert_miss": 0.4417075972826708,
+    "cert_above": 1.0,
+    "tau": 0.0010022896483817447
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5212956523490804,
+    "cost": 1899.2407857142857,
+    "inhouse": 22.0,
+    "exped": 489.0005,
+    "false": 497.5957142857143,
+    "nfail": 26.782714285714285,
+    "missed": 13.674642857142857,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5212956523490804,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8458818879382951,
+    "cost": 777.217,
+    "inhouse": 22.0,
+    "exped": 27.461142857142857,
+    "false": 44.28635714285714,
+    "nfail": 26.782714285714285,
+    "missed": 22.427785714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8458818879382952,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6772067077266318,
+    "cost": 870.4912857142857,
+    "inhouse": 22.0,
+    "exped": 100.86971428571428,
+    "false": 113.78507142857143,
+    "nfail": 26.782714285714285,
+    "missed": 18.19607142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6772067077266318,
+    "cert_above": 1.0,
+    "tau": 0.18272029141749555
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5568933226047076,
+    "cost": 8076.435571428571,
+    "inhouse": 1.0,
+    "exped": 2554.413285714286,
+    "false": 2542.3704285714284,
+    "nfail": 26.782714285714285,
+    "missed": 13.739857142857144,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5568933226047076,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8672321624813386,
+    "cost": 978.7548571428572,
+    "inhouse": 1.0,
+    "exped": 100.02828571428572,
+    "false": 96.83457142857142,
+    "nfail": 26.782714285714285,
+    "missed": 22.589,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8672321624813385,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=1 | random split | alpha=0.5": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.48717649388313294,
+    "cost": 2857.965142857143,
+    "inhouse": 22.0,
+    "exped": 818.856,
+    "false": 826.5354285714286,
+    "nfail": 26.782714285714285,
+    "missed": 12.646571428571429,
+    "above": 0.29,
+    "abstain": 0.0,
+    "cert_miss": 0.487176493883133,
+    "cert_above": 0.29,
+    "tau": 0.0031947228193154134
+   },
+   "validation-tuned": {
+    "miss": 0.49734141108606544,
+    "cost": 2591.649785714286,
+    "inhouse": 22.0,
+    "exped": 727.0313571428571,
+    "false": 734.9862142857143,
+    "nfail": 26.782714285714285,
+    "missed": 12.951857142857143,
+    "above": 0.47,
+    "abstain": 0.0,
+    "cert_miss": 0.49734141108606544,
+    "cert_above": 0.47,
+    "tau": 0.003702442557809333
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5212956523490804,
+    "cost": 1899.2407857142857,
+    "inhouse": 22.0,
+    "exped": 489.0005,
+    "false": 497.5957142857143,
+    "nfail": 26.782714285714285,
+    "missed": 13.674642857142857,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5212956523490804,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8458818879382951,
+    "cost": 777.217,
+    "inhouse": 22.0,
+    "exped": 27.461142857142857,
+    "false": 44.28635714285714,
+    "nfail": 26.782714285714285,
+    "missed": 22.427785714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8458818879382952,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.7580877226037639,
+    "cost": 819.6222142857143,
+    "inhouse": 22.0,
+    "exped": 66.42264285714286,
+    "false": 80.92135714285715,
+    "nfail": 26.782714285714285,
+    "missed": 19.94514285714286,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.758087722603764,
+    "cert_above": 1.0,
+    "tau": 0.29890716933707845
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5568933226047076,
+    "cost": 8076.435571428571,
+    "inhouse": 1.0,
+    "exped": 2554.413285714286,
+    "false": 2542.3704285714284,
+    "nfail": 26.782714285714285,
+    "missed": 13.739857142857144,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5568933226047076,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8672321624813386,
+    "cost": 978.7548571428572,
+    "inhouse": 1.0,
+    "exped": 100.02828571428572,
+    "false": 96.83457142857142,
+    "nfail": 26.782714285714285,
+    "missed": 22.589,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8672321624813385,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=1 | forward split | alpha=0.3": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.38362305214007697,
+    "cost": 7263.85,
+    "inhouse": 22.0,
+    "exped": 2282.866666666667,
+    "false": 2283.725,
+    "nfail": 34.233333333333334,
+    "missed": 13.108333333333333,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.38362305214007697,
+    "cost": 7263.85,
+    "inhouse": 22.0,
+    "exped": 2282.866666666667,
+    "false": 2283.725,
+    "nfail": 34.233333333333334,
+    "missed": 13.108333333333333,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.47748205562432605,
+    "cost": 2014.025,
+    "inhouse": 22.0,
+    "exped": 501.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.266666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.4774820556243261,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8224530791242918,
+    "cost": 960.05,
+    "inhouse": 22.0,
+    "exped": 30.85,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.183333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8224530791242917,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6067106013496717,
+    "cost": 1130.7,
+    "inhouse": 22.0,
+    "exped": 162.56666666666666,
+    "false": 170.475,
+    "nfail": 34.233333333333334,
+    "missed": 20.7,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6067106013496717,
+    "cert_above": 1.0,
+    "tau": 0.07649770426978551
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8537.825,
+    "inhouse": 1.0,
+    "exped": 2681.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1173.9,
+    "inhouse": 1.0,
+    "exped": 107.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=1 | forward split | alpha=0.4": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.386498511582613,
+    "cost": 6354.7,
+    "inhouse": 22.0,
+    "exped": 1978.8166666666666,
+    "false": 1979.75,
+    "nfail": 34.233333333333334,
+    "missed": 13.208333333333334,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.34612075984477997,
+    "cert_above": 0.0,
+    "tau": 0.0012155956034245934
+   },
+   "validation-tuned": {
+    "miss": 0.38713434810439745,
+    "cost": 6208.45,
+    "inhouse": 22.0,
+    "exped": 1929.8166666666666,
+    "false": 1930.7583333333334,
+    "nfail": 34.233333333333334,
+    "missed": 13.233333333333333,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.3486641059319178,
+    "cert_above": 0.0,
+    "tau": 0.0012772951068854167
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.47748205562432605,
+    "cost": 2014.025,
+    "inhouse": 22.0,
+    "exped": 501.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.266666666666666,
+    "above": 0.75,
+    "abstain": 0.0,
+    "cert_miss": 0.4774820556243261,
+    "cert_above": 0.75,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8224530791242918,
+    "cost": 960.05,
+    "inhouse": 22.0,
+    "exped": 30.85,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.183333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8224530791242917,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.656005697697401,
+    "cost": 1000.275,
+    "inhouse": 22.0,
+    "exped": 102.425,
+    "false": 111.86666666666666,
+    "nfail": 34.233333333333334,
+    "missed": 22.366666666666667,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6560056976974011,
+    "cert_above": 1.0,
+    "tau": 0.20556675661327808
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8537.825,
+    "inhouse": 1.0,
+    "exped": 2681.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1173.9,
+    "inhouse": 1.0,
+    "exped": 107.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=1 | forward split | alpha=0.5": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4167178663114707,
+    "cost": 4857.0,
+    "inhouse": 22.0,
+    "exped": 1469.25,
+    "false": 1471.0416666666667,
+    "nfail": 34.233333333333334,
+    "missed": 14.241666666666667,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.37929874459902446,
+    "cert_above": 0.0,
+    "tau": 0.00211591471009521
+   },
+   "validation-tuned": {
+    "miss": 0.4227034447093805,
+    "cost": 4781.725,
+    "inhouse": 22.0,
+    "exped": 1442.075,
+    "false": 1444.025,
+    "nfail": 34.233333333333334,
+    "missed": 14.45,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.3912699013948441,
+    "cert_above": 0.0,
+    "tau": 0.002242163836900616
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.47748205562432605,
+    "cost": 2014.025,
+    "inhouse": 22.0,
+    "exped": 501.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.266666666666666,
+    "above": 0.5,
+    "abstain": 0.0,
+    "cert_miss": 0.4774820556243261,
+    "cert_above": 0.5,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8224530791242918,
+    "cost": 960.05,
+    "inhouse": 22.0,
+    "exped": 30.85,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.183333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8224530791242917,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.7219781592488289,
+    "cost": 971.325,
+    "inhouse": 22.0,
+    "exped": 69.10833333333333,
+    "false": 80.65,
+    "nfail": 34.233333333333334,
+    "missed": 24.733333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.7219781592488289,
+    "cert_above": 1.0,
+    "tau": 0.3232517729034091
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8537.825,
+    "inhouse": 1.0,
+    "exped": 2681.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 0.25,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 0.25,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1173.9,
+    "inhouse": 1.0,
+    "exped": 107.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=2 | frontier": [
+   {
+    "tau": 0.5,
+    "miss": 0.8739726385474205,
+    "repl": 49.435,
+    "cost": 761.645
+   },
+   {
+    "tau": 0.2,
+    "miss": 0.7302318698167801,
+    "repl": 121.435,
+    "cost": 840.615
+   },
+   {
+    "tau": 0.1,
+    "miss": 0.6488007737696171,
+    "repl": 162.955,
+    "cost": 920.035
+   },
+   {
+    "tau": 0.05,
+    "miss": 0.6307466547936201,
+    "repl": 187.895,
+    "cost": 981.165
+   },
+   {
+    "tau": 0.02,
+    "miss": 0.5957848290354013,
+    "repl": 251.305,
+    "cost": 1141.715
+   },
+   {
+    "tau": 0.01,
+    "miss": 0.561108121573925,
+    "repl": 364.2,
+    "cost": 1444.85
+   },
+   {
+    "tau": 0.005,
+    "miss": 0.5173238777369261,
+    "repl": 578.32,
+    "cost": 2052.86
+   },
+   {
+    "tau": 0.002,
+    "miss": 0.45698106072843075,
+    "repl": 1261.885,
+    "cost": 4048.205
+   },
+   {
+    "tau": 0.0010000001,
+    "miss": 0.42245862051844596,
+    "repl": 2300.745,
+    "cost": 7140.485
+   }
+  ],
+  "TOSHIBA_MG08ACA16TA | C=2 | random split | alpha=0.3": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4220868376110281,
+    "cost": 7142.220071428572,
+    "inhouse": 44.0,
+    "exped": 2257.302642857143,
+    "false": 2285.3427142857145,
+    "nfail": 26.77342857142857,
+    "missed": 10.877071428571428,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4220868376110281,
+    "cost": 7142.220071428572,
+    "inhouse": 44.0,
+    "exped": 2257.302642857143,
+    "false": 2285.3427142857145,
+    "nfail": 26.77342857142857,
+    "missed": 10.877071428571428,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5257212587158595,
+    "cost": 1858.1906428571428,
+    "inhouse": 44.0,
+    "exped": 467.0845,
+    "false": 497.69235714285713,
+    "nfail": 26.77342857142857,
+    "missed": 13.76457142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5257212587158595,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8741671598255635,
+    "cost": 762.288,
+    "inhouse": 42.53485714285714,
+    "exped": 6.904857142857143,
+    "false": 44.26907142857143,
+    "nfail": 26.77342857142857,
+    "missed": 23.301285714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8741671598255636,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.62036637504931,
+    "cost": 1173.7557857142858,
+    "inhouse": 43.99092857142857,
+    "exped": 207.74114285714285,
+    "false": 241.1237857142857,
+    "nfail": 26.77342857142857,
+    "missed": 16.884714285714285,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.62036637504931,
+    "cert_above": 1.0,
+    "tau": 0.03795297126817545
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5569815818931801,
+    "cost": 8079.930928571429,
+    "inhouse": 2.0,
+    "exped": 2555.1772142857144,
+    "false": 2544.1504285714286,
+    "nfail": 26.77342857142857,
+    "missed": 13.746642857142858,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5569815818931803,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8671938721597235,
+    "cost": 976.7906428571429,
+    "inhouse": 2.0,
+    "exped": 99.05664285714286,
+    "false": 96.87057142857142,
+    "nfail": 26.77342857142857,
+    "missed": 22.587357142857144,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8671938721597234,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=2 | random split | alpha=0.4": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4220868376110281,
+    "cost": 7142.220071428572,
+    "inhouse": 44.0,
+    "exped": 2257.302642857143,
+    "false": 2285.3427142857145,
+    "nfail": 26.77342857142857,
+    "missed": 10.877071428571428,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.42211447850295475,
+    "cost": 7140.424357142857,
+    "inhouse": 44.0,
+    "exped": 2256.6983571428573,
+    "false": 2284.7390714285716,
+    "nfail": 26.77342857142857,
+    "missed": 10.877642857142858,
+    "above": 1.0,
+    "abstain": 0.99,
+    "cert_miss": 0.4360795798046248,
+    "cert_above": 1.0,
+    "tau": 0.0010002781072412756
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5257212587158595,
+    "cost": 1858.1906428571428,
+    "inhouse": 44.0,
+    "exped": 467.0845,
+    "false": 497.69235714285713,
+    "nfail": 26.77342857142857,
+    "missed": 13.76457142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5257212587158595,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8741671598255635,
+    "cost": 762.288,
+    "inhouse": 42.53485714285714,
+    "exped": 6.904857142857143,
+    "false": 44.26907142857143,
+    "nfail": 26.77342857142857,
+    "missed": 23.301285714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8741671598255636,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6887177394543376,
+    "cost": 856.1592142857143,
+    "inhouse": 43.88028571428571,
+    "exped": 85.50321428571428,
+    "false": 119.98714285714286,
+    "nfail": 26.77342857142857,
+    "missed": 18.525642857142856,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6887177394543375,
+    "cert_above": 1.0,
+    "tau": 0.16915692578220354
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5569815818931801,
+    "cost": 8079.930928571429,
+    "inhouse": 2.0,
+    "exped": 2555.1772142857144,
+    "false": 2544.1504285714286,
+    "nfail": 26.77342857142857,
+    "missed": 13.746642857142858,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5569815818931803,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8671938721597235,
+    "cost": 976.7906428571429,
+    "inhouse": 2.0,
+    "exped": 99.05664285714286,
+    "false": 96.87057142857142,
+    "nfail": 26.77342857142857,
+    "missed": 22.587357142857144,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8671938721597234,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=2 | random split | alpha=0.5": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4860708076027887,
+    "cost": 2945.261857142857,
+    "inhouse": 44.0,
+    "exped": 841.2387142857143,
+    "false": 870.7974285714286,
+    "nfail": 26.77342857142857,
+    "missed": 12.584857142857143,
+    "above": 0.23,
+    "abstain": 0.0,
+    "cert_miss": 0.48607080760278876,
+    "cert_above": 0.23,
+    "tau": 0.0029927738488864128
+   },
+   "validation-tuned": {
+    "miss": 0.4997319722920656,
+    "cost": 2598.8702857142857,
+    "inhouse": 44.0,
+    "exped": 721.7305714285715,
+    "false": 751.6510714285714,
+    "nfail": 26.77342857142857,
+    "missed": 12.989285714285714,
+    "above": 0.51,
+    "abstain": 0.0,
+    "cert_miss": 0.4997319722920656,
+    "cert_above": 0.51,
+    "tau": 0.0036034829133436046
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5257212587158595,
+    "cost": 1858.1906428571428,
+    "inhouse": 44.0,
+    "exped": 467.0845,
+    "false": 497.69235714285713,
+    "nfail": 26.77342857142857,
+    "missed": 13.76457142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5257212587158595,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8741671598255635,
+    "cost": 762.288,
+    "inhouse": 42.53485714285714,
+    "exped": 6.904857142857143,
+    "false": 44.26907142857143,
+    "nfail": 26.77342857142857,
+    "missed": 23.301285714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8741671598255636,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.7693162589541503,
+    "cost": 801.9465714285715,
+    "inhouse": 43.98585714285714,
+    "exped": 51.30428571428571,
+    "false": 87.50685714285714,
+    "nfail": 26.77342857142857,
+    "missed": 20.13492857142857,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.7693162589541502,
+    "cert_above": 1.0,
+    "tau": 0.2667247848629399
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5569815818931801,
+    "cost": 8079.930928571429,
+    "inhouse": 2.0,
+    "exped": 2555.1772142857144,
+    "false": 2544.1504285714286,
+    "nfail": 26.77342857142857,
+    "missed": 13.746642857142858,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5569815818931803,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8671938721597235,
+    "cost": 976.7906428571429,
+    "inhouse": 2.0,
+    "exped": 99.05664285714286,
+    "false": 96.87057142857142,
+    "nfail": 26.77342857142857,
+    "missed": 22.587357142857144,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8671938721597234,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=2 | forward split | alpha=0.3": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.3852248980353276,
+    "cost": 7221.6,
+    "inhouse": 44.0,
+    "exped": 2260.866666666667,
+    "false": 2283.725,
+    "nfail": 34.233333333333334,
+    "missed": 13.166666666666666,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.3852248980353276,
+    "cost": 7221.6,
+    "inhouse": 44.0,
+    "exped": 2260.866666666667,
+    "false": 2283.725,
+    "nfail": 34.233333333333334,
+    "missed": 13.166666666666666,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.4782376356422901,
+    "cost": 1970.775,
+    "inhouse": 44.0,
+    "exped": 479.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.291666666666668,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.4782376356422901,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8617426936825117,
+    "cost": 956.6666666666666,
+    "inhouse": 43.94166666666667,
+    "exped": 8.908333333333333,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 29.533333333333335,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8617426936825117,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6139856552084287,
+    "cost": 1111.8333333333333,
+    "inhouse": 43.983333333333334,
+    "exped": 146.11666666666667,
+    "false": 175.91666666666666,
+    "nfail": 34.233333333333334,
+    "missed": 20.983333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6139856552084286,
+    "cert_above": 1.0,
+    "tau": 0.06680607391114159
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8535.825,
+    "inhouse": 2.0,
+    "exped": 2680.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1171.9,
+    "inhouse": 2.0,
+    "exped": 106.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=2 | forward split | alpha=0.4": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.38785804621875286,
+    "cost": 6428.15,
+    "inhouse": 44.0,
+    "exped": 1995.4666666666667,
+    "false": 2018.375,
+    "nfail": 34.233333333333334,
+    "missed": 13.258333333333333,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.3451515148083369,
+    "cert_above": 0.0,
+    "tau": 0.001178537286983524
+   },
+   "validation-tuned": {
+    "miss": 0.39008060805499556,
+    "cost": 6185.5,
+    "inhouse": 44.0,
+    "exped": 1913.75,
+    "false": 1936.6916666666666,
+    "nfail": 34.233333333333334,
+    "missed": 13.341666666666667,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.35404176215330757,
+    "cert_above": 0.0,
+    "tau": 0.0012694308486602907
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.4782376356422901,
+    "cost": 1970.775,
+    "inhouse": 44.0,
+    "exped": 479.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.291666666666668,
+    "above": 0.75,
+    "abstain": 0.0,
+    "cert_miss": 0.4782376356422901,
+    "cert_above": 0.75,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8617426936825117,
+    "cost": 956.6666666666666,
+    "inhouse": 43.94166666666667,
+    "exped": 8.908333333333333,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 29.533333333333335,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8617426936825117,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6708410506447157,
+    "cost": 992.325,
+    "inhouse": 43.95,
+    "exped": 87.375,
+    "false": 118.4,
+    "nfail": 34.233333333333334,
+    "missed": 22.875,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6708410506447156,
+    "cert_above": 1.0,
+    "tau": 0.19464418544700368
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8535.825,
+    "inhouse": 2.0,
+    "exped": 2680.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1171.9,
+    "inhouse": 2.0,
+    "exped": 106.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=2 | forward split | alpha=0.5": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4173283825318019,
+    "cost": 4840.5,
+    "inhouse": 44.0,
+    "exped": 1456.1666666666667,
+    "false": 1479.95,
+    "nfail": 34.233333333333334,
+    "missed": 14.266666666666667,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.378753536939621,
+    "cert_above": 0.0,
+    "tau": 0.0020761179689804763
+   },
+   "validation-tuned": {
+    "miss": 0.4205929229656855,
+    "cost": 4768.975,
+    "inhouse": 44.0,
+    "exped": 1431.1583333333333,
+    "false": 1455.05,
+    "nfail": 34.233333333333334,
+    "missed": 14.383333333333333,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.38528261780738826,
+    "cert_above": 0.0,
+    "tau": 0.002181063276889874
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.4782376356422901,
+    "cost": 1970.775,
+    "inhouse": 44.0,
+    "exped": 479.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.291666666666668,
+    "above": 0.5,
+    "abstain": 0.0,
+    "cert_miss": 0.4782376356422901,
+    "cert_above": 0.5,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8617426936825117,
+    "cost": 956.6666666666666,
+    "inhouse": 43.94166666666667,
+    "exped": 8.908333333333333,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 29.533333333333335,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8617426936825117,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.7291229253013929,
+    "cost": 953.525,
+    "inhouse": 44.0,
+    "exped": 53.84166666666667,
+    "false": 86.95,
+    "nfail": 34.233333333333334,
+    "missed": 24.933333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.7291229253013929,
+    "cert_above": 1.0,
+    "tau": 0.2876778086699971
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8535.825,
+    "inhouse": 2.0,
+    "exped": 2680.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 0.25,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 0.25,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1171.9,
+    "inhouse": 2.0,
+    "exped": 106.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=4 | frontier": [
+   {
+    "tau": 0.5,
+    "miss": 0.8512147521972656,
+    "repl": 49.435,
+    "cost": 728.075
+   },
+   {
+    "tau": 0.2,
+    "miss": 0.7466144552826881,
+    "repl": 121.435,
+    "cost": 786.295
+   },
+   {
+    "tau": 0.1,
+    "miss": 0.6619439533352852,
+    "repl": 162.955,
+    "cost": 859.755
+   },
+   {
+    "tau": 0.05,
+    "miss": 0.6392267261445522,
+    "repl": 187.895,
+    "cost": 914.935
+   },
+   {
+    "tau": 0.02,
+    "miss": 0.6017023097723723,
+    "repl": 251.305,
+    "cost": 1059.435
+   },
+   {
+    "tau": 0.01,
+    "miss": 0.5612381667643785,
+    "repl": 364.2,
+    "cost": 1358.5
+   },
+   {
+    "tau": 0.005,
+    "miss": 0.522915501371026,
+    "repl": 578.32,
+    "cost": 1968.61
+   },
+   {
+    "tau": 0.002,
+    "miss": 0.4603701854497194,
+    "repl": 1261.885,
+    "cost": 3963.355
+   },
+   {
+    "tau": 0.0010000001,
+    "miss": 0.42461455121636393,
+    "repl": 2300.745,
+    "cost": 7054.135
+   }
+  ],
+  "TOSHIBA_MG08ACA16TA | C=4 | random split | alpha=0.3": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.42390182838908264,
+    "cost": 7052.764214285714,
+    "inhouse": 88.0,
+    "exped": 2212.2759285714287,
+    "false": 2284.3155714285713,
+    "nfail": 26.7685,
+    "missed": 10.931214285714285,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.42390182838908264,
+    "cost": 7052.764214285714,
+    "inhouse": 88.0,
+    "exped": 2212.2759285714287,
+    "false": 2284.3155714285713,
+    "nfail": 26.7685,
+    "missed": 10.931214285714285,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5272552626835448,
+    "cost": 1770.3997857142858,
+    "inhouse": 88.0,
+    "exped": 422.7370714285714,
+    "false": 497.3364285714286,
+    "nfail": 26.7685,
+    "missed": 13.806285714285714,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.527255262683545,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8510785247385502,
+    "cost": 728.3725,
+    "inhouse": 49.082928571428575,
+    "exped": 0.32271428571428573,
+    "false": 44.23092857142857,
+    "nfail": 26.7685,
+    "missed": 22.610714285714284,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8510785247385502,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6238780387810299,
+    "cost": 1127.9657857142856,
+    "inhouse": 83.96171428571428,
+    "exped": 178.13135714285715,
+    "false": 251.31692857142858,
+    "nfail": 26.7685,
+    "missed": 16.987,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6238780387810299,
+    "cert_above": 1.0,
+    "tau": 0.03247461868665734
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5572585803035457,
+    "cost": 8069.966285714286,
+    "inhouse": 4.0,
+    "exped": 2551.2318571428573,
+    "false": 2542.2057142857143,
+    "nfail": 26.7685,
+    "missed": 13.742357142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5572585803035457,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8674400045416261,
+    "cost": 972.5133571428571,
+    "inhouse": 4.0,
+    "exped": 96.99564285714285,
+    "false": 96.81135714285715,
+    "nfail": 26.7685,
+    "missed": 22.584214285714285,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8674400045416261,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=4 | random split | alpha=0.4": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.42390182838908264,
+    "cost": 7052.764214285714,
+    "inhouse": 88.0,
+    "exped": 2212.2759285714287,
+    "false": 2284.3155714285713,
+    "nfail": 26.7685,
+    "missed": 10.931214285714285,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.42399676773803574,
+    "cost": 7048.079071428571,
+    "inhouse": 88.0,
+    "exped": 2210.691357142857,
+    "false": 2282.733,
+    "nfail": 26.7685,
+    "missed": 10.9335,
+    "above": 1.0,
+    "abstain": 0.97,
+    "cert_miss": 0.43923579908552624,
+    "cert_above": 1.0,
+    "tau": 0.001000723815443071
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5272552626835448,
+    "cost": 1770.3997857142858,
+    "inhouse": 88.0,
+    "exped": 422.7370714285714,
+    "false": 497.3364285714286,
+    "nfail": 26.7685,
+    "missed": 13.806285714285714,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.527255262683545,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8510785247385502,
+    "cost": 728.3725,
+    "inhouse": 49.082928571428575,
+    "exped": 0.32271428571428573,
+    "false": 44.23092857142857,
+    "nfail": 26.7685,
+    "missed": 22.610714285714284,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8510785247385502,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.700367781575237,
+    "cost": 813.4760714285715,
+    "inhouse": 78.95414285714286,
+    "exped": 57.78778571428571,
+    "false": 127.10257142857142,
+    "nfail": 26.7685,
+    "missed": 18.705285714285715,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.7003677815752369,
+    "cert_above": 1.0,
+    "tau": 0.1519646376919733
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5572585803035457,
+    "cost": 8069.966285714286,
+    "inhouse": 4.0,
+    "exped": 2551.2318571428573,
+    "false": 2542.2057142857143,
+    "nfail": 26.7685,
+    "missed": 13.742357142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5572585803035457,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8674400045416261,
+    "cost": 972.5133571428571,
+    "inhouse": 4.0,
+    "exped": 96.99564285714285,
+    "false": 96.81135714285715,
+    "nfail": 26.7685,
+    "missed": 22.584214285714285,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8674400045416261,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=4 | random split | alpha=0.5": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.48650050259275096,
+    "cost": 2941.446785714286,
+    "inhouse": 88.0,
+    "exped": 825.1225,
+    "false": 898.587,
+    "nfail": 26.7685,
+    "missed": 12.602642857142857,
+    "above": 0.18,
+    "abstain": 0.0,
+    "cert_miss": 0.4865005025927509,
+    "cert_above": 0.18,
+    "tau": 0.002883040034663853
+   },
+   "validation-tuned": {
+    "miss": 0.49883704581750293,
+    "cost": 2645.094357142857,
+    "inhouse": 88.0,
+    "exped": 722.6340714285715,
+    "false": 796.4254285714286,
+    "nfail": 26.7685,
+    "missed": 12.973071428571428,
+    "above": 0.45,
+    "abstain": 0.0,
+    "cert_miss": 0.4988370458175029,
+    "cert_above": 0.45,
+    "tau": 0.0033429844184926206
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.5272552626835448,
+    "cost": 1770.3997857142858,
+    "inhouse": 88.0,
+    "exped": 422.7370714285714,
+    "false": 497.3364285714286,
+    "nfail": 26.7685,
+    "missed": 13.806285714285714,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.527255262683545,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8510785247385502,
+    "cost": 728.3725,
+    "inhouse": 49.082928571428575,
+    "exped": 0.32271428571428573,
+    "false": 44.23092857142857,
+    "nfail": 26.7685,
+    "missed": 22.610714285714284,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8510785247385502,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.7757404993644782,
+    "cost": 756.4481428571429,
+    "inhouse": 78.49185714285714,
+    "exped": 22.114714285714285,
+    "false": 92.57371428571429,
+    "nfail": 26.7685,
+    "missed": 20.387071428571428,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.7757404993644783,
+    "cert_above": 1.0,
+    "tau": 0.24251082438073357
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.5572585803035457,
+    "cost": 8069.966285714286,
+    "inhouse": 4.0,
+    "exped": 2551.2318571428573,
+    "false": 2542.2057142857143,
+    "nfail": 26.7685,
+    "missed": 13.742357142857143,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.5572585803035457,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8674400045416261,
+    "cost": 972.5133571428571,
+    "inhouse": 4.0,
+    "exped": 96.99564285714285,
+    "false": 96.81135714285715,
+    "nfail": 26.7685,
+    "missed": 22.584214285714285,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8674400045416261,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=4 | forward split | alpha=0.3": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.3878921897461017,
+    "cost": 7136.1,
+    "inhouse": 88.0,
+    "exped": 2216.866666666667,
+    "false": 2283.725,
+    "nfail": 34.233333333333334,
+    "missed": 13.25,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.3878921897461017,
+    "cost": 7136.1,
+    "inhouse": 88.0,
+    "exped": 2216.866666666667,
+    "false": 2283.725,
+    "nfail": 34.233333333333334,
+    "missed": 13.25,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "tau": 0.0010000010000005004
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.48045253654321035,
+    "cost": 1885.275,
+    "inhouse": 88.0,
+    "exped": 435.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.375,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.4804525365432104,
+    "cert_above": 1.0,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8305070688327153,
+    "cost": 907.7833333333333,
+    "inhouse": 52.50833333333333,
+    "exped": 0.3416666666666667,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.475,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8305070688327154,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6190996711452802,
+    "cost": 1062.6833333333334,
+    "inhouse": 82.55833333333334,
+    "exped": 115.125,
+    "false": 183.31666666666666,
+    "nfail": 34.233333333333334,
+    "missed": 21.158333333333335,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6190996711452802,
+    "cert_above": 1.0,
+    "tau": 0.05578166767380722
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8531.825,
+    "inhouse": 4.0,
+    "exped": 2678.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1167.9,
+    "inhouse": 4.0,
+    "exped": 104.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=4 | forward split | alpha=0.4": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.3921272313843171,
+    "cost": 6361.35,
+    "inhouse": 88.0,
+    "exped": 1957.1166666666666,
+    "false": 2024.025,
+    "nfail": 34.233333333333334,
+    "missed": 13.4,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.35155908862749735,
+    "cert_above": 0.0,
+    "tau": 0.00117408185893403
+   },
+   "validation-tuned": {
+    "miss": 0.394172087435921,
+    "cost": 6156.25,
+    "inhouse": 88.0,
+    "exped": 1888.0,
+    "false": 1954.9416666666666,
+    "nfail": 34.233333333333334,
+    "missed": 13.475,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.35973851283391317,
+    "cert_above": 0.0,
+    "tau": 0.0012465624332127572
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.48045253654321035,
+    "cost": 1885.275,
+    "inhouse": 88.0,
+    "exped": 435.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.375,
+    "above": 0.75,
+    "abstain": 0.0,
+    "cert_miss": 0.4804525365432104,
+    "cert_above": 0.75,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8305070688327153,
+    "cost": 907.7833333333333,
+    "inhouse": 52.50833333333333,
+    "exped": 0.3416666666666667,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.475,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8305070688327154,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.6721795953810215,
+    "cost": 946.8333333333334,
+    "inhouse": 80.05833333333334,
+    "exped": 59.59166666666667,
+    "false": 126.39166666666667,
+    "nfail": 34.233333333333334,
+    "missed": 22.933333333333334,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.6721795953810215,
+    "cert_above": 1.0,
+    "tau": 0.17525834531278237
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8531.825,
+    "inhouse": 4.0,
+    "exped": 2678.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 1.0,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1167.9,
+    "inhouse": 4.0,
+    "exped": 104.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "TOSHIBA_MG08ACA16TA | C=4 | forward split | alpha=0.5": {
+   "CRC exact path (abstains if not certifiable)": {
+    "miss": 0.4159648152689139,
+    "cost": 4857.325,
+    "inhouse": 88.0,
+    "exped": 1447.525,
+    "false": 1515.225,
+    "nfail": 34.233333333333334,
+    "missed": 14.225,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.3764252538482348,
+    "cert_above": 0.0,
+    "tau": 0.0019532493433030863
+   },
+   "validation-tuned": {
+    "miss": 0.42242031494776405,
+    "cost": 4713.475,
+    "inhouse": 88.0,
+    "exped": 1397.325,
+    "false": 1465.175,
+    "nfail": 34.233333333333334,
+    "missed": 14.45,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.3893362532059351,
+    "cert_above": 0.0,
+    "tau": 0.0021529596621471933
+   },
+   "fixed FPR 1% threshold": {
+    "miss": 0.48045253654321035,
+    "cost": 1885.275,
+    "inhouse": 88.0,
+    "exped": 435.34166666666664,
+    "false": 505.075,
+    "nfail": 34.233333333333334,
+    "missed": 16.375,
+    "above": 0.5,
+    "abstain": 0.0,
+    "cert_miss": 0.4804525365432104,
+    "cert_above": 0.5,
+    "tau": 0.005858441349118945
+   },
+   "point (tau = 0.5)": {
+    "miss": 0.8305070688327153,
+    "cost": 907.7833333333333,
+    "inhouse": 52.50833333333333,
+    "exped": 0.3416666666666667,
+    "false": 45.68333333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.475,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8305070688327154,
+    "cert_above": 1.0,
+    "tau": 0.5
+   },
+   "model-based (predicted miss <= alpha, per day)": {
+    "miss": 0.7383946100870769,
+    "cost": 908.6666666666666,
+    "inhouse": 81.69166666666666,
+    "exped": 22.908333333333335,
+    "false": 93.34166666666667,
+    "nfail": 34.233333333333334,
+    "missed": 25.275,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.7383946100870769,
+    "cert_above": 1.0,
+    "tau": 0.2540506179338792
+   },
+   "RAIDShield-style SMART5 > 0": {
+    "miss": 0.48188491669238365,
+    "cost": 8531.825,
+    "inhouse": 4.0,
+    "exped": 2678.108333333333,
+    "false": 2664.325,
+    "nfail": 34.233333333333334,
+    "missed": 16.45,
+    "above": 0.25,
+    "abstain": 0.0,
+    "cert_miss": 0.48188491669238365,
+    "cert_above": 0.25,
+    "tau": null
+   },
+   "RAIDShield-style SMART5 > 200": {
+    "miss": 0.8280238149514886,
+    "cost": 1167.9,
+    "inhouse": 4.0,
+    "exped": 104.05,
+    "false": 102.20833333333333,
+    "nfail": 34.233333333333334,
+    "missed": 28.391666666666666,
+    "above": 1.0,
+    "abstain": 0.0,
+    "cert_miss": 0.8280238149514885,
+    "cert_above": 1.0,
+    "tau": null
+   }
+  },
+  "online": {
+   "lambda_cost": 0.09396909491548538,
+   "fixed|0.5": {
+    "missed_per_day": 0.6785714285714286,
+    "miss_frac": 0.6909090909090909,
+    "missed": 114,
+    "prevented": 51,
+    "inhouse": 161,
+    "expedited": 0,
+    "days": 168,
+    "max_daily_missed": 5,
+    "cost": 3581.0,
+    "mean_tau": 0.5
+   },
+   "fixed|0.2": {
+    "missed_per_day": 0.5654761904761905,
+    "miss_frac": 0.6089743589743589,
+    "missed": 95,
+    "prevented": 61,
+    "inhouse": 284,
+    "expedited": 7,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 3155.0,
+    "mean_tau": 0.2000000000000001
+   },
+   "fixed|0.1": {
+    "missed_per_day": 0.5357142857142857,
+    "miss_frac": 0.5960264900662252,
+    "missed": 90,
+    "prevented": 61,
+    "inhouse": 331,
+    "expedited": 30,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 3121.0,
+    "mean_tau": 0.10000000000000002
+   },
+   "fixed|0.05": {
+    "missed_per_day": 0.5357142857142857,
+    "miss_frac": 0.6122448979591837,
+    "missed": 90,
+    "prevented": 57,
+    "inhouse": 336,
+    "expedited": 83,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 3285.0,
+    "mean_tau": 0.05000000000000001
+   },
+   "fixed|0.02": {
+    "missed_per_day": 0.5119047619047619,
+    "miss_frac": 0.6013986013986014,
+    "missed": 86,
+    "prevented": 57,
+    "inhouse": 336,
+    "expedited": 419,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 4173.0,
+    "mean_tau": 0.02000000000000001
+   },
+   "fixed|0.01": {
+    "missed_per_day": 0.4166666666666667,
+    "miss_frac": 0.5303030303030303,
+    "missed": 70,
+    "prevented": 62,
+    "inhouse": 336,
+    "expedited": 1098,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 5730.0,
+    "mean_tau": 0.010000000000000004
+   },
+   "fixed|0.005": {
+    "missed_per_day": 0.375,
+    "miss_frac": 0.5294117647058824,
+    "missed": 63,
+    "prevented": 56,
+    "inhouse": 336,
+    "expedited": 2049,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 8373.0,
+    "mean_tau": 0.005000000000000006
+   },
+   "fixed|0.002": {
+    "missed_per_day": 0.3333333333333333,
+    "miss_frac": 0.5137614678899083,
+    "missed": 56,
+    "prevented": 53,
+    "inhouse": 336,
+    "expedited": 3615,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 12861.0,
+    "mean_tau": 0.0020000000000000005
+   },
+   "fixed|0.001": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995
+   },
+   "0.3|static CRC (first 60 days; abstains -> most conservative)": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.3|adaptive cold (lambda_0 = 0)": {
+    "missed_per_day": 0.3630952380952381,
+    "miss_frac": 0.3885350318471338,
+    "missed": 61,
+    "prevented": 96,
+    "inhouse": 336,
+    "expedited": 6436,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 21474.0,
+    "mean_tau": 0.002503603876335777,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.3|adaptive warm (lambda_0 = static CRC)": {
+    "missed_per_day": 0.34523809523809523,
+    "miss_frac": 0.5,
+    "missed": 58,
+    "prevented": 58,
+    "inhouse": 335,
+    "expedited": 4692,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 16151.0,
+    "mean_tau": 0.0026005971123853502,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.3|cost-aware (max(lambda_t, lambda_cost))": {
+    "missed_per_day": 0.3630952380952381,
+    "miss_frac": 0.3885350318471338,
+    "missed": 61,
+    "prevented": 96,
+    "inhouse": 336,
+    "expedited": 6435,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 21471.0,
+    "mean_tau": 0.002503603876335777,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.4|static CRC (first 60 days; abstains -> most conservative)": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.4|adaptive cold (lambda_0 = 0)": {
+    "missed_per_day": 0.36904761904761907,
+    "miss_frac": 0.39490445859872614,
+    "missed": 62,
+    "prevented": 95,
+    "inhouse": 324,
+    "expedited": 3780,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 13524.0,
+    "mean_tau": 0.010394598046511602,
+    "bound_slack_per_day": 0.10009232474978734
+   },
+   "0.4|adaptive warm (lambda_0 = static CRC)": {
+    "missed_per_day": 0.375,
+    "miss_frac": 0.5384615384615384,
+    "missed": 63,
+    "prevented": 54,
+    "inhouse": 305,
+    "expedited": 1816,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 7643.0,
+    "mean_tau": 0.016490268025213715,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.4|cost-aware (max(lambda_t, lambda_cost))": {
+    "missed_per_day": 0.36904761904761907,
+    "miss_frac": 0.39490445859872614,
+    "missed": 62,
+    "prevented": 95,
+    "inhouse": 324,
+    "expedited": 3778,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 13518.0,
+    "mean_tau": 0.010394598046511602,
+    "bound_slack_per_day": 0.10009232474978734
+   },
+   "0.5|static CRC (first 60 days; abstains -> most conservative)": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995,
+    "bound_slack_per_day": 0.0941399437974064
+   },
+   "0.5|adaptive cold (lambda_0 = 0)": {
+    "missed_per_day": 0.4166666666666667,
+    "miss_frac": 0.4375,
+    "missed": 70,
+    "prevented": 90,
+    "inhouse": 265,
+    "expedited": 2202,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 8971.0,
+    "mean_tau": 0.027175317828486666,
+    "bound_slack_per_day": 0.10009232474978734
+   },
+   "0.5|adaptive warm (lambda_0 = static CRC)": {
+    "missed_per_day": 0.4166666666666667,
+    "miss_frac": 0.5932203389830508,
+    "missed": 70,
+    "prevented": 48,
+    "inhouse": 224,
+    "expedited": 345,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 3359.0,
+    "mean_tau": 0.060946544300896875,
+    "bound_slack_per_day": 0.10009232474978734
+   },
+   "0.5|cost-aware (max(lambda_t, lambda_cost))": {
+    "missed_per_day": 0.4166666666666667,
+    "miss_frac": 0.43478260869565216,
+    "missed": 70,
+    "prevented": 91,
+    "inhouse": 265,
+    "expedited": 2201,
+    "days": 168,
+    "max_daily_missed": 3,
+    "cost": 8968.0,
+    "mean_tau": 0.027175317828486666,
+    "bound_slack_per_day": 0.10009232474978734
+   }
+  }
+ },
+ "v3c": {
+  "C=1 | floor": 0.42102131247520447,
+  "C=1 | random | alpha=0.3": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4216063161992601,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7180.162,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.4216063161992601,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7180.162,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4216063161992601,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7180.162,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=1 | random | alpha=0.4": {
+   "CRC (mean guarantee)": {
+    "miss": 0.42167043143617255,
+    "above": 1.0,
+    "abstain": 0.98,
+    "cert_miss": 0.439213199700628,
+    "cert_above": 1.0,
+    "cost": 7176.469857142857,
+    "tau": 0.0010005685118525459
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.4216063161992601,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7180.162,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4221002920482839,
+    "above": 1.0,
+    "abstain": 0.94,
+    "cert_miss": 0.4411335787602833,
+    "cert_above": 1.0,
+    "cost": 7133.9564285714305,
+    "tau": 0.0010093754883777942
+   }
+  },
+  "C=1 | random | alpha=0.5": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4929867952561805,
+    "above": 0.34,
+    "abstain": 0.0,
+    "cert_miss": 0.4929867952561805,
+    "cert_above": 0.34,
+    "cost": 2746.657,
+    "tau": 0.003397700707747158
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.4216063161992601,
+    "above": 0.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7180.162,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.5022300671328391,
+    "above": 0.54,
+    "abstain": 0.0,
+    "cert_miss": 0.5022300671328391,
+    "cert_above": 0.54,
+    "cost": 2511.181857142857,
+    "tau": 0.003907439495514018
+   }
+  },
+  "C=1 | forward | alpha=0.3": {
+   "CRC (mean guarantee)": {
+    "miss": 0.38362305214007697,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7263.85,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.38362305214007697,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7263.85,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.38362305214007697,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7263.85,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=1 | forward | alpha=0.4": {
+   "CRC (mean guarantee)": {
+    "miss": 0.386498511582613,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.34612075984477997,
+    "cert_above": 0.0,
+    "cost": 6354.7,
+    "tau": 0.0012155956034245934
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.38362305214007697,
+    "above": 0.5,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7263.85,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.38713434810439745,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.3486641059319178,
+    "cert_above": 0.0,
+    "cost": 6208.45,
+    "tau": 0.0012772951068854167
+   }
+  },
+  "C=1 | forward | alpha=0.5": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4167178663114707,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.37929874459902446,
+    "cert_above": 0.0,
+    "cost": 4857.0,
+    "tau": 0.00211591471009521
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.38512280210852623,
+    "above": 0.0,
+    "abstain": 0.75,
+    "cert_miss": 0.34061792194843293,
+    "cert_above": 0.0,
+    "cost": 6784.35,
+    "tau": 0.001100597085600574
+   },
+   "validation-tuned": {
+    "miss": 0.4227034447093805,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.3912699013948441,
+    "cert_above": 0.0,
+    "cost": 4781.725,
+    "tau": 0.002242163836900616
+   }
+  },
+  "C=2 | floor": 0.42245861887931824,
+  "C=2 | random | alpha=0.3": {
+   "CRC (mean guarantee)": {
+    "miss": 0.42277918933331954,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7141.438785714286,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.42277918933331954,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7141.438785714286,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.42277918933331954,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7141.438785714286,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=2 | random | alpha=0.4": {
+   "CRC (mean guarantee)": {
+    "miss": 0.42277918933331954,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7141.438785714286,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.42277918933331954,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7141.438785714286,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4228485852820532,
+    "above": 1.0,
+    "abstain": 0.96,
+    "cert_miss": 0.4347814158137356,
+    "cert_above": 1.0,
+    "cost": 7135.943428571429,
+    "tau": 0.001000844113134835
+   }
+  },
+  "C=2 | random | alpha=0.5": {
+   "CRC (mean guarantee)": {
+    "miss": 0.48740793068174804,
+    "above": 0.32,
+    "abstain": 0.0,
+    "cert_miss": 0.48740793068174804,
+    "cert_above": 0.32,
+    "cost": 2915.823071428572,
+    "tau": 0.003035965378206429
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.42277918933331954,
+    "above": 0.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7141.438785714286,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.5004612657481006,
+    "above": 0.53,
+    "abstain": 0.0,
+    "cert_miss": 0.5004612657481006,
+    "cert_above": 0.53,
+    "cost": 2569.4552857142853,
+    "tau": 0.0036723116357354193
+   }
+  },
+  "C=2 | forward | alpha=0.3": {
+   "CRC (mean guarantee)": {
+    "miss": 0.3852248980353276,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7221.6,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.3852248980353276,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7221.6,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.3852248980353276,
+    "above": 0.75,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7221.6,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=2 | forward | alpha=0.4": {
+   "CRC (mean guarantee)": {
+    "miss": 0.38785804621875286,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.3451515148083369,
+    "cert_above": 0.0,
+    "cost": 6428.15,
+    "tau": 0.001178537286983524
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.3852248980353276,
+    "above": 0.5,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7221.6,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.39008060805499556,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.35404176215330757,
+    "cert_above": 0.0,
+    "cost": 6185.5,
+    "tau": 0.0012694308486602907
+   }
+  },
+  "C=2 | forward | alpha=0.5": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4173283825318019,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.378753536939621,
+    "cert_above": 0.0,
+    "cost": 4840.5,
+    "tau": 0.0020761179689804763
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.3857477738211552,
+    "above": 0.0,
+    "abstain": 0.75,
+    "cert_miss": 0.33671042521794636,
+    "cert_above": 0.0,
+    "cost": 7002.125,
+    "tau": 0.0010362873984661777
+   },
+   "validation-tuned": {
+    "miss": 0.42059292296568557,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.38528261780738826,
+    "cert_above": 0.0,
+    "cost": 4768.975,
+    "tau": 0.002181063276889874
+   }
+  },
+  "C=4 | floor": 0.4246145486831665,
+  "C=4 | random | alpha=0.3": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4247443492316774,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.4247443492316774,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4247443492316774,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=4 | random | alpha=0.4": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4247443492316774,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.4247443492316774,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4247443492316774,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=4 | random | alpha=0.5": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4873649119160005,
+    "above": 0.18,
+    "abstain": 0.0,
+    "cert_miss": 0.4873649119160005,
+    "cert_above": 0.18,
+    "cost": 2939.0266428571426,
+    "tau": 0.0028800918309073607
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.4247443492316774,
+    "above": 0.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7052.248428571429,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.4996093423004661,
+    "above": 0.53,
+    "abstain": 0.0,
+    "cert_miss": 0.4996093423004661,
+    "cert_above": 0.53,
+    "cost": 2645.3120714285715,
+    "tau": 0.0033298958944297996
+   }
+  },
+  "C=4 | forward | alpha=0.3": {
+   "CRC (mean guarantee)": {
+    "miss": 0.3878921897461017,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7136.1,
+    "tau": 0.0010000010000005004
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.3878921897461017,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7136.1,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.3878921897461017,
+    "above": 1.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7136.1,
+    "tau": 0.0010000010000005004
+   }
+  },
+  "C=4 | forward | alpha=0.4": {
+   "CRC (mean guarantee)": {
+    "miss": 0.39212723138431704,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.35155908862749735,
+    "cert_above": 0.0,
+    "cost": 6361.35,
+    "tau": 0.00117408185893403
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.3878921897461017,
+    "above": 0.5,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7136.1,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.394172087435921,
+    "above": 0.5,
+    "abstain": 0.75,
+    "cert_miss": 0.35973851283391317,
+    "cert_above": 0.0,
+    "cost": 6156.25,
+    "tau": 0.0012465624332127572
+   }
+  },
+  "C=4 | forward | alpha=0.5": {
+   "CRC (mean guarantee)": {
+    "miss": 0.4159648152689139,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.3764252538482348,
+    "cert_above": 0.0,
+    "cost": 4857.325,
+    "tau": 0.0019532493433030863
+   },
+   "LTT-HB delta=0.1 (high-probability)": {
+    "miss": 0.3878921897461017,
+    "above": 0.0,
+    "abstain": 1.0,
+    "cert_miss": null,
+    "cert_above": null,
+    "cost": 7136.1,
+    "tau": 0.0010000010000005004
+   },
+   "validation-tuned": {
+    "miss": 0.42242031494776405,
+    "above": 0.0,
+    "abstain": 0.5,
+    "cert_miss": 0.3893362532059351,
+    "cert_above": 0.0,
+    "cost": 4713.475,
+    "tau": 0.0021529596621471933
+   }
+  },
+  "online": {
+   "0.3": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995,
+    "abstain": true
+   },
+   "0.4": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995,
+    "abstain": true
+   },
+   "0.5": {
+    "missed_per_day": 0.32142857142857145,
+    "miss_frac": 0.5294117647058824,
+    "missed": 54,
+    "prevented": 48,
+    "inhouse": 336,
+    "expedited": 5962,
+    "days": 168,
+    "max_daily_missed": 2,
+    "cost": 19842.0,
+    "mean_tau": 0.0010000010000004995,
+    "abstain": true
+   }
+  }
+ },
+ "exactness_timing": {
+  "days": 20,
+  "breakpoints_mean": 4440.05,
+  "path_seconds_mean": 3.3028066515922547,
+  "direct_solve_seconds_mean": 0.0007100443840026855,
+  "exact_matches": 500,
+  "checks": 500
+ },
+ "ltt_vs_n": {
+  "n=30|alpha=0.4": {
+   "crc_miss": 0.423125611129929,
+   "crc_above": 1.0,
+   "crc_cost": 7142.221470588236,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7142.221470588236
+  },
+  "n=30|alpha=0.5": {
+   "crc_miss": 0.4841348428279162,
+   "crc_above": 0.28,
+   "crc_cost": 3062.127764705882,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7142.221470588236
+  },
+  "n=60|alpha=0.4": {
+   "crc_miss": 0.42239670654599165,
+   "crc_above": 1.0,
+   "crc_cost": 7138.445642857143,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7138.445642857143
+  },
+  "n=60|alpha=0.5": {
+   "crc_miss": 0.4847371704269734,
+   "crc_above": 0.24,
+   "crc_cost": 2927.7847142857145,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7138.445642857143
+  },
+  "n=90|alpha=0.4": {
+   "crc_miss": 0.4219932186237791,
+   "crc_above": 1.0,
+   "crc_cost": 7140.580181818181,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7140.580181818181
+  },
+  "n=90|alpha=0.5": {
+   "crc_miss": 0.4886979598226872,
+   "crc_above": 0.28,
+   "crc_cost": 2875.0380909090914,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7140.580181818181
+  },
+  "n=120|alpha=0.4": {
+   "crc_miss": 0.4229203993119299,
+   "crc_above": 0.98,
+   "crc_cost": 7143.495874999999,
+   "ltt_abstain": 1.0,
+   "ltt_cert_miss": null,
+   "ltt_cert_above": null,
+   "ltt_cost": 7143.495874999999
+  },
+  "n=120|alpha=0.5": {
+   "crc_miss": 0.49232988426648083,
+   "crc_above": 0.33,
+   "crc_cost": 2843.4785,
+   "ltt_abstain": 0.99,
+   "ltt_cert_miss": 0.44722270760685207,
+   "ltt_cert_above": 0.0,
+   "ltt_cost": 7142.2519999999995
+  }
+ },
+ "cost_sensitivity": {
+  "c_fail=10|alpha=0.4": {
+   "CRC": {
+    "cost": 6918.677841796875,
+    "miss": 0.4231385266780853,
+    "premium": 25.509069702278733
+   },
+   "LTT": {
+    "cost": 6918.677841796875,
+    "miss": 0.4231385266780853,
+    "premium": 25.509069702278733
+   },
+   "validation-tuned": {
+    "cost": 6917.021557617188,
+    "miss": 0.4231436151266098,
+    "premium": 25.50272361220631
+   },
+   "point": {
+    "cost": 295.6450714111328,
+    "miss": 0.8736064898967743,
+    "premium": 0.13277073804862183
+   },
+   "oracle": {
+    "cost": 260.99285714285713,
+    "miss": 0.9530887163494313,
+    "premium": 0.0
+   }
+  },
+  "c_fail=10|alpha=0.5": {
+   "CRC": {
+    "cost": 2639.3861450195313,
+    "miss": 0.4888578435778618,
+    "premium": 9.112867355503282
+   },
+   "LTT": {
+    "cost": 6918.677841796875,
+    "miss": 0.4231385266780853,
+    "premium": 25.509069702278733
+   },
+   "validation-tuned": {
+    "cost": 2300.1114978027344,
+    "miss": 0.5019291466474534,
+    "premium": 7.812928916839072
+   },
+   "point": {
+    "cost": 295.6450714111328,
+    "miss": 0.8736064898967743,
+    "premium": 0.13277073804862183
+   },
+   "oracle": {
+    "cost": 260.99285714285713,
+    "miss": 0.9530887163494313,
+    "premium": 0.0
+   }
+  },
+  "c_fail=30|alpha=0.4": {
+   "CRC": {
+    "cost": 7136.109267578125,
+    "miss": 0.4231385266780853,
+    "premium": 8.48483756012724
+   },
+   "LTT": {
+    "cost": 7136.109267578125,
+    "miss": 0.4231385266780853,
+    "premium": 8.48483756012724
+   },
+   "validation-tuned": {
+    "cost": 7134.455834960938,
+    "miss": 0.4231436151266098,
+    "premium": 8.482639928448323
+   },
+   "point": {
+    "cost": 760.5093585205078,
+    "miss": 0.8736064898967743,
+    "premium": 0.010818004328521313
+   },
+   "oracle": {
+    "cost": 752.3702142857145,
+    "miss": 0.8924310972988607,
+    "premium": 0.0
+   }
+  },
+  "c_fail=30|alpha=0.5": {
+   "CRC": {
+    "cost": 2892.0247192382812,
+    "miss": 0.4888578435778618,
+    "premium": 2.843885183551442
+   },
+   "LTT": {
+    "cost": 7136.109267578125,
+    "miss": 0.4231385266780853,
+    "premium": 8.48483756012724
+   },
+   "validation-tuned": {
+    "cost": 2560.58150390625,
+    "miss": 0.5019291466474534,
+    "premium": 2.4033531036807667
+   },
+   "point": {
+    "cost": 760.5093585205078,
+    "miss": 0.8736064898967743,
+    "premium": 0.010818004328521313
+   },
+   "oracle": {
+    "cost": 752.3702142857145,
+    "miss": 0.8924310972988607,
+    "premium": 0.0
+   }
+  },
+  "c_fail=100|alpha=0.4": {
+   "CRC": {
+    "cost": 7897.119267578125,
+    "miss": 0.4231385266780853,
+    "premium": 2.7295269155895077
+   },
+   "LTT": {
+    "cost": 7897.119267578125,
+    "miss": 0.4231385266780853,
+    "premium": 2.7295269155895077
+   },
+   "validation-tuned": {
+    "cost": 7895.475834960937,
+    "miss": 0.4231436151266098,
+    "premium": 2.728750781157181
+   },
+   "point": {
+    "cost": 2387.534365234375,
+    "miss": 0.8736064898967743,
+    "premium": 0.1275470681560682
+   },
+   "oracle": {
+    "cost": 2117.4587142857144,
+    "miss": 0.6837744692393711,
+    "premium": 0.0
+   }
+  },
+  "c_fail=100|alpha=0.5": {
+   "CRC": {
+    "cost": 3776.2597192382814,
+    "miss": 0.4888578435778618,
+    "premium": 0.7833923720737728
+   },
+   "LTT": {
+    "cost": 7897.119267578125,
+    "miss": 0.4231385266780853,
+    "premium": 2.7295269155895077
+   },
+   "validation-tuned": {
+    "cost": 3472.22650390625,
+    "miss": 0.5019291466474534,
+    "premium": 0.6398083610700014
+   },
+   "point": {
+    "cost": 2387.534365234375,
+    "miss": 0.8736064898967743,
+    "premium": 0.1275470681560682
+   },
+   "oracle": {
+    "cost": 2117.4587142857144,
+    "miss": 0.6837744692393711,
+    "premium": 0.0
+   }
+  }
+ }
+}

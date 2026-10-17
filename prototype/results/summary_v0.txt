@@ -1,0 +1,347 @@
+== Paper 4 prototype v0 (C-MAPSS FD001+FD003, GBM predictor, fleet MILP K=20) ==
+pool A: monotonicity violations  mean-loss 30, any-loss 23  (of 20400 scenario-lambda pairs)
+pool A: per-engine residual rhat-r  mean -13.8, P(rhat > r) 0.44; oracle cost 93
+pool B: monotonicity violations  mean-loss 31, any-loss 22  (of 20400 scenario-lambda pairs)
+pool B: per-engine residual rhat-r  mean -20.9, P(rhat > r) 0.40; oracle cost 82
+
+A->A | mean | alpha=0.01 | n=25
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1868   1903.9%
+  fixed margin 10                             0.0280   1.000    10.0     1042   1018.2%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1044.7%
+  fixed margin 30                             0.0030   0.000    30.0     1373   1372.6%
+  validation-tuned (no correction)            0.0103   0.336    18.4     1046   1022.1%
+  per-engine conformal (alpha)                0.0011   0.000    35.6     1601   1618.3%
+  CRC (decision-level)                        0.0000   0.000   100.0     6079   6422.4%
+  CRC cheapest-valid                          0.0000   0.000   100.0     6079   6422.4%
+
+A->A | mean | alpha=0.01 | n=50
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1868   1909.6%
+  fixed margin 10                             0.0280   1.000    10.0     1042   1021.3%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1047.4%
+  fixed margin 30                             0.0030   0.000    30.0     1372   1376.3%
+  validation-tuned (no correction)            0.0095   0.215    18.4     1032   1010.4%
+  per-engine conformal (alpha)                0.0011   0.000    35.3     1588   1608.5%
+  CRC (decision-level)                        0.0000   0.000   100.0     6079   6440.6%
+  CRC cheapest-valid                          0.0000   0.000   100.0     6079   6440.6%
+
+A->A | mean | alpha=0.01 | n=100
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1867   1910.3%
+  fixed margin 10                             0.0280   1.000    10.0     1042   1021.7%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1048.3%
+  fixed margin 30                             0.0030   0.000    30.0     1372   1377.0%
+  validation-tuned (no correction)            0.0087   0.062    18.7     1028   1005.9%
+  per-engine conformal (alpha)                0.0011   0.000    35.2     1584   1605.1%
+  CRC (decision-level)                        0.0005   0.000    44.3     1982   2033.2%
+  CRC cheapest-valid                          0.0005   0.000    44.3     1982   2033.2%
+
+A->A | mean | alpha=0.02 | n=25
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1867   1904.1%
+  fixed margin 10                             0.0280   1.000    10.0     1042   1018.6%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1044.8%
+  fixed margin 30                             0.0030   0.000    30.0     1372   1372.9%
+  validation-tuned (no correction)            0.0193   0.476    13.2     1007    981.0%
+  per-engine conformal (alpha)                0.0025   0.000    31.2     1425   1429.5%
+  CRC (decision-level)                        0.0000   0.000   100.0     6079   6424.2%
+  CRC cheapest-valid                          0.0000   0.000   100.0     6079   6424.2%
+
+A->A | mean | alpha=0.02 | n=50
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1867   1903.2%
+  fixed margin 10                             0.0280   1.000    10.0     1042   1018.1%
+  fixed margin 20                             0.0078   0.000    20.0     1066   1044.3%
+  fixed margin 30                             0.0030   0.000    30.0     1373   1373.2%
+  validation-tuned (no correction)            0.0178   0.337    13.8     1001    974.7%
+  per-engine conformal (alpha)                0.0025   0.000    31.0     1415   1418.0%
+  CRC (decision-level)                        0.0008   0.000    40.5     1815   1846.6%
+  CRC cheapest-valid                          0.0008   0.000    40.5     1815   1846.6%
+
+A->A | mean | alpha=0.02 | n=100
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0887   1.000     0.0     1869   1906.1%
+  fixed margin 10                             0.0280   1.000    10.0     1042   1018.7%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1045.9%
+  fixed margin 30                             0.0030   0.000    30.0     1373   1373.7%
+  validation-tuned (no correction)            0.0179   0.293    13.7      999    972.4%
+  per-engine conformal (alpha)                0.0025   0.000    31.0     1413   1416.7%
+  CRC (decision-level)                        0.0087   0.000    18.8     1033   1008.9%
+  CRC cheapest-valid                          0.0086   0.000    18.9     1033   1008.8%
+
+A->A | mean | alpha=0.05 | n=25
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1868   1906.0%
+  fixed margin 10                             0.0280   0.000    10.0     1042   1019.0%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1045.7%
+  fixed margin 30                             0.0030   0.000    30.0     1373   1373.8%
+  validation-tuned (no correction)            0.0440   0.202     5.2     1157   1141.9%
+  per-engine conformal (alpha)                0.0066   0.000    22.7     1149   1133.9%
+  CRC (decision-level)                        0.0118   0.000    17.3     1030   1005.7%
+  CRC cheapest-valid                          0.0109   0.000    17.8     1034   1010.2%
+
+A->A | mean | alpha=0.05 | n=50
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1868   1906.7%
+  fixed margin 10                             0.0280   0.000    10.0     1042   1019.3%
+  fixed margin 20                             0.0079   0.000    20.0     1067   1046.1%
+  fixed margin 30                             0.0030   0.000    30.0     1373   1374.7%
+  validation-tuned (no correction)            0.0444   0.267     4.9     1153   1138.2%
+  per-engine conformal (alpha)                0.0065   0.000    22.6     1144   1129.0%
+  CRC (decision-level)                        0.0277   0.000     9.9     1035   1011.8%
+  CRC cheapest-valid                          0.0177   0.000    14.1     1010    985.5%
+
+A->A | mean | alpha=0.05 | n=100
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0886   1.000     0.0     1868   1914.4%
+  fixed margin 10                             0.0280   0.000    10.0     1041   1022.5%
+  fixed margin 20                             0.0079   0.000    20.0     1066   1049.2%
+  fixed margin 30                             0.0030   0.000    30.0     1372   1379.3%
+  validation-tuned (no correction)            0.0449   0.342     4.8     1158   1148.3%
+  per-engine conformal (alpha)                0.0066   0.000    22.5     1137   1126.4%
+  CRC (decision-level)                        0.0367   0.009     6.5     1073   1056.7%
+  CRC cheapest-valid                          0.0172   0.000    14.3     1009    987.8%
+
+A->A | any | alpha=0.1 | n=25  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8574   1.000     0.0     1868   1906.8%
+  fixed margin 10                             0.4352   1.000    10.0     1042   1019.8%
+  fixed margin 20                             0.1548   1.000    20.0     1066   1045.7%
+  fixed margin 30                             0.0600   0.000    30.0     1372   1374.4%
+  validation-tuned (no correction)            0.1042   0.470    26.0     1261   1254.9%
+  per-engine conformal (alpha)                0.2076   1.000    17.0     1008    983.2%
+  per-engine conformal Bonferroni (alpha/K)   0.0113   0.000    41.0     1830   1866.1%
+  LTT (decision-level)                        0.0327   0.047    36.5     1651   1673.3%
+  LTT cheapest-valid                          0.0327   0.047    36.5     1651   1673.3%
+
+A->A | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8577   1.000     0.0     1868   1904.9%
+  fixed margin 10                             0.4352   1.000    10.0     1042   1018.6%
+  fixed margin 20                             0.1551   1.000    20.0     1067   1045.0%
+  fixed margin 30                             0.0599   0.000    30.0     1372   1372.8%
+  validation-tuned (no correction)            0.1092   0.551    25.4     1237   1226.7%
+  per-engine conformal (alpha)                0.2059   1.000    17.0     1006    980.0%
+  per-engine conformal Bonferroni (alpha/K)   0.0142   0.000    38.9     1736   1762.7%
+  LTT (decision-level)                        0.0328   0.017    34.8     1573   1587.4%
+  LTT cheapest-valid                          0.0328   0.017    34.8     1573   1587.4%
+
+A->A | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8575   1.000     0.0     1867   1910.0%
+  fixed margin 10                             0.4340   1.000    10.0     1041   1020.9%
+  fixed margin 20                             0.1545   1.000    20.0     1067   1048.2%
+  fixed margin 30                             0.0597   0.000    30.0     1373   1377.7%
+  validation-tuned (no correction)            0.0990   0.466    26.6     1277   1274.8%
+  per-engine conformal (alpha)                0.2040   1.000    17.0     1006    982.8%
+  per-engine conformal Bonferroni (alpha/K)   0.0148   0.000    38.7     1726   1757.7%
+  LTT (decision-level)                        0.0485   0.066    31.4     1431   1440.8%
+  LTT cheapest-valid                          0.0485   0.066    31.4     1431   1440.8%
+
+A->A | any | alpha=0.2 | n=25  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8577   1.000     0.0     1868   1905.4%
+  fixed margin 10                             0.4349   1.000    10.0     1042   1018.6%
+  fixed margin 20                             0.1547   0.000    20.0     1067   1045.0%
+  fixed margin 30                             0.0598   0.000    30.0     1372   1373.3%
+  validation-tuned (no correction)            0.2019   0.376    18.1     1046   1022.8%
+  per-engine conformal (alpha)                0.4551   1.000     9.3     1047   1024.4%
+  per-engine conformal Bonferroni (alpha/K)   0.0226   0.000    35.7     1604   1622.4%
+  LTT (decision-level)                        0.0970   0.028    26.7     1283   1276.6%
+  LTT cheapest-valid                          0.0964   0.026    26.7     1284   1278.5%
+
+A->A | any | alpha=0.2 | n=50  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8577   1.000     0.0     1868   1908.1%
+  fixed margin 10                             0.4353   1.000    10.0     1042   1020.3%
+  fixed margin 20                             0.1552   0.000    20.0     1067   1046.5%
+  fixed margin 30                             0.0601   0.000    30.0     1372   1374.9%
+  validation-tuned (no correction)            0.1919   0.318    18.0     1031   1007.5%
+  per-engine conformal (alpha)                0.4575   1.000     9.2     1049   1027.7%
+  per-engine conformal Bonferroni (alpha/K)   0.0226   0.000    35.3     1590   1608.9%
+  LTT (decision-level)                        0.1049   0.003    25.8     1248   1241.4%
+  LTT cheapest-valid                          0.1046   0.002    25.8     1249   1242.1%
+
+A->A | any | alpha=0.2 | n=100  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8576   1.000     0.0     1868   1908.8%
+  fixed margin 10                             0.4349   1.000    10.0     1043   1021.4%
+  fixed margin 20                             0.1549   0.000    20.0     1067   1047.4%
+  fixed margin 30                             0.0599   0.000    30.0     1373   1376.1%
+  validation-tuned (no correction)            0.1798   0.163    18.1     1017    993.4%
+  per-engine conformal (alpha)                0.4547   1.000     9.3     1049   1028.3%
+  per-engine conformal Bonferroni (alpha/K)   0.0221   0.000    35.2     1587   1606.5%
+  LTT (decision-level)                        0.1333   0.005    22.6     1149   1135.0%
+  LTT cheapest-valid                          0.1333   0.005    22.6     1149   1135.0%
+
+A->B | mean | alpha=0.01 | n=25
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   1.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0109   0.762    18.2      981   1088.9%
+  per-engine conformal (alpha)                0.0013   0.000    35.5     1522   1744.8%
+  CRC (decision-level)                        0.0000   0.000   100.0     6230   7452.8%
+  CRC cheapest-valid                          0.0000   0.000   100.0     6230   7452.8%
+
+A->B | mean | alpha=0.01 | n=50
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   1.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0104   0.743    18.6      984   1093.3%
+  per-engine conformal (alpha)                0.0013   0.000    35.4     1519   1741.6%
+  CRC (decision-level)                        0.0000   0.000   100.0     6230   7452.8%
+  CRC cheapest-valid                          0.0000   0.000   100.0     6230   7452.8%
+
+A->B | mean | alpha=0.01 | n=100
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   1.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0102   0.743    18.7      983   1091.7%
+  per-engine conformal (alpha)                0.0013   0.000    35.2     1511   1732.2%
+  CRC (decision-level)                        0.0004   0.000    44.6     1948   2261.8%
+  CRC cheapest-valid                          0.0004   0.000    44.6     1948   2261.8%
+
+A->B | mean | alpha=0.02 | n=25
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   1.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0168   0.165    13.2      906    998.9%
+  per-engine conformal (alpha)                0.0026   0.000    31.0     1353   1540.2%
+  CRC (decision-level)                        0.0000   0.000   100.0     6230   7452.8%
+  CRC cheapest-valid                          0.0000   0.000   100.0     6230   7452.8%
+
+A->B | mean | alpha=0.02 | n=50
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   1.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0156   0.031    13.8      906    998.0%
+  per-engine conformal (alpha)                0.0027   0.000    31.0     1351   1537.4%
+  CRC (decision-level)                        0.0009   0.000    40.9     1774   2051.1%
+  CRC cheapest-valid                          0.0009   0.000    40.9     1774   2051.1%
+
+A->B | mean | alpha=0.02 | n=100
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   1.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0156   0.002    13.7      903    994.3%
+  per-engine conformal (alpha)                0.0027   0.000    31.0     1351   1538.2%
+  CRC (decision-level)                        0.0100   0.000    18.9      988   1098.2%
+  CRC cheapest-valid                          0.0100   0.000    18.9      989   1098.9%
+
+A->B | mean | alpha=0.05 | n=25
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   0.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0392   0.032     5.2     1047   1169.1%
+  per-engine conformal (alpha)                0.0066   0.000    22.8     1081   1210.4%
+  CRC (decision-level)                        0.0118   0.000    17.2      960   1064.0%
+  CRC cheapest-valid                          0.0114   0.000    17.7      969   1075.2%
+
+A->B | mean | alpha=0.05 | n=50
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   0.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0401   0.010     4.9     1055   1179.5%
+  per-engine conformal (alpha)                0.0066   0.000    22.6     1077   1205.1%
+  CRC (decision-level)                        0.0226   0.000     9.9      900    991.1%
+  CRC cheapest-valid                          0.0158   0.000    14.0      920   1015.5%
+
+A->B | mean | alpha=0.05 | n=100
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.0816   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.0216   0.000    10.0      880    966.3%
+  fixed margin 20                             0.0090   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0029   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0406   0.001     4.8     1061   1186.1%
+  per-engine conformal (alpha)                0.0067   0.000    22.5     1073   1200.5%
+  CRC (decision-level)                        0.0322   0.000     6.5      962   1066.6%
+  CRC cheapest-valid                          0.0156   0.000    14.1      920   1015.2%
+
+A->B | any | alpha=0.1 | n=25  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8175   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.3625   1.000    10.0      880    966.3%
+  fixed margin 20                             0.1650   1.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0550   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.1001   0.392    26.2     1203   1357.9%
+  per-engine conformal (alpha)                0.2160   1.000    17.0      949   1050.5%
+  per-engine conformal Bonferroni (alpha/K)   0.0102   0.000    41.1     1769   2044.7%
+  LTT (decision-level)                        0.0319   0.029    36.7     1593   1830.9%
+  LTT cheapest-valid                          0.0319   0.029    36.7     1593   1830.9%
+
+A->B | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8175   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.3625   1.000    10.0      880    966.3%
+  fixed margin 20                             0.1650   1.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0550   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.1023   0.438    25.4     1171   1319.9%
+  per-engine conformal (alpha)                0.2151   1.000    17.0      949   1049.9%
+  per-engine conformal Bonferroni (alpha/K)   0.0118   0.000    39.0     1660   1912.8%
+  LTT (decision-level)                        0.0350   0.009    34.6     1497   1715.2%
+  LTT cheapest-valid                          0.0350   0.009    34.6     1497   1715.2%
+
+A->B | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8175   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.3625   1.000    10.0      880    966.3%
+  fixed margin 20                             0.1650   1.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0550   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.0871   0.272    26.6     1203   1358.8%
+  per-engine conformal (alpha)                0.2148   1.000    17.0      948   1049.6%
+  per-engine conformal Bonferroni (alpha/K)   0.0105   0.000    38.8     1649   1899.7%
+  LTT (decision-level)                        0.0493   0.004    31.3     1363   1552.6%
+  LTT cheapest-valid                          0.0493   0.004    31.3     1363   1552.6%
+
+A->B | any | alpha=0.2 | n=25  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8175   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.3625   1.000    10.0      880    966.3%
+  fixed margin 20                             0.1650   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0550   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.2040   0.412    18.0      979   1086.7%
+  per-engine conformal (alpha)                0.3911   1.000     9.2      898    988.4%
+  per-engine conformal Bonferroni (alpha/K)   0.0246   0.000    35.6     1527   1751.2%
+  LTT (decision-level)                        0.0962   0.027    26.4     1206   1361.8%
+  LTT cheapest-valid                          0.0956   0.025    26.4     1208   1364.5%
+
+A->B | any | alpha=0.2 | n=50  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8175   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.3625   1.000    10.0      880    966.3%
+  fixed margin 20                             0.1650   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0550   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.2016   0.346    17.9      971   1077.1%
+  per-engine conformal (alpha)                0.3914   1.000     9.2      896    986.6%
+  per-engine conformal Bonferroni (alpha/K)   0.0254   0.000    35.3     1516   1737.4%
+  LTT (decision-level)                        0.0980   0.002    25.7     1180   1329.9%
+  LTT cheapest-valid                          0.0978   0.002    25.8     1180   1330.5%
+
+A->B | any | alpha=0.2 | n=100  (LTT delta=0.1)
+  rule                                          risk  >alpha  lambda     cost vs oracle
+  point (lambda=0)                            0.8175   1.000     0.0     1717   1981.0%
+  fixed margin 10                             0.3625   1.000    10.0      880    966.3%
+  fixed margin 20                             0.1650   0.000    20.0     1012   1127.1%
+  fixed margin 30                             0.0550   0.000    30.0     1307   1484.8%
+  validation-tuned (no correction)            0.1980   0.171    18.1      970   1076.3%
+  per-engine conformal (alpha)                0.3877   1.000     9.3      894    984.0%
+  per-engine conformal Bonferroni (alpha/K)   0.0267   0.000    35.2     1512   1733.4%
+  LTT (decision-level)                        0.1286   0.003    22.7     1086   1216.7%
+  LTT cheapest-valid                          0.1286   0.003    22.7     1086   1216.7%

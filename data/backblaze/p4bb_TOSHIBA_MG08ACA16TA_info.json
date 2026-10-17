@@ -1,0 +1,55 @@
+{
+ "model": "TOSHIBA MG08ACA16TA",
+ "features": [
+  "smart_5_raw",
+  "smart_5_raw_d7",
+  "smart_5_raw_d30",
+  "smart_197_raw",
+  "smart_197_raw_d7",
+  "smart_197_raw_d30",
+  "smart_198_raw",
+  "smart_198_raw_d7",
+  "smart_198_raw_d30",
+  "smart_199_raw",
+  "smart_199_raw_d7",
+  "smart_199_raw_d30",
+  "smart_193_raw",
+  "smart_193_raw_d7",
+  "smart_193_raw_d30",
+  "smart_9_raw",
+  "smart_12_raw",
+  "smart_194_raw",
+  "age_days"
+ ],
+ "train": {
+  "h7": {
+   "n_train": 52643,
+   "n_pos": 835
+  },
+  "h14": {
+   "n_train": 52643,
+   "n_pos": 1730
+  },
+  "h21": {
+   "n_train": 52643,
+   "n_pos": 2654
+  },
+  "h28": {
+   "n_train": 52643,
+   "n_pos": 3555
+  }
+ },
+ "thr_fpr1_G28": 0.0035693456884473562,
+ "auc_eval": {
+  "h7": 0.7398052665310619,
+  "h14": 0.784485921849124,
+  "h21": 0.7754856666848626,
+  "h28": 0.7744776390607627
+ },
+ "train_fail_per_day": 0.9349593495934959,
+ "n_eval_rows": 8394219,
+ "n_eval_drives": 40048,
+ "eval_days": 212,
+ "eval_failures": 199,
+ "seconds": 214.31049704551697
+}

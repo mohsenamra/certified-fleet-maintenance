@@ -1,0 +1,64 @@
+{
+ "seed": 2027,
+ "K": 20,
+ "P": 6,
+ "Lp": 10,
+ "D": 2,
+ "D_out": 3,
+ "c_setup": 100.0,
+ "c_lease": 40.0,
+ "families": [
+  "add",
+  "sc",
+  "s05"
+ ],
+ "zhu_omega": 3.0,
+ "mitici_z": 2.326,
+ "workers": 4,
+ "n_check": 200,
+ "settings": {
+  "RICH_ID": [
+   "ID",
+   "pool",
+   1000,
+   2,
+   3
+  ],
+  "RICH_TIGHT": [
+   "ID",
+   "pool",
+   400,
+   1,
+   1
+  ],
+  "RICH_S13_src": [
+   "S13",
+   "src",
+   400,
+   2,
+   3
+  ],
+  "RICH_S13_tgt": [
+   "S13",
+   "tgt",
+   400,
+   2,
+   3
+  ],
+  "RICH_S24_src": [
+   "S24",
+   "src",
+   400,
+   2,
+   3
+  ],
+  "RICH_S24_tgt": [
+   "S24",
+   "tgt",
+   400,
+   2,
+   3
+  ]
+ },
+ "seconds": 11725.83644080162
+}

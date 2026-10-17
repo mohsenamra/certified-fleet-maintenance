@@ -1,0 +1,16 @@
+[add] c_fail/c_out =  1.00 (c_fail    300): premium CRC  +62.0%  LTT +119.9% | hindsight cost-optimal plan: failure fraction 0.0829, P(any) 0.820 | CRC risk 0.0099, LTT P(any) 0.056
+[add] c_fail/c_out =  2.00 (c_fail    600): premium CRC  +30.4%  LTT  +73.2% | hindsight cost-optimal plan: failure fraction 0.0386, P(any) 0.547 | CRC risk 0.0099, LTT P(any) 0.056
+[add] c_fail/c_out =  3.33 (c_fail    999): premium CRC  +15.4%  LTT  +49.0% | hindsight cost-optimal plan: failure fraction 0.0307, P(any) 0.462 | CRC risk 0.0099, LTT P(any) 0.056
+[add] c_fail/c_out =  5.00 (c_fail   1500): premium CRC   +6.6%  LTT  +33.1% | hindsight cost-optimal plan: failure fraction 0.0214, P(any) 0.350 | CRC risk 0.0098, LTT P(any) 0.056
+[add] c_fail/c_out = 10.00 (c_fail   3000): premium CRC   +1.1%  LTT  +15.5% | hindsight cost-optimal plan: failure fraction 0.0086, P(any) 0.165 | CRC risk 0.0089, LTT P(any) 0.055
+[add] c_fail/c_out = 15.00 (c_fail   4500): premium CRC   +1.3%  LTT   +9.2% | hindsight cost-optimal plan: failure fraction 0.0066, P(any) 0.130 | CRC risk 0.0073, LTT P(any) 0.055
+[add] c_fail/c_out = 30.00 (c_fail   9000): premium CRC   +3.5%  LTT   +5.4% | hindsight cost-optimal plan: failure fraction 0.0032, P(any) 0.064 | CRC risk 0.0040, LTT P(any) 0.052
+[add] c_fail/c_out = 50.00 (c_fail  15000): premium CRC   +3.3%  LTT   +3.1% | hindsight cost-optimal plan: failure fraction 0.0031, P(any) 0.062 | CRC risk 0.0025, LTT P(any) 0.042
+[s05] c_fail/c_out =  1.00 (c_fail    300): premium CRC  +84.2%  LTT +174.3% | hindsight cost-optimal plan: failure fraction 0.0709, P(any) 0.789 | CRC risk 0.0088, LTT P(any) 0.050
+[s05] c_fail/c_out =  2.00 (c_fail    600): premium CRC  +50.5%  LTT +120.3% | hindsight cost-optimal plan: failure fraction 0.0483, P(any) 0.619 | CRC risk 0.0088, LTT P(any) 0.050
+[s05] c_fail/c_out =  3.33 (c_fail    999): premium CRC  +31.6%  LTT  +88.4% | hindsight cost-optimal plan: failure fraction 0.0302, P(any) 0.458 | CRC risk 0.0088, LTT P(any) 0.050
+[s05] c_fail/c_out =  5.00 (c_fail   1500): premium CRC  +19.2%  LTT  +66.0% | hindsight cost-optimal plan: failure fraction 0.0270, P(any) 0.428 | CRC risk 0.0088, LTT P(any) 0.050
+[s05] c_fail/c_out = 10.00 (c_fail   3000): premium CRC   +5.3%  LTT  +35.9% | hindsight cost-optimal plan: failure fraction 0.0146, P(any) 0.263 | CRC risk 0.0085, LTT P(any) 0.050
+[s05] c_fail/c_out = 15.00 (c_fail   4500): premium CRC   +2.4%  LTT  +23.5% | hindsight cost-optimal plan: failure fraction 0.0088, P(any) 0.162 | CRC risk 0.0081, LTT P(any) 0.050
+[s05] c_fail/c_out = 30.00 (c_fail   9000): premium CRC   +3.2%  LTT   +9.2% | hindsight cost-optimal plan: failure fraction 0.0060, P(any) 0.111 | CRC risk 0.0063, LTT P(any) 0.047
+[s05] c_fail/c_out = 50.00 (c_fail  15000): premium CRC   +4.0%  LTT   +3.7% | hindsight cost-optimal plan: failure fraction 0.0024, P(any) 0.048 | CRC risk 0.0037, LTT P(any) 0.043

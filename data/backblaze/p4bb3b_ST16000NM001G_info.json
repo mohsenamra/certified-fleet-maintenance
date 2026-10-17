@@ -1,0 +1,61 @@
+{
+ "model": "ST16000NM001G",
+ "features": [
+  "smart_5_raw",
+  "smart_5_raw_d7",
+  "smart_5_raw_d30",
+  "smart_187_raw",
+  "smart_187_raw_d7",
+  "smart_187_raw_d30",
+  "smart_188_raw",
+  "smart_188_raw_d7",
+  "smart_188_raw_d30",
+  "smart_197_raw",
+  "smart_197_raw_d7",
+  "smart_197_raw_d30",
+  "smart_198_raw",
+  "smart_198_raw_d7",
+  "smart_198_raw_d30",
+  "smart_199_raw",
+  "smart_199_raw_d7",
+  "smart_199_raw_d30",
+  "smart_193_raw",
+  "smart_193_raw_d7",
+  "smart_193_raw_d30",
+  "smart_9_raw",
+  "smart_12_raw",
+  "smart_194_raw",
+  "age_days"
+ ],
+ "train": {
+  "h7": {
+   "n_train": 37926,
+   "n_pos": 426
+  },
+  "h14": {
+   "n_train": 37926,
+   "n_pos": 855
+  },
+  "h21": {
+   "n_train": 37926,
+   "n_pos": 1283
+  },
+  "h28": {
+   "n_train": 37926,
+   "n_pos": 1703
+  }
+ },
+ "thr_fpr1_G28": 0.0017072964692488313,
+ "auc_eval": {
+  "h7": 0.9467695538160736,
+  "h14": 0.9450279104816113,
+  "h21": 0.9285263559083949,
+  "h28": 0.9138314636415918
+ },
+ "train_fail_per_day": 0.5700934579439252,
+ "n_eval_rows": 7871998,
+ "n_eval_drives": 35176,
+ "eval_days": 228,
+ "eval_failures": 95,
+ "seconds": 314.09274530410767
+}

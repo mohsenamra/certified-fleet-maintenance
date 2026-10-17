@@ -1,0 +1,86 @@
+{
+ "quarter": "Q1_2026",
+ "days": 90,
+ "models": {
+  "ST16000NM001G": {
+   "drives": 34729,
+   "drive_days": 3098105,
+   "failures": 44,
+   "capacity_TB": 16.0,
+   "smart_nonmissing": {
+    "smart_5_raw": 1.0,
+    "smart_9_raw": 1.0,
+    "smart_12_raw": 1.0,
+    "smart_187_raw": 1.0,
+    "smart_188_raw": 1.0,
+    "smart_193_raw": 1.0,
+    "smart_194_raw": 1.0,
+    "smart_197_raw": 1.0,
+    "smart_198_raw": 1.0,
+    "smart_199_raw": 1.0,
+    "smart_241_raw": 1.0,
+    "smart_242_raw": 1.0
+   }
+  },
+  "TOSHIBA MG07ACA14TA": {
+   "drives": 37263,
+   "drive_days": 3343724,
+   "failures": 94,
+   "capacity_TB": 14.0,
+   "smart_nonmissing": {
+    "smart_5_raw": 1.0,
+    "smart_9_raw": 1.0,
+    "smart_12_raw": 1.0,
+    "smart_187_raw": 0.0,
+    "smart_188_raw": 0.0,
+    "smart_193_raw": 1.0,
+    "smart_194_raw": 1.0,
+    "smart_197_raw": 1.0,
+    "smart_198_raw": 1.0,
+    "smart_199_raw": 1.0,
+    "smart_241_raw": 0.0,
+    "smart_242_raw": 0.0
+   }
+  },
+  "TOSHIBA MG08ACA16TA": {
+   "drives": 40036,
+   "drive_days": 3548250,
+   "failures": 102,
+   "capacity_TB": 16.0,
+   "smart_nonmissing": {
+    "smart_5_raw": 1.0,
+    "smart_9_raw": 1.0,
+    "smart_12_raw": 1.0,
+    "smart_187_raw": 0.0,
+    "smart_188_raw": 0.0,
+    "smart_193_raw": 1.0,
+    "smart_194_raw": 1.0,
+    "smart_197_raw": 1.0,
+    "smart_198_raw": 1.0,
+    "smart_199_raw": 1.0,
+    "smart_241_raw": 0.0,
+    "smart_242_raw": 0.0
+   }
+  },
+  "WDC WUH722222ALE6L4": {
+   "drives": 45638,
+   "drive_days": 3992942,
+   "failures": 42,
+   "capacity_TB": 22.0,
+   "smart_nonmissing": {
+    "smart_5_raw": 1.0,
+    "smart_9_raw": 1.0,
+    "smart_12_raw": 1.0,
+    "smart_187_raw": 0.0,
+    "smart_188_raw": 0.0,
+    "smart_193_raw": 1.0,
+    "smart_194_raw": 1.0,
+    "smart_197_raw": 1.0,
+    "smart_198_raw": 1.0,
+    "smart_199_raw": 1.0,
+    "smart_241_raw": 0.0,
+    "smart_242_raw": 0.0
+   }
+  }
+ }
+}

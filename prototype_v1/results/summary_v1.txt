@@ -1,0 +1,504 @@
+== Paper 4 prototype v1 ==
+predictor RMSE (capped RUL): {'ID': {'pool': 13.323543270206343}, 'S13': {'src': 12.429362144338779, 'tgt': 17.632912319196397}, 'S24': {'src': 13.678963382361205, 'tgt': 19.388015595530543}}
+
+Monotonicity violations (increases of the loss when the margin grows): (mean-loss, any-loss, of pairs)
+  ID        {'add': (58, 25, 20400), 'sc': (87, 42, 20400)}
+  S13_src   {'add': (43, 12, 20400), 'sc': (69, 32, 20400)}
+  S13_tgt   {'add': (129, 56, 20400), 'sc': (142, 59, 20400)}
+  S24_src   {'add': (65, 31, 20400), 'sc': (84, 46, 20400)}
+  S24_tgt   {'add': (144, 61, 20400), 'sc': (194, 76, 20400)}
+  SENS_K10  {'add': (12, 7, 10200), 'sc': (12, 8, 10200)}
+  SENS_K40  {'add': (22, 6, 10200), 'sc': (35, 10, 10200)}
+
+Per-engine residual rhat - r: share optimistic (rhat > r) / mean
+  ID        0.44 / -13.3
+  S13_src   0.44 / -11.9
+  S13_tgt   0.46 / -20.7
+  S24_src   0.49 / -7.6
+  S24_tgt   0.47 / -17.7
+  SENS_K10  0.46 / -13.9
+  SENS_K40  0.45 / -13.3
+
+ID | mean | alpha=0.02 | n=50
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1222   1.000    0.00    2535    1203  <-- violates
+  fixed margin 20                               0.0221   0.998   20.00    1322     -11  <-- violates
+  Zhu-style rhat-3sigma                         0.0438   1.000   fixed    1190    -143  <-- violates
+  Mitici-style rhat-2.33sigma                   0.0552   1.000   fixed    1351      19  <-- violates
+  validation-tuned additive                     0.0183   0.278   22.38    1343      11
+  per-engine CP additive (alpha)                0.0031   0.000   39.12    1738     406
+  CRC additive                                  0.0008   0.000   48.55    2158     826
+  CRC additive cheapest-valid                   0.0008   0.000   48.55    2158     826
+  validation-tuned sigma-scaled                 0.0183   0.303    5.03    1069    -264
+  per-engine CP sigma-scaled (alpha)            0.0013   0.000   13.70    2615    1282
+  CRC sigma-scaled                              0.0009   0.000   15.62    2985    1652
+  CRC sigma-scaled cheapest-valid               0.0009   0.000   15.62    2985    1652
+
+ID | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1224   1.000    0.00    2538    1206  <-- violates
+  fixed margin 20                               0.0221   0.974   20.00    1322     -10  <-- violates
+  Zhu-style rhat-3sigma                         0.0439   1.000   fixed    1191    -141  <-- violates
+  Mitici-style rhat-2.33sigma                   0.0553   1.000   fixed    1352      20  <-- violates
+  validation-tuned additive                     0.0183   0.208   22.28    1339       7
+  per-engine CP additive (alpha)                0.0031   0.000   39.05    1734     402
+  CRC additive                                  0.0095   0.000   29.05    1428      95
+  CRC additive cheapest-valid                   0.0095   0.000   29.07    1428      96
+  validation-tuned sigma-scaled                 0.0186   0.381    4.96    1064    -268
+  per-engine CP sigma-scaled (alpha)            0.0012   0.000   13.71    2615    1283
+  CRC sigma-scaled                              0.0095   0.000    6.82    1226    -106
+  CRC sigma-scaled cheapest-valid               0.0095   0.000    6.82    1227    -106
+
+ID | mean | alpha=0.05 | n=50
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1222   1.000    0.00    2536    1213  <-- violates
+  fixed margin 20                               0.0221   0.000   20.00    1323       0
+  Zhu-style rhat-3sigma                         0.0438   0.000   fixed    1190    -133
+  Mitici-style rhat-2.33sigma                   0.0552   1.000   fixed    1351      28  <-- violates
+  validation-tuned additive                     0.0462   0.402   11.37    1465     142
+  per-engine CP additive (alpha)                0.0074   0.000   31.31    1478     155
+  CRC additive                                  0.0279   0.000   17.58    1350      27
+  CRC additive cheapest-valid                   0.0219   0.000   20.69    1350      27
+  validation-tuned sigma-scaled                 0.0464   0.371    2.69    1288     -35
+  per-engine CP sigma-scaled (alpha)            0.0045   0.000    8.89    1568     246
+  CRC sigma-scaled                              0.0277   0.000    3.99    1093    -230
+  CRC sigma-scaled cheapest-valid               0.0204   0.000    4.77    1069    -254
+
+ID | mean | alpha=0.05 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1222   1.000    0.00    2536    1214  <-- violates
+  fixed margin 20                               0.0221   0.000   20.00    1322       1
+  Zhu-style rhat-3sigma                         0.0439   0.000   fixed    1191    -130
+  Mitici-style rhat-2.33sigma                   0.0553   1.000   fixed    1352      30  <-- violates
+  validation-tuned additive                     0.0465   0.392   11.25    1465     144
+  per-engine CP additive (alpha)                0.0074   0.000   31.32    1476     155
+  CRC additive                                  0.0376   0.003   13.92    1396      74
+  CRC additive cheapest-valid                   0.0233   0.001   19.99    1350      28
+  validation-tuned sigma-scaled                 0.0470   0.387    2.66    1296     -25
+  per-engine CP sigma-scaled (alpha)            0.0045   0.000    8.88    1561     240
+  CRC sigma-scaled                              0.0369   0.000    3.24    1169    -152
+  CRC sigma-scaled cheapest-valid               0.0209   0.000    4.69    1066    -256
+
+ID | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9024   1.000    0.00    2536     925  <-- violates
+  fixed margin 20                               0.3550   1.000   20.00    1323    -288  <-- violates
+  Zhu-style rhat-3sigma                         0.5800   1.000   fixed    1191    -420  <-- violates
+  Mitici-style rhat-2.33sigma                   0.6701   1.000   fixed    1352    -259  <-- violates
+  validation-tuned additive                     0.1054   0.542   34.52    1584     -27  <-- violates
+  per-engine CP additive (alpha)                0.2955   1.000   22.92    1342    -269  <-- violates
+  per-engine CP additive (alpha/K)              0.0190   0.000   46.46    2040     429
+  LTT additive                                  0.0320   0.010   44.30    1954     343
+  LTT additive cheapest-valid                   0.0320   0.010   44.30    1954     343
+  validation-tuned sigma-scaled                 0.1074   0.511    8.36    1486    -125  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.2339   1.000    5.94    1121    -490  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0012   0.000   19.11    3621    2010
+  LTT sigma-scaled                              0.0347   0.035   13.26    2513     902
+  LTT sigma-scaled cheapest-valid               0.0347   0.035   13.26    2513     902
+
+ID | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9025   1.000    0.00    2535     932  <-- violates
+  fixed margin 20                               0.3546   1.000   20.00    1322    -282  <-- violates
+  Zhu-style rhat-3sigma                         0.5798   1.000   fixed    1191    -412  <-- violates
+  Mitici-style rhat-2.33sigma                   0.6696   1.000   fixed    1352    -252  <-- violates
+  validation-tuned additive                     0.0975   0.458   35.00    1596      -8  <-- violates
+  per-engine CP additive (alpha)                0.2933   1.000   23.01    1341    -263  <-- violates
+  per-engine CP additive (alpha/K)              0.0185   0.000   46.47    2039     435
+  LTT additive                                  0.0498   0.024   40.80    1807     203
+  LTT additive cheapest-valid                   0.0498   0.024   40.80    1807     203
+  validation-tuned sigma-scaled                 0.1006   0.448    8.38    1476    -128  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.2338   1.000    5.93    1117    -487  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0005   0.000   19.19    3634    2031
+  LTT sigma-scaled                              0.0539   0.054   11.01    2039     435
+  LTT sigma-scaled cheapest-valid               0.0539   0.054   11.01    2039     435
+
+ID | any | alpha=0.2 | n=50  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9028   1.000    0.00    2536    1138  <-- violates
+  fixed margin 20                               0.3554   1.000   20.00    1323     -75  <-- violates
+  Zhu-style rhat-3sigma                         0.5802   1.000   fixed    1191    -207  <-- violates
+  Mitici-style rhat-2.33sigma                   0.6700   1.000   fixed    1352     -46  <-- violates
+  validation-tuned additive                     0.2006   0.389   27.77    1412      14  <-- violates
+  per-engine CP additive (alpha)                0.5585   1.000   12.34    1426      28  <-- violates
+  per-engine CP additive (alpha/K)              0.0372   0.000   42.99    1890     492
+  LTT additive                                  0.1062   0.020   34.51    1585     187
+  LTT additive cheapest-valid                   0.1061   0.020   34.52    1586     187
+  validation-tuned sigma-scaled                 0.2052   0.543    6.40    1183    -215  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.5111   1.000    3.30    1158    -240  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0102   0.000   16.75    3213    1815
+  LTT sigma-scaled                              0.1095   0.025    8.29    1471      73
+  LTT sigma-scaled cheapest-valid               0.1095   0.025    8.29    1471      73
+
+ID | any | alpha=0.2 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9025   1.000    0.00    2537    1138  <-- violates
+  fixed margin 20                               0.3544   1.000   20.00    1321     -78  <-- violates
+  Zhu-style rhat-3sigma                         0.5797   1.000   fixed    1190    -209  <-- violates
+  Mitici-style rhat-2.33sigma                   0.6699   1.000   fixed    1351     -48  <-- violates
+  validation-tuned additive                     0.1893   0.238   28.17    1410      11  <-- violates
+  per-engine CP additive (alpha)                0.5610   1.000   12.21    1424      26  <-- violates
+  per-engine CP additive (alpha/K)              0.0373   0.000   42.84    1883     484
+  LTT additive                                  0.1331   0.058   32.02    1502     103
+  LTT additive cheapest-valid                   0.1331   0.058   32.02    1502     103
+  validation-tuned sigma-scaled                 0.1928   0.421    6.54    1190    -209  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.5128   1.000    3.27    1159    -240  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0104   0.000   16.65    3196    1797
+  LTT sigma-scaled                              0.1356   0.023    7.50    1324     -75
+  LTT sigma-scaled cheapest-valid               0.1356   0.023    7.50    1324     -75
+
+S13 source->source | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1048   1.000    0.00    2188    1080  <-- violates
+  fixed margin 20                               0.0124   0.000   20.00    1126      18
+  Zhu-style rhat-3sigma                         0.0218   0.974   fixed     798    -309  <-- violates
+  Mitici-style rhat-2.33sigma                   0.0344   1.000   fixed     940    -167  <-- violates
+  validation-tuned additive                     0.0183   0.342   16.89    1112       5
+  per-engine CP additive (alpha)                0.0029   0.000   32.34    1519     412
+  CRC additive                                  0.0091   0.000   22.30    1159      52
+  CRC additive cheapest-valid                   0.0091   0.000   22.30    1160      52
+  validation-tuned sigma-scaled                 0.0176   0.428    3.38     879    -228
+  per-engine CP sigma-scaled (alpha)            0.0011   0.000    8.49    2298    1191
+  CRC sigma-scaled                              0.0089   0.000    4.27     934    -173
+  CRC sigma-scaled cheapest-valid               0.0088   0.000    4.28     935    -172
+
+S13 NAIVE source->target (shift) | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1628   1.000    0.00    3290    1660  <-- violates
+  fixed margin 20                               0.1024   1.000   20.00    2563     934  <-- violates
+  Zhu-style rhat-3sigma                         0.0968   1.000   fixed    2091     461  <-- violates
+  Mitici-style rhat-2.33sigma                   0.1130   1.000   fixed    2369     740  <-- violates
+  validation-tuned additive                     0.1066   1.000   16.75    2574     945  <-- violates
+  per-engine CP additive (alpha)                0.0527   1.000   32.41    1936     307  <-- violates
+  CRC additive                                  0.0945   1.000   22.28    2469     840  <-- violates
+  CRC additive cheapest-valid                   0.0944   1.000   22.31    2468     839  <-- violates
+  validation-tuned sigma-scaled                 0.0835   1.000    3.38    1942     313  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.0167   0.134    8.49    1922     292
+  CRC sigma-scaled                              0.0592   1.000    4.24    1577     -52  <-- violates
+  CRC sigma-scaled cheapest-valid               0.0592   1.000    4.24    1576     -53  <-- violates
+
+S13 RECALIBRATED on target | mean | alpha=0.02 | n=25
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1626   1.000    0.00    3288    1659  <-- violates
+  fixed margin 20                               0.1024   1.000   20.00    2563     934  <-- violates
+  Zhu-style rhat-3sigma                         0.0968   1.000   fixed    2091     462  <-- violates
+  Mitici-style rhat-2.33sigma                   0.1130   1.000   fixed    2368     740  <-- violates
+  validation-tuned additive                     0.0198   0.508   41.25    1634       6  <-- violates
+  per-engine CP additive (alpha)                0.0058   0.000   48.62    1825     196
+  CRC additive                                  0.0000   0.000  100.00    6367    4739
+  CRC additive cheapest-valid                   0.0000   0.000  100.00    6367    4739
+  validation-tuned sigma-scaled                 0.0211   0.490    7.81    1793     164
+  per-engine CP sigma-scaled (alpha)            0.0061   0.000   11.48    2662    1033
+  CRC sigma-scaled                              0.0006   0.000   20.00    4695    3067
+  CRC sigma-scaled cheapest-valid               0.0006   0.000   20.00    4695    3067
+
+S13 RECALIBRATED on target | mean | alpha=0.02 | n=50
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1627   1.000    0.00    3289    1661  <-- violates
+  fixed margin 20                               0.1023   1.000   20.00    2562     933  <-- violates
+  Zhu-style rhat-3sigma                         0.0967   1.000   fixed    2089     461  <-- violates
+  Mitici-style rhat-2.33sigma                   0.1130   1.000   fixed    2368     740  <-- violates
+  validation-tuned additive                     0.0179   0.348   41.96    1629       1
+  per-engine CP additive (alpha)                0.0055   0.000   48.48    1807     179
+  CRC additive                                  0.0005   0.000   56.65    2397     769
+  CRC additive cheapest-valid                   0.0005   0.000   56.65    2397     769
+  validation-tuned sigma-scaled                 0.0187   0.282    8.12    1842     214
+  per-engine CP sigma-scaled (alpha)            0.0056   0.000   11.54    2672    1044
+  CRC sigma-scaled                              0.0011   0.000   18.11    4290    2661
+  CRC sigma-scaled cheapest-valid               0.0011   0.000   18.11    4290    2661
+
+S13 source->source | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.8875   1.000    0.00    2185     810  <-- violates
+  fixed margin 20                               0.2299   1.000   20.00    1124    -251  <-- violates
+  Zhu-style rhat-3sigma                         0.3750   1.000   fixed     797    -578  <-- violates
+  Mitici-style rhat-2.33sigma                   0.5273   1.000   fixed     940    -435  <-- violates
+  validation-tuned additive                     0.0996   0.420   27.95    1358     -17  <-- violates
+  per-engine CP additive (alpha)                0.3338   1.000   16.85    1110    -265  <-- violates
+  per-engine CP additive (alpha/K)              0.0056   0.000   41.52    1943     568
+  LTT additive                                  0.0509   0.056   33.01    1545     170
+  LTT additive cheapest-valid                   0.0509   0.056   33.01    1545     170
+  validation-tuned sigma-scaled                 0.0925   0.532    5.05    1085    -290  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.2933   1.000    3.50     874    -501  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0000   0.000   15.60    4489    3114
+  LTT sigma-scaled                              0.0521   0.018    6.38    1527     152
+  LTT sigma-scaled cheapest-valid               0.0521   0.018    6.38    1527     152
+
+S13 NAIVE source->target (shift) | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9575   1.000    0.00    3290    1395  <-- violates
+  fixed margin 20                               0.8675   1.000   20.00    2563     669  <-- violates
+  Zhu-style rhat-3sigma                         0.8550   1.000   fixed    2091     196  <-- violates
+  Mitici-style rhat-2.33sigma                   0.8975   1.000   fixed    2369     475  <-- violates
+  validation-tuned additive                     0.7577   1.000   28.05    2197     303  <-- violates
+  per-engine CP additive (alpha)                0.8789   1.000   16.87    2571     677  <-- violates
+  per-engine CP additive (alpha/K)              0.3145   1.000   41.57    1623    -271  <-- violates
+  LTT additive                                  0.6203   1.000   33.04    1894      -0  <-- violates
+  LTT additive cheapest-valid                   0.6203   1.000   33.04    1894      -0  <-- violates
+  validation-tuned sigma-scaled                 0.5702   1.000    5.04    1425    -469  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.7733   1.000    3.53    1873     -21  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0292   0.004   15.62    3762    1867
+  LTT sigma-scaled                              0.4726   1.000    6.31    1538    -356  <-- violates
+  LTT sigma-scaled cheapest-valid               0.4726   1.000    6.31    1538    -356  <-- violates
+
+S13 RECALIBRATED on target | any | alpha=0.1 | n=25  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9574   1.000    0.00    3289    1406  <-- violates
+  fixed margin 20                               0.8671   1.000   20.00    2563     680  <-- violates
+  Zhu-style rhat-3sigma                         0.8548   1.000   fixed    2090     207  <-- violates
+  Mitici-style rhat-2.33sigma                   0.8971   1.000   fixed    2368     486  <-- violates
+  validation-tuned additive                     0.1000   0.524   49.42    1878      -5  <-- violates
+  per-engine CP additive (alpha)                0.5922   1.000   33.91    1843     -39  <-- violates
+  per-engine CP additive (alpha/K)              0.0057   0.000   58.50    2637     754
+  LTT additive                                  0.0238   0.034   55.36    2294     411
+  LTT additive cheapest-valid                   0.0238   0.034   55.36    2294     411
+  validation-tuned sigma-scaled                 0.1086   0.410   11.86    2763     880  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.5219   1.000    5.74    1448    -435  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0255   0.000   16.84    4020    2137
+  LTT sigma-scaled                              0.0358   0.024   16.40    3880    1997
+  LTT sigma-scaled cheapest-valid               0.0358   0.024   16.40    3880    1997
+
+S13 RECALIBRATED on target | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9576   1.000    0.00    3292    1431  <-- violates
+  fixed margin 20                               0.8674   1.000   20.00    2563     702  <-- violates
+  Zhu-style rhat-3sigma                         0.8550   1.000   fixed    2091     230  <-- violates
+  Mitici-style rhat-2.33sigma                   0.8975   1.000   fixed    2369     508  <-- violates
+  validation-tuned additive                     0.0951   0.566   49.22    1853      -8  <-- violates
+  per-engine CP additive (alpha)                0.5920   1.000   33.98    1837     -24  <-- violates
+  per-engine CP additive (alpha/K)              0.0065   0.000   57.58    2503     642
+  LTT additive                                  0.0224   0.008   55.24    2276     415
+  LTT additive cheapest-valid                   0.0224   0.008   55.24    2276     415
+  validation-tuned sigma-scaled                 0.1051   0.394   11.57    2682     821  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.5252   1.000    5.70    1441    -420  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0302   0.000   15.72    3775    1914
+  LTT sigma-scaled                              0.0359   0.016   15.84    3767    1906
+  LTT sigma-scaled cheapest-valid               0.0359   0.016   15.84    3767    1906
+
+S24 source->source | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1315   1.000    0.00    2729    1400  <-- violates
+  fixed margin 20                               0.0203   0.600   20.00    1311     -19  <-- violates
+  Zhu-style rhat-3sigma                         0.0361   1.000   fixed    1029    -300  <-- violates
+  Mitici-style rhat-2.33sigma                   0.0493   1.000   fixed    1218    -111  <-- violates
+  validation-tuned additive                     0.0189   0.450   21.72    1345      16
+  per-engine CP additive (alpha)                0.0039   0.000   40.72    1885     556
+  CRC additive                                  0.0094   0.000   31.91    1583     254
+  CRC additive cheapest-valid                   0.0094   0.000   31.92    1583     254
+  validation-tuned sigma-scaled                 0.0183   0.438    4.20     983    -346
+  per-engine CP sigma-scaled (alpha)            0.0012   0.000   13.83    3140    1811
+  CRC sigma-scaled                              0.0093   0.000    5.63    1096    -233
+  CRC sigma-scaled cheapest-valid               0.0093   0.000    5.63    1096    -233
+
+S24 NAIVE source->target (shift) | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1692   1.000    0.00    3423    1369  <-- violates
+  fixed margin 20                               0.0855   1.000   20.00    2248     194  <-- violates
+  Zhu-style rhat-3sigma                         0.1055   1.000   fixed    2262     208  <-- violates
+  Mitici-style rhat-2.33sigma                   0.1173   1.000   fixed    2454     400  <-- violates
+  validation-tuned additive                     0.0793   1.000   21.82    2185     131  <-- violates
+  per-engine CP additive (alpha)                0.0337   1.000   40.75    1937    -117  <-- violates
+  CRC additive                                  0.0514   1.000   31.88    1965     -89  <-- violates
+  CRC additive cheapest-valid                   0.0514   1.000   31.88    1965     -89  <-- violates
+  validation-tuned sigma-scaled                 0.0811   1.000    4.21    1981     -73  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.0123   0.000   13.80    3080    1026
+  CRC sigma-scaled                              0.0573   1.000    5.59    1728    -325  <-- violates
+  CRC sigma-scaled cheapest-valid               0.0573   1.000    5.59    1728    -325  <-- violates
+
+S24 RECALIBRATED on target | mean | alpha=0.02 | n=25
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1692   1.000    0.00    3422    1369  <-- violates
+  fixed margin 20                               0.0855   1.000   20.00    2248     195  <-- violates
+  Zhu-style rhat-3sigma                         0.1055   1.000   fixed    2261     208  <-- violates
+  Mitici-style rhat-2.33sigma                   0.1172   1.000   fixed    2453     400  <-- violates
+  validation-tuned additive                     0.0201   0.450   48.92    2050      -3
+  per-engine CP additive (alpha)                0.0069   0.002   57.65    2462     409
+  CRC additive                                  0.0000   0.000  100.00    6297    4244
+  CRC additive cheapest-valid                   0.0000   0.000  100.00    6297    4244
+  validation-tuned sigma-scaled                 0.0217   0.628   10.71    2391     338  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.0056   0.000   18.16    3892    1838
+  CRC sigma-scaled                              0.0036   0.000   20.00    4193    2140
+  CRC sigma-scaled cheapest-valid               0.0036   0.000   20.00    4193    2140
+
+S24 RECALIBRATED on target | mean | alpha=0.02 | n=50
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1694   1.000    0.00    3427    1373  <-- violates
+  fixed margin 20                               0.0856   1.000   20.00    2249     195  <-- violates
+  Zhu-style rhat-3sigma                         0.1056   1.000   fixed    2265     211  <-- violates
+  Mitici-style rhat-2.33sigma                   0.1174   1.000   fixed    2457     403  <-- violates
+  validation-tuned additive                     0.0187   0.324   49.79    2060       6
+  per-engine CP additive (alpha)                0.0071   0.000   57.42    2413     359
+  CRC additive                                  0.0005   0.000   69.01    4243    2189
+  CRC additive cheapest-valid                   0.0005   0.000   69.01    4243    2189
+  validation-tuned sigma-scaled                 0.0200   0.516   11.07    2464     410  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.0054   0.000   18.18    3900    1846
+  CRC sigma-scaled                              0.0037   0.000   19.97    4191    2137
+  CRC sigma-scaled cheapest-valid               0.0037   0.000   19.97    4191    2137
+
+S24 source->source | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9375   1.000    0.00    2728     955  <-- violates
+  fixed margin 20                               0.3443   1.000   20.00    1309    -464  <-- violates
+  Zhu-style rhat-3sigma                         0.5243   1.000   fixed    1026    -747  <-- violates
+  Mitici-style rhat-2.33sigma                   0.6395   1.000   fixed    1216    -557  <-- violates
+  validation-tuned additive                     0.0996   0.416   37.36    1758     -15  <-- violates
+  per-engine CP additive (alpha)                0.3014   1.000   23.13    1369    -404  <-- violates
+  per-engine CP additive (alpha/K)              0.0153   0.000   48.20    2217     444
+  LTT additive                                  0.0500   0.024   43.03    1977     204
+  LTT additive cheapest-valid                   0.0500   0.024   43.03    1977     204
+  validation-tuned sigma-scaled                 0.1021   0.404    7.16    1407    -366  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.1621   0.998    5.74    1108    -665  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0042   0.000   19.08    4198    2425
+  LTT sigma-scaled                              0.0561   0.026    9.56    2035     262
+  LTT sigma-scaled cheapest-valid               0.0561   0.026    9.56    2035     262
+
+S24 NAIVE source->target (shift) | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9800   1.000    0.00    3423     823  <-- violates
+  fixed margin 20                               0.8200   1.000   20.00    2248    -352  <-- violates
+  Zhu-style rhat-3sigma                         0.8975   1.000   fixed    2262    -338  <-- violates
+  Mitici-style rhat-2.33sigma                   0.9150   1.000   fixed    2454    -146  <-- violates
+  validation-tuned additive                     0.5841   1.000   37.36    1943    -657  <-- violates
+  per-engine CP additive (alpha)                0.7799   1.000   23.15    2136    -464  <-- violates
+  per-engine CP additive (alpha/K)              0.3598   1.000   48.31    2018    -582  <-- violates
+  LTT additive                                  0.4750   1.000   43.01    1955    -645  <-- violates
+  LTT additive cheapest-valid                   0.4750   1.000   43.01    1955    -645  <-- violates
+  validation-tuned sigma-scaled                 0.5580   1.000    7.16    1773    -827  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.6663   1.000    5.76    1701    -899  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0873   0.024   19.15    4062    1462
+  LTT sigma-scaled                              0.4132   1.000    9.49    2150    -450  <-- violates
+  LTT sigma-scaled cheapest-valid               0.4132   1.000    9.49    2150    -450  <-- violates
+
+S24 RECALIBRATED on target | any | alpha=0.1 | n=25  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9799   1.000    0.00    3422     822  <-- violates
+  fixed margin 20                               0.8197   1.000   20.00    2247    -353  <-- violates
+  Zhu-style rhat-3sigma                         0.8972   1.000   fixed    2262    -339  <-- violates
+  Mitici-style rhat-2.33sigma                   0.9147   1.000   fixed    2453    -147  <-- violates
+  validation-tuned additive                     0.0924   0.394   59.14    2590     -10  <-- violates
+  per-engine CP additive (alpha)                0.6060   1.000   35.92    1944    -656  <-- violates
+  per-engine CP additive (alpha/K)              0.0070   0.002   70.45    4291    1691
+  LTT additive                                  0.0213   0.020   66.31    3815    1215
+  LTT additive cheapest-valid                   0.0213   0.020   66.31    3815    1215
+  validation-tuned sigma-scaled                 0.1184   0.478   17.74    3810    1209  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.4508   1.000    8.77    1998    -602  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0724   0.000   20.00    4195    1595
+  LTT sigma-scaled                              0.0761   0.062   19.80    4162    1562
+  LTT sigma-scaled cheapest-valid               0.0761   0.062   19.80    4162    1562
+
+S24 RECALIBRATED on target | any | alpha=0.1 | n=50  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.9801   1.000    0.00    3423     823  <-- violates
+  fixed margin 20                               0.8201   1.000   20.00    2248    -351  <-- violates
+  Zhu-style rhat-3sigma                         0.8977   1.000   fixed    2263    -337  <-- violates
+  Mitici-style rhat-2.33sigma                   0.9151   1.000   fixed    2454    -146  <-- violates
+  validation-tuned additive                     0.0928   0.436   58.96    2531     -69  <-- violates
+  per-engine CP additive (alpha)                0.6079   1.000   35.85    1942    -658  <-- violates
+  per-engine CP additive (alpha/K)              0.0098   0.000   68.02    4131    1531
+  LTT additive                                  0.0223   0.008   65.00    3728    1129
+  LTT additive cheapest-valid                   0.0222   0.008   65.28    3730    1130
+  validation-tuned sigma-scaled                 0.1175   0.554   17.61    3797    1197  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.4550   1.000    8.71    1987    -613  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0725   0.000   20.00    4194    1594
+  LTT sigma-scaled                              0.0737   0.024   19.93    4183    1583
+  LTT sigma-scaled cheapest-valid               0.0737   0.024   19.93    4183    1583
+
+SENS_K10 | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.7023   1.000    0.00    1155     505  <-- violates
+  fixed margin 20                               0.2040   1.000   20.00     648      -1  <-- violates
+  Zhu-style rhat-3sigma                         0.3345   1.000   fixed     558     -91  <-- violates
+  Mitici-style rhat-2.33sigma                   0.4247   1.000   fixed     656       7  <-- violates
+  validation-tuned additive                     0.0958   0.300   28.44     663      13  <-- violates
+  per-engine CP additive (alpha)                0.1477   0.944   23.68     638     -12  <-- violates
+  per-engine CP additive (alpha/K)              0.0147   0.000   43.51     872     222
+  LTT additive                                  0.0521   0.058   34.10     722      73
+  LTT additive cheapest-valid                   0.0520   0.058   34.11     722      73
+  validation-tuned sigma-scaled                 0.0983   0.488    6.13     531    -119  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.0761   0.114    6.47     539    -111
+  per-engine CP sigma-scaled (alpha/K)          0.0000   0.000   17.46    1624     975
+  LTT sigma-scaled                              0.0526   0.054    7.42     611     -39
+  LTT sigma-scaled cheapest-valid               0.0526   0.054    7.42     611     -39
+
+SENS_K10 | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1085   1.000    0.00    1160     528  <-- violates
+  fixed margin 20                               0.0232   0.796   20.00     652      20  <-- violates
+  Zhu-style rhat-3sigma                         0.0402   1.000   fixed     563     -69  <-- violates
+  Mitici-style rhat-2.33sigma                   0.0524   1.000   fixed     663      31  <-- violates
+  validation-tuned additive                     0.0190   0.316   22.38     647      15
+  per-engine CP additive (alpha)                0.0028   0.000   39.66     816     184
+  CRC additive                                  0.0097   0.026   28.91     668      36
+  CRC additive cheapest-valid                   0.0094   0.026   29.29     671      39
+  validation-tuned sigma-scaled                 0.0184   0.220    4.81     507    -125
+  per-engine CP sigma-scaled (alpha)            0.0004   0.000   14.15    1316     684
+  CRC sigma-scaled                              0.0097   0.012    6.30     541     -91
+  CRC sigma-scaled cheapest-valid               0.0095   0.012    6.34     543     -89
+
+SENS_K40 | any | alpha=0.1 | n=100  (LTT delta=0.1)
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              1.0000   1.000    0.00    5465    2001  <-- violates
+  fixed margin 20                               0.6185   1.000   20.00    2523    -940  <-- violates
+  Zhu-style rhat-3sigma                         0.8775   1.000   fixed    2450   -1013  <-- violates
+  Mitici-style rhat-2.33sigma                   0.9183   1.000   fixed    2795    -668  <-- violates
+  validation-tuned additive                     0.0985   0.408   40.86    3466       2  <-- violates
+  per-engine CP additive (alpha)                0.5451   1.000   22.05    2542    -921  <-- violates
+  per-engine CP additive (alpha/K)              0.0393   0.000   48.16    4100     636
+  LTT additive                                  0.0505   0.114   45.81    3898     434
+  LTT additive cheapest-valid                   0.0505   0.114   45.81    3898     434
+  validation-tuned sigma-scaled                 0.1012   0.414   11.42    3965     502  <-- violates
+  per-engine CP sigma-scaled (alpha)            0.4974   1.000    6.09    2135   -1328  <-- violates
+  per-engine CP sigma-scaled (alpha/K)          0.0209   0.000   19.93    7314    3851
+  LTT sigma-scaled                              0.0578   0.038   13.22    4746    1282
+  LTT sigma-scaled cheapest-valid               0.0578   0.038   13.22    4746    1282
+
+SENS_K40 | mean | alpha=0.02 | n=100
+  rule                                            risk  >alpha  margin    cost regret*
+  point (margin 0)                              0.1342   1.000    0.00    5469    2911  <-- violates
+  fixed margin 20                               0.0232   0.966   20.00    2527     -31  <-- violates
+  Zhu-style rhat-3sigma                         0.0496   1.000   fixed    2463     -96  <-- violates
+  Mitici-style rhat-2.33sigma                   0.0612   1.000   fixed    2808     250  <-- violates
+  validation-tuned additive                     0.0188   0.292   22.63    2573      15
+  per-engine CP additive (alpha)                0.0036   0.000   38.52    3290     732
+  CRC additive                                  0.0091   0.000   30.38    2821     263
+  CRC additive cheapest-valid                   0.0091   0.000   30.38    2821     263
+  validation-tuned sigma-scaled                 0.0191   0.442    5.36    2059    -499
+  per-engine CP sigma-scaled (alpha)            0.0014   0.000   13.01    4657    2099
+  CRC sigma-scaled                              0.0094   0.000    7.64    2500     -58
+  CRC sigma-scaled cheapest-valid               0.0094   0.000    7.64    2500     -58
+
+== Online rolling-horizon runs (K=20, T=1000 periods, shift at period 300; static CRC margins {'S13': 22.0, 'S24': 28.0}) ==
+   failure rate = failures per engine-period (whole run | after shift+20 periods); mean over seeds; '>alpha' = share of seeds whose whole-run rate exceeds alpha
+  S13 shift      adaptive_add (alpha=0.0025)  rate 0.0026 | post-shift 0.0030  >alpha 0.8  cost/period     144  maint/period 1.13  mean margin 23.09
+  S13 shift      adaptive_add (alpha=0.005)   rate 0.0044 | post-shift 0.0054  >alpha 0.0  cost/period     168  maint/period 1.07  mean margin 21.30
+  S13 shift      adaptive_sc (alpha=0.0025)   rate 0.0024 | post-shift 0.0026  >alpha 0.0  cost/period     123  maint/period 1.13  mean margin 3.78
+  S13 shift      adaptive_sc (alpha=0.005)    rate 0.0044 | post-shift 0.0052  >alpha 0.0  cost/period     152  maint/period 1.07  mean margin 3.37
+  S13 shift      mitici                       rate 0.0153 | post-shift 0.0222  cost/period     331  maint/period 0.80  mean margin 2.33
+  S13 shift      point                        rate 0.0181 | post-shift 0.0249  cost/period     375  maint/period 0.74  mean margin 0.00
+  S13 shift      static_CRC                   rate 0.0147 | post-shift 0.0215  cost/period     380  maint/period 0.91  mean margin 22.00
+  S13 shift      zhu                          rate 0.0136 | post-shift 0.0198  cost/period     305  maint/period 0.87  mean margin 3.00
+  S13 stationary adaptive_add (alpha=0.0025)  rate 0.0016 | post-shift 0.0017  >alpha 0.0  cost/period      86  maint/period 1.23  mean margin 2.10
+  S13 stationary adaptive_add (alpha=0.005)   rate 0.0023 | post-shift 0.0024  >alpha 0.0  cost/period      91  maint/period 1.21  mean margin 1.31
+  S13 stationary adaptive_sc (alpha=0.0025)   rate 0.0019 | post-shift 0.0020  >alpha 0.0  cost/period      87  maint/period 1.22  mean margin 0.83
+  S13 stationary adaptive_sc (alpha=0.005)    rate 0.0026 | post-shift 0.0026  >alpha 0.0  cost/period      94  maint/period 1.20  mean margin 0.45
+  S13 stationary mitici                       rate 0.0008 | post-shift 0.0007  cost/period      69  maint/period 1.28  mean margin 2.33
+  S13 stationary point                        rate 0.0037 | post-shift 0.0035  cost/period     106  maint/period 1.16  mean margin 0.00
+  S13 stationary static_CRC                   rate 0.0000 | post-shift 0.0000  cost/period     149  maint/period 1.44  mean margin 22.00
+  S13 stationary zhu                          rate 0.0004 | post-shift 0.0005  cost/period      71  maint/period 1.32  mean margin 3.00
+  S24 shift      adaptive_add (alpha=0.0025)  rate 0.0027 | post-shift 0.0029  >alpha 1.0  cost/period     163  maint/period 1.14  mean margin 20.78
+  S24 shift      adaptive_add (alpha=0.005)   rate 0.0047 | post-shift 0.0053  >alpha 0.0  cost/period     187  maint/period 1.09  mean margin 17.83
+  S24 shift      adaptive_sc (alpha=0.0025)   rate 0.0026 | post-shift 0.0027  >alpha 1.0  cost/period     195  maint/period 1.25  mean margin 5.33
+  S24 shift      adaptive_sc (alpha=0.005)    rate 0.0047 | post-shift 0.0053  >alpha 0.0  cost/period     192  maint/period 1.14  mean margin 4.40
+  S24 shift      mitici                       rate 0.0146 | post-shift 0.0207  cost/period     321  maint/period 0.84  mean margin 2.33
+  S24 shift      point                        rate 0.0186 | post-shift 0.0244  cost/period     389  maint/period 0.74  mean margin 0.00
+  S24 shift      static_CRC                   rate 0.0013 | post-shift 0.0020  cost/period     177  maint/period 1.25  mean margin 28.00
+  S24 shift      zhu                          rate 0.0125 | post-shift 0.0180  cost/period     284  maint/period 0.90  mean margin 3.00
+  S24 stationary adaptive_add (alpha=0.0025)  rate 0.0022 | post-shift 0.0022  >alpha 0.0  cost/period     114  maint/period 1.26  mean margin 3.50
+  S24 stationary adaptive_add (alpha=0.005)   rate 0.0036 | post-shift 0.0036  >alpha 0.0  cost/period     129  maint/period 1.22  mean margin 2.39
+  S24 stationary adaptive_sc (alpha=0.0025)   rate 0.0023 | post-shift 0.0024  >alpha 0.0  cost/period     106  maint/period 1.26  mean margin 1.39
+  S24 stationary adaptive_sc (alpha=0.005)    rate 0.0038 | post-shift 0.0039  >alpha 0.0  cost/period     126  maint/period 1.22  mean margin 0.92
+  S24 stationary mitici                       rate 0.0015 | post-shift 0.0016  cost/period      86  maint/period 1.30  mean margin 2.33
+  S24 stationary point                        rate 0.0063 | post-shift 0.0064  cost/period     157  maint/period 1.16  mean margin 0.00
+  S24 stationary static_CRC                   rate 0.0000 | post-shift 0.0000  cost/period     200  maint/period 1.55  mean margin 28.00
+  S24 stationary zhu                          rate 0.0009 | post-shift 0.0008  cost/period      82  maint/period 1.31  mean margin 3.00
+  theory: long-run rate <= alpha + (lam_max + eta)/(eta*T); additive: lam_max = 126, bound slack = 0.0023; scaled: lam_max = 63.5, slack = 0.0031

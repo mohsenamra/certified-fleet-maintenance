@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pkl
+*.pkl.gz
+*.npz
+*.h5
+*.zip
+data/CMAPSS/
+data/backblaze/*.csv
+data/backblaze/panel*
+data/ncmapss/*.npz
+results_smoke/
+*.tmp
